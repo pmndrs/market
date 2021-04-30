@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs'
+import btoa from 'btoa'
 
 const getAllModels = () => {
   const a = path.join(process.cwd(), 'public/resources')
@@ -11,7 +12,7 @@ const getAllModels = () => {
     // eslint-disable-next-line array-callback-return
     fs.readdirSync(path.join(a, folder)).map((filename) => {
       const filePath = path.join(a, folder, filename)
-      const fileContents = fs.readFileSync(filePath, 'utf8')
+      const fileContents = fs.readFileSync(filePath, 'utf-8')
       var stats = fs.statSync(filePath)
       var fileSizeInBytes = stats.size
       model.size = (fileSizeInBytes / (1024 * 1024)).toFixed(2)
