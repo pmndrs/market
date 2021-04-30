@@ -77,6 +77,11 @@ const Header = () => {
         Be sure validate your Twitter card markup on the documentation site. */}
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:site' content='@onirenaud' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap'
+          rel='stylesheet'
+        />
       </Head>
     </>
   )

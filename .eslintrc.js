@@ -5,7 +5,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'react-app',
-    'prettier/react',
     'plugin:tailwind/recommended',
     'plugin:react-hooks/recommended',
   ],

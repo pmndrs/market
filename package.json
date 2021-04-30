@@ -24,9 +24,14 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "^1.1.1",
+    "@heroicons/react": "^1.0.1",
+    "@react-spring/web": "^9.1.2",
     "@react-three/a11y": "^2.0.1",
     "@react-three/drei": "^4.3.2",
     "@react-three/fiber": "^6.0.16",
+    "@react-three/gltfjsx": "^4.1.5",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "esbuild-loader": "^2.12.0",
     "next": "^10.2.0",
     "react": "^17.0.2",
