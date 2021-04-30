@@ -1,0 +1,13 @@
+// @js-ignore
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["./src/**/*", "./pages/**/*"],
+  "exclude": ["node_modules"]
+}

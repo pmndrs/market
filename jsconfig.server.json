@@ -1,0 +1,14 @@
+{
+  "extends": "./jsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2017"],
+    "module": "commonjs",
+    "noEmit": false,
+    "outDir": "build",
+    "skipLibCheck": true,
+    "target": "es2017"
+  },
+  "include": ["server/**/*.js"]
+}
