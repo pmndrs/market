@@ -3,10 +3,10 @@ import { OrbitControls, Stage } from '@react-three/drei'
 import { useState, useEffect, Suspense, useRef, useLayoutEffect } from 'react'
 
 import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
-import { useControls, Leva } from 'leva'
+import { useControls } from 'leva'
 
 const Model = ({ buffer }) => {
-  const [code, setCode] = useState()
+  const [scene, setScene] = useState()
   const ref = useRef()
   const controls = useControls(
     {
@@ -44,14 +44,14 @@ const Model = ({ buffer }) => {
   )
 
   useLayoutEffect(() => {
-    code &&
-      code.traverse((obj) => {
+    scene &&
+      scene.traverse((obj) => {
         if (obj.isMesh) {
           obj.castShadow = obj.receiveShadow = true
           obj.material.envMapIntensity = 0.8
         }
       })
-  }, [code])
+  }, [scene])
 
   const getModel = async () => {
     const gltfLoader = new GLTFLoader()
@@ -62,13 +62,14 @@ const Model = ({ buffer }) => {
     const result = await new Promise((resolve, reject) =>
       gltfLoader.parse(buffer, '', resolve, reject)
     )
-    setCode(result.scenes[0])
+    setScene(result.scenes[0])
   }
 
   useEffect(() => {
     getModel()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  if (!code) return null
+  if (!scene) return null
   return (
     <>
       <ambientLight intensity={0.25} />
@@ -83,7 +84,7 @@ const Model = ({ buffer }) => {
           environment={controls.environment}
         >
           <sphereGeometry />
-          <primitive object={code} />
+          <primitive object={scene} />
         </Stage>
       </Suspense>
       <OrbitControls ref={ref} autoRotate={controls.autoRotate} />

@@ -41,7 +41,11 @@ const Layout = ({ children, title }) => {
                 <div className='flex justify-between h-16'>
                   <div className='flex'>
                     <div className='flex items-center flex-shrink-0'>
-                      <Logo width='100' />
+                      <Link href='/'>
+                        <a>
+                          <Logo width='100' />
+                        </a>
+                      </Link>
                     </div>
                     <div className='hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8'>
                       {navigation.map((item) => (
