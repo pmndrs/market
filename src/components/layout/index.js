@@ -13,7 +13,7 @@ const Header = () => {
   )
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title }) => {
   const events = useStore((s) => s.events)
 
   const navigation = [
@@ -102,7 +102,7 @@ const Layout = ({ children }) => {
           <header>
             <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
               <h1 className='text-3xl font-bold leading-tight text-gray-900'>
-                All Models
+                {title || 'All Models'}
               </h1>
             </div>
           </header>

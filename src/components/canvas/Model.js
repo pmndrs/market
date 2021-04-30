@@ -3,32 +3,46 @@ import { OrbitControls, Stage } from '@react-three/drei'
 import { useState, useEffect, Suspense, useRef, useLayoutEffect } from 'react'
 
 import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
+import { useControls, Leva } from 'leva'
 
 const Model = ({ buffer }) => {
   const [code, setCode] = useState()
   const ref = useRef()
-  const controls = {
-    preset: {
-      value: 'rembrandt',
-      options: ['rembrandt', 'portrait', 'upfront', 'soft'],
+  const controls = useControls(
+    {
+      autoRotate: true,
+      contactShadow: true,
+      intensity: {
+        value: 1,
+        min: 0,
+        max: 2,
+        step: 0.1,
+        label: 'light intensity',
+      },
+      preset: {
+        value: 'rembrandt',
+        options: ['rembrandt', 'portrait', 'upfront', 'soft'],
+      },
+      environment: {
+        value: 'city',
+        options: [
+          '',
+          'sunset',
+          'dawn',
+          'night',
+          'warehouse',
+          'forest',
+          'apartment',
+          'studio',
+          'city',
+          'park',
+          'lobby',
+        ],
+      },
     },
-    environment: {
-      value: 'city',
-      options: [
-        '',
-        'sunset',
-        'dawn',
-        'night',
-        'warehouse',
-        'forest',
-        'apartment',
-        'studio',
-        'city',
-        'park',
-        'lobby',
-      ],
-    },
-  }
+    { collapsed: true }
+  )
+
   useLayoutEffect(() => {
     code &&
       code.traverse((obj) => {
@@ -61,26 +75,33 @@ const Model = ({ buffer }) => {
       <Suspense fallback={null}>
         <Stage
           controls={ref}
-          preset={controls.preset.value}
-          intensity={1}
-          contactShadow
+          preset={controls.preset}
+          intensity={controls.intensity}
+          contactShadow={controls.contactShadow}
           shadows
           adjustCamera
-          environment={controls.environment.value}
+          environment={controls.environment}
         >
           <sphereGeometry />
           <primitive object={code} />
         </Stage>
       </Suspense>
-      <OrbitControls ref={ref} autoRotate />
+      <OrbitControls ref={ref} autoRotate={controls.autoRotate} />
     </>
   )
 }
 
 export default function ModelComponent(props) {
   return (
-    <Canvas shadows dpr={[1, 1.5]} camera={{ position: [0, 0, 150], fov: 50 }}>
-      <Model {...props} />
-    </Canvas>
+    <>
+      {' '}
+      <Canvas
+        shadows
+        dpr={[1, 1.5]}
+        camera={{ position: [0, 0, 150], fov: 50 }}
+      >
+        <Model {...props} />
+      </Canvas>
+    </>
   )
 }

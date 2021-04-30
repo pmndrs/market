@@ -6,7 +6,7 @@
   * {
     box-sizing: border-box;
   }
-  
+
   html,
   body,
   #__next {
@@ -16,4 +16,8 @@
     padding: 0;
     overflow: hidden;
   }
+}
+
+a {
+  @apply text-indigo-700;
 }

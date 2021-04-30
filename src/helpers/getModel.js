@@ -1,0 +1,32 @@
+import path from 'path'
+import fs from 'fs'
+
+const getModel = (name) => {
+  const a = path.join(process.cwd(), 'public/resources')
+  var model = {}
+  const newPath = path.join(a, name)
+  if (fs.statSync(newPath).isDirectory()) {
+    // eslint-disable-next-line array-callback-return
+    fs.readdirSync(newPath).map((filename) => {
+      const filePath = path.join(a, name, filename)
+      const fileContents = fs.readFileSync(filePath, 'utf-8')
+      var stats = fs.statSync(filePath)
+      var fileSizeInBytes = stats.size
+      model.size = (fileSizeInBytes / 1024).toFixed(2)
+      model.url = name
+      if (filename.includes('.png') || filename.includes('.jpg')) {
+        model.image = `/resources/${name}/${filename}`
+      } else if (filename.includes('.json')) {
+        model.info = JSON.parse(fileContents)
+      } else {
+        model.gltf = `resources/${name}/${filename}`
+        model.buffer = fileContents
+      }
+    })
+    return model
+  }
+
+  return model
+}
+
+export default getModel

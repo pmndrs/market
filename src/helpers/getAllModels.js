@@ -15,7 +15,8 @@ const getAllModels = () => {
         const fileContents = fs.readFileSync(filePath, 'utf-8')
         var stats = fs.statSync(filePath)
         var fileSizeInBytes = stats.size
-        model.size = (fileSizeInBytes / (1024 * 1024)).toFixed(2)
+        model.size = (fileSizeInBytes / 1024).toFixed(2)
+        model.url = folder
         if (filename.includes('.png') || filename.includes('.jpg')) {
           model.image = `/resources/${folder}/${filename}`
         } else if (filename.includes('.json')) {
