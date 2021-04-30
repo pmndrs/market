@@ -1,6 +1,5 @@
 import path from 'path'
 import fs from 'fs'
-import btoa from 'btoa'
 
 const getAllModels = () => {
   const a = path.join(process.cwd(), 'public/resources')
