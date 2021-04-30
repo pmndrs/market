@@ -1,5 +1,5 @@
 import useStore from '@/helpers/store'
-import getAllModels from '@/helpers/getAllModels'
+import { getAllModelLinks } from '@/helpers/getAllModels'
 import getModel from '@/helpers/getModel'
 import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
@@ -39,7 +39,7 @@ const Page = ({ title, model }) => {
               <span className='text-gray-600'>Size: </span>{' '}
               <span className='font-bold'>{model.size}KB</span>
             </span>
-            {model.info.categories.length && (
+            {model.info.categories && (
               <>
                 <span className='text-gray-600'>Categories: </span>
                 {model.info.categories.map((category) => (
@@ -88,7 +88,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const models = getAllModels().map((a) => `/model/${a.url}`)
+  const models = getAllModelLinks()
   return {
     paths: models,
     fallback: false,
