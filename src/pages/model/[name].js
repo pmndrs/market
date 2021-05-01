@@ -12,7 +12,7 @@ const Page = ({ title, model }) => {
   useStore.setState({ title })
   return (
     <Layout title={title}>
-      <main className='min-h-screen mt-10 grid sm:grid-cols-2 gap-x-4 gap-y-8'>
+      <main className='my-10 grid sm:grid-cols-2 gap-x-4 gap-y-8'>
         <div className='mt-5'>
           <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
             <img
