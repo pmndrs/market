@@ -17,7 +17,7 @@ const Model = (model) => {
             />
           </div>
           <p className='block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none'>
-            {model.info.name}
+            {model.info?.name}
           </p>
           <p className='block text-sm font-medium text-gray-500 pointer-events-none'>
             {model.size}KB
