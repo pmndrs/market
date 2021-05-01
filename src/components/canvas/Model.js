@@ -71,6 +71,7 @@ const Model = ({ buffer }) => {
         intensity={controls.intensity}
         contactShadow={controls.contactShadow}
         environment={controls.environment}
+        shadowBias={-0.001}
       >
         <primitive object={scene} />
       </Stage>
