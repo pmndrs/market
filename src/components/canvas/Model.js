@@ -1,12 +1,11 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stage } from '@react-three/drei'
-import { useState, useEffect, Suspense, useRef, useLayoutEffect } from 'react'
-
+import { Suspense, useRef, useLayoutEffect } from 'react'
 import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 import { useControls } from 'leva'
+import { useAsset } from 'use-asset'
 
 const Model = ({ buffer }) => {
-  const [scene, setScene] = useState()
   const ref = useRef()
   const controls = useControls(
     {
@@ -43,50 +42,38 @@ const Model = ({ buffer }) => {
     { collapsed: true }
   )
 
+  const scene = useAsset(
+    async ([buffer]) => {
+      const gltfLoader = new GLTFLoader()
+      const dracoloader = new DRACOLoader()
+      dracoloader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
+      gltfLoader.setDRACOLoader(dracoloader)
+      gltfLoader.setMeshoptDecoder(MeshoptDecoder)
+      const result = await new Promise((resolve, reject) =>
+        gltfLoader.parse(buffer, '', resolve, reject)
+      )
+      return result.scenes[0]
+    },
+    [buffer]
+  )
+
   useLayoutEffect(() => {
-    scene &&
-      scene.traverse((obj) => {
-        if (obj.isMesh) {
-          obj.castShadow = obj.receiveShadow = true
-          obj.material.envMapIntensity = 0.8
-        }
-      })
+    void scene.traverse(
+      (obj) => obj.isMesh && (obj.castShadow = obj.receiveShadow = true)
+    )
   }, [scene])
 
-  const getModel = async () => {
-    const gltfLoader = new GLTFLoader()
-    const dracoloader = new DRACOLoader()
-    dracoloader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
-    gltfLoader.setDRACOLoader(dracoloader)
-    gltfLoader.setMeshoptDecoder(MeshoptDecoder)
-    const result = await new Promise((resolve, reject) =>
-      gltfLoader.parse(buffer, '', resolve, reject)
-    )
-    setScene(result.scenes[0])
-  }
-
-  useEffect(() => {
-    getModel()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-  if (!scene) return null
   return (
     <>
-      <ambientLight intensity={0.25} />
-      <Suspense fallback={null}>
-        <Stage
-          controls={ref}
-          preset={controls.preset}
-          intensity={controls.intensity}
-          contactShadow={controls.contactShadow}
-          shadows
-          adjustCamera
-          environment={controls.environment}
-        >
-          <sphereGeometry />
-          <primitive object={scene} />
-        </Stage>
-      </Suspense>
+      <Stage
+        controls={ref}
+        preset={controls.preset}
+        intensity={controls.intensity}
+        contactShadow={controls.contactShadow}
+        environment={controls.environment}
+      >
+        <primitive object={scene} />
+      </Stage>
       <OrbitControls ref={ref} autoRotate={controls.autoRotate} />
     </>
   )
@@ -94,15 +81,17 @@ const Model = ({ buffer }) => {
 
 export default function ModelComponent(props) {
   return (
-    <>
-      {' '}
-      <Canvas
-        shadows
-        dpr={[1, 1.5]}
-        camera={{ position: [0, 0, 150], fov: 50 }}
-      >
+    <Canvas
+      shadows
+      gl={{ alpha: false }}
+      dpr={[1, 1.5]}
+      camera={{ position: [0, 0, 150], fov: 50 }}
+    >
+      <color attach='background' color='white' />
+      <ambientLight intensity={0.25} />
+      <Suspense fallback={null}>
         <Model {...props} />
-      </Canvas>
-    </>
+      </Suspense>
+    </Canvas>
   )
 }
