@@ -62,6 +62,7 @@ const Model = ({ buffer }) => {
     const result = await new Promise((resolve, reject) =>
       gltfLoader.parse(buffer, '', resolve, reject)
     )
+    console.log(result)
     setScene(result.scenes[0])
   }
 
