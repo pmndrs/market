@@ -56,6 +56,7 @@ const Page = ({ title, model }) => {
               <button className='block w-full py-2 text-center text-white bg-gray-800'>
                 Copy JSX Code
               </button>
+              {console.log(model.gltfTextured)}
               {model.gltfTextured && (
                 <a
                   href={model.gltfTextured}

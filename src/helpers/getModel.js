@@ -20,10 +20,10 @@ const getModel = (name) => {
         model.info = JSON.parse(fileContents)
       } else {
         if (filename.includes('_textures')) {
-          model.gltfTextured = `resources/${name}/${filename}`
+          model.gltfTextured = `/resources/${name}/${filename}`
           model.buffer = fileContents
         } else {
-          model.gltf = `resources/${name}/${filename}`
+          model.gltf = `/resources/${name}/${filename}`
         }
       }
     })
