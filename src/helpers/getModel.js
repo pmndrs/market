@@ -19,8 +19,12 @@ const getModel = (name) => {
       } else if (filename.includes('.json')) {
         model.info = JSON.parse(fileContents)
       } else {
-        model.gltf = `resources/${name}/${filename}`
-        model.buffer = fileContents
+        if (filename.includes('_textures')) {
+          model.gltfTextured = `resources/${name}/${filename}`
+          model.buffer = fileContents
+        } else {
+          model.gltf = `resources/${name}/${filename}`
+        }
       }
     })
     return model

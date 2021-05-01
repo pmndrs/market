@@ -21,9 +21,6 @@ const getAllModels = () => {
           model.image = `/resources/${folder}/${filename}`
         } else if (filename.includes('.json')) {
           model.info = JSON.parse(fileContents)
-        } else {
-          model.gltf = `resources/${folder}/${filename}`
-          model.buffer = fileContents
         }
       })
       return model

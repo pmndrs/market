@@ -13,7 +13,8 @@
     "build": "next build",
     "export": "EXPORT=true next build && EXPORT=true next export",
     "analyze": "ANALYZE=true next build",
-    "start": "next start"
+    "start": "next start",
+    "minify": "node server/minify.js"
   },
   "lint-staged": {
     "*.{js,jsx,json,md}": [
@@ -33,6 +34,7 @@
     "@react-three/gltfjsx": "^4.1.5",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "esbuild-loader": "^2.12.0",
+    "leva": "^0.9.9",
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -43,6 +45,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@next/bundle-analyzer": "^10.0.7",
+    "add": "^2.0.6",
     "autoprefixer": "^10.2.5",
     "babel-eslint": "^10.0.0",
     "babel-plugin-glsl": "^1.0.0",
@@ -58,8 +61,13 @@
     "eslint-plugin-tailwind": "^0.2.1",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
+    "fs-extra": "^9.1.0",
+    "glob": "^7.1.6",
     "glslify": "^7.1.1",
     "glslify-loader": "^2.0.0",
+    "gltf-pipeline": "^3.0.2",
+    "imagemin": "^7.0.1",
+    "imagemin-pngquant": "^9.0.2",
     "lint-staged": "^10.5.4",
     "next-compose-plugins": "^2.2.1",
     "next-offline": "^5.0.3",
@@ -67,7 +75,8 @@
     "prettier": "^2.2.1",
     "raw-loader": "^4.0.2",
     "url-loader": "^4.1.1",
-    "webpack": "^5.28.0"
+    "webpack": "^5.28.0",
+    "yarn": "^1.22.10"
   },
   "license": "MIT"
 }

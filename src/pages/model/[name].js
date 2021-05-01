@@ -56,6 +56,15 @@ const Page = ({ title, model }) => {
               <button className='block w-full py-2 text-center text-white bg-gray-800'>
                 Copy JSX Code
               </button>
+              {model.gltfTextured && (
+                <a
+                  href={model.gltfTextured}
+                  download
+                  className='block w-full py-2 mt-4 text-center text-white bg-indigo-600'
+                >
+                  Download Textured GLTF
+                </a>
+              )}
               <a
                 href={model.gltf}
                 download
