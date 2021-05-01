@@ -33,7 +33,18 @@ const Page = ({ title, model }) => {
             </a>
             <span className='block'>
               <span className='text-gray-600'>License: </span>{' '}
-              <span className='font-bold'>{model.info.license}</span>
+              {model.info.license === 1 ? (
+                <a
+                  target='_blank'
+                  href='https://creativecommons.org/share-your-work/public-domain/cc0/'
+                  rel='noreferrer'
+                  className='font-bold'
+                >
+                  CC0
+                </a>
+              ) : (
+                <span className='font-bold'>{model.info.license}</span>
+              )}
             </span>
             <span className='block'>
               <span className='text-gray-600'>Size: </span>{' '}

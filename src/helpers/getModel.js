@@ -1,15 +1,14 @@
 import path from 'path'
 import fs from 'fs'
-import { mode } from '../../tailwind.config'
 
 const getModel = (name) => {
-  const a = path.join(process.cwd(), 'public/resources')
+  const resources = path.join(process.cwd(), 'public/resources')
   var model = {}
-  const newPath = path.join(a, name)
+  const newPath = path.join(resources, name)
   if (fs.statSync(newPath).isDirectory()) {
     // eslint-disable-next-line array-callback-return
     fs.readdirSync(newPath).map((filename) => {
-      const filePath = path.join(a, name, filename)
+      const filePath = path.join(resources, name, filename)
       const fileContents = fs.readFileSync(filePath, 'utf-8')
       var stats = fs.statSync(filePath)
       var fileSizeInBytes = stats.size
