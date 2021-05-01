@@ -3,12 +3,27 @@ import getAllModels from '@/helpers/getAllModels'
 import Model from '@/components/Model'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Page = ({ title, models }) => {
   useStore.setState({ title })
   const [currentModels, setCurrentModels] = useState(models)
   const [search, setSearch] = useState('')
+
+  useEffect(() => {
+    if (search.length) {
+      const searchResults = models.filter((model) => {
+        return (
+          model.url.toLowerCase().includes(search.toLowerCase()) ||
+          model.info.name.toLowerCase().includes(search.toLowerCase())
+        )
+      })
+      setCurrentModels(searchResults)
+    } else {
+      setCurrentModels(models)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search])
   return (
     <Layout>
       <div>
@@ -20,6 +35,8 @@ const Page = ({ title, models }) => {
             type='search'
             name='search'
             id='search'
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             className='block w-full pr-10 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
             placeholder='Search for models'
           />
