@@ -25,9 +25,11 @@ const getAllModels = () => {
       })
       return model
     }
+
+    model = null
   })
 
-  return models
+  return models.filter((a) => a)
 }
 
 export const getAllModelLinks = () => {
