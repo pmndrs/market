@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs'
+import { mode } from '../../tailwind.config'
 
 const getModel = (name) => {
   const a = path.join(process.cwd(), 'public/resources')
@@ -24,6 +25,7 @@ const getModel = (name) => {
           model.buffer = fileContents
         } else {
           model.gltf = `/resources/${name}/${filename}`
+          if (!model.buffer) model.buffer = fileContents
         }
       }
     })
