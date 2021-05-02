@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
 import ModelInfo from '../../components/ModelInfo'
 import { useEffect } from 'react'
+import { Leva } from 'leva'
 
 const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
@@ -16,9 +17,15 @@ const Page = ({ title, model }) => {
   }, [])
   return (
     <Layout title={title}>
-      <main className='my-10 grid sm:grid-cols-2 gap-x-4 gap-y-8'>
+      <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
         <ModelInfo {...model} />
-        <div className='w-full h-full'>
+        <div className='min-w-full min-h-full col-span-2'>
+          <div
+            className='absolute z-10 hidden right-[-60px] sm:block top-[-10px]'
+            style={{ transform: 'translateX(50%)' }}
+          >
+            <Leva fill />
+          </div>
           <Viewer buffer={model.buffer} />
         </div>
       </main>
