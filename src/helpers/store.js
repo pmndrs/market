@@ -18,7 +18,11 @@ const useStore = create((set, get) => {
       set({ search: search })
       if (search.length) {
         const searchResults = models.filter((model) => {
+          const cats = model.info.categories.map((cat) =>
+            cat.toLowerCase()
+          ) || ['']
           return (
+            cats[0].includes(search.toLowerCase()) ||
             model.url.toLowerCase().includes(search.toLowerCase()) ||
             model.info.name.toLowerCase().includes(search.toLowerCase())
           )
