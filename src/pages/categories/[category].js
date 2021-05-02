@@ -8,7 +8,8 @@ import getAllCategories from '@/helpers/getAllCategories'
 const Page = ({ title, models }) => {
   useEffect(() => {
     useStore.setState({ title })
-  }, [])
+  }, [title])
+
   return (
     <Layout title={`Models in ${title}`}>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>

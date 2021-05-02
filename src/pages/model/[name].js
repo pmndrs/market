@@ -14,7 +14,8 @@ const Viewer = dynamic(() => import('@/components/canvas/Model'), {
 const Page = ({ title, model }) => {
   useEffect(() => {
     useStore.setState({ title })
-  }, [])
+  }, [title])
+
   return (
     <Layout title={title}>
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
