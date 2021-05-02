@@ -34,6 +34,7 @@
     "@react-three/gltfjsx": "^4.1.5",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.3.2",
+    "@tippyjs/react": "^4.2.5",
     "clipboard-copy": "^4.0.1",
     "esbuild-loader": "^2.12.0",
     "leva": "^0.9.9",

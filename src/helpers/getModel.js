@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs'
+import { getSize } from './getFileSize'
 
 const getModel = (name) => {
   const resources = path.join(process.cwd(), 'public/resources')
@@ -10,9 +11,11 @@ const getModel = (name) => {
     fs.readdirSync(newPath).map((filename) => {
       const filePath = path.join(resources, name, filename)
       const fileContents = fs.readFileSync(filePath, 'utf-8')
-      var stats = fs.statSync(filePath)
-      var fileSizeInBytes = stats.size
-      model.size = (fileSizeInBytes / 1024).toFixed(2)
+      if (filename.includes('.gltf')) {
+        const { size, highPoly } = getSize(filePath)
+        model.size = size
+        model.highPoly = highPoly
+      }
       model.url = name
       if (filename.includes('.png') || filename.includes('.jpg')) {
         model.image = `/resources/${name}/${filename}`
