@@ -90,17 +90,12 @@ const ModelInfo = (model) => {
             <span>{model.size}</span>
           </span>
         </span>
-        {model.info.categories && (
+        {model.info.category && (
           <>
-            <span className='text-gray-600'>Categories: </span>
-            {model.info.categories.map((category) => (
-              <span
-                key={category}
-                className='inline-flex items-center px-2 mt-1 text-xs font-medium text-gray-800 bg-gray-100 rounded py-0.5'
-              >
-                {category}
-              </span>
-            ))}
+            <span className='text-gray-600'>Category: </span>
+            <span className='inline-flex items-center px-2 mt-1 text-xs font-medium text-gray-800 bg-gray-100 rounded py-0.5'>
+              {model.info.category}
+            </span>
           </>
         )}
         <div className='mt-7'>

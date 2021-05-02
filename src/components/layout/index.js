@@ -46,7 +46,11 @@ const Layout = ({ children, title }) => {
 
   const navigation = [
     { name: 'All Models', href: '/', current: pathname === '/' },
-    { name: 'Team', href: '/', current: false },
+    {
+      name: 'Categories',
+      href: '/categories',
+      current: pathname === '/categories',
+    },
     { name: 'Projects', href: '/', current: false },
     { name: 'Calendar', href: '/', current: false },
   ]
