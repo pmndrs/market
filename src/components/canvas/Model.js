@@ -4,9 +4,11 @@ import { Suspense, useRef, useLayoutEffect } from 'react'
 import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 import { useControls } from 'leva'
 import { useAsset } from 'use-asset'
+import useStore from '@/helpers/store'
 
 const Model = ({ buffer }) => {
   const ref = useRef()
+
   const controls = useControls(
     {
       autoRotate: true,
@@ -52,6 +54,7 @@ const Model = ({ buffer }) => {
       const result = await new Promise((resolve, reject) =>
         gltfLoader.parse(buffer, '', resolve, reject)
       )
+      useStore.setState({ parsedBuffer: result })
       return result.scenes[0]
     },
     [buffer]

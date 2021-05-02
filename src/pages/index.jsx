@@ -3,40 +3,35 @@ import getAllModels from '@/helpers/getAllModels'
 import Model from '@/components/Model'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
-const Page = ({ title, models }) => {
-  useStore.setState({ title })
-  const [currentModels, setCurrentModels] = useState(models)
-  const [search, setSearch] = useState('')
+const Index = ({ title, models }) => {
+  const { search, currentModels, setSearch } = useStore((state) => ({
+    search: state.search,
+    currentModels: state.currentModels,
+    setSearch: state.setSearch,
+  }))
 
   useEffect(() => {
-    if (search.length) {
-      const searchResults = models.filter((model) => {
-        return (
-          model.url.toLowerCase().includes(search.toLowerCase()) ||
-          model.info.name.toLowerCase().includes(search.toLowerCase())
-        )
-      })
-      setCurrentModels(searchResults)
-    } else {
-      setCurrentModels(models)
-    }
+    useStore.setState({ currentModels: models })
+    useStore.setState({ defaultModels: models })
+    useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search])
+  }, [])
+
   return (
     <Layout>
       <div>
         <label htmlFor='search' className='sr-only'>
           Search for modules
         </label>
-        <div className='relative mt-1 rounded-md shadow-sm mt-6'>
+        <div className='relative mt-6 rounded-md shadow-sm'>
           <input
             type='search'
             name='search'
             id='search'
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={setSearch}
             className='block w-full pr-10 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
             placeholder='Search for models'
           />
@@ -54,9 +49,8 @@ const Page = ({ title, models }) => {
   )
 }
 
-export default Page
-// This function gets called at build time on server-side.
-// It won't be called on client-side.
+export default Index
+
 export async function getStaticProps() {
   const models = getAllModels()
 
