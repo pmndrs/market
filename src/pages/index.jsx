@@ -18,9 +18,11 @@ const Index = ({ title, models }) => {
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
+  const heading = search
+    ? `Search for ${search}`
+    : `All Models (${currentModels.length})`
   return (
-    <Layout>
+    <Layout title={heading}>
       <div>
         <label htmlFor='search' className='sr-only'>
           Search for modules
