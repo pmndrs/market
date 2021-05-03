@@ -3,6 +3,7 @@ import create from 'zustand'
 const useStore = create((set, get) => {
   return {
     router: {},
+    user: null,
     events: null,
     setEvents: (events) => {
       set({ events })

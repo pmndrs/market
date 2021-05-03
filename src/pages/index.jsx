@@ -5,13 +5,12 @@ import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
 
-const Index = ({ title, models }) => {
+const Index = ({ title, models, user }) => {
   const { search, currentModels, setSearch } = useStore((state) => ({
     search: state.search,
     currentModels: state.currentModels,
     setSearch: state.setSearch,
   }))
-
   useEffect(() => {
     useStore.setState({ currentModels: models })
     useStore.setState({ defaultModels: models })

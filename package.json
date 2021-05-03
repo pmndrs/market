@@ -32,6 +32,8 @@
     "@react-three/drei": "^4.3.3",
     "@react-three/fiber": "^6.0.19",
     "@react-three/gltfjsx": "^4.1.5",
+    "@supabase/supabase-js": "^1.11.9",
+    "@supabase/ui": "^0.24.2",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.3.2",
     "@tippyjs/react": "^4.2.5",
@@ -41,6 +43,7 @@
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "swr": "^0.5.5",
     "tailwindcss": "^2.1.2",
     "three": "^0.128.0",
     "three-stdlib": "^2.0.1"
