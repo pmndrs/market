@@ -40,3 +40,4 @@ report.*.json
 
 # .vscode Debugging
 .vscode/*-debug-profile
+.env
