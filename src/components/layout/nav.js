@@ -24,8 +24,11 @@ const Nav = () => {
       href: '/categories',
       current: pathname === '/categories',
     },
-    { name: 'Projects', href: '/', current: false },
-    { name: 'Calendar', href: '/', current: false },
+    {
+      name: 'Request a Model',
+      href: '/request',
+      current: pathname === '/request',
+    },
   ]
 
   return (

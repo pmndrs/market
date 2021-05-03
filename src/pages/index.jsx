@@ -42,8 +42,8 @@ const Index = ({ title, models, user }) => {
         </div>
       </div>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
-        {currentModels.map((model) => (
-          <Model {...model} key={model.gltf} />
+        {currentModels.map((model, i) => (
+          <Model {...model} key={i} />
         ))}
       </ul>
     </Layout>
