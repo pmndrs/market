@@ -10,13 +10,13 @@ const Index = ({ user, authView }) => {
   }
 
   return (
-    <Layout>
-      <div className='max-w-[600px]'>
+    <Layout title='Sign In' center>
+      <div className='m-auto mt-5 max-w-[600px]'>
         <Auth
+          className='login-component'
           supabaseClient={supabase}
           providers={['github']}
           view={authView}
-          socialLayout='horizontal'
           socialButtonSize='xlarge'
         />
       </div>
