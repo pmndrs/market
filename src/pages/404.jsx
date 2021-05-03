@@ -1,4 +1,11 @@
-// custom pages/404.js !! Do not remove please or it will break build
+import Layout from '@/components/layout'
+import useStore from '@/helpers/store'
+
 export default function Error() {
-  return <h1>404 - Page Not Found</h1>
+  useStore.setState({ title: '404' })
+  return (
+    <Layout title='OH NO'>
+      <h1 className='mt-6'>404 - Seems you got lost</h1>
+    </Layout>
+  )
 }

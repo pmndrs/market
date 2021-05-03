@@ -1,4 +1,11 @@
-// custom pages/500.js !! Do not remove please or it will break build
+import Layout from '@/components/layout'
+import useStore from '@/helpers/store'
+
 export default function Error() {
-  return <h1>500 - Something went wrong</h1>
+  useStore.setState({ title: 'Bad error' })
+  return (
+    <Layout title='OH NO'>
+      <h1 className='mt-6'>500 - Something went wrong</h1>
+    </Layout>
+  )
 }
