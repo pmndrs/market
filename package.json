@@ -14,7 +14,8 @@
     "export": "EXPORT=true next build && EXPORT=true next export",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
-    "minify": "node server/minify.js"
+    "minify": "node server/minify.js",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,json,md}": [
@@ -75,6 +76,7 @@
     "glslify-loader": "^2.0.0",
     "gltf-pipeline": "^3.0.2",
     "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
     "lint-staged": "^10.5.4",
     "next-compose-plugins": "^2.2.1",
@@ -84,7 +86,8 @@
     "raw-loader": "^4.0.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.28.0",
-    "yarn": "^1.22.10"
+    "yarn": "^1.22.10",
+    "husky": "^6.0.0"
   },
   "license": "MIT"
 }
