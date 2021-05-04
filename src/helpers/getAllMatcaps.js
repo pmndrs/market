@@ -34,7 +34,7 @@ export const getAllMatcapsLinks = () => {
       const newPath = path.join(resources, folder)
       return fs.statSync(newPath).isDirectory()
     })
-    .map((a) => `/model/${a}`)
+    .map((a) => `/matcap/${a}`)
 
   return models
 }
