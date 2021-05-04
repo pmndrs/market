@@ -4,8 +4,8 @@ import Layout from '@/components/layout/'
 import ModelInfo from '../../components/ModelInfo'
 import { useEffect } from 'react'
 import { Leva } from 'leva'
-import { getAllMatcapsLinks } from '@/helpers/getAllMatcaps'
-import getMatcap from '@/helpers/getMatcap'
+// import { getAllMatcapsLinks } from '@/helpers/getAllMatcaps'
+// import getMatcap from '@/helpers/getMatcap'
 
 const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
@@ -37,8 +37,8 @@ const Page = ({ title, model }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const matcap = getMatcap(params.name)
-
+  // const matcap = getMatcap(params.name)
+  const matcap = {}
   return {
     props: {
       matcap,
@@ -48,7 +48,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const matcaps = getAllMatcapsLinks()
+  // const matcaps = getAllMatcapsLinks()
+  const matcaps = []
   return {
     paths: matcaps,
     fallback: false,

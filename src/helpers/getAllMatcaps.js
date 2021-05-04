@@ -14,6 +14,7 @@ const getAllMatcaps = () => {
       fs.readdirSync(newPath).map((filename) => {
         const filePath = path.join(resources, folder, filename)
         const fileContents = fs.readFileSync(filePath, 'utf-8')
+        matcap.url = folder
         if (filename.includes('.json')) {
           matcap.info = JSON.parse(fileContents)
         }
