@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/796D6B_DED3CB_C6BAB1_ADA09B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/796D6B_DED3CB_C6BAB1_ADA09B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/796D6B_DED3CB_C6BAB1_ADA09B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/796D6B_DED3CB_C6BAB1_ADA09B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/796D6B_DED3CB_C6BAB1_ADA09B.png",
+  "index": 328,
+  "title": "796D6B_DED3CB_C6BAB1_ADA09B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/796D6B_DED3CB_C6BAB1_ADA09B-preview.png",
+  "colors": [
+    {
+      "color": "796D6B",
+      "name": "Spicy Pink"
+    },
+    {
+      "color": "DED3CB",
+      "name": "Wafer"
+    },
+    {
+      "color": "C6BAB1",
+      "name": "Tea"
+    },
+    {
+      "color": "ADA09B",
+      "name": "Martini"
+    }
+  ]
+}

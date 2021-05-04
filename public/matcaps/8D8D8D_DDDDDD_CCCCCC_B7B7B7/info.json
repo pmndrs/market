@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8D8D8D_DDDDDD_CCCCCC_B7B7B7.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8D8D8D_DDDDDD_CCCCCC_B7B7B7.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8D8D8D_DDDDDD_CCCCCC_B7B7B7.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8D8D8D_DDDDDD_CCCCCC_B7B7B7.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8D8D8D_DDDDDD_CCCCCC_B7B7B7.png",
+  "index": 398,
+  "title": "8D8D8D_DDDDDD_CCCCCC_B7B7B7",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8D8D8D_DDDDDD_CCCCCC_B7B7B7-preview.png",
+  "colors": [
+    {
+      "color": "8D8D8D",
+      "name": "Gray"
+    },
+    {
+      "color": "DDDDDD",
+      "name": "Alto"
+    },
+    {
+      "color": "CCCCCC",
+      "name": "Silver"
+    },
+    {
+      "color": "B7B7B7",
+      "name": "Nobel"
+    }
+  ]
+}

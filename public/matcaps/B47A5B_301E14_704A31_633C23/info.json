@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B47A5B_301E14_704A31_633C23.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B47A5B_301E14_704A31_633C23.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B47A5B_301E14_704A31_633C23.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B47A5B_301E14_704A31_633C23.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B47A5B_301E14_704A31_633C23.png",
+  "index": 530,
+  "title": "B47A5B_301E14_704A31_633C23",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B47A5B_301E14_704A31_633C23-preview.png",
+  "colors": [
+    {
+      "color": "B47A5B",
+      "name": "Santa Fe"
+    },
+    {
+      "color": "301E14",
+      "name": "Eclipse"
+    },
+    {
+      "color": "704A31",
+      "name": "Old Copper"
+    },
+    {
+      "color": "633C23",
+      "name": "Irish Coffee"
+    }
+  ]
+}

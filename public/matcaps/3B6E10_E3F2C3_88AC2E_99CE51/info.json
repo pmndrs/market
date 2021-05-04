@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3B6E10_E3F2C3_88AC2E_99CE51.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3B6E10_E3F2C3_88AC2E_99CE51.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3B6E10_E3F2C3_88AC2E_99CE51.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3B6E10_E3F2C3_88AC2E_99CE51.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3B6E10_E3F2C3_88AC2E_99CE51.png",
+  "index": 98,
+  "title": "3B6E10_E3F2C3_88AC2E_99CE51",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3B6E10_E3F2C3_88AC2E_99CE51-preview.png",
+  "colors": [
+    {
+      "color": "3B6E10",
+      "name": "Green Leaf"
+    },
+    {
+      "color": "E3F2C3",
+      "name": "Tusk"
+    },
+    {
+      "color": "88AC2E",
+      "name": "Sushi"
+    },
+    {
+      "color": "99CE51",
+      "name": "Conifer"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CEB299_6B5C4C_887564_746355.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CEB299_6B5C4C_887564_746355.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CEB299_6B5C4C_887564_746355.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CEB299_6B5C4C_887564_746355.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CEB299_6B5C4C_887564_746355.png",
+  "index": 618,
+  "title": "CEB299_6B5C4C_887564_746355",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CEB299_6B5C4C_887564_746355-preview.png",
+  "colors": [
+    {
+      "color": "CEB299",
+      "name": "Rodeo Dust"
+    },
+    {
+      "color": "6B5C4C",
+      "name": "Soya Bean"
+    },
+    {
+      "color": "887564",
+      "name": "Cement"
+    },
+    {
+      "color": "746355",
+      "name": "Coffee"
+    }
+  ]
+}

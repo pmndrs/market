@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9D9D9D_4E4E4E_646464_6C6C6C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9D9D9D_4E4E4E_646464_6C6C6C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9D9D9D_4E4E4E_646464_6C6C6C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9D9D9D_4E4E4E_646464_6C6C6C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9D9D9D_4E4E4E_646464_6C6C6C.png",
+  "index": 482,
+  "title": "9D9D9D_4E4E4E_646464_6C6C6C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9D9D9D_4E4E4E_646464_6C6C6C-preview.png",
+  "colors": [
+    {
+      "color": "9D9D9D",
+      "name": "Silver Chalice"
+    },
+    {
+      "color": "4E4E4E",
+      "name": "Tundora"
+    },
+    {
+      "color": "646464",
+      "name": "Dove Gray"
+    },
+    {
+      "color": "6C6C6C",
+      "name": "Dove Gray"
+    }
+  ]
+}

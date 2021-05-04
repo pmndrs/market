@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2A4BA7_1B2D44_1F3768_233C81.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2A4BA7_1B2D44_1F3768_233C81.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2A4BA7_1B2D44_1F3768_233C81.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2A4BA7_1B2D44_1F3768_233C81.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2A4BA7_1B2D44_1F3768_233C81.png",
+  "index": 50,
+  "title": "2A4BA7_1B2D44_1F3768_233C81",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2A4BA7_1B2D44_1F3768_233C81-preview.png",
+  "colors": [
+    {
+      "color": "2A4BA7",
+      "name": "Sapphire"
+    },
+    {
+      "color": "1B2D44",
+      "name": "Big Stone"
+    },
+    {
+      "color": "1F3768",
+      "name": "Biscay"
+    },
+    {
+      "color": "233C81",
+      "name": "Bay of Many"
+    }
+  ]
+}

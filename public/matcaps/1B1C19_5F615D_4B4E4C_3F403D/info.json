@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/1B1C19_5F615D_4B4E4C_3F403D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/1B1C19_5F615D_4B4E4C_3F403D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/1B1C19_5F615D_4B4E4C_3F403D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/1B1C19_5F615D_4B4E4C_3F403D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/1B1C19_5F615D_4B4E4C_3F403D.png",
+  "index": 29,
+  "title": "1B1C19_5F615D_4B4E4C_3F403D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/1B1C19_5F615D_4B4E4C_3F403D-preview.png",
+  "colors": [
+    {
+      "color": "1B1C19",
+      "name": "Heavy Metal"
+    },
+    {
+      "color": "5F615D",
+      "name": "Storm Dust"
+    },
+    {
+      "color": "4B4E4C",
+      "name": "Nandor"
+    },
+    {
+      "color": "3F403D",
+      "name": "Lunar Green"
+    }
+  ]
+}

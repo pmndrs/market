@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9A7467_D2C2BF_662D22_CCB2A5.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9A7467_D2C2BF_662D22_CCB2A5.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9A7467_D2C2BF_662D22_CCB2A5.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9A7467_D2C2BF_662D22_CCB2A5.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9A7467_D2C2BF_662D22_CCB2A5.png",
+  "index": 470,
+  "title": "9A7467_D2C2BF_662D22_CCB2A5",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9A7467_D2C2BF_662D22_CCB2A5-preview.png",
+  "colors": [
+    {
+      "color": "9A7467",
+      "name": "Toast"
+    },
+    {
+      "color": "D2C2BF",
+      "name": "Cold Turkey"
+    },
+    {
+      "color": "662D22",
+      "name": "Irish Coffee"
+    },
+    {
+      "color": "CCB2A5",
+      "name": "Rodeo Dust"
+    }
+  ]
+}

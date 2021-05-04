@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8F4E20_E8B06B_391A08_CC8944.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8F4E20_E8B06B_391A08_CC8944.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8F4E20_E8B06B_391A08_CC8944.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8F4E20_E8B06B_391A08_CC8944.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8F4E20_E8B06B_391A08_CC8944.png",
+  "index": 443,
+  "title": "8F4E20_E8B06B_391A08_CC8944",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8F4E20_E8B06B_391A08_CC8944-preview.png",
+  "colors": [
+    {
+      "color": "8F4E20",
+      "name": "Rope"
+    },
+    {
+      "color": "E8B06B",
+      "name": "Porsche"
+    },
+    {
+      "color": "391A08",
+      "name": "Bronze"
+    },
+    {
+      "color": "CC8944",
+      "name": "Raw Sienna"
+    }
+  ]
+}

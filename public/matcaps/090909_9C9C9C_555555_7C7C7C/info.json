@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/090909_9C9C9C_555555_7C7C7C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/090909_9C9C9C_555555_7C7C7C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/090909_9C9C9C_555555_7C7C7C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/090909_9C9C9C_555555_7C7C7C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/090909_9C9C9C_555555_7C7C7C.png",
+  "index": 11,
+  "title": "090909_9C9C9C_555555_7C7C7C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/090909_9C9C9C_555555_7C7C7C-preview.png",
+  "colors": [
+    {
+      "color": "090909",
+      "name": "Cod Gray"
+    },
+    {
+      "color": "9C9C9C",
+      "name": "Dusty Gray"
+    },
+    {
+      "color": "555555",
+      "name": "Emperor"
+    },
+    {
+      "color": "7C7C7C",
+      "name": "Boulder"
+    }
+  ]
+}

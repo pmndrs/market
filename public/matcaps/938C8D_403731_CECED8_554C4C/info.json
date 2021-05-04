@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/938C8D_403731_CECED8_554C4C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/938C8D_403731_CECED8_554C4C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/938C8D_403731_CECED8_554C4C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/938C8D_403731_CECED8_554C4C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/938C8D_403731_CECED8_554C4C.png",
+  "index": 457,
+  "title": "938C8D_403731_CECED8_554C4C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/938C8D_403731_CECED8_554C4C-preview.png",
+  "colors": [
+    {
+      "color": "938C8D",
+      "name": "Hurricane"
+    },
+    {
+      "color": "403731",
+      "name": "Armadillo"
+    },
+    {
+      "color": "CECED8",
+      "name": "Mischka"
+    },
+    {
+      "color": "554C4C",
+      "name": "Emperor"
+    }
+  ]
+}

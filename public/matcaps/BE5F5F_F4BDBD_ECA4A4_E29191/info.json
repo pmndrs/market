@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/BE5F5F_F4BDBD_ECA4A4_E29191.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/BE5F5F_F4BDBD_ECA4A4_E29191.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/BE5F5F_F4BDBD_ECA4A4_E29191.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/BE5F5F_F4BDBD_ECA4A4_E29191.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/BE5F5F_F4BDBD_ECA4A4_E29191.png",
+  "index": 555,
+  "title": "BE5F5F_F4BDBD_ECA4A4_E29191",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/BE5F5F_F4BDBD_ECA4A4_E29191-preview.png",
+  "colors": [
+    {
+      "color": "BE5F5F",
+      "name": "Fuzzy Wuzzy Brown"
+    },
+    {
+      "color": "F4BDBD",
+      "name": "Mandys Pink"
+    },
+    {
+      "color": "ECA4A4",
+      "name": "Sea Pink"
+    },
+    {
+      "color": "E29191",
+      "name": "Petite Orchid"
+    }
+  ]
+}

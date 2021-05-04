@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/815F54_DECBC6_301813_C5A8A0.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/815F54_DECBC6_301813_C5A8A0.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/815F54_DECBC6_301813_C5A8A0.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/815F54_DECBC6_301813_C5A8A0.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/815F54_DECBC6_301813_C5A8A0.png",
+  "index": 360,
+  "title": "815F54_DECBC6_301813_C5A8A0",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/815F54_DECBC6_301813_C5A8A0-preview.png",
+  "colors": [
+    {
+      "color": "815F54",
+      "name": "Roman Coffee"
+    },
+    {
+      "color": "DECBC6",
+      "name": "Wafer"
+    },
+    {
+      "color": "301813",
+      "name": "Tamarind"
+    },
+    {
+      "color": "C5A8A0",
+      "name": "Rodeo Dust"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/513A11_CDBEB5_C8811C_9A733F.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/513A11_CDBEB5_C8811C_9A733F.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/513A11_CDBEB5_C8811C_9A733F.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/513A11_CDBEB5_C8811C_9A733F.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/513A11_CDBEB5_C8811C_9A733F.png",
+  "index": 167,
+  "title": "513A11_CDBEB5_C8811C_9A733F",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/513A11_CDBEB5_C8811C_9A733F-preview.png",
+  "colors": [
+    {
+      "color": "513A11",
+      "name": "Bronzetone"
+    },
+    {
+      "color": "CDBEB5",
+      "name": "Cold Turkey"
+    },
+    {
+      "color": "C8811C",
+      "name": "Geebung"
+    },
+    {
+      "color": "9A733F",
+      "name": "Cape Palliser"
+    }
+  ]
+}

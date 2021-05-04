@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B3AA93_F4EFD7_E1DDC2_DCD3BB.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B3AA93_F4EFD7_E1DDC2_DCD3BB.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B3AA93_F4EFD7_E1DDC2_DCD3BB.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B3AA93_F4EFD7_E1DDC2_DCD3BB.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B3AA93_F4EFD7_E1DDC2_DCD3BB.png",
+  "index": 529,
+  "title": "B3AA93_F4EFD7_E1DDC2_DCD3BB",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B3AA93_F4EFD7_E1DDC2_DCD3BB-preview.png",
+  "colors": [
+    {
+      "color": "B3AA93",
+      "name": "Heathered Gray"
+    },
+    {
+      "color": "F4EFD7",
+      "name": "Wheatfield"
+    },
+    {
+      "color": "E1DDC2",
+      "name": "Tana"
+    },
+    {
+      "color": "DCD3BB",
+      "name": "Tana"
+    }
+  ]
+}

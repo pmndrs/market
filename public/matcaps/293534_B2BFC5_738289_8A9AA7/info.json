@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/293534_B2BFC5_738289_8A9AA7.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/293534_B2BFC5_738289_8A9AA7.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/293534_B2BFC5_738289_8A9AA7.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/293534_B2BFC5_738289_8A9AA7.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/293534_B2BFC5_738289_8A9AA7.png",
+  "index": 45,
+  "title": "293534_B2BFC5_738289_8A9AA7",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/293534_B2BFC5_738289_8A9AA7-preview.png",
+  "colors": [
+    {
+      "color": "293534",
+      "name": "Outer Space"
+    },
+    {
+      "color": "B2BFC5",
+      "name": "Submarine"
+    },
+    {
+      "color": "738289",
+      "name": "Rolling Stone"
+    },
+    {
+      "color": "8A9AA7",
+      "name": "Regent Gray"
+    }
+  ]
+}

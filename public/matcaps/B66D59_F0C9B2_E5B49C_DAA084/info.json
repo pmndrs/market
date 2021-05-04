@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B66D59_F0C9B2_E5B49C_DAA084.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B66D59_F0C9B2_E5B49C_DAA084.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B66D59_F0C9B2_E5B49C_DAA084.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B66D59_F0C9B2_E5B49C_DAA084.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B66D59_F0C9B2_E5B49C_DAA084.png",
+  "index": 535,
+  "title": "B66D59_F0C9B2_E5B49C_DAA084",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B66D59_F0C9B2_E5B49C_DAA084-preview.png",
+  "colors": [
+    {
+      "color": "B66D59",
+      "name": "Santa Fe"
+    },
+    {
+      "color": "F0C9B2",
+      "name": "Desert Sand"
+    },
+    {
+      "color": "E5B49C",
+      "name": "Cashmere"
+    },
+    {
+      "color": "DAA084",
+      "name": "Tumbleweed"
+    }
+  ]
+}

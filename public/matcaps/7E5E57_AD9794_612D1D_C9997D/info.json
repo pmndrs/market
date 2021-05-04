@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/7E5E57_AD9794_612D1D_C9997D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/7E5E57_AD9794_612D1D_C9997D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/7E5E57_AD9794_612D1D_C9997D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/7E5E57_AD9794_612D1D_C9997D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/7E5E57_AD9794_612D1D_C9997D.png",
+  "index": 347,
+  "title": "7E5E57_AD9794_612D1D_C9997D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/7E5E57_AD9794_612D1D_C9997D-preview.png",
+  "colors": [
+    {
+      "color": "7E5E57",
+      "name": "Russett"
+    },
+    {
+      "color": "AD9794",
+      "name": "Del Rio"
+    },
+    {
+      "color": "612D1D",
+      "name": "Espresso"
+    },
+    {
+      "color": "C9997D",
+      "name": "Tan"
+    }
+  ]
+}

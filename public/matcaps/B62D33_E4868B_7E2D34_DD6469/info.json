@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B62D33_E4868B_7E2D34_DD6469.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B62D33_E4868B_7E2D34_DD6469.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B62D33_E4868B_7E2D34_DD6469.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B62D33_E4868B_7E2D34_DD6469.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B62D33_E4868B_7E2D34_DD6469.png",
+  "index": 534,
+  "title": "B62D33_E4868B_7E2D34_DD6469",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B62D33_E4868B_7E2D34_DD6469-preview.png",
+  "colors": [
+    {
+      "color": "B62D33",
+      "name": "Well Read"
+    },
+    {
+      "color": "E4868B",
+      "name": "Tonys Pink"
+    },
+    {
+      "color": "7E2D34",
+      "name": "Nutmeg"
+    },
+    {
+      "color": "DD6469",
+      "name": "Roman"
+    }
+  ]
+}

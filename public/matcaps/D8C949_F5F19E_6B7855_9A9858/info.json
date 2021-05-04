@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/D8C949_F5F19E_6B7855_9A9858.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/D8C949_F5F19E_6B7855_9A9858.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/D8C949_F5F19E_6B7855_9A9858.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/D8C949_F5F19E_6B7855_9A9858.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/D8C949_F5F19E_6B7855_9A9858.png",
+  "index": 633,
+  "title": "D8C949_F5F19E_6B7855_9A9858",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/D8C949_F5F19E_6B7855_9A9858-preview.png",
+  "colors": [
+    {
+      "color": "D8C949",
+      "name": "Wattle"
+    },
+    {
+      "color": "F5F19E",
+      "name": "Sandwisp"
+    },
+    {
+      "color": "6B7855",
+      "name": "Siam"
+    },
+    {
+      "color": "9A9858",
+      "name": "Barley Corn"
+    }
+  ]
+}

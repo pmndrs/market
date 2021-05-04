@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/515151_DCDCDC_B7B7B7_9B9B9B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/515151_DCDCDC_B7B7B7_9B9B9B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/515151_DCDCDC_B7B7B7_9B9B9B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/515151_DCDCDC_B7B7B7_9B9B9B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/515151_DCDCDC_B7B7B7_9B9B9B.png",
+  "index": 169,
+  "title": "515151_DCDCDC_B7B7B7_9B9B9B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/515151_DCDCDC_B7B7B7_9B9B9B-preview.png",
+  "colors": [
+    {
+      "color": "515151",
+      "name": "Emperor"
+    },
+    {
+      "color": "DCDCDC",
+      "name": "Alto"
+    },
+    {
+      "color": "B7B7B7",
+      "name": "Nobel"
+    },
+    {
+      "color": "9B9B9B",
+      "name": "Dusty Gray"
+    }
+  ]
+}

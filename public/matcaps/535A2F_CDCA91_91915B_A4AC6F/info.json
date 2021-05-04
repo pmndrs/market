@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/535A2F_CDCA91_91915B_A4AC6F.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/535A2F_CDCA91_91915B_A4AC6F.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/535A2F_CDCA91_91915B_A4AC6F.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/535A2F_CDCA91_91915B_A4AC6F.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/535A2F_CDCA91_91915B_A4AC6F.png",
+  "index": 177,
+  "title": "535A2F_CDCA91_91915B_A4AC6F",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/535A2F_CDCA91_91915B_A4AC6F-preview.png",
+  "colors": [
+    {
+      "color": "535A2F",
+      "name": "Woodland"
+    },
+    {
+      "color": "CDCA91",
+      "name": "Pine Glade"
+    },
+    {
+      "color": "91915B",
+      "name": "Clay Creek"
+    },
+    {
+      "color": "A4AC6F",
+      "name": "Green Smoke"
+    }
+  ]
+}

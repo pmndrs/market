@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CAA094_875343_956255_EADEDC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CAA094_875343_956255_EADEDC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CAA094_875343_956255_EADEDC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CAA094_875343_956255_EADEDC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CAA094_875343_956255_EADEDC.png",
+  "index": 597,
+  "title": "CAA094_875343_956255_EADEDC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CAA094_875343_956255_EADEDC-preview.png",
+  "colors": [
+    {
+      "color": "CAA094",
+      "name": "Eunry"
+    },
+    {
+      "color": "875343",
+      "name": "Spicy Mix"
+    },
+    {
+      "color": "956255",
+      "name": "Au Chico"
+    },
+    {
+      "color": "EADEDC",
+      "name": "Pearl Bush"
+    }
+  ]
+}

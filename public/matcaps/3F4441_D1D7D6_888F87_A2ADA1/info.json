@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3F4441_D1D7D6_888F87_A2ADA1.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3F4441_D1D7D6_888F87_A2ADA1.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3F4441_D1D7D6_888F87_A2ADA1.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3F4441_D1D7D6_888F87_A2ADA1.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3F4441_D1D7D6_888F87_A2ADA1.png",
+  "index": 107,
+  "title": "3F4441_D1D7D6_888F87_A2ADA1",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3F4441_D1D7D6_888F87_A2ADA1-preview.png",
+  "colors": [
+    {
+      "color": "3F4441",
+      "name": "Cape Cod"
+    },
+    {
+      "color": "D1D7D6",
+      "name": "Tiara"
+    },
+    {
+      "color": "888F87",
+      "name": "Stack"
+    },
+    {
+      "color": "A2ADA1",
+      "name": "Bud"
+    }
+  ]
+}

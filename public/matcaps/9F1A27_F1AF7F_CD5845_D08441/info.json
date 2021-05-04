@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9F1A27_F1AF7F_CD5845_D08441.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9F1A27_F1AF7F_CD5845_D08441.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9F1A27_F1AF7F_CD5845_D08441.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9F1A27_F1AF7F_CD5845_D08441.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9F1A27_F1AF7F_CD5845_D08441.png",
+  "index": 485,
+  "title": "9F1A27_F1AF7F_CD5845_D08441",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9F1A27_F1AF7F_CD5845_D08441-preview.png",
+  "colors": [
+    {
+      "color": "9F1A27",
+      "name": "Old Brick"
+    },
+    {
+      "color": "F1AF7F",
+      "name": "Tacao"
+    },
+    {
+      "color": "CD5845",
+      "name": "Chestnut Rose"
+    },
+    {
+      "color": "D08441",
+      "name": "Raw Sienna"
+    }
+  ]
+}

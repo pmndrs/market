@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6D1616_E6CDBA_DE2B24_230F0F.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6D1616_E6CDBA_DE2B24_230F0F.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6D1616_E6CDBA_DE2B24_230F0F.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6D1616_E6CDBA_DE2B24_230F0F.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6D1616_E6CDBA_DE2B24_230F0F.png",
+  "index": 279,
+  "title": "6D1616_E6CDBA_DE2B24_230F0F",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6D1616_E6CDBA_DE2B24_230F0F-preview.png",
+  "colors": [
+    {
+      "color": "6D1616",
+      "name": "Cherrywood"
+    },
+    {
+      "color": "E6CDBA",
+      "name": "Double Spanish White"
+    },
+    {
+      "color": "DE2B24",
+      "name": "Alizarin Crimson"
+    },
+    {
+      "color": "230F0F",
+      "name": "Night Rider"
+    }
+  ]
+}

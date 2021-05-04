@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/677E93_36444D_99A9BA_435464.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/677E93_36444D_99A9BA_435464.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/677E93_36444D_99A9BA_435464.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/677E93_36444D_99A9BA_435464.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/677E93_36444D_99A9BA_435464.png",
+  "index": 258,
+  "title": "677E93_36444D_99A9BA_435464",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/677E93_36444D_99A9BA_435464-preview.png",
+  "colors": [
+    {
+      "color": "677E93",
+      "name": "Lynch"
+    },
+    {
+      "color": "36444D",
+      "name": "Limed Spruce"
+    },
+    {
+      "color": "99A9BA",
+      "name": "Gull Gray"
+    },
+    {
+      "color": "435464",
+      "name": "Fiord"
+    }
+  ]
+}

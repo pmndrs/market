@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/E6E3E3_B5AFAF_CCC4C4_C4C4C4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/E6E3E3_B5AFAF_CCC4C4_C4C4C4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/E6E3E3_B5AFAF_CCC4C4_C4C4C4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/E6E3E3_B5AFAF_CCC4C4_C4C4C4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/E6E3E3_B5AFAF_CCC4C4_C4C4C4.png",
+  "index": 654,
+  "title": "E6E3E3_B5AFAF_CCC4C4_C4C4C4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/E6E3E3_B5AFAF_CCC4C4_C4C4C4-preview.png",
+  "colors": [
+    {
+      "color": "E6E3E3",
+      "name": "Bon Jour"
+    },
+    {
+      "color": "B5AFAF",
+      "name": "Nobel"
+    },
+    {
+      "color": "CCC4C4",
+      "name": "Silver Rust"
+    },
+    {
+      "color": "C4C4C4",
+      "name": "Silver"
+    }
+  ]
+}

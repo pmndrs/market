@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/1D3FCC_051B5F_81A0F2_5579E9.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/1D3FCC_051B5F_81A0F2_5579E9.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/1D3FCC_051B5F_81A0F2_5579E9.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/1D3FCC_051B5F_81A0F2_5579E9.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/1D3FCC_051B5F_81A0F2_5579E9.png",
+  "index": 34,
+  "title": "1D3FCC_051B5F_81A0F2_5579E9",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/1D3FCC_051B5F_81A0F2_5579E9-preview.png",
+  "colors": [
+    {
+      "color": "1D3FCC",
+      "name": "Persian Blue"
+    },
+    {
+      "color": "051B5F",
+      "name": "Gulf Blue"
+    },
+    {
+      "color": "81A0F2",
+      "name": "Portage"
+    },
+    {
+      "color": "5579E9",
+      "name": "Cornflower Blue"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/684C40_776E69_9B7765_758D96.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/684C40_776E69_9B7765_758D96.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/684C40_776E69_9B7765_758D96.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/684C40_776E69_9B7765_758D96.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/684C40_776E69_9B7765_758D96.png",
+  "index": 263,
+  "title": "684C40_776E69_9B7765_758D96",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/684C40_776E69_9B7765_758D96-preview.png",
+  "colors": [
+    {
+      "color": "684C40",
+      "name": "Kabul"
+    },
+    {
+      "color": "776E69",
+      "name": "Sandstone"
+    },
+    {
+      "color": "9B7765",
+      "name": "Toast"
+    },
+    {
+      "color": "758D96",
+      "name": "Slate Gray"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/855D08_DAC31B_BF9B0C_AF860C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/855D08_DAC31B_BF9B0C_AF860C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/855D08_DAC31B_BF9B0C_AF860C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/855D08_DAC31B_BF9B0C_AF860C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/855D08_DAC31B_BF9B0C_AF860C.png",
+  "index": 372,
+  "title": "855D08_DAC31B_BF9B0C_AF860C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/855D08_DAC31B_BF9B0C_AF860C-preview.png",
+  "colors": [
+    {
+      "color": "855D08",
+      "name": "Rusty Nail"
+    },
+    {
+      "color": "DAC31B",
+      "name": "Bird Flower"
+    },
+    {
+      "color": "BF9B0C",
+      "name": "Buddha Gold"
+    },
+    {
+      "color": "AF860C",
+      "name": "Hot Toddy"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/812828_521818_C94141_AB3737.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/812828_521818_C94141_AB3737.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/812828_521818_C94141_AB3737.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/812828_521818_C94141_AB3737.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/812828_521818_C94141_AB3737.png",
+  "index": 357,
+  "title": "812828_521818_C94141_AB3737",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/812828_521818_C94141_AB3737-preview.png",
+  "colors": [
+    {
+      "color": "812828",
+      "name": "Burnt Umber"
+    },
+    {
+      "color": "521818",
+      "name": "Brown Derby"
+    },
+    {
+      "color": "C94141",
+      "name": "Mojo"
+    },
+    {
+      "color": "AB3737",
+      "name": "Medium Carmine"
+    }
+  ]
+}

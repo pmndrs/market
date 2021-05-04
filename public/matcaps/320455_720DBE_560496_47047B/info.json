@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/320455_720DBE_560496_47047B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/320455_720DBE_560496_47047B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/320455_720DBE_560496_47047B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/320455_720DBE_560496_47047B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/320455_720DBE_560496_47047B.png",
+  "index": 68,
+  "title": "320455_720DBE_560496_47047B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/320455_720DBE_560496_47047B-preview.png",
+  "colors": [
+    {
+      "color": "320455",
+      "name": "Cherry Pie"
+    },
+    {
+      "color": "720DBE",
+      "name": "Purple"
+    },
+    {
+      "color": "560496",
+      "name": "Purple"
+    },
+    {
+      "color": "47047B",
+      "name": "Kingfisher Daisy"
+    }
+  ]
+}

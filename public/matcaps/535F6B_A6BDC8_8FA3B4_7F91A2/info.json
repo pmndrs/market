@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/535F6B_A6BDC8_8FA3B4_7F91A2.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/535F6B_A6BDC8_8FA3B4_7F91A2.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/535F6B_A6BDC8_8FA3B4_7F91A2.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/535F6B_A6BDC8_8FA3B4_7F91A2.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/535F6B_A6BDC8_8FA3B4_7F91A2.png",
+  "index": 178,
+  "title": "535F6B_A6BDC8_8FA3B4_7F91A2",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/535F6B_A6BDC8_8FA3B4_7F91A2-preview.png",
+  "colors": [
+    {
+      "color": "535F6B",
+      "name": "Shuttle Gray"
+    },
+    {
+      "color": "A6BDC8",
+      "name": "Casper"
+    },
+    {
+      "color": "8FA3B4",
+      "name": "Bali Hai"
+    },
+    {
+      "color": "7F91A2",
+      "name": "Regent Gray"
+    }
+  ]
+}

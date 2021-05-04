@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/4F4F4F_A1A1A1_8C8C8C_848484.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/4F4F4F_A1A1A1_8C8C8C_848484.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/4F4F4F_A1A1A1_8C8C8C_848484.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/4F4F4F_A1A1A1_8C8C8C_848484.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/4F4F4F_A1A1A1_8C8C8C_848484.png",
+  "index": 161,
+  "title": "4F4F4F_A1A1A1_8C8C8C_848484",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/4F4F4F_A1A1A1_8C8C8C_848484-preview.png",
+  "colors": [
+    {
+      "color": "4F4F4F",
+      "name": "Emperor"
+    },
+    {
+      "color": "A1A1A1",
+      "name": "Silver Chalice"
+    },
+    {
+      "color": "8C8C8C",
+      "name": "Gray"
+    },
+    {
+      "color": "848484",
+      "name": "Gray"
+    }
+  ]
+}

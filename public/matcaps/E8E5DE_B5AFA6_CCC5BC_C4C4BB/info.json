@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/E8E5DE_B5AFA6_CCC5BC_C4C4BB.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/E8E5DE_B5AFA6_CCC5BC_C4C4BB.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/E8E5DE_B5AFA6_CCC5BC_C4C4BB.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/E8E5DE_B5AFA6_CCC5BC_C4C4BB.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/E8E5DE_B5AFA6_CCC5BC_C4C4BB.png",
+  "index": 661,
+  "title": "E8E5DE_B5AFA6_CCC5BC_C4C4BB",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/E8E5DE_B5AFA6_CCC5BC_C4C4BB-preview.png",
+  "colors": [
+    {
+      "color": "E8E5DE",
+      "name": "Cararra"
+    },
+    {
+      "color": "B5AFA6",
+      "name": "Nomad"
+    },
+    {
+      "color": "CCC5BC",
+      "name": "Silver Rust"
+    },
+    {
+      "color": "C4C4BB",
+      "name": "Mist Gray"
+    }
+  ]
+}

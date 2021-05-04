@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/683F2D_9F736D_431D06_966152.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/683F2D_9F736D_431D06_966152.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/683F2D_9F736D_431D06_966152.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/683F2D_9F736D_431D06_966152.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/683F2D_9F736D_431D06_966152.png",
+  "index": 261,
+  "title": "683F2D_9F736D_431D06_966152",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/683F2D_9F736D_431D06_966152-preview.png",
+  "colors": [
+    {
+      "color": "683F2D",
+      "name": "Spice"
+    },
+    {
+      "color": "9F736D",
+      "name": "Copper Rose"
+    },
+    {
+      "color": "431D06",
+      "name": "Dark Ebony"
+    },
+    {
+      "color": "966152",
+      "name": "Leather"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2B2828_7B796F_534F4A_616464.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2B2828_7B796F_534F4A_616464.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2B2828_7B796F_534F4A_616464.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2B2828_7B796F_534F4A_616464.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2B2828_7B796F_534F4A_616464.png",
+  "index": 52,
+  "title": "2B2828_7B796F_534F4A_616464",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2B2828_7B796F_534F4A_616464-preview.png",
+  "colors": [
+    {
+      "color": "2B2828",
+      "name": "Mine Shaft"
+    },
+    {
+      "color": "7B796F",
+      "name": "Tapa"
+    },
+    {
+      "color": "534F4A",
+      "name": "Fuscous Gray"
+    },
+    {
+      "color": "616464",
+      "name": "Corduroy"
+    }
+  ]
+}

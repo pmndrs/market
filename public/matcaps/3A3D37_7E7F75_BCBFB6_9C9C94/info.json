@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3A3D37_7E7F75_BCBFB6_9C9C94.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3A3D37_7E7F75_BCBFB6_9C9C94.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3A3D37_7E7F75_BCBFB6_9C9C94.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3A3D37_7E7F75_BCBFB6_9C9C94.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3A3D37_7E7F75_BCBFB6_9C9C94.png",
+  "index": 94,
+  "title": "3A3D37_7E7F75_BCBFB6_9C9C94",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3A3D37_7E7F75_BCBFB6_9C9C94-preview.png",
+  "colors": [
+    {
+      "color": "3A3D37",
+      "name": "Lunar Green"
+    },
+    {
+      "color": "7E7F75",
+      "name": "Bandicoot"
+    },
+    {
+      "color": "BCBFB6",
+      "name": "Kangaroo"
+    },
+    {
+      "color": "9C9C94",
+      "name": "Star Dust"
+    }
+  ]
+}

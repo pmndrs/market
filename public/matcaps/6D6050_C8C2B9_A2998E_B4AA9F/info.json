@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6D6050_C8C2B9_A2998E_B4AA9F.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6D6050_C8C2B9_A2998E_B4AA9F.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6D6050_C8C2B9_A2998E_B4AA9F.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6D6050_C8C2B9_A2998E_B4AA9F.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6D6050_C8C2B9_A2998E_B4AA9F.png",
+  "index": 281,
+  "title": "6D6050_C8C2B9_A2998E_B4AA9F",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6D6050_C8C2B9_A2998E_B4AA9F-preview.png",
+  "colors": [
+    {
+      "color": "6D6050",
+      "name": "Soya Bean"
+    },
+    {
+      "color": "C8C2B9",
+      "name": "Ash"
+    },
+    {
+      "color": "A2998E",
+      "name": "Zorba"
+    },
+    {
+      "color": "B4AA9F",
+      "name": "Nomad"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B5987E_F8E4DC_6F5939_E9CCBA.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B5987E_F8E4DC_6F5939_E9CCBA.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B5987E_F8E4DC_6F5939_E9CCBA.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B5987E_F8E4DC_6F5939_E9CCBA.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B5987E_F8E4DC_6F5939_E9CCBA.png",
+  "index": 532,
+  "title": "B5987E_F8E4DC_6F5939_E9CCBA",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B5987E_F8E4DC_6F5939_E9CCBA-preview.png",
+  "colors": [
+    {
+      "color": "B5987E",
+      "name": "Mongoose"
+    },
+    {
+      "color": "F8E4DC",
+      "name": "Linen"
+    },
+    {
+      "color": "6F5939",
+      "name": "Yellow Metal"
+    },
+    {
+      "color": "E9CCBA",
+      "name": "Just Right"
+    }
+  ]
+}

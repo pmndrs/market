@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/EA783E_6D4830_905837_FCDC6C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/EA783E_6D4830_905837_FCDC6C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/EA783E_6D4830_905837_FCDC6C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/EA783E_6D4830_905837_FCDC6C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/EA783E_6D4830_905837_FCDC6C.png",
+  "index": 664,
+  "title": "EA783E_6D4830_905837_FCDC6C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/EA783E_6D4830_905837_FCDC6C-preview.png",
+  "colors": [
+    {
+      "color": "EA783E",
+      "name": "Jaffa"
+    },
+    {
+      "color": "6D4830",
+      "name": "Spice"
+    },
+    {
+      "color": "905837",
+      "name": "Potters Clay"
+    },
+    {
+      "color": "FCDC6C",
+      "name": "Goldenrod"
+    }
+  ]
+}

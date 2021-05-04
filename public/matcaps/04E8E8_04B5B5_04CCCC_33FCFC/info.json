@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/04E8E8_04B5B5_04CCCC_33FCFC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/04E8E8_04B5B5_04CCCC_33FCFC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/04E8E8_04B5B5_04CCCC_33FCFC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/04E8E8_04B5B5_04CCCC_33FCFC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/04E8E8_04B5B5_04CCCC_33FCFC.png",
+  "index": 8,
+  "title": "04E8E8_04B5B5_04CCCC_33FCFC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/04E8E8_04B5B5_04CCCC_33FCFC-preview.png",
+  "colors": [
+    {
+      "color": "04E8E8",
+      "name": "Bright Turquoise"
+    },
+    {
+      "color": "04B5B5",
+      "name": "Pacific Blue"
+    },
+    {
+      "color": "04CCCC",
+      "name": "Robin's Egg Blue"
+    },
+    {
+      "color": "33FCFC",
+      "name": "Cyan / Aqua"
+    }
+  ]
+}

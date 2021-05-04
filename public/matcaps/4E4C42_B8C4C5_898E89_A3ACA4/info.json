@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/4E4C42_B8C4C5_898E89_A3ACA4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/4E4C42_B8C4C5_898E89_A3ACA4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/4E4C42_B8C4C5_898E89_A3ACA4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/4E4C42_B8C4C5_898E89_A3ACA4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/4E4C42_B8C4C5_898E89_A3ACA4.png",
+  "index": 153,
+  "title": "4E4C42_B8C4C5_898E89_A3ACA4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/4E4C42_B8C4C5_898E89_A3ACA4-preview.png",
+  "colors": [
+    {
+      "color": "4E4C42",
+      "name": "Fuscous Gray"
+    },
+    {
+      "color": "B8C4C5",
+      "name": "Submarine"
+    },
+    {
+      "color": "898E89",
+      "name": "Stack"
+    },
+    {
+      "color": "A3ACA4",
+      "name": "Pewter"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/D4855F_92512D_AE6742_A75C2C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/D4855F_92512D_AE6742_A75C2C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/D4855F_92512D_AE6742_A75C2C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/D4855F_92512D_AE6742_A75C2C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/D4855F_92512D_AE6742_A75C2C.png",
+  "index": 625,
+  "title": "D4855F_92512D_AE6742_A75C2C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/D4855F_92512D_AE6742_A75C2C-preview.png",
+  "colors": [
+    {
+      "color": "D4855F",
+      "name": "Japonica"
+    },
+    {
+      "color": "92512D",
+      "name": "Mule Fawn"
+    },
+    {
+      "color": "AE6742",
+      "name": "Brown Rust"
+    },
+    {
+      "color": "A75C2C",
+      "name": "Paarl"
+    }
+  ]
+}

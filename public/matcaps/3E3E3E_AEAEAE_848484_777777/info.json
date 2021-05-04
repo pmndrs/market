@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E3E_AEAEAE_848484_777777.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E3E_AEAEAE_848484_777777.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E3E_AEAEAE_848484_777777.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E3E_AEAEAE_848484_777777.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E3E_AEAEAE_848484_777777.png",
+  "index": 103,
+  "title": "3E3E3E_AEAEAE_848484_777777",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3E3E3E_AEAEAE_848484_777777-preview.png",
+  "colors": [
+    {
+      "color": "3E3E3E",
+      "name": "Mine Shaft"
+    },
+    {
+      "color": "AEAEAE",
+      "name": "Silver Chalice"
+    },
+    {
+      "color": "848484",
+      "name": "Gray"
+    },
+    {
+      "color": "777777",
+      "name": "Boulder"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/613F04_D68C04_A45F04_1F0F04.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/613F04_D68C04_A45F04_1F0F04.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/613F04_D68C04_A45F04_1F0F04.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/613F04_D68C04_A45F04_1F0F04.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/613F04_D68C04_A45F04_1F0F04.png",
+  "index": 228,
+  "title": "613F04_D68C04_A45F04_1F0F04",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/613F04_D68C04_A45F04_1F0F04-preview.png",
+  "colors": [
+    {
+      "color": "613F04",
+      "name": "Antique Bronze"
+    },
+    {
+      "color": "D68C04",
+      "name": "Tahiti Gold"
+    },
+    {
+      "color": "A45F04",
+      "name": "Chelsea Gem"
+    },
+    {
+      "color": "1F0F04",
+      "name": "Creole"
+    }
+  ]
+}

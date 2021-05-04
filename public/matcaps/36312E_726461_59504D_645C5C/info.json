@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/36312E_726461_59504D_645C5C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/36312E_726461_59504D_645C5C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/36312E_726461_59504D_645C5C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/36312E_726461_59504D_645C5C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/36312E_726461_59504D_645C5C.png",
+  "index": 81,
+  "title": "36312E_726461_59504D_645C5C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/36312E_726461_59504D_645C5C-preview.png",
+  "colors": [
+    {
+      "color": "36312E",
+      "name": "Dune"
+    },
+    {
+      "color": "726461",
+      "name": "Sandstone"
+    },
+    {
+      "color": "59504D",
+      "name": "Don Juan"
+    },
+    {
+      "color": "645C5C",
+      "name": "Scorpion"
+    }
+  ]
+}

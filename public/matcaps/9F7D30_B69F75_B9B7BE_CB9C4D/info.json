@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9F7D30_B69F75_B9B7BE_CB9C4D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9F7D30_B69F75_B9B7BE_CB9C4D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9F7D30_B69F75_B9B7BE_CB9C4D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9F7D30_B69F75_B9B7BE_CB9C4D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9F7D30_B69F75_B9B7BE_CB9C4D.png",
+  "index": 487,
+  "title": "9F7D30_B69F75_B9B7BE_CB9C4D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9F7D30_B69F75_B9B7BE_CB9C4D-preview.png",
+  "colors": [
+    {
+      "color": "9F7D30",
+      "name": "Luxor Gold"
+    },
+    {
+      "color": "B69F75",
+      "name": "Mongoose"
+    },
+    {
+      "color": "B9B7BE",
+      "name": "French Gray"
+    },
+    {
+      "color": "CB9C4D",
+      "name": "Tussock"
+    }
+  ]
+}

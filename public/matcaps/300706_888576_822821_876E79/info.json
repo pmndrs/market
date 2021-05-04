@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/300706_888576_822821_876E79.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/300706_888576_822821_876E79.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/300706_888576_822821_876E79.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/300706_888576_822821_876E79.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/300706_888576_822821_876E79.png",
+  "index": 62,
+  "title": "300706_888576_822821_876E79",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/300706_888576_822821_876E79-preview.png",
+  "colors": [
+    {
+      "color": "300706",
+      "name": "Aubergine"
+    },
+    {
+      "color": "888576",
+      "name": "Granite Green"
+    },
+    {
+      "color": "822821",
+      "name": "Red Robin"
+    },
+    {
+      "color": "876E79",
+      "name": "Empress"
+    }
+  ]
+}

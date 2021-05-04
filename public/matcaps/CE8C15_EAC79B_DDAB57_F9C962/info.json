@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CE8C15_EAC79B_DDAB57_F9C962.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CE8C15_EAC79B_DDAB57_F9C962.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CE8C15_EAC79B_DDAB57_F9C962.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CE8C15_EAC79B_DDAB57_F9C962.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CE8C15_EAC79B_DDAB57_F9C962.png",
+  "index": 616,
+  "title": "CE8C15_EAC79B_DDAB57_F9C962",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CE8C15_EAC79B_DDAB57_F9C962-preview.png",
+  "colors": [
+    {
+      "color": "CE8C15",
+      "name": "Pizza"
+    },
+    {
+      "color": "EAC79B",
+      "name": "Pancho"
+    },
+    {
+      "color": "DDAB57",
+      "name": "Di Serria"
+    },
+    {
+      "color": "F9C962",
+      "name": "Saffron Mango"
+    }
+  ]
+}

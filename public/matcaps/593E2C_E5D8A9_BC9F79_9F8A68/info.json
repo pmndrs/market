@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/593E2C_E5D8A9_BC9F79_9F8A68.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/593E2C_E5D8A9_BC9F79_9F8A68.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/593E2C_E5D8A9_BC9F79_9F8A68.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/593E2C_E5D8A9_BC9F79_9F8A68.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/593E2C_E5D8A9_BC9F79_9F8A68.png",
+  "index": 196,
+  "title": "593E2C_E5D8A9_BC9F79_9F8A68",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/593E2C_E5D8A9_BC9F79_9F8A68-preview.png",
+  "colors": [
+    {
+      "color": "593E2C",
+      "name": "Quincy"
+    },
+    {
+      "color": "E5D8A9",
+      "name": "Hampton"
+    },
+    {
+      "color": "BC9F79",
+      "name": "Mongoose"
+    },
+    {
+      "color": "9F8A68",
+      "name": "Sandal"
+    }
+  ]
+}

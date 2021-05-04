@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/A0A8B0_424336_E7E9EF_545C5C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/A0A8B0_424336_E7E9EF_545C5C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/A0A8B0_424336_E7E9EF_545C5C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/A0A8B0_424336_E7E9EF_545C5C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/A0A8B0_424336_E7E9EF_545C5C.png",
+  "index": 491,
+  "title": "A0A8B0_424336_E7E9EF_545C5C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/A0A8B0_424336_E7E9EF_545C5C-preview.png",
+  "colors": [
+    {
+      "color": "A0A8B0",
+      "name": "Gray Chateau"
+    },
+    {
+      "color": "424336",
+      "name": "Kelp"
+    },
+    {
+      "color": "E7E9EF",
+      "name": "Athens Gray"
+    },
+    {
+      "color": "545C5C",
+      "name": "Corduroy"
+    }
+  ]
+}

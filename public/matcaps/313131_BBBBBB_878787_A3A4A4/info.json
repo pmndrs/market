@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/313131_BBBBBB_878787_A3A4A4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/313131_BBBBBB_878787_A3A4A4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/313131_BBBBBB_878787_A3A4A4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/313131_BBBBBB_878787_A3A4A4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/313131_BBBBBB_878787_A3A4A4.png",
+  "index": 67,
+  "title": "313131_BBBBBB_878787_A3A4A4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/313131_BBBBBB_878787_A3A4A4-preview.png",
+  "colors": [
+    {
+      "color": "313131",
+      "name": "Mine Shaft"
+    },
+    {
+      "color": "BBBBBB",
+      "name": "Silver"
+    },
+    {
+      "color": "878787",
+      "name": "Gray"
+    },
+    {
+      "color": "A3A4A4",
+      "name": "Edward"
+    }
+  ]
+}

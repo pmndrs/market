@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9C5B3B_49200A_E9C8AB_DDAB7D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9C5B3B_49200A_E9C8AB_DDAB7D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9C5B3B_49200A_E9C8AB_DDAB7D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9C5B3B_49200A_E9C8AB_DDAB7D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9C5B3B_49200A_E9C8AB_DDAB7D.png",
+  "index": 475,
+  "title": "9C5B3B_49200A_E9C8AB_DDAB7D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9C5B3B_49200A_E9C8AB_DDAB7D-preview.png",
+  "colors": [
+    {
+      "color": "9C5B3B",
+      "name": "Sepia Skin"
+    },
+    {
+      "color": "49200A",
+      "name": "Bronze"
+    },
+    {
+      "color": "E9C8AB",
+      "name": "Zinnwaldite"
+    },
+    {
+      "color": "DDAB7D",
+      "name": "Tumbleweed"
+    }
+  ]
+}

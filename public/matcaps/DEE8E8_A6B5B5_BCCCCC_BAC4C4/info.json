@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/DEE8E8_A6B5B5_BCCCCC_BAC4C4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/DEE8E8_A6B5B5_BCCCCC_BAC4C4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/DEE8E8_A6B5B5_BCCCCC_BAC4C4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/DEE8E8_A6B5B5_BCCCCC_BAC4C4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/DEE8E8_A6B5B5_BCCCCC_BAC4C4.png",
+  "index": 642,
+  "title": "DEE8E8_A6B5B5_BCCCCC_BAC4C4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/DEE8E8_A6B5B5_BCCCCC_BAC4C4-preview.png",
+  "colors": [
+    {
+      "color": "DEE8E8",
+      "name": "Geyser"
+    },
+    {
+      "color": "A6B5B5",
+      "name": "Edward"
+    },
+    {
+      "color": "BCCCCC",
+      "name": "Submarine"
+    },
+    {
+      "color": "BAC4C4",
+      "name": "Submarine"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5E5049_CDC2BE_9C8E88_B7ACA4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5E5049_CDC2BE_9C8E88_B7ACA4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5E5049_CDC2BE_9C8E88_B7ACA4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5E5049_CDC2BE_9C8E88_B7ACA4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5E5049_CDC2BE_9C8E88_B7ACA4.png",
+  "index": 216,
+  "title": "5E5049_CDC2BE_9C8E88_B7ACA4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5E5049_CDC2BE_9C8E88_B7ACA4-preview.png",
+  "colors": [
+    {
+      "color": "5E5049",
+      "name": "Pine Cone"
+    },
+    {
+      "color": "CDC2BE",
+      "name": "Silver Rust"
+    },
+    {
+      "color": "9C8E88",
+      "name": "Zorba"
+    },
+    {
+      "color": "B7ACA4",
+      "name": "Silk"
+    }
+  ]
+}

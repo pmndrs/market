@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/DC3E04_B52604_FC7D20_F85F04.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/DC3E04_B52604_FC7D20_F85F04.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/DC3E04_B52604_FC7D20_F85F04.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/DC3E04_B52604_FC7D20_F85F04.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/DC3E04_B52604_FC7D20_F85F04.png",
+  "index": 637,
+  "title": "DC3E04_B52604_FC7D20_F85F04",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/DC3E04_B52604_FC7D20_F85F04-preview.png",
+  "colors": [
+    {
+      "color": "DC3E04",
+      "name": "Grenadier"
+    },
+    {
+      "color": "B52604",
+      "name": "Milano Red"
+    },
+    {
+      "color": "FC7D20",
+      "name": "Pumpkin"
+    },
+    {
+      "color": "F85F04",
+      "name": "Blaze Orange"
+    }
+  ]
+}

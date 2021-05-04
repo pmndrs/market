@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/A67362_36150C_5E2E1E_F6C3BF.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/A67362_36150C_5E2E1E_F6C3BF.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/A67362_36150C_5E2E1E_F6C3BF.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/A67362_36150C_5E2E1E_F6C3BF.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/A67362_36150C_5E2E1E_F6C3BF.png",
+  "index": 498,
+  "title": "A67362_36150C_5E2E1E_F6C3BF",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/A67362_36150C_5E2E1E_F6C3BF-preview.png",
+  "colors": [
+    {
+      "color": "A67362",
+      "name": "Coral Tree"
+    },
+    {
+      "color": "36150C",
+      "name": "Paco"
+    },
+    {
+      "color": "5E2E1E",
+      "name": "Espresso"
+    },
+    {
+      "color": "F6C3BF",
+      "name": "Mandys Pink"
+    }
+  ]
+}

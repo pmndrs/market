@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CC7C5F_A15436_B26346_AF5C3C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CC7C5F_A15436_B26346_AF5C3C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CC7C5F_A15436_B26346_AF5C3C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CC7C5F_A15436_B26346_AF5C3C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CC7C5F_A15436_B26346_AF5C3C.png",
+  "index": 610,
+  "title": "CC7C5F_A15436_B26346_AF5C3C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CC7C5F_A15436_B26346_AF5C3C-preview.png",
+  "colors": [
+    {
+      "color": "CC7C5F",
+      "name": "Antique Brass"
+    },
+    {
+      "color": "A15436",
+      "name": "Brown Rust"
+    },
+    {
+      "color": "B26346",
+      "name": "Brown Rust"
+    },
+    {
+      "color": "AF5C3C",
+      "name": "Brown Rust"
+    }
+  ]
+}

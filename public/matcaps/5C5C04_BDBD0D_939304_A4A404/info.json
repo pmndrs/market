@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5C5C04_BDBD0D_939304_A4A404.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5C5C04_BDBD0D_939304_A4A404.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5C5C04_BDBD0D_939304_A4A404.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5C5C04_BDBD0D_939304_A4A404.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5C5C04_BDBD0D_939304_A4A404.png",
+  "index": 210,
+  "title": "5C5C04_BDBD0D_939304_A4A404",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5C5C04_BDBD0D_939304_A4A404-preview.png",
+  "colors": [
+    {
+      "color": "5C5C04",
+      "name": "Verdun Green"
+    },
+    {
+      "color": "BDBD0D",
+      "name": "La Rioja"
+    },
+    {
+      "color": "939304",
+      "name": "Olive"
+    },
+    {
+      "color": "A4A404",
+      "name": "Buddha Gold"
+    }
+  ]
+}

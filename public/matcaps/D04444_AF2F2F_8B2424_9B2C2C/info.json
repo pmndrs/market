@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/D04444_AF2F2F_8B2424_9B2C2C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/D04444_AF2F2F_8B2424_9B2C2C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/D04444_AF2F2F_8B2424_9B2C2C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/D04444_AF2F2F_8B2424_9B2C2C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/D04444_AF2F2F_8B2424_9B2C2C.png",
+  "index": 619,
+  "title": "D04444_AF2F2F_8B2424_9B2C2C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/D04444_AF2F2F_8B2424_9B2C2C-preview.png",
+  "colors": [
+    {
+      "color": "D04444",
+      "name": "Flush Mahogany"
+    },
+    {
+      "color": "AF2F2F",
+      "name": "Well Read"
+    },
+    {
+      "color": "8B2424",
+      "name": "Burnt Umber"
+    },
+    {
+      "color": "9B2C2C",
+      "name": "Stiletto"
+    }
+  ]
+}

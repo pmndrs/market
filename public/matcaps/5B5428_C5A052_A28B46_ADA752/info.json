@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5B5428_C5A052_A28B46_ADA752.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5B5428_C5A052_A28B46_ADA752.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5B5428_C5A052_A28B46_ADA752.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5B5428_C5A052_A28B46_ADA752.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5B5428_C5A052_A28B46_ADA752.png",
+  "index": 204,
+  "title": "5B5428_C5A052_A28B46_ADA752",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5B5428_C5A052_A28B46_ADA752-preview.png",
+  "colors": [
+    {
+      "color": "5B5428",
+      "name": "Costa Del Sol"
+    },
+    {
+      "color": "C5A052",
+      "name": "Tussock"
+    },
+    {
+      "color": "A28B46",
+      "name": "Driftwood"
+    },
+    {
+      "color": "ADA752",
+      "name": "Olive Green"
+    }
+  ]
+}

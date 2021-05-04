@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5D5854_1A1714_373330_2C2424.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5D5854_1A1714_373330_2C2424.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5D5854_1A1714_373330_2C2424.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5D5854_1A1714_373330_2C2424.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5D5854_1A1714_373330_2C2424.png",
+  "index": 212,
+  "title": "5D5854_1A1714_373330_2C2424",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5D5854_1A1714_373330_2C2424-preview.png",
+  "colors": [
+    {
+      "color": "5D5854",
+      "name": "Chicago"
+    },
+    {
+      "color": "1A1714",
+      "name": "Zeus"
+    },
+    {
+      "color": "373330",
+      "name": "Dune"
+    },
+    {
+      "color": "2C2424",
+      "name": "Thunder"
+    }
+  ]
+}

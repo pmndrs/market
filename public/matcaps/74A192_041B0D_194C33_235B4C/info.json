@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/74A192_041B0D_194C33_235B4C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/74A192_041B0D_194C33_235B4C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/74A192_041B0D_194C33_235B4C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/74A192_041B0D_194C33_235B4C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/74A192_041B0D_194C33_235B4C.png",
+  "index": 305,
+  "title": "74A192_041B0D_194C33_235B4C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/74A192_041B0D_194C33_235B4C-preview.png",
+  "colors": [
+    {
+      "color": "74A192",
+      "name": "Sea Nymph"
+    },
+    {
+      "color": "041B0D",
+      "name": "Bottle Green"
+    },
+    {
+      "color": "194C33",
+      "name": "Green Pea"
+    },
+    {
+      "color": "235B4C",
+      "name": "Blue Dianne"
+    }
+  ]
+}

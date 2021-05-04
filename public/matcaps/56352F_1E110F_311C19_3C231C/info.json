@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/56352F_1E110F_311C19_3C231C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/56352F_1E110F_311C19_3C231C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/56352F_1E110F_311C19_3C231C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/56352F_1E110F_311C19_3C231C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/56352F_1E110F_311C19_3C231C.png",
+  "index": 188,
+  "title": "56352F_1E110F_311C19_3C231C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/56352F_1E110F_311C19_3C231C-preview.png",
+  "colors": [
+    {
+      "color": "56352F",
+      "name": "Congo Brown"
+    },
+    {
+      "color": "1E110F",
+      "name": "Night Rider"
+    },
+    {
+      "color": "311C19",
+      "name": "Eclipse"
+    },
+    {
+      "color": "3C231C",
+      "name": "Cork"
+    }
+  ]
+}

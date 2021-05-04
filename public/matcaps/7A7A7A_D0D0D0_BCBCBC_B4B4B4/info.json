@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/7A7A7A_D0D0D0_BCBCBC_B4B4B4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/7A7A7A_D0D0D0_BCBCBC_B4B4B4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/7A7A7A_D0D0D0_BCBCBC_B4B4B4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/7A7A7A_D0D0D0_BCBCBC_B4B4B4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/7A7A7A_D0D0D0_BCBCBC_B4B4B4.png",
+  "index": 333,
+  "title": "7A7A7A_D0D0D0_BCBCBC_B4B4B4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/7A7A7A_D0D0D0_BCBCBC_B4B4B4-preview.png",
+  "colors": [
+    {
+      "color": "7A7A7A",
+      "name": "Boulder"
+    },
+    {
+      "color": "D0D0D0",
+      "name": "Alto"
+    },
+    {
+      "color": "BCBCBC",
+      "name": "Silver"
+    },
+    {
+      "color": "B4B4B4",
+      "name": "Nobel"
+    }
+  ]
+}

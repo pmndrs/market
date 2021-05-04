@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/DEDEC4_B5B597_F9F9EA_C4C4AB.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/DEDEC4_B5B597_F9F9EA_C4C4AB.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/DEDEC4_B5B597_F9F9EA_C4C4AB.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/DEDEC4_B5B597_F9F9EA_C4C4AB.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/DEDEC4_B5B597_F9F9EA_C4C4AB.png",
+  "index": 639,
+  "title": "DEDEC4_B5B597_F9F9EA_C4C4AB",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/DEDEC4_B5B597_F9F9EA_C4C4AB-preview.png",
+  "colors": [
+    {
+      "color": "DEDEC4",
+      "name": "Tana"
+    },
+    {
+      "color": "B5B597",
+      "name": "Taupe Gray"
+    },
+    {
+      "color": "F9F9EA",
+      "name": "Beige"
+    },
+    {
+      "color": "C4C4AB",
+      "name": "Foggy Gray"
+    }
+  ]
+}

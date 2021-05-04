@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/DFDBB7_F9F8E3_B5AF86_BCBC8C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/DFDBB7_F9F8E3_B5AF86_BCBC8C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/DFDBB7_F9F8E3_B5AF86_BCBC8C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/DFDBB7_F9F8E3_B5AF86_BCBC8C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/DFDBB7_F9F8E3_B5AF86_BCBC8C.png",
+  "index": 644,
+  "title": "DFDBB7_F9F8E3_B5AF86_BCBC8C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/DFDBB7_F9F8E3_B5AF86_BCBC8C-preview.png",
+  "colors": [
+    {
+      "color": "DFDBB7",
+      "name": "Stark White"
+    },
+    {
+      "color": "F9F8E3",
+      "name": "Rum Swizzle"
+    },
+    {
+      "color": "B5AF86",
+      "name": "Mongoose"
+    },
+    {
+      "color": "BCBC8C",
+      "name": "Swamp Green"
+    }
+  ]
+}

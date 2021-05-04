@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/A05F31_D5C2BC_D9996F_42230E.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/A05F31_D5C2BC_D9996F_42230E.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/A05F31_D5C2BC_D9996F_42230E.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/A05F31_D5C2BC_D9996F_42230E.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/A05F31_D5C2BC_D9996F_42230E.png",
+  "index": 490,
+  "title": "A05F31_D5C2BC_D9996F_42230E",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/A05F31_D5C2BC_D9996F_42230E-preview.png",
+  "colors": [
+    {
+      "color": "A05F31",
+      "name": "Paarl"
+    },
+    {
+      "color": "D5C2BC",
+      "name": "Wafer"
+    },
+    {
+      "color": "D9996F",
+      "name": "Burning Sand"
+    },
+    {
+      "color": "42230E",
+      "name": "Deep Oak"
+    }
+  ]
+}

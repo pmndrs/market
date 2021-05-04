@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/C21338_920C24_E71C54_F34A7D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/C21338_920C24_E71C54_F34A7D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/C21338_920C24_E71C54_F34A7D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/C21338_920C24_E71C54_F34A7D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/C21338_920C24_E71C54_F34A7D.png",
+  "index": 566,
+  "title": "C21338_920C24_E71C54_F34A7D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/C21338_920C24_E71C54_F34A7D-preview.png",
+  "colors": [
+    {
+      "color": "C21338",
+      "name": "Crimson"
+    },
+    {
+      "color": "920C24",
+      "name": "Monarch"
+    },
+    {
+      "color": "E71C54",
+      "name": "Amaranth"
+    },
+    {
+      "color": "F34A7D",
+      "name": "French Rose"
+    }
+  ]
+}

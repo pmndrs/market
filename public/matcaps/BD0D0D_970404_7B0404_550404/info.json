@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/BD0D0D_970404_7B0404_550404.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/BD0D0D_970404_7B0404_550404.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/BD0D0D_970404_7B0404_550404.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/BD0D0D_970404_7B0404_550404.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/BD0D0D_970404_7B0404_550404.png",
+  "index": 552,
+  "title": "BD0D0D_970404_7B0404_550404",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/BD0D0D_970404_7B0404_550404-preview.png",
+  "colors": [
+    {
+      "color": "BD0D0D",
+      "name": "Milano Red"
+    },
+    {
+      "color": "970404",
+      "name": "Sangria"
+    },
+    {
+      "color": "7B0404",
+      "name": "Dark Burgundy"
+    },
+    {
+      "color": "550404",
+      "name": "Rustic Red"
+    }
+  ]
+}

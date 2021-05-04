@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2EAC9E_61EBE3_4DDDD1_43D1C6.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2EAC9E_61EBE3_4DDDD1_43D1C6.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2EAC9E_61EBE3_4DDDD1_43D1C6.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2EAC9E_61EBE3_4DDDD1_43D1C6.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2EAC9E_61EBE3_4DDDD1_43D1C6.png",
+  "index": 59,
+  "title": "2EAC9E_61EBE3_4DDDD1_43D1C6",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2EAC9E_61EBE3_4DDDD1_43D1C6-preview.png",
+  "colors": [
+    {
+      "color": "2EAC9E",
+      "name": "Jungle Green"
+    },
+    {
+      "color": "61EBE3",
+      "name": "Turquoise Blue"
+    },
+    {
+      "color": "4DDDD1",
+      "name": "Viking"
+    },
+    {
+      "color": "43D1C6",
+      "name": "Turquoise"
+    }
+  ]
+}

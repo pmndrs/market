@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/EDED06_B5B504_CCCC04_D4D404.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/EDED06_B5B504_CCCC04_D4D404.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/EDED06_B5B504_CCCC04_D4D404.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/EDED06_B5B504_CCCC04_D4D404.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/EDED06_B5B504_CCCC04_D4D404.png",
+  "index": 671,
+  "title": "EDED06_B5B504_CCCC04_D4D404",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/EDED06_B5B504_CCCC04_D4D404-preview.png",
+  "colors": [
+    {
+      "color": "EDED06",
+      "name": "Turbo"
+    },
+    {
+      "color": "B5B504",
+      "name": "Buddha Gold"
+    },
+    {
+      "color": "CCCC04",
+      "name": "Rio Grande"
+    },
+    {
+      "color": "D4D404",
+      "name": "Rio Grande"
+    }
+  ]
+}

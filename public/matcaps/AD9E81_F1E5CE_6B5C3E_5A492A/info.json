@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/AD9E81_F1E5CE_6B5C3E_5A492A.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/AD9E81_F1E5CE_6B5C3E_5A492A.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/AD9E81_F1E5CE_6B5C3E_5A492A.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/AD9E81_F1E5CE_6B5C3E_5A492A.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/AD9E81_F1E5CE_6B5C3E_5A492A.png",
+  "index": 514,
+  "title": "AD9E81_F1E5CE_6B5C3E_5A492A",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/AD9E81_F1E5CE_6B5C3E_5A492A-preview.png",
+  "colors": [
+    {
+      "color": "AD9E81",
+      "name": "Hillary"
+    },
+    {
+      "color": "F1E5CE",
+      "name": "Parchment"
+    },
+    {
+      "color": "6B5C3E",
+      "name": "Tobacco Brown"
+    },
+    {
+      "color": "5A492A",
+      "name": "Quincy"
+    }
+  ]
+}

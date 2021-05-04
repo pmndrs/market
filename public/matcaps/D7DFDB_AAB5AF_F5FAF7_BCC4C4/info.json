@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/D7DFDB_AAB5AF_F5FAF7_BCC4C4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/D7DFDB_AAB5AF_F5FAF7_BCC4C4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/D7DFDB_AAB5AF_F5FAF7_BCC4C4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/D7DFDB_AAB5AF_F5FAF7_BCC4C4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/D7DFDB_AAB5AF_F5FAF7_BCC4C4.png",
+  "index": 631,
+  "title": "D7DFDB_AAB5AF_F5FAF7_BCC4C4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/D7DFDB_AAB5AF_F5FAF7_BCC4C4-preview.png",
+  "colors": [
+    {
+      "color": "D7DFDB",
+      "name": "Conch"
+    },
+    {
+      "color": "AAB5AF",
+      "name": "Edward"
+    },
+    {
+      "color": "F5FAF7",
+      "name": "Saltpan"
+    },
+    {
+      "color": "BCC4C4",
+      "name": "Submarine"
+    }
+  ]
+}

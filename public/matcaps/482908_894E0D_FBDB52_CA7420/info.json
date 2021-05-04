@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/482908_894E0D_FBDB52_CA7420.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/482908_894E0D_FBDB52_CA7420.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/482908_894E0D_FBDB52_CA7420.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/482908_894E0D_FBDB52_CA7420.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/482908_894E0D_FBDB52_CA7420.png",
+  "index": 136,
+  "title": "482908_894E0D_FBDB52_CA7420",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/482908_894E0D_FBDB52_CA7420-preview.png",
+  "colors": [
+    {
+      "color": "482908",
+      "name": "Bronze"
+    },
+    {
+      "color": "894E0D",
+      "name": "Korma"
+    },
+    {
+      "color": "FBDB52",
+      "name": "Energy Yellow"
+    },
+    {
+      "color": "CA7420",
+      "name": "Ochre"
+    }
+  ]
+}

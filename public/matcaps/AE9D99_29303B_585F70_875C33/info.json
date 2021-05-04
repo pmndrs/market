@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/AE9D99_29303B_585F70_875C33.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/AE9D99_29303B_585F70_875C33.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/AE9D99_29303B_585F70_875C33.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/AE9D99_29303B_585F70_875C33.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/AE9D99_29303B_585F70_875C33.png",
+  "index": 516,
+  "title": "AE9D99_29303B_585F70_875C33",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/AE9D99_29303B_585F70_875C33-preview.png",
+  "colors": [
+    {
+      "color": "AE9D99",
+      "name": "Martini"
+    },
+    {
+      "color": "29303B",
+      "name": "Ebony Clay"
+    },
+    {
+      "color": "585F70",
+      "name": "Shuttle Gray"
+    },
+    {
+      "color": "875C33",
+      "name": "Potters Clay"
+    }
+  ]
+}

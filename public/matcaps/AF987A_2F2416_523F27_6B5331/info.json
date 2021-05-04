@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/AF987A_2F2416_523F27_6B5331.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/AF987A_2F2416_523F27_6B5331.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/AF987A_2F2416_523F27_6B5331.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/AF987A_2F2416_523F27_6B5331.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/AF987A_2F2416_523F27_6B5331.png",
+  "index": 518,
+  "title": "AF987A_2F2416_523F27_6B5331",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/AF987A_2F2416_523F27_6B5331-preview.png",
+  "colors": [
+    {
+      "color": "AF987A",
+      "name": "Sandrift"
+    },
+    {
+      "color": "2F2416",
+      "name": "Oil"
+    },
+    {
+      "color": "523F27",
+      "name": "Saddle"
+    },
+    {
+      "color": "6B5331",
+      "name": "Shingle Fawn"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/39433A_65866E_86BF8B_BFF8D8.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/39433A_65866E_86BF8B_BFF8D8.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/39433A_65866E_86BF8B_BFF8D8.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/39433A_65866E_86BF8B_BFF8D8.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/39433A_65866E_86BF8B_BFF8D8.png",
+  "index": 90,
+  "title": "39433A_65866E_86BF8B_BFF8D8",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/39433A_65866E_86BF8B_BFF8D8-preview.png",
+  "colors": [
+    {
+      "color": "39433A",
+      "name": "Lunar Green"
+    },
+    {
+      "color": "65866E",
+      "name": "Viridian Green"
+    },
+    {
+      "color": "86BF8B",
+      "name": "De York"
+    },
+    {
+      "color": "BFF8D8",
+      "name": "Ice Cold"
+    }
+  ]
+}

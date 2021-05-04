@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/254FB0_99AFF0_6587D8_1D3279.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/254FB0_99AFF0_6587D8_1D3279.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/254FB0_99AFF0_6587D8_1D3279.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/254FB0_99AFF0_6587D8_1D3279.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/254FB0_99AFF0_6587D8_1D3279.png",
+  "index": 40,
+  "title": "254FB0_99AFF0_6587D8_1D3279",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/254FB0_99AFF0_6587D8_1D3279-preview.png",
+  "colors": [
+    {
+      "color": "254FB0",
+      "name": "Cerulean Blue"
+    },
+    {
+      "color": "99AFF0",
+      "name": "Portage"
+    },
+    {
+      "color": "6587D8",
+      "name": "Danube"
+    },
+    {
+      "color": "1D3279",
+      "name": "Biscay"
+    }
+  ]
+}

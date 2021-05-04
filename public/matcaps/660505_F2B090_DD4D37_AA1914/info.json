@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/660505_F2B090_DD4D37_AA1914.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/660505_F2B090_DD4D37_AA1914.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/660505_F2B090_DD4D37_AA1914.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/660505_F2B090_DD4D37_AA1914.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/660505_F2B090_DD4D37_AA1914.png",
+  "index": 254,
+  "title": "660505_F2B090_DD4D37_AA1914",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/660505_F2B090_DD4D37_AA1914-preview.png",
+  "colors": [
+    {
+      "color": "660505",
+      "name": "Red Oxide"
+    },
+    {
+      "color": "F2B090",
+      "name": "Tacao"
+    },
+    {
+      "color": "DD4D37",
+      "name": "Punch"
+    },
+    {
+      "color": "AA1914",
+      "name": "Tabasco"
+    }
+  ]
+}

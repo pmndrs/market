@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6C6F76_CBD1D7_B2BDC7_A6B0BF.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6C6F76_CBD1D7_B2BDC7_A6B0BF.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6C6F76_CBD1D7_B2BDC7_A6B0BF.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6C6F76_CBD1D7_B2BDC7_A6B0BF.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6C6F76_CBD1D7_B2BDC7_A6B0BF.png",
+  "index": 277,
+  "title": "6C6F76_CBD1D7_B2BDC7_A6B0BF",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6C6F76_CBD1D7_B2BDC7_A6B0BF-preview.png",
+  "colors": [
+    {
+      "color": "6C6F76",
+      "name": "Nevada"
+    },
+    {
+      "color": "CBD1D7",
+      "name": "Ghost"
+    },
+    {
+      "color": "B2BDC7",
+      "name": "Cadet Blue"
+    },
+    {
+      "color": "A6B0BF",
+      "name": "Cadet Blue"
+    }
+  ]
+}

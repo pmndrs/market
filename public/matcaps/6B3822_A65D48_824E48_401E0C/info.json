@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6B3822_A65D48_824E48_401E0C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6B3822_A65D48_824E48_401E0C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6B3822_A65D48_824E48_401E0C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6B3822_A65D48_824E48_401E0C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6B3822_A65D48_824E48_401E0C.png",
+  "index": 273,
+  "title": "6B3822_A65D48_824E48_401E0C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6B3822_A65D48_824E48_401E0C-preview.png",
+  "colors": [
+    {
+      "color": "6B3822",
+      "name": "Pickled Bean"
+    },
+    {
+      "color": "A65D48",
+      "name": "Cape Palliser"
+    },
+    {
+      "color": "824E48",
+      "name": "Spicy Mix"
+    },
+    {
+      "color": "401E0C",
+      "name": "Clinker"
+    }
+  ]
+}

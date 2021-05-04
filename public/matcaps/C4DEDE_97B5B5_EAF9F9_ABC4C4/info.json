@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/C4DEDE_97B5B5_EAF9F9_ABC4C4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/C4DEDE_97B5B5_EAF9F9_ABC4C4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/C4DEDE_97B5B5_EAF9F9_ABC4C4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/C4DEDE_97B5B5_EAF9F9_ABC4C4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/C4DEDE_97B5B5_EAF9F9_ABC4C4.png",
+  "index": 579,
+  "title": "C4DEDE_97B5B5_EAF9F9_ABC4C4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/C4DEDE_97B5B5_EAF9F9_ABC4C4-preview.png",
+  "colors": [
+    {
+      "color": "C4DEDE",
+      "name": "Edgewater"
+    },
+    {
+      "color": "97B5B5",
+      "name": "Gull Gray"
+    },
+    {
+      "color": "EAF9F9",
+      "name": "Aqua Spring"
+    },
+    {
+      "color": "ABC4C4",
+      "name": "Opal"
+    }
+  ]
+}

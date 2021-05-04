@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E36_72726D_63645D_0E0F0C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E36_72726D_63645D_0E0F0C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E36_72726D_63645D_0E0F0C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E36_72726D_63645D_0E0F0C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3E3E36_72726D_63645D_0E0F0C.png",
+  "index": 102,
+  "title": "3E3E36_72726D_63645D_0E0F0C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3E3E36_72726D_63645D_0E0F0C-preview.png",
+  "colors": [
+    {
+      "color": "3E3E36",
+      "name": "Armadillo"
+    },
+    {
+      "color": "72726D",
+      "name": "Ironside Gray"
+    },
+    {
+      "color": "63645D",
+      "name": "Storm Dust"
+    },
+    {
+      "color": "0E0F0C",
+      "name": "Rangoon Green"
+    }
+  ]
+}

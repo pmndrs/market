@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5D5E5A_A1A29B_2A2927_8B948C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5D5E5A_A1A29B_2A2927_8B948C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5D5E5A_A1A29B_2A2927_8B948C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5D5E5A_A1A29B_2A2927_8B948C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5D5E5A_A1A29B_2A2927_8B948C.png",
+  "index": 214,
+  "title": "5D5E5A_A1A29B_2A2927_8B948C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5D5E5A_A1A29B_2A2927_8B948C-preview.png",
+  "colors": [
+    {
+      "color": "5D5E5A",
+      "name": "Storm Dust"
+    },
+    {
+      "color": "A1A29B",
+      "name": "Delta"
+    },
+    {
+      "color": "2A2927",
+      "name": "Tuatara"
+    },
+    {
+      "color": "8B948C",
+      "name": "Stack"
+    }
+  ]
+}

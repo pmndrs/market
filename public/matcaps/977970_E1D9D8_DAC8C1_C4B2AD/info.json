@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/977970_E1D9D8_DAC8C1_C4B2AD.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/977970_E1D9D8_DAC8C1_C4B2AD.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/977970_E1D9D8_DAC8C1_C4B2AD.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/977970_E1D9D8_DAC8C1_C4B2AD.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/977970_E1D9D8_DAC8C1_C4B2AD.png",
+  "index": 466,
+  "title": "977970_E1D9D8_DAC8C1_C4B2AD",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/977970_E1D9D8_DAC8C1_C4B2AD-preview.png",
+  "colors": [
+    {
+      "color": "977970",
+      "name": "Almond Frost"
+    },
+    {
+      "color": "E1D9D8",
+      "name": "Swiss Coffee"
+    },
+    {
+      "color": "DAC8C1",
+      "name": "Wafer"
+    },
+    {
+      "color": "C4B2AD",
+      "name": "Silk"
+    }
+  ]
+}

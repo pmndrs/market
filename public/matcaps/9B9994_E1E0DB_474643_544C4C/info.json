@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9B9994_E1E0DB_474643_544C4C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9B9994_E1E0DB_474643_544C4C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9B9994_E1E0DB_474643_544C4C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9B9994_E1E0DB_474643_544C4C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9B9994_E1E0DB_474643_544C4C.png",
+  "index": 473,
+  "title": "9B9994_E1E0DB_474643_544C4C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9B9994_E1E0DB_474643_544C4C-preview.png",
+  "colors": [
+    {
+      "color": "9B9994",
+      "name": "Star Dust"
+    },
+    {
+      "color": "E1E0DB",
+      "name": "Westar"
+    },
+    {
+      "color": "474643",
+      "name": "Fuscous Gray"
+    },
+    {
+      "color": "544C4C",
+      "name": "Emperor"
+    }
+  ]
+}

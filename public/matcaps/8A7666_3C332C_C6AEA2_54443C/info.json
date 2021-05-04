@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8A7666_3C332C_C6AEA2_54443C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8A7666_3C332C_C6AEA2_54443C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8A7666_3C332C_C6AEA2_54443C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8A7666_3C332C_C6AEA2_54443C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8A7666_3C332C_C6AEA2_54443C.png",
+  "index": 390,
+  "title": "8A7666_3C332C_C6AEA2_54443C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8A7666_3C332C_C6AEA2_54443C-preview.png",
+  "colors": [
+    {
+      "color": "8A7666",
+      "name": "Cement"
+    },
+    {
+      "color": "3C332C",
+      "name": "Taupe"
+    },
+    {
+      "color": "C6AEA2",
+      "name": "Rodeo Dust"
+    },
+    {
+      "color": "54443C",
+      "name": "Kabul"
+    }
+  ]
+}

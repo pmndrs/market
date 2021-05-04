@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/A95E4D_57261A_6E3223_773C24.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/A95E4D_57261A_6E3223_773C24.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/A95E4D_57261A_6E3223_773C24.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/A95E4D_57261A_6E3223_773C24.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/A95E4D_57261A_6E3223_773C24.png",
+  "index": 501,
+  "title": "A95E4D_57261A_6E3223_773C24",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/A95E4D_57261A_6E3223_773C24-preview.png",
+  "colors": [
+    {
+      "color": "A95E4D",
+      "name": "Matrix"
+    },
+    {
+      "color": "57261A",
+      "name": "Brown Derby"
+    },
+    {
+      "color": "6E3223",
+      "name": "Metallic Copper"
+    },
+    {
+      "color": "773C24",
+      "name": "Nutmeg"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9AA8B6_313133_4E5055_D7EBF8.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9AA8B6_313133_4E5055_D7EBF8.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9AA8B6_313133_4E5055_D7EBF8.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9AA8B6_313133_4E5055_D7EBF8.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9AA8B6_313133_4E5055_D7EBF8.png",
+  "index": 471,
+  "title": "9AA8B6_313133_4E5055_D7EBF8",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9AA8B6_313133_4E5055_D7EBF8-preview.png",
+  "colors": [
+    {
+      "color": "9AA8B6",
+      "name": "Gull Gray"
+    },
+    {
+      "color": "313133",
+      "name": "Tuna"
+    },
+    {
+      "color": "4E5055",
+      "name": "Abbey"
+    },
+    {
+      "color": "D7EBF8",
+      "name": "White Ice"
+    }
+  ]
+}

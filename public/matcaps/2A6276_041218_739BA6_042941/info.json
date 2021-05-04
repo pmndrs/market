@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2A6276_041218_739BA6_042941.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2A6276_041218_739BA6_042941.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2A6276_041218_739BA6_042941.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2A6276_041218_739BA6_042941.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2A6276_041218_739BA6_042941.png",
+  "index": 51,
+  "title": "2A6276_041218_739BA6_042941",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2A6276_041218_739BA6_042941-preview.png",
+  "colors": [
+    {
+      "color": "2A6276",
+      "name": "Paradiso"
+    },
+    {
+      "color": "041218",
+      "name": "Black Pearl"
+    },
+    {
+      "color": "739BA6",
+      "name": "Gothic"
+    },
+    {
+      "color": "042941",
+      "name": "Blue Whale"
+    }
+  ]
+}

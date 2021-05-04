@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/837667_DCD4C8_C5BAAC_3C2E22.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/837667_DCD4C8_C5BAAC_3C2E22.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/837667_DCD4C8_C5BAAC_3C2E22.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/837667_DCD4C8_C5BAAC_3C2E22.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/837667_DCD4C8_C5BAAC_3C2E22.png",
+  "index": 369,
+  "title": "837667_DCD4C8_C5BAAC_3C2E22",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/837667_DCD4C8_C5BAAC_3C2E22-preview.png",
+  "colors": [
+    {
+      "color": "837667",
+      "name": "Makara"
+    },
+    {
+      "color": "DCD4C8",
+      "name": "Sisal"
+    },
+    {
+      "color": "C5BAAC",
+      "name": "Bison Hide"
+    },
+    {
+      "color": "3C2E22",
+      "name": "English Walnut"
+    }
+  ]
+}

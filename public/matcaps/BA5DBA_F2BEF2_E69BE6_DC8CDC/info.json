@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/BA5DBA_F2BEF2_E69BE6_DC8CDC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/BA5DBA_F2BEF2_E69BE6_DC8CDC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/BA5DBA_F2BEF2_E69BE6_DC8CDC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/BA5DBA_F2BEF2_E69BE6_DC8CDC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/BA5DBA_F2BEF2_E69BE6_DC8CDC.png",
+  "index": 546,
+  "title": "BA5DBA_F2BEF2_E69BE6_DC8CDC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/BA5DBA_F2BEF2_E69BE6_DC8CDC-preview.png",
+  "colors": [
+    {
+      "color": "BA5DBA",
+      "name": "Fuchsia Pink"
+    },
+    {
+      "color": "F2BEF2",
+      "name": "Cherub"
+    },
+    {
+      "color": "E69BE6",
+      "name": "Light Orchid"
+    },
+    {
+      "color": "DC8CDC",
+      "name": "Light Orchid"
+    }
+  ]
+}

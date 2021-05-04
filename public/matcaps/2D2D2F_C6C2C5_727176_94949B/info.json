@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2F_C6C2C5_727176_94949B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2F_C6C2C5_727176_94949B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2F_C6C2C5_727176_94949B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2F_C6C2C5_727176_94949B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2F_C6C2C5_727176_94949B.png",
+  "index": 55,
+  "title": "2D2D2F_C6C2C5_727176_94949B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2D2D2F_C6C2C5_727176_94949B-preview.png",
+  "colors": [
+    {
+      "color": "2D2D2F",
+      "name": "Shark"
+    },
+    {
+      "color": "C6C2C5",
+      "name": "Pale Slate"
+    },
+    {
+      "color": "727176",
+      "name": "Jumbo"
+    },
+    {
+      "color": "94949B",
+      "name": "Manatee"
+    }
+  ]
+}

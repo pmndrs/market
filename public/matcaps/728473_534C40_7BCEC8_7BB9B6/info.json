@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/728473_534C40_7BCEC8_7BB9B6.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/728473_534C40_7BCEC8_7BB9B6.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/728473_534C40_7BCEC8_7BB9B6.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/728473_534C40_7BCEC8_7BB9B6.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/728473_534C40_7BCEC8_7BB9B6.png",
+  "index": 300,
+  "title": "728473_534C40_7BCEC8_7BB9B6",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/728473_534C40_7BCEC8_7BB9B6-preview.png",
+  "colors": [
+    {
+      "color": "728473",
+      "name": "Xanadu"
+    },
+    {
+      "color": "534C40",
+      "name": "Armadillo"
+    },
+    {
+      "color": "7BCEC8",
+      "name": "Monte Carlo"
+    },
+    {
+      "color": "7BB9B6",
+      "name": "Neptune"
+    }
+  ]
+}

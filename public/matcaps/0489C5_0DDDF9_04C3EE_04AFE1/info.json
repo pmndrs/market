@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/0489C5_0DDDF9_04C3EE_04AFE1.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/0489C5_0DDDF9_04C3EE_04AFE1.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/0489C5_0DDDF9_04C3EE_04AFE1.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/0489C5_0DDDF9_04C3EE_04AFE1.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/0489C5_0DDDF9_04C3EE_04AFE1.png",
+  "index": 3,
+  "title": "0489C5_0DDDF9_04C3EE_04AFE1",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/0489C5_0DDDF9_04C3EE_04AFE1-preview.png",
+  "colors": [
+    {
+      "color": "0489C5",
+      "name": "Lochmara"
+    },
+    {
+      "color": "0DDDF9",
+      "name": "Bright Turquoise"
+    },
+    {
+      "color": "04C3EE",
+      "name": "Bright Turquoise"
+    },
+    {
+      "color": "04AFE1",
+      "name": "Cerulean"
+    }
+  ]
+}

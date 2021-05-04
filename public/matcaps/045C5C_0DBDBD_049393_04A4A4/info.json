@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/045C5C_0DBDBD_049393_04A4A4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/045C5C_0DBDBD_049393_04A4A4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/045C5C_0DBDBD_049393_04A4A4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/045C5C_0DBDBD_049393_04A4A4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/045C5C_0DBDBD_049393_04A4A4.png",
+  "index": 1,
+  "title": "045C5C_0DBDBD_049393_04A4A4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/045C5C_0DBDBD_049393_04A4A4-preview.png",
+  "colors": [
+    {
+      "color": "045C5C",
+      "name": "Blue Stone"
+    },
+    {
+      "color": "0DBDBD",
+      "name": "Robin's Egg Blue"
+    },
+    {
+      "color": "049393",
+      "name": "Niagara"
+    },
+    {
+      "color": "04A4A4",
+      "name": "Persian Green"
+    }
+  ]
+}

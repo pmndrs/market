@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/66605E_939198_2E261F_3C332A.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/66605E_939198_2E261F_3C332A.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/66605E_939198_2E261F_3C332A.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/66605E_939198_2E261F_3C332A.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/66605E_939198_2E261F_3C332A.png",
+  "index": 255,
+  "title": "66605E_939198_2E261F_3C332A",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/66605E_939198_2E261F_3C332A-preview.png",
+  "colors": [
+    {
+      "color": "66605E",
+      "name": "Flint"
+    },
+    {
+      "color": "939198",
+      "name": "Mountain Mist"
+    },
+    {
+      "color": "2E261F",
+      "name": "Zeus"
+    },
+    {
+      "color": "3C332A",
+      "name": "Taupe"
+    }
+  ]
+}

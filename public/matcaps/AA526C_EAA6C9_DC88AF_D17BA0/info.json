@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/AA526C_EAA6C9_DC88AF_D17BA0.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/AA526C_EAA6C9_DC88AF_D17BA0.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/AA526C_EAA6C9_DC88AF_D17BA0.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/AA526C_EAA6C9_DC88AF_D17BA0.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/AA526C_EAA6C9_DC88AF_D17BA0.png",
+  "index": 505,
+  "title": "AA526C_EAA6C9_DC88AF_D17BA0",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/AA526C_EAA6C9_DC88AF_D17BA0-preview.png",
+  "colors": [
+    {
+      "color": "AA526C",
+      "name": "Cadillac"
+    },
+    {
+      "color": "EAA6C9",
+      "name": "Kobi"
+    },
+    {
+      "color": "DC88AF",
+      "name": "Shocking"
+    },
+    {
+      "color": "D17BA0",
+      "name": "Hopbush"
+    }
+  ]
+}

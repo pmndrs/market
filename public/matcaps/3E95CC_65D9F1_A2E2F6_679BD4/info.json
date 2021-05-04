@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3E95CC_65D9F1_A2E2F6_679BD4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3E95CC_65D9F1_A2E2F6_679BD4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3E95CC_65D9F1_A2E2F6_679BD4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3E95CC_65D9F1_A2E2F6_679BD4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3E95CC_65D9F1_A2E2F6_679BD4.png",
+  "index": 104,
+  "title": "3E95CC_65D9F1_A2E2F6_679BD4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3E95CC_65D9F1_A2E2F6_679BD4-preview.png",
+  "colors": [
+    {
+      "color": "3E95CC",
+      "name": "Shakespeare"
+    },
+    {
+      "color": "65D9F1",
+      "name": "Spray"
+    },
+    {
+      "color": "A2E2F6",
+      "name": "Sail"
+    },
+    {
+      "color": "679BD4",
+      "name": "Danube"
+    }
+  ]
+}

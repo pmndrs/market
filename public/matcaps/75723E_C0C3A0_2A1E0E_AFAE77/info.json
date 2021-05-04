@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/75723E_C0C3A0_2A1E0E_AFAE77.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/75723E_C0C3A0_2A1E0E_AFAE77.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/75723E_C0C3A0_2A1E0E_AFAE77.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/75723E_C0C3A0_2A1E0E_AFAE77.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/75723E_C0C3A0_2A1E0E_AFAE77.png",
+  "index": 307,
+  "title": "75723E_C0C3A0_2A1E0E_AFAE77",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/75723E_C0C3A0_2A1E0E_AFAE77-preview.png",
+  "colors": [
+    {
+      "color": "75723E",
+      "name": "Yellow Metal"
+    },
+    {
+      "color": "C0C3A0",
+      "name": "Thistle Green"
+    },
+    {
+      "color": "2A1E0E",
+      "name": "Mikado"
+    },
+    {
+      "color": "AFAE77",
+      "name": "Green Smoke"
+    }
+  ]
+}

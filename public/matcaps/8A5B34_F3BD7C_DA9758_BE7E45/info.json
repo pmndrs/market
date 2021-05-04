@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8A5B34_F3BD7C_DA9758_BE7E45.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8A5B34_F3BD7C_DA9758_BE7E45.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8A5B34_F3BD7C_DA9758_BE7E45.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8A5B34_F3BD7C_DA9758_BE7E45.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8A5B34_F3BD7C_DA9758_BE7E45.png",
+  "index": 388,
+  "title": "8A5B34_F3BD7C_DA9758_BE7E45",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8A5B34_F3BD7C_DA9758_BE7E45-preview.png",
+  "colors": [
+    {
+      "color": "8A5B34",
+      "name": "Potters Clay"
+    },
+    {
+      "color": "F3BD7C",
+      "name": "Tacao"
+    },
+    {
+      "color": "DA9758",
+      "name": "Di Serria"
+    },
+    {
+      "color": "BE7E45",
+      "name": "Tussock"
+    }
+  ]
+}

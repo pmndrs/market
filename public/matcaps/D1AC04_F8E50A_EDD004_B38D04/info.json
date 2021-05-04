@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/D1AC04_F8E50A_EDD004_B38D04.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/D1AC04_F8E50A_EDD004_B38D04.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/D1AC04_F8E50A_EDD004_B38D04.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/D1AC04_F8E50A_EDD004_B38D04.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/D1AC04_F8E50A_EDD004_B38D04.png",
+  "index": 623,
+  "title": "D1AC04_F8E50A_EDD004_B38D04",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/D1AC04_F8E50A_EDD004_B38D04-preview.png",
+  "colors": [
+    {
+      "color": "D1AC04",
+      "name": "Buddha Gold"
+    },
+    {
+      "color": "F8E50A",
+      "name": "Lemon"
+    },
+    {
+      "color": "EDD004",
+      "name": "Corn"
+    },
+    {
+      "color": "B38D04",
+      "name": "Pirate Gold"
+    }
+  ]
+}

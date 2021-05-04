@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/D0D3BE_816854_998366_685146.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/D0D3BE_816854_998366_685146.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/D0D3BE_816854_998366_685146.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/D0D3BE_816854_998366_685146.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/D0D3BE_816854_998366_685146.png",
+  "index": 622,
+  "title": "D0D3BE_816854_998366_685146",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/D0D3BE_816854_998366_685146-preview.png",
+  "colors": [
+    {
+      "color": "D0D3BE",
+      "name": "Foggy Gray"
+    },
+    {
+      "color": "816854",
+      "name": "Shadow"
+    },
+    {
+      "color": "998366",
+      "name": "Domino"
+    },
+    {
+      "color": "685146",
+      "name": "Kabul"
+    }
+  ]
+}

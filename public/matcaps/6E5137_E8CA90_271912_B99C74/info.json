@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6E5137_E8CA90_271912_B99C74.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6E5137_E8CA90_271912_B99C74.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6E5137_E8CA90_271912_B99C74.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6E5137_E8CA90_271912_B99C74.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6E5137_E8CA90_271912_B99C74.png",
+  "index": 284,
+  "title": "6E5137_E8CA90_271912_B99C74",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6E5137_E8CA90_271912_B99C74-preview.png",
+  "colors": [
+    {
+      "color": "6E5137",
+      "name": "Shingle Fawn"
+    },
+    {
+      "color": "E8CA90",
+      "name": "Putty"
+    },
+    {
+      "color": "271912",
+      "name": "Night Rider"
+    },
+    {
+      "color": "B99C74",
+      "name": "Mongoose"
+    }
+  ]
+}

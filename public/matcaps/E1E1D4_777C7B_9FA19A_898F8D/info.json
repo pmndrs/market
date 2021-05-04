@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/E1E1D4_777C7B_9FA19A_898F8D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/E1E1D4_777C7B_9FA19A_898F8D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/E1E1D4_777C7B_9FA19A_898F8D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/E1E1D4_777C7B_9FA19A_898F8D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/E1E1D4_777C7B_9FA19A_898F8D.png",
+  "index": 647,
+  "title": "E1E1D4_777C7B_9FA19A_898F8D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/E1E1D4_777C7B_9FA19A_898F8D-preview.png",
+  "colors": [
+    {
+      "color": "E1E1D4",
+      "name": "Moon Mist"
+    },
+    {
+      "color": "777C7B",
+      "name": "Sirocco"
+    },
+    {
+      "color": "9FA19A",
+      "name": "Delta"
+    },
+    {
+      "color": "898F8D",
+      "name": "Gunsmoke"
+    }
+  ]
+}

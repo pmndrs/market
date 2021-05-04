@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3B3C3F_DAD9D5_929290_ABACA8.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3B3C3F_DAD9D5_929290_ABACA8.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3B3C3F_DAD9D5_929290_ABACA8.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3B3C3F_DAD9D5_929290_ABACA8.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3B3C3F_DAD9D5_929290_ABACA8.png",
+  "index": 96,
+  "title": "3B3C3F_DAD9D5_929290_ABACA8",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3B3C3F_DAD9D5_929290_ABACA8-preview.png",
+  "colors": [
+    {
+      "color": "3B3C3F",
+      "name": "Tuna"
+    },
+    {
+      "color": "DAD9D5",
+      "name": "Quill Gray"
+    },
+    {
+      "color": "929290",
+      "name": "Star Dust"
+    },
+    {
+      "color": "ABACA8",
+      "name": "Delta"
+    }
+  ]
+}

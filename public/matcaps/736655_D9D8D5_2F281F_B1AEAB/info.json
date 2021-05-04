@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/736655_D9D8D5_2F281F_B1AEAB.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/736655_D9D8D5_2F281F_B1AEAB.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/736655_D9D8D5_2F281F_B1AEAB.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/736655_D9D8D5_2F281F_B1AEAB.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/736655_D9D8D5_2F281F_B1AEAB.png",
+  "index": 301,
+  "title": "736655_D9D8D5_2F281F_B1AEAB",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/736655_D9D8D5_2F281F_B1AEAB-preview.png",
+  "colors": [
+    {
+      "color": "736655",
+      "name": "Coffee"
+    },
+    {
+      "color": "D9D8D5",
+      "name": "Quill Gray"
+    },
+    {
+      "color": "2F281F",
+      "name": "Zeus"
+    },
+    {
+      "color": "B1AEAB",
+      "name": "Cloudy"
+    }
+  ]
+}

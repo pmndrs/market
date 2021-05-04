@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CB919B_F9DDE1_ECC0C8_F4CCD4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CB919B_F9DDE1_ECC0C8_F4CCD4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CB919B_F9DDE1_ECC0C8_F4CCD4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CB919B_F9DDE1_ECC0C8_F4CCD4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CB919B_F9DDE1_ECC0C8_F4CCD4.png",
+  "index": 608,
+  "title": "CB919B_F9DDE1_ECC0C8_F4CCD4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CB919B_F9DDE1_ECC0C8_F4CCD4-preview.png",
+  "colors": [
+    {
+      "color": "CB919B",
+      "name": "Puce"
+    },
+    {
+      "color": "F9DDE1",
+      "name": "Cherub"
+    },
+    {
+      "color": "ECC0C8",
+      "name": "Beauty Bush"
+    },
+    {
+      "color": "F4CCD4",
+      "name": "We Peep"
+    }
+  ]
+}

@@ -25,6 +25,11 @@ const Nav = () => {
       current: pathname === '/categories',
     },
     {
+      name: 'MatCaps',
+      href: '/matcaps',
+      current: pathname === '/matcaps',
+    },
+    {
       name: 'Request a Model',
       href: '/request',
       current: pathname === '/request',

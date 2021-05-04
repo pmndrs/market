@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/FBB43F_FBE993_FB552E_FCDD65.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/FBB43F_FBE993_FB552E_FCDD65.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/FBB43F_FBE993_FB552E_FCDD65.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/FBB43F_FBE993_FB552E_FCDD65.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/FBB43F_FBE993_FB552E_FCDD65.png",
+  "index": 679,
+  "title": "FBB43F_FBE993_FB552E_FCDD65",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/FBB43F_FBE993_FB552E_FCDD65-preview.png",
+  "colors": [
+    {
+      "color": "FBB43F",
+      "name": "Yellow Orange"
+    },
+    {
+      "color": "FBE993",
+      "name": "Sweet Corn"
+    },
+    {
+      "color": "FB552E",
+      "name": "Outrageous Orange"
+    },
+    {
+      "color": "FCDD65",
+      "name": "Goldenrod"
+    }
+  ]
+}

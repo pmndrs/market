@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/794E40_361612_4C2A21_441B1B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/794E40_361612_4C2A21_441B1B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/794E40_361612_4C2A21_441B1B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/794E40_361612_4C2A21_441B1B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/794E40_361612_4C2A21_441B1B.png",
+  "index": 326,
+  "title": "794E40_361612_4C2A21_441B1B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/794E40_361612_4C2A21_441B1B-preview.png",
+  "colors": [
+    {
+      "color": "794E40",
+      "name": "Spicy Mix"
+    },
+    {
+      "color": "361612",
+      "name": "Cedar"
+    },
+    {
+      "color": "4C2A21",
+      "name": "Saddle"
+    },
+    {
+      "color": "441B1B",
+      "name": "Cocoa Bean"
+    }
+  ]
+}

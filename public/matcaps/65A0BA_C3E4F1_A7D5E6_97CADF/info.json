@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/65A0BA_C3E4F1_A7D5E6_97CADF.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/65A0BA_C3E4F1_A7D5E6_97CADF.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/65A0BA_C3E4F1_A7D5E6_97CADF.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/65A0BA_C3E4F1_A7D5E6_97CADF.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/65A0BA_C3E4F1_A7D5E6_97CADF.png",
+  "index": 252,
+  "title": "65A0BA_C3E4F1_A7D5E6_97CADF",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/65A0BA_C3E4F1_A7D5E6_97CADF-preview.png",
+  "colors": [
+    {
+      "color": "65A0BA",
+      "name": "Hippie Blue"
+    },
+    {
+      "color": "C3E4F1",
+      "name": "Link Water"
+    },
+    {
+      "color": "A7D5E6",
+      "name": "Regent St Blue"
+    },
+    {
+      "color": "97CADF",
+      "name": "Morning Glory"
+    }
+  ]
+}

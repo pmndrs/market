@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/7B7E82_343536_A0B1C8_44444C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/7B7E82_343536_A0B1C8_44444C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/7B7E82_343536_A0B1C8_44444C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/7B7E82_343536_A0B1C8_44444C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/7B7E82_343536_A0B1C8_44444C.png",
+  "index": 340,
+  "title": "7B7E82_343536_A0B1C8_44444C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/7B7E82_343536_A0B1C8_44444C-preview.png",
+  "colors": [
+    {
+      "color": "7B7E82",
+      "name": "Rolling Stone"
+    },
+    {
+      "color": "343536",
+      "name": "Shark"
+    },
+    {
+      "color": "A0B1C8",
+      "name": "Rock Blue"
+    },
+    {
+      "color": "44444C",
+      "name": "Abbey"
+    }
+  ]
+}

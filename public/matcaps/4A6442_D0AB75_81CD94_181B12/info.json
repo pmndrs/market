@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/4A6442_D0AB75_81CD94_181B12.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/4A6442_D0AB75_81CD94_181B12.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/4A6442_D0AB75_81CD94_181B12.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/4A6442_D0AB75_81CD94_181B12.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/4A6442_D0AB75_81CD94_181B12.png",
+  "index": 144,
+  "title": "4A6442_D0AB75_81CD94_181B12",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/4A6442_D0AB75_81CD94_181B12-preview.png",
+  "colors": [
+    {
+      "color": "4A6442",
+      "name": "Axolotl"
+    },
+    {
+      "color": "D0AB75",
+      "name": "Laser"
+    },
+    {
+      "color": "81CD94",
+      "name": "De York"
+    },
+    {
+      "color": "181B12",
+      "name": "Rangoon Green"
+    }
+  ]
+}

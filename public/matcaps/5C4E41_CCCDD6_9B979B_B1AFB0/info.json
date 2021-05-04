@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5C4E41_CCCDD6_9B979B_B1AFB0.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5C4E41_CCCDD6_9B979B_B1AFB0.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5C4E41_CCCDD6_9B979B_B1AFB0.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5C4E41_CCCDD6_9B979B_B1AFB0.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5C4E41_CCCDD6_9B979B_B1AFB0.png",
+  "index": 208,
+  "title": "5C4E41_CCCDD6_9B979B_B1AFB0",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5C4E41_CCCDD6_9B979B_B1AFB0-preview.png",
+  "colors": [
+    {
+      "color": "5C4E41",
+      "name": "Kabul"
+    },
+    {
+      "color": "CCCDD6",
+      "name": "Ghost"
+    },
+    {
+      "color": "9B979B",
+      "name": "Shady Lady"
+    },
+    {
+      "color": "B1AFB0",
+      "name": "Shady Lady"
+    }
+  ]
+}

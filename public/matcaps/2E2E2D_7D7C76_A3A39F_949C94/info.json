@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2E2E2D_7D7C76_A3A39F_949C94.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2E2E2D_7D7C76_A3A39F_949C94.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2E2E2D_7D7C76_A3A39F_949C94.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2E2E2D_7D7C76_A3A39F_949C94.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2E2E2D_7D7C76_A3A39F_949C94.png",
+  "index": 57,
+  "title": "2E2E2D_7D7C76_A3A39F_949C94",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2E2E2D_7D7C76_A3A39F_949C94-preview.png",
+  "colors": [
+    {
+      "color": "2E2E2D",
+      "name": "Tuatara"
+    },
+    {
+      "color": "7D7C76",
+      "name": "Friar Gray"
+    },
+    {
+      "color": "A3A39F",
+      "name": "Delta"
+    },
+    {
+      "color": "949C94",
+      "name": "Mantle"
+    }
+  ]
+}

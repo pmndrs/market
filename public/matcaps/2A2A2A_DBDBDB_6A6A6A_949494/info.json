@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2A2A2A_DBDBDB_6A6A6A_949494.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2A2A2A_DBDBDB_6A6A6A_949494.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2A2A2A_DBDBDB_6A6A6A_949494.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2A2A2A_DBDBDB_6A6A6A_949494.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2A2A2A_DBDBDB_6A6A6A_949494.png",
+  "index": 48,
+  "title": "2A2A2A_DBDBDB_6A6A6A_949494",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2A2A2A_DBDBDB_6A6A6A_949494-preview.png",
+  "colors": [
+    {
+      "color": "2A2A2A",
+      "name": "Mine Shaft"
+    },
+    {
+      "color": "DBDBDB",
+      "name": "Alto"
+    },
+    {
+      "color": "6A6A6A",
+      "name": "Dove Gray"
+    },
+    {
+      "color": "949494",
+      "name": "Dusty Gray"
+    }
+  ]
+}

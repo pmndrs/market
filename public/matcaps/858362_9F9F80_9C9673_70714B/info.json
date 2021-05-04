@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/858362_9F9F80_9C9673_70714B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/858362_9F9F80_9C9673_70714B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/858362_9F9F80_9C9673_70714B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/858362_9F9F80_9C9673_70714B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/858362_9F9F80_9C9673_70714B.png",
+  "index": 375,
+  "title": "858362_9F9F80_9C9673_70714B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/858362_9F9F80_9C9673_70714B-preview.png",
+  "colors": [
+    {
+      "color": "858362",
+      "name": "Clay Creek"
+    },
+    {
+      "color": "9F9F80",
+      "name": "Gurkha"
+    },
+    {
+      "color": "9C9673",
+      "name": "Gurkha"
+    },
+    {
+      "color": "70714B",
+      "name": "Go Ben"
+    }
+  ]
+}

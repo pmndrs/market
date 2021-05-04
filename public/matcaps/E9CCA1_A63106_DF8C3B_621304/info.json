@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/E9CCA1_A63106_DF8C3B_621304.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/E9CCA1_A63106_DF8C3B_621304.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/E9CCA1_A63106_DF8C3B_621304.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/E9CCA1_A63106_DF8C3B_621304.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/E9CCA1_A63106_DF8C3B_621304.png",
+  "index": 663,
+  "title": "E9CCA1_A63106_DF8C3B_621304",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/E9CCA1_A63106_DF8C3B_621304-preview.png",
+  "colors": [
+    {
+      "color": "E9CCA1",
+      "name": "Pancho"
+    },
+    {
+      "color": "A63106",
+      "name": "Fire"
+    },
+    {
+      "color": "DF8C3B",
+      "name": "Red Damask"
+    },
+    {
+      "color": "621304",
+      "name": "Red Oxide"
+    }
+  ]
+}

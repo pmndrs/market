@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/4D595E_858D87_596F84_748480.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/4D595E_858D87_596F84_748480.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/4D595E_858D87_596F84_748480.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/4D595E_858D87_596F84_748480.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/4D595E_858D87_596F84_748480.png",
+  "index": 152,
+  "title": "4D595E_858D87_596F84_748480",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/4D595E_858D87_596F84_748480-preview.png",
+  "colors": [
+    {
+      "color": "4D595E",
+      "name": "River Bed"
+    },
+    {
+      "color": "858D87",
+      "name": "Stack"
+    },
+    {
+      "color": "596F84",
+      "name": "Blue Bayoux"
+    },
+    {
+      "color": "748480",
+      "name": "Blue Smoke"
+    }
+  ]
+}

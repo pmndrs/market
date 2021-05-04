@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/7A7C63_625531_665B3F_5B4B29.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/7A7C63_625531_665B3F_5B4B29.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/7A7C63_625531_665B3F_5B4B29.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/7A7C63_625531_665B3F_5B4B29.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/7A7C63_625531_665B3F_5B4B29.png",
+  "index": 335,
+  "title": "7A7C63_625531_665B3F_5B4B29",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/7A7C63_625531_665B3F_5B4B29-preview.png",
+  "colors": [
+    {
+      "color": "7A7C63",
+      "name": "Flax Smoke"
+    },
+    {
+      "color": "625531",
+      "name": "Costa Del Sol"
+    },
+    {
+      "color": "665B3F",
+      "name": "Hemlock"
+    },
+    {
+      "color": "5B4B29",
+      "name": "Quincy"
+    }
+  ]
+}

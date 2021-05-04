@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/48270F_C4723B_9B5728_7B431B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/48270F_C4723B_9B5728_7B431B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/48270F_C4723B_9B5728_7B431B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/48270F_C4723B_9B5728_7B431B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/48270F_C4723B_9B5728_7B431B.png",
+  "index": 135,
+  "title": "48270F_C4723B_9B5728_7B431B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/48270F_C4723B_9B5728_7B431B-preview.png",
+  "colors": [
+    {
+      "color": "48270F",
+      "name": "Deep Oak"
+    },
+    {
+      "color": "C4723B",
+      "name": "Copper"
+    },
+    {
+      "color": "9B5728",
+      "name": "Paarl"
+    },
+    {
+      "color": "7B431B",
+      "name": "Walnut"
+    }
+  ]
+}

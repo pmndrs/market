@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/BA8979_DDCBCA_9A4726_892407.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/BA8979_DDCBCA_9A4726_892407.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/BA8979_DDCBCA_9A4726_892407.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/BA8979_DDCBCA_9A4726_892407.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/BA8979_DDCBCA_9A4726_892407.png",
+  "index": 548,
+  "title": "BA8979_DDCBCA_9A4726_892407",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/BA8979_DDCBCA_9A4726_892407-preview.png",
+  "colors": [
+    {
+      "color": "BA8979",
+      "name": "Brandy Rose"
+    },
+    {
+      "color": "DDCBCA",
+      "name": "Wafer"
+    },
+    {
+      "color": "9A4726",
+      "name": "Cumin"
+    },
+    {
+      "color": "892407",
+      "name": "Kenyan Copper"
+    }
+  ]
+}

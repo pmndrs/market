@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8F894E_DAD79B_C9C384_C4BE7B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8F894E_DAD79B_C9C384_C4BE7B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8F894E_DAD79B_C9C384_C4BE7B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8F894E_DAD79B_C9C384_C4BE7B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8F894E_DAD79B_C9C384_C4BE7B.png",
+  "index": 446,
+  "title": "8F894E_DAD79B_C9C384_C4BE7B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8F894E_DAD79B_C9C384_C4BE7B-preview.png",
+  "colors": [
+    {
+      "color": "8F894E",
+      "name": "Shadow"
+    },
+    {
+      "color": "DAD79B",
+      "name": "Deco"
+    },
+    {
+      "color": "C9C384",
+      "name": "Yuma"
+    },
+    {
+      "color": "C4BE7B",
+      "name": "Gimblet"
+    }
+  ]
+}

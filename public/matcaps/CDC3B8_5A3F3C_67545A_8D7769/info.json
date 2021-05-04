@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CDC3B8_5A3F3C_67545A_8D7769.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CDC3B8_5A3F3C_67545A_8D7769.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CDC3B8_5A3F3C_67545A_8D7769.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CDC3B8_5A3F3C_67545A_8D7769.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CDC3B8_5A3F3C_67545A_8D7769.png",
+  "index": 614,
+  "title": "CDC3B8_5A3F3C_67545A_8D7769",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CDC3B8_5A3F3C_67545A_8D7769-preview.png",
+  "colors": [
+    {
+      "color": "CDC3B8",
+      "name": "Sisal"
+    },
+    {
+      "color": "5A3F3C",
+      "name": "Kabul"
+    },
+    {
+      "color": "67545A",
+      "name": "Zambezi"
+    },
+    {
+      "color": "8D7769",
+      "name": "Cement"
+    }
+  ]
+}

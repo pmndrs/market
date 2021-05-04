@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/070B0C_B2C7CE_728FA3_5B748B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/070B0C_B2C7CE_728FA3_5B748B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/070B0C_B2C7CE_728FA3_5B748B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/070B0C_B2C7CE_728FA3_5B748B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/070B0C_B2C7CE_728FA3_5B748B.png",
+  "index": 10,
+  "title": "070B0C_B2C7CE_728FA3_5B748B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/070B0C_B2C7CE_728FA3_5B748B-preview.png",
+  "colors": [
+    {
+      "color": "070B0C",
+      "name": "Bunker"
+    },
+    {
+      "color": "B2C7CE",
+      "name": "Heather"
+    },
+    {
+      "color": "728FA3",
+      "name": "Gothic"
+    },
+    {
+      "color": "5B748B",
+      "name": "Lynch"
+    }
+  ]
+}

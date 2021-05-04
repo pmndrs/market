@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/4B5455_BBBFC4_97A0A6_838C90.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/4B5455_BBBFC4_97A0A6_838C90.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/4B5455_BBBFC4_97A0A6_838C90.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/4B5455_BBBFC4_97A0A6_838C90.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/4B5455_BBBFC4_97A0A6_838C90.png",
+  "index": 147,
+  "title": "4B5455_BBBFC4_97A0A6_838C90",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/4B5455_BBBFC4_97A0A6_838C90-preview.png",
+  "colors": [
+    {
+      "color": "4B5455",
+      "name": "Abbey"
+    },
+    {
+      "color": "BBBFC4",
+      "name": "Silver Sand"
+    },
+    {
+      "color": "97A0A6",
+      "name": "Gray Chateau"
+    },
+    {
+      "color": "838C90",
+      "name": "Oslo Gray"
+    }
+  ]
+}

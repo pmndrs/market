@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/686B73_2A2B2D_D5D9DD_B0B3BC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/686B73_2A2B2D_D5D9DD_B0B3BC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/686B73_2A2B2D_D5D9DD_B0B3BC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/686B73_2A2B2D_D5D9DD_B0B3BC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/686B73_2A2B2D_D5D9DD_B0B3BC.png",
+  "index": 266,
+  "title": "686B73_2A2B2D_D5D9DD_B0B3BC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/686B73_2A2B2D_D5D9DD_B0B3BC-preview.png",
+  "colors": [
+    {
+      "color": "686B73",
+      "name": "Shuttle Gray"
+    },
+    {
+      "color": "2A2B2D",
+      "name": "Shark"
+    },
+    {
+      "color": "D5D9DD",
+      "name": "Iron"
+    },
+    {
+      "color": "B0B3BC",
+      "name": "Bombay"
+    }
+  ]
+}

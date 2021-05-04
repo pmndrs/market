@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5F1827_9B4A60_1F0404_340406.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5F1827_9B4A60_1F0404_340406.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5F1827_9B4A60_1F0404_340406.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5F1827_9B4A60_1F0404_340406.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5F1827_9B4A60_1F0404_340406.png",
+  "index": 220,
+  "title": "5F1827_9B4A60_1F0404_340406",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5F1827_9B4A60_1F0404_340406-preview.png",
+  "colors": [
+    {
+      "color": "5F1827",
+      "name": "Persian Plum"
+    },
+    {
+      "color": "9B4A60",
+      "name": "Cannon Pink"
+    },
+    {
+      "color": "1F0404",
+      "name": "Creole"
+    },
+    {
+      "color": "340406",
+      "name": "Sepia Black"
+    }
+  ]
+}

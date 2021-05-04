@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5F5F5F_BDBDBD_A4A4A4_9C9C9C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5F5F5F_BDBDBD_A4A4A4_9C9C9C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5F5F5F_BDBDBD_A4A4A4_9C9C9C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5F5F5F_BDBDBD_A4A4A4_9C9C9C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5F5F5F_BDBDBD_A4A4A4_9C9C9C.png",
+  "index": 223,
+  "title": "5F5F5F_BDBDBD_A4A4A4_9C9C9C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5F5F5F_BDBDBD_A4A4A4_9C9C9C-preview.png",
+  "colors": [
+    {
+      "color": "5F5F5F",
+      "name": "Scorpion"
+    },
+    {
+      "color": "BDBDBD",
+      "name": "Silver"
+    },
+    {
+      "color": "A4A4A4",
+      "name": "Silver Chalice"
+    },
+    {
+      "color": "9C9C9C",
+      "name": "Dusty Gray"
+    }
+  ]
+}

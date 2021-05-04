@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/50332C_D98D79_955F52_AA7C6C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/50332C_D98D79_955F52_AA7C6C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/50332C_D98D79_955F52_AA7C6C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/50332C_D98D79_955F52_AA7C6C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/50332C_D98D79_955F52_AA7C6C.png",
+  "index": 164,
+  "title": "50332C_D98D79_955F52_AA7C6C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/50332C_D98D79_955F52_AA7C6C-preview.png",
+  "colors": [
+    {
+      "color": "50332C",
+      "name": "Cowboy"
+    },
+    {
+      "color": "D98D79",
+      "name": "Burning Sand"
+    },
+    {
+      "color": "955F52",
+      "name": "Au Chico"
+    },
+    {
+      "color": "AA7C6C",
+      "name": "Coral Tree"
+    }
+  ]
+}

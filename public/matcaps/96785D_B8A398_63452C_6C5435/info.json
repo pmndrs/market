@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/96785D_B8A398_63452C_6C5435.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/96785D_B8A398_63452C_6C5435.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/96785D_B8A398_63452C_6C5435.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/96785D_B8A398_63452C_6C5435.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/96785D_B8A398_63452C_6C5435.png",
+  "index": 464,
+  "title": "96785D_B8A398_63452C_6C5435",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/96785D_B8A398_63452C_6C5435-preview.png",
+  "colors": [
+    {
+      "color": "96785D",
+      "name": "Beaver"
+    },
+    {
+      "color": "B8A398",
+      "name": "Thatch"
+    },
+    {
+      "color": "63452C",
+      "name": "Quincy"
+    },
+    {
+      "color": "6C5435",
+      "name": "Shingle Fawn"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B06932_451B09_7B3E16_150804.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B06932_451B09_7B3E16_150804.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B06932_451B09_7B3E16_150804.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B06932_451B09_7B3E16_150804.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B06932_451B09_7B3E16_150804.png",
+  "index": 520,
+  "title": "B06932_451B09_7B3E16_150804",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B06932_451B09_7B3E16_150804-preview.png",
+  "colors": [
+    {
+      "color": "B06932",
+      "name": "Copper"
+    },
+    {
+      "color": "451B09",
+      "name": "Bronze"
+    },
+    {
+      "color": "7B3E16",
+      "name": "Copper Canyon"
+    },
+    {
+      "color": "150804",
+      "name": "Graphite"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/28292A_D3DAE5_A3ACB8_818183.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/28292A_D3DAE5_A3ACB8_818183.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/28292A_D3DAE5_A3ACB8_818183.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/28292A_D3DAE5_A3ACB8_818183.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/28292A_D3DAE5_A3ACB8_818183.png",
+  "index": 43,
+  "title": "28292A_D3DAE5_A3ACB8_818183",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/28292A_D3DAE5_A3ACB8_818183-preview.png",
+  "colors": [
+    {
+      "color": "28292A",
+      "name": "Shark"
+    },
+    {
+      "color": "D3DAE5",
+      "name": "Geyser"
+    },
+    {
+      "color": "A3ACB8",
+      "name": "Hit Gray"
+    },
+    {
+      "color": "818183",
+      "name": "Jumbo"
+    }
+  ]
+}

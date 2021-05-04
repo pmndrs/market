@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/60534A_211813_9B948E_8E837D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/60534A_211813_9B948E_8E837D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/60534A_211813_9B948E_8E837D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/60534A_211813_9B948E_8E837D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/60534A_211813_9B948E_8E837D.png",
+  "index": 225,
+  "title": "60534A_211813_9B948E_8E837D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/60534A_211813_9B948E_8E837D-preview.png",
+  "colors": [
+    {
+      "color": "60534A",
+      "name": "Soya Bean"
+    },
+    {
+      "color": "211813",
+      "name": "Oil"
+    },
+    {
+      "color": "9B948E",
+      "name": "Zorba"
+    },
+    {
+      "color": "8E837D",
+      "name": "Schooner"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/3E2335_D36A1B_8E4A2E_2842A5.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/3E2335_D36A1B_8E4A2E_2842A5.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/3E2335_D36A1B_8E4A2E_2842A5.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/3E2335_D36A1B_8E4A2E_2842A5.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/3E2335_D36A1B_8E4A2E_2842A5.png",
+  "index": 100,
+  "title": "3E2335_D36A1B_8E4A2E_2842A5",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/3E2335_D36A1B_8E4A2E_2842A5-preview.png",
+  "colors": [
+    {
+      "color": "3E2335",
+      "name": "Livid Brown"
+    },
+    {
+      "color": "D36A1B",
+      "name": "Hot Cinnamon"
+    },
+    {
+      "color": "8E4A2E",
+      "name": "Mule Fawn"
+    },
+    {
+      "color": "2842A5",
+      "name": "Governor Bay"
+    }
+  ]
+}

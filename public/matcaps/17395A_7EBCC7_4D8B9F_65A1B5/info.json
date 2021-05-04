@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/17395A_7EBCC7_4D8B9F_65A1B5.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/17395A_7EBCC7_4D8B9F_65A1B5.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/17395A_7EBCC7_4D8B9F_65A1B5.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/17395A_7EBCC7_4D8B9F_65A1B5.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/17395A_7EBCC7_4D8B9F_65A1B5.png",
+  "index": 23,
+  "title": "17395A_7EBCC7_4D8B9F_65A1B5",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/17395A_7EBCC7_4D8B9F_65A1B5-preview.png",
+  "colors": [
+    {
+      "color": "17395A",
+      "name": "Biscay"
+    },
+    {
+      "color": "7EBCC7",
+      "name": "Glacier"
+    },
+    {
+      "color": "4D8B9F",
+      "name": "Wedgewood"
+    },
+    {
+      "color": "65A1B5",
+      "name": "Hippie Blue"
+    }
+  ]
+}

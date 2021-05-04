@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8B7469_443E39_C7A797_544443.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8B7469_443E39_C7A797_544443.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8B7469_443E39_C7A797_544443.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8B7469_443E39_C7A797_544443.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8B7469_443E39_C7A797_544443.png",
+  "index": 392,
+  "title": "8B7469_443E39_C7A797_544443",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8B7469_443E39_C7A797_544443-preview.png",
+  "colors": [
+    {
+      "color": "8B7469",
+      "name": "Sand Dune"
+    },
+    {
+      "color": "443E39",
+      "name": "Merlin"
+    },
+    {
+      "color": "C7A797",
+      "name": "Rodeo Dust"
+    },
+    {
+      "color": "544443",
+      "name": "Emperor"
+    }
+  ]
+}

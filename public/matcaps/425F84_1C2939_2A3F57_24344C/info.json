@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/425F84_1C2939_2A3F57_24344C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/425F84_1C2939_2A3F57_24344C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/425F84_1C2939_2A3F57_24344C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/425F84_1C2939_2A3F57_24344C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/425F84_1C2939_2A3F57_24344C.png",
+  "index": 114,
+  "title": "425F84_1C2939_2A3F57_24344C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/425F84_1C2939_2A3F57_24344C-preview.png",
+  "colors": [
+    {
+      "color": "425F84",
+      "name": "East Bay"
+    },
+    {
+      "color": "1C2939",
+      "name": "Mirage"
+    },
+    {
+      "color": "2A3F57",
+      "name": "Rhino"
+    },
+    {
+      "color": "24344C",
+      "name": "Cloud Burst"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/9E7C7E_DDCBD0_351D20_683B38.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/9E7C7E_DDCBD0_351D20_683B38.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/9E7C7E_DDCBD0_351D20_683B38.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/9E7C7E_DDCBD0_351D20_683B38.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/9E7C7E_DDCBD0_351D20_683B38.png",
+  "index": 483,
+  "title": "9E7C7E_DDCBD0_351D20_683B38",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/9E7C7E_DDCBD0_351D20_683B38-preview.png",
+  "colors": [
+    {
+      "color": "9E7C7E",
+      "name": "Bazaar"
+    },
+    {
+      "color": "DDCBD0",
+      "name": "Lola"
+    },
+    {
+      "color": "351D20",
+      "name": "Jon"
+    },
+    {
+      "color": "683B38",
+      "name": "Buccaneer"
+    }
+  ]
+}

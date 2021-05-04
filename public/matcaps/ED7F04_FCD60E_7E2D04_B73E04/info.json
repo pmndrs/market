@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/ED7F04_FCD60E_7E2D04_B73E04.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/ED7F04_FCD60E_7E2D04_B73E04.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/ED7F04_FCD60E_7E2D04_B73E04.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/ED7F04_FCD60E_7E2D04_B73E04.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/ED7F04_FCD60E_7E2D04_B73E04.png",
+  "index": 670,
+  "title": "ED7F04_FCD60E_7E2D04_B73E04",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/ED7F04_FCD60E_7E2D04_B73E04-preview.png",
+  "colors": [
+    {
+      "color": "ED7F04",
+      "name": "Tahiti Gold"
+    },
+    {
+      "color": "FCD60E",
+      "name": "Candlelight"
+    },
+    {
+      "color": "7E2D04",
+      "name": "Peru Tan"
+    },
+    {
+      "color": "B73E04",
+      "name": "Fire"
+    }
+  ]
+}

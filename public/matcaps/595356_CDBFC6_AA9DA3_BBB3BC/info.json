@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/595356_CDBFC6_AA9DA3_BBB3BC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/595356_CDBFC6_AA9DA3_BBB3BC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/595356_CDBFC6_AA9DA3_BBB3BC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/595356_CDBFC6_AA9DA3_BBB3BC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/595356_CDBFC6_AA9DA3_BBB3BC.png",
+  "index": 197,
+  "title": "595356_CDBFC6_AA9DA3_BBB3BC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/595356_CDBFC6_AA9DA3_BBB3BC-preview.png",
+  "colors": [
+    {
+      "color": "595356",
+      "name": "Don Juan"
+    },
+    {
+      "color": "CDBFC6",
+      "name": "Pale Slate"
+    },
+    {
+      "color": "AA9DA3",
+      "name": "Dusty Gray"
+    },
+    {
+      "color": "BBB3BC",
+      "name": "Chatelle"
+    }
+  ]
+}

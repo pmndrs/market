@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/848679_363630_AABBB7_4B4B44.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/848679_363630_AABBB7_4B4B44.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/848679_363630_AABBB7_4B4B44.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/848679_363630_AABBB7_4B4B44.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/848679_363630_AABBB7_4B4B44.png",
+  "index": 371,
+  "title": "848679_363630_AABBB7_4B4B44",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/848679_363630_AABBB7_4B4B44-preview.png",
+  "colors": [
+    {
+      "color": "848679",
+      "name": "Bitter"
+    },
+    {
+      "color": "363630",
+      "name": "Tuatara"
+    },
+    {
+      "color": "AABBB7",
+      "name": "Tower Gray"
+    },
+    {
+      "color": "4B4B44",
+      "name": "Fuscous Gray"
+    }
+  ]
+}

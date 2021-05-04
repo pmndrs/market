@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8A3B3D_DA5F62_461F20_BC7F81.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8A3B3D_DA5F62_461F20_BC7F81.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8A3B3D_DA5F62_461F20_BC7F81.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8A3B3D_DA5F62_461F20_BC7F81.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8A3B3D_DA5F62_461F20_BC7F81.png",
+  "index": 386,
+  "title": "8A3B3D_DA5F62_461F20_BC7F81",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8A3B3D_DA5F62_461F20_BC7F81-preview.png",
+  "colors": [
+    {
+      "color": "8A3B3D",
+      "name": "Lotus"
+    },
+    {
+      "color": "DA5F62",
+      "name": "Roman"
+    },
+    {
+      "color": "461F20",
+      "name": "Cocoa Bean"
+    },
+    {
+      "color": "BC7F81",
+      "name": "Old Rose"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B67F6B_4B2E2A_6C3A34_F3DBC6.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B67F6B_4B2E2A_6C3A34_F3DBC6.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B67F6B_4B2E2A_6C3A34_F3DBC6.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B67F6B_4B2E2A_6C3A34_F3DBC6.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B67F6B_4B2E2A_6C3A34_F3DBC6.png",
+  "index": 536,
+  "title": "B67F6B_4B2E2A_6C3A34_F3DBC6",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B67F6B_4B2E2A_6C3A34_F3DBC6-preview.png",
+  "colors": [
+    {
+      "color": "B67F6B",
+      "name": "Muddy Waters"
+    },
+    {
+      "color": "4B2E2A",
+      "name": "Cowboy"
+    },
+    {
+      "color": "6C3A34",
+      "name": "Buccaneer"
+    },
+    {
+      "color": "F3DBC6",
+      "name": "Albescent White"
+    }
+  ]
+}

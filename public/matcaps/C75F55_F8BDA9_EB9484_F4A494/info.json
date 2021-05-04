@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/C75F55_F8BDA9_EB9484_F4A494.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/C75F55_F8BDA9_EB9484_F4A494.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/C75F55_F8BDA9_EB9484_F4A494.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/C75F55_F8BDA9_EB9484_F4A494.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/C75F55_F8BDA9_EB9484_F4A494.png",
+  "index": 582,
+  "title": "C75F55_F8BDA9_EB9484_F4A494",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/C75F55_F8BDA9_EB9484_F4A494-preview.png",
+  "colors": [
+    {
+      "color": "C75F55",
+      "name": "Fuzzy Wuzzy Brown"
+    },
+    {
+      "color": "F8BDA9",
+      "name": "Rose Bud"
+    },
+    {
+      "color": "EB9484",
+      "name": "Apricot"
+    },
+    {
+      "color": "F4A494",
+      "name": "Wewak"
+    }
+  ]
+}

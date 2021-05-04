@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/BDB466_F3EDC3_E3DD9F_ECE3AA.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/BDB466_F3EDC3_E3DD9F_ECE3AA.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/BDB466_F3EDC3_E3DD9F_ECE3AA.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/BDB466_F3EDC3_E3DD9F_ECE3AA.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/BDB466_F3EDC3_E3DD9F_ECE3AA.png",
+  "index": 554,
+  "title": "BDB466_F3EDC3_E3DD9F_ECE3AA",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/BDB466_F3EDC3_E3DD9F_ECE3AA-preview.png",
+  "colors": [
+    {
+      "color": "BDB466",
+      "name": "Gimblet"
+    },
+    {
+      "color": "F3EDC3",
+      "name": "Mint Julep"
+    },
+    {
+      "color": "E3DD9F",
+      "name": "Zombie"
+    },
+    {
+      "color": "ECE3AA",
+      "name": "Double Colonial White"
+    }
+  ]
+}

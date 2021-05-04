@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/596773_B3C6CE_98AFB9_879AA8.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/596773_B3C6CE_98AFB9_879AA8.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/596773_B3C6CE_98AFB9_879AA8.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/596773_B3C6CE_98AFB9_879AA8.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/596773_B3C6CE_98AFB9_879AA8.png",
+  "index": 199,
+  "title": "596773_B3C6CE_98AFB9_879AA8",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/596773_B3C6CE_98AFB9_879AA8-preview.png",
+  "colors": [
+    {
+      "color": "596773",
+      "name": "Shuttle Gray"
+    },
+    {
+      "color": "B3C6CE",
+      "name": "Heather"
+    },
+    {
+      "color": "98AFB9",
+      "name": "Gull Gray"
+    },
+    {
+      "color": "879AA8",
+      "name": "Regent Gray"
+    }
+  ]
+}

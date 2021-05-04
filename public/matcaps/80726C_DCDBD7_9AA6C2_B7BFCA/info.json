@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/80726C_DCDBD7_9AA6C2_B7BFCA.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/80726C_DCDBD7_9AA6C2_B7BFCA.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/80726C_DCDBD7_9AA6C2_B7BFCA.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/80726C_DCDBD7_9AA6C2_B7BFCA.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/80726C_DCDBD7_9AA6C2_B7BFCA.png",
+  "index": 353,
+  "title": "80726C_DCDBD7_9AA6C2_B7BFCA",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/80726C_DCDBD7_9AA6C2_B7BFCA-preview.png",
+  "colors": [
+    {
+      "color": "80726C",
+      "name": "Americano"
+    },
+    {
+      "color": "DCDBD7",
+      "name": "Quill Gray"
+    },
+    {
+      "color": "9AA6C2",
+      "name": "Nepal"
+    },
+    {
+      "color": "B7BFCA",
+      "name": "Loblolly"
+    }
+  ]
+}

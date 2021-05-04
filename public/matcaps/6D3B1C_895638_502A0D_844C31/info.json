@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6D3B1C_895638_502A0D_844C31.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6D3B1C_895638_502A0D_844C31.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6D3B1C_895638_502A0D_844C31.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6D3B1C_895638_502A0D_844C31.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6D3B1C_895638_502A0D_844C31.png",
+  "index": 280,
+  "title": "6D3B1C_895638_502A0D_844C31",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6D3B1C_895638_502A0D_844C31-preview.png",
+  "colors": [
+    {
+      "color": "6D3B1C",
+      "name": "Walnut"
+    },
+    {
+      "color": "895638",
+      "name": "Potters Clay"
+    },
+    {
+      "color": "502A0D",
+      "name": "Cioccolato"
+    },
+    {
+      "color": "844C31",
+      "name": "Mule Fawn"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/826A59_E0C9B9_CBAD99_3D2615.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/826A59_E0C9B9_CBAD99_3D2615.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/826A59_E0C9B9_CBAD99_3D2615.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/826A59_E0C9B9_CBAD99_3D2615.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/826A59_E0C9B9_CBAD99_3D2615.png",
+  "index": 365,
+  "title": "826A59_E0C9B9_CBAD99_3D2615",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/826A59_E0C9B9_CBAD99_3D2615-preview.png",
+  "colors": [
+    {
+      "color": "826A59",
+      "name": "Cement"
+    },
+    {
+      "color": "E0C9B9",
+      "name": "Bone"
+    },
+    {
+      "color": "CBAD99",
+      "name": "Rodeo Dust"
+    },
+    {
+      "color": "3D2615",
+      "name": "Cedar"
+    }
+  ]
+}

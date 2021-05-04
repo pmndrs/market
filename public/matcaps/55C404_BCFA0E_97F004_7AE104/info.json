@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/55C404_BCFA0E_97F004_7AE104.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/55C404_BCFA0E_97F004_7AE104.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/55C404_BCFA0E_97F004_7AE104.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/55C404_BCFA0E_97F004_7AE104.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/55C404_BCFA0E_97F004_7AE104.png",
+  "index": 186,
+  "title": "55C404_BCFA0E_97F004_7AE104",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/55C404_BCFA0E_97F004_7AE104-preview.png",
+  "colors": [
+    {
+      "color": "55C404",
+      "name": "Limeade"
+    },
+    {
+      "color": "BCFA0E",
+      "name": "Lime"
+    },
+    {
+      "color": "97F004",
+      "name": "Chartreuse"
+    },
+    {
+      "color": "7AE104",
+      "name": "Chartreuse"
+    }
+  ]
+}

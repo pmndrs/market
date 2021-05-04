@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/A27216_E9D036_D0AB24_DCB927.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/A27216_E9D036_D0AB24_DCB927.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/A27216_E9D036_D0AB24_DCB927.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/A27216_E9D036_D0AB24_DCB927.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/A27216_E9D036_D0AB24_DCB927.png",
+  "index": 493,
+  "title": "A27216_E9D036_D0AB24_DCB927",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/A27216_E9D036_D0AB24_DCB927-preview.png",
+  "colors": [
+    {
+      "color": "A27216",
+      "name": "Reno Sand"
+    },
+    {
+      "color": "E9D036",
+      "name": "Golden Dream"
+    },
+    {
+      "color": "D0AB24",
+      "name": "Hokey Pokey"
+    },
+    {
+      "color": "DCB927",
+      "name": "Golden Grass"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/582410_83381A_1F0C04_30140A.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/582410_83381A_1F0C04_30140A.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/582410_83381A_1F0C04_30140A.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/582410_83381A_1F0C04_30140A.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/582410_83381A_1F0C04_30140A.png",
+  "index": 192,
+  "title": "582410_83381A_1F0C04_30140A",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/582410_83381A_1F0C04_30140A-preview.png",
+  "colors": [
+    {
+      "color": "582410",
+      "name": "Redwood"
+    },
+    {
+      "color": "83381A",
+      "name": "Russet"
+    },
+    {
+      "color": "1F0C04",
+      "name": "Creole"
+    },
+    {
+      "color": "30140A",
+      "name": "Graphite"
+    }
+  ]
+}

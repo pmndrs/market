@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/B9B37A_F1EED0_E5E4BA_DAD6A8.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/B9B37A_F1EED0_E5E4BA_DAD6A8.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/B9B37A_F1EED0_E5E4BA_DAD6A8.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/B9B37A_F1EED0_E5E4BA_DAD6A8.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/B9B37A_F1EED0_E5E4BA_DAD6A8.png",
+  "index": 543,
+  "title": "B9B37A_F1EED0_E5E4BA_DAD6A8",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/B9B37A_F1EED0_E5E4BA_DAD6A8-preview.png",
+  "colors": [
+    {
+      "color": "B9B37A",
+      "name": "Gimblet"
+    },
+    {
+      "color": "F1EED0",
+      "name": "Parchment"
+    },
+    {
+      "color": "E5E4BA",
+      "name": "Beryl Green"
+    },
+    {
+      "color": "DAD6A8",
+      "name": "Sapling"
+    }
+  ]
+}

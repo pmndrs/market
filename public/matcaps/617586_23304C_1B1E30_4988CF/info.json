@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/617586_23304C_1B1E30_4988CF.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/617586_23304C_1B1E30_4988CF.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/617586_23304C_1B1E30_4988CF.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/617586_23304C_1B1E30_4988CF.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/617586_23304C_1B1E30_4988CF.png",
+  "index": 230,
+  "title": "617586_23304C_1B1E30_4988CF",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/617586_23304C_1B1E30_4988CF-preview.png",
+  "colors": [
+    {
+      "color": "617586",
+      "name": "Pale Sky"
+    },
+    {
+      "color": "23304C",
+      "name": "Cloud Burst"
+    },
+    {
+      "color": "1B1E30",
+      "name": "Mirage"
+    },
+    {
+      "color": "4988CF",
+      "name": "Havelock Blue"
+    }
+  ]
+}

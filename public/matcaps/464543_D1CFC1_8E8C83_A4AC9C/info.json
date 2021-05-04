@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/464543_D1CFC1_8E8C83_A4AC9C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/464543_D1CFC1_8E8C83_A4AC9C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/464543_D1CFC1_8E8C83_A4AC9C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/464543_D1CFC1_8E8C83_A4AC9C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/464543_D1CFC1_8E8C83_A4AC9C.png",
+  "index": 128,
+  "title": "464543_D1CFC1_8E8C83_A4AC9C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/464543_D1CFC1_8E8C83_A4AC9C-preview.png",
+  "colors": [
+    {
+      "color": "464543",
+      "name": "Fuscous Gray"
+    },
+    {
+      "color": "D1CFC1",
+      "name": "Swirl"
+    },
+    {
+      "color": "8E8C83",
+      "name": "Natural Gray"
+    },
+    {
+      "color": "A4AC9C",
+      "name": "Bud"
+    }
+  ]
+}

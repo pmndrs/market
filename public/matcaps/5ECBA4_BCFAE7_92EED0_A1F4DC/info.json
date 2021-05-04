@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5ECBA4_BCFAE7_92EED0_A1F4DC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5ECBA4_BCFAE7_92EED0_A1F4DC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5ECBA4_BCFAE7_92EED0_A1F4DC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5ECBA4_BCFAE7_92EED0_A1F4DC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5ECBA4_BCFAE7_92EED0_A1F4DC.png",
+  "index": 219,
+  "title": "5ECBA4_BCFAE7_92EED0_A1F4DC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5ECBA4_BCFAE7_92EED0_A1F4DC-preview.png",
+  "colors": [
+    {
+      "color": "5ECBA4",
+      "name": "Downy"
+    },
+    {
+      "color": "BCFAE7",
+      "name": "Scandal"
+    },
+    {
+      "color": "92EED0",
+      "name": "Magic Mint"
+    },
+    {
+      "color": "A1F4DC",
+      "name": "Ice Cold"
+    }
+  ]
+}

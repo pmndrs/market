@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CB4934_FB9971_F07554_F68464.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CB4934_FB9971_F07554_F68464.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CB4934_FB9971_F07554_F68464.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CB4934_FB9971_F07554_F68464.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CB4934_FB9971_F07554_F68464.png",
+  "index": 603,
+  "title": "CB4934_FB9971_F07554_F68464",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CB4934_FB9971_F07554_F68464-preview.png",
+  "colors": [
+    {
+      "color": "CB4934",
+      "name": "Mojo"
+    },
+    {
+      "color": "FB9971",
+      "name": "Atomic Tangerine"
+    },
+    {
+      "color": "F07554",
+      "name": "Burnt Sienna"
+    },
+    {
+      "color": "F68464",
+      "name": "Tan Hide"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/4F4742_B7B1AA_847E79_969294.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/4F4742_B7B1AA_847E79_969294.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/4F4742_B7B1AA_847E79_969294.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/4F4742_B7B1AA_847E79_969294.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/4F4742_B7B1AA_847E79_969294.png",
+  "index": 158,
+  "title": "4F4742_B7B1AA_847E79_969294",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/4F4742_B7B1AA_847E79_969294-preview.png",
+  "colors": [
+    {
+      "color": "4F4742",
+      "name": "Armadillo"
+    },
+    {
+      "color": "B7B1AA",
+      "name": "Tide"
+    },
+    {
+      "color": "847E79",
+      "name": "Schooner"
+    },
+    {
+      "color": "969294",
+      "name": "Venus"
+    }
+  ]
+}

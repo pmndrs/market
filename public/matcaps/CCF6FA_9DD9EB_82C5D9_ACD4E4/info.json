@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CCF6FA_9DD9EB_82C5D9_ACD4E4.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CCF6FA_9DD9EB_82C5D9_ACD4E4.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CCF6FA_9DD9EB_82C5D9_ACD4E4.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CCF6FA_9DD9EB_82C5D9_ACD4E4.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CCF6FA_9DD9EB_82C5D9_ACD4E4.png",
+  "index": 613,
+  "title": "CCF6FA_9DD9EB_82C5D9_ACD4E4",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CCF6FA_9DD9EB_82C5D9_ACD4E4-preview.png",
+  "colors": [
+    {
+      "color": "CCF6FA",
+      "name": "Scandal"
+    },
+    {
+      "color": "9DD9EB",
+      "name": "Blizzard Blue"
+    },
+    {
+      "color": "82C5D9",
+      "name": "Bermuda"
+    },
+    {
+      "color": "ACD4E4",
+      "name": "Regent St Blue"
+    }
+  ]
+}

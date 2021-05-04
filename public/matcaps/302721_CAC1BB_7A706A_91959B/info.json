@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/302721_CAC1BB_7A706A_91959B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/302721_CAC1BB_7A706A_91959B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/302721_CAC1BB_7A706A_91959B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/302721_CAC1BB_7A706A_91959B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/302721_CAC1BB_7A706A_91959B.png",
+  "index": 63,
+  "title": "302721_CAC1BB_7A706A_91959B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/302721_CAC1BB_7A706A_91959B-preview.png",
+  "colors": [
+    {
+      "color": "302721",
+      "name": "Cocoa Brown"
+    },
+    {
+      "color": "CAC1BB",
+      "name": "Silver Rust"
+    },
+    {
+      "color": "7A706A",
+      "name": "Sandstone"
+    },
+    {
+      "color": "91959B",
+      "name": "Oslo Gray"
+    }
+  ]
+}

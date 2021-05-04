@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/C7C7D7_4C4E5A_818393_6C6C74.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/C7C7D7_4C4E5A_818393_6C6C74.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/C7C7D7_4C4E5A_818393_6C6C74.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/C7C7D7_4C4E5A_818393_6C6C74.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/C7C7D7_4C4E5A_818393_6C6C74.png",
+  "index": 586,
+  "title": "C7C7D7_4C4E5A_818393_6C6C74",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/C7C7D7_4C4E5A_818393_6C6C74-preview.png",
+  "colors": [
+    {
+      "color": "C7C7D7",
+      "name": "Ghost"
+    },
+    {
+      "color": "4C4E5A",
+      "name": "Trout"
+    },
+    {
+      "color": "818393",
+      "name": "Waterloo "
+    },
+    {
+      "color": "6C6C74",
+      "name": "Mid Gray"
+    }
+  ]
+}

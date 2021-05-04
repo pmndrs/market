@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/1D2424_565F66_4E555A_646C6E.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/1D2424_565F66_4E555A_646C6E.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/1D2424_565F66_4E555A_646C6E.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/1D2424_565F66_4E555A_646C6E.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/1D2424_565F66_4E555A_646C6E.png",
+  "index": 32,
+  "title": "1D2424_565F66_4E555A_646C6E",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/1D2424_565F66_4E555A_646C6E-preview.png",
+  "colors": [
+    {
+      "color": "1D2424",
+      "name": "Outer Space"
+    },
+    {
+      "color": "565F66",
+      "name": "Shuttle Gray"
+    },
+    {
+      "color": "4E555A",
+      "name": "Abbey"
+    },
+    {
+      "color": "646C6E",
+      "name": "Nevada"
+    }
+  ]
+}

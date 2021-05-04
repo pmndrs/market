@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2A_74716E_8F8C8C_92958E.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2A_74716E_8F8C8C_92958E.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2A_74716E_8F8C8C_92958E.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2A_74716E_8F8C8C_92958E.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2D2D2A_74716E_8F8C8C_92958E.png",
+  "index": 54,
+  "title": "2D2D2A_74716E_8F8C8C_92958E",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2D2D2A_74716E_8F8C8C_92958E-preview.png",
+  "colors": [
+    {
+      "color": "2D2D2A",
+      "name": "Tuatara"
+    },
+    {
+      "color": "74716E",
+      "name": "Tapa"
+    },
+    {
+      "color": "8F8C8C",
+      "name": "Gray"
+    },
+    {
+      "color": "92958E",
+      "name": "Lemon Grass"
+    }
+  ]
+}

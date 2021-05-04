@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/626D5C_B8C2BB_1B230F_A4ACA3.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/626D5C_B8C2BB_1B230F_A4ACA3.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/626D5C_B8C2BB_1B230F_A4ACA3.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/626D5C_B8C2BB_1B230F_A4ACA3.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/626D5C_B8C2BB_1B230F_A4ACA3.png",
+  "index": 237,
+  "title": "626D5C_B8C2BB_1B230F_A4ACA3",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/626D5C_B8C2BB_1B230F_A4ACA3-preview.png",
+  "colors": [
+    {
+      "color": "626D5C",
+      "name": "Willow Grove"
+    },
+    {
+      "color": "B8C2BB",
+      "name": "Pumice"
+    },
+    {
+      "color": "1B230F",
+      "name": "Black Olive"
+    },
+    {
+      "color": "A4ACA3",
+      "name": "Bud"
+    }
+  ]
+}

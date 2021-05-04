@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8194AB_D6DFEB_C0CEDE_B0BFD1.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8194AB_D6DFEB_C0CEDE_B0BFD1.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8194AB_D6DFEB_C0CEDE_B0BFD1.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8194AB_D6DFEB_C0CEDE_B0BFD1.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8194AB_D6DFEB_C0CEDE_B0BFD1.png",
+  "index": 361,
+  "title": "8194AB_D6DFEB_C0CEDE_B0BFD1",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8194AB_D6DFEB_C0CEDE_B0BFD1-preview.png",
+  "colors": [
+    {
+      "color": "8194AB",
+      "name": "Bali Hai"
+    },
+    {
+      "color": "D6DFEB",
+      "name": "Botticelli"
+    },
+    {
+      "color": "C0CEDE",
+      "name": "Ziggurat"
+    },
+    {
+      "color": "B0BFD1",
+      "name": "Casper"
+    }
+  ]
+}

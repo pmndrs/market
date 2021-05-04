@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/454447_908E9A_181716_7C7C7B.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/454447_908E9A_181716_7C7C7B.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/454447_908E9A_181716_7C7C7B.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/454447_908E9A_181716_7C7C7B.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/454447_908E9A_181716_7C7C7B.png",
+  "index": 124,
+  "title": "454447_908E9A_181716_7C7C7B",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/454447_908E9A_181716_7C7C7B-preview.png",
+  "colors": [
+    {
+      "color": "454447",
+      "name": "Ship Gray"
+    },
+    {
+      "color": "908E9A",
+      "name": "Manatee"
+    },
+    {
+      "color": "181716",
+      "name": "Cod Gray"
+    },
+    {
+      "color": "7C7C7B",
+      "name": "Friar Gray"
+    }
+  ]
+}

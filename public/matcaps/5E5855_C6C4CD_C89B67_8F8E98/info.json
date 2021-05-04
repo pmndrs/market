@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/5E5855_C6C4CD_C89B67_8F8E98.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/5E5855_C6C4CD_C89B67_8F8E98.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/5E5855_C6C4CD_C89B67_8F8E98.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/5E5855_C6C4CD_C89B67_8F8E98.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/5E5855_C6C4CD_C89B67_8F8E98.png",
+  "index": 217,
+  "title": "5E5855_C6C4CD_C89B67_8F8E98",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/5E5855_C6C4CD_C89B67_8F8E98-preview.png",
+  "colors": [
+    {
+      "color": "5E5855",
+      "name": "Chicago"
+    },
+    {
+      "color": "C6C4CD",
+      "name": "Gray Suit"
+    },
+    {
+      "color": "C89B67",
+      "name": "Twine"
+    },
+    {
+      "color": "8F8E98",
+      "name": "Manatee"
+    }
+  ]
+}

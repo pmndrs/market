@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/046363_0CC3C3_049B9B_04ACAC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/046363_0CC3C3_049B9B_04ACAC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/046363_0CC3C3_049B9B_04ACAC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/046363_0CC3C3_049B9B_04ACAC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/046363_0CC3C3_049B9B_04ACAC.png",
+  "index": 2,
+  "title": "046363_0CC3C3_049B9B_04ACAC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/046363_0CC3C3_049B9B_04ACAC-preview.png",
+  "colors": [
+    {
+      "color": "046363",
+      "name": "Mosque"
+    },
+    {
+      "color": "0CC3C3",
+      "name": "Robin's Egg Blue"
+    },
+    {
+      "color": "049B9B",
+      "name": "Niagara"
+    },
+    {
+      "color": "04ACAC",
+      "name": "Persian Green"
+    }
+  ]
+}

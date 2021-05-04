@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/331A0B_B17038_7D4E28_5B351A.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/331A0B_B17038_7D4E28_5B351A.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/331A0B_B17038_7D4E28_5B351A.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/331A0B_B17038_7D4E28_5B351A.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/331A0B_B17038_7D4E28_5B351A.png",
+  "index": 73,
+  "title": "331A0B_B17038_7D4E28_5B351A",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/331A0B_B17038_7D4E28_5B351A-preview.png",
+  "colors": [
+    {
+      "color": "331A0B",
+      "name": "Paco"
+    },
+    {
+      "color": "B17038",
+      "name": "Copper"
+    },
+    {
+      "color": "7D4E28",
+      "name": "Nutmeg"
+    },
+    {
+      "color": "5B351A",
+      "name": "Espresso"
+    }
+  ]
+}

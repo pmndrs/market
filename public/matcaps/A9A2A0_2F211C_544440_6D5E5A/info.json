@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/A9A2A0_2F211C_544440_6D5E5A.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/A9A2A0_2F211C_544440_6D5E5A.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/A9A2A0_2F211C_544440_6D5E5A.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/A9A2A0_2F211C_544440_6D5E5A.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/A9A2A0_2F211C_544440_6D5E5A.png",
+  "index": 504,
+  "title": "A9A2A0_2F211C_544440_6D5E5A",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/A9A2A0_2F211C_544440_6D5E5A-preview.png",
+  "colors": [
+    {
+      "color": "A9A2A0",
+      "name": "Cloudy"
+    },
+    {
+      "color": "2F211C",
+      "name": "Cocoa Brown"
+    },
+    {
+      "color": "544440",
+      "name": "Kabul"
+    },
+    {
+      "color": "6D5E5A",
+      "name": "Dorado"
+    }
+  ]
+}

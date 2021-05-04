@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/AC8942_432D19_6E4D27_5F3B1C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/AC8942_432D19_6E4D27_5F3B1C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/AC8942_432D19_6E4D27_5F3B1C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/AC8942_432D19_6E4D27_5F3B1C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/AC8942_432D19_6E4D27_5F3B1C.png",
+  "index": 512,
+  "title": "AC8942_432D19_6E4D27_5F3B1C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/AC8942_432D19_6E4D27_5F3B1C-preview.png",
+  "colors": [
+    {
+      "color": "AC8942",
+      "name": "Driftwood"
+    },
+    {
+      "color": "432D19",
+      "name": "Metallic Bronze"
+    },
+    {
+      "color": "6E4D27",
+      "name": "Dallas"
+    },
+    {
+      "color": "5F3B1C",
+      "name": "Espresso"
+    }
+  ]
+}

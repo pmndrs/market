@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/808A5B_E0E1D4_2C4304_C5C7B0.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/808A5B_E0E1D4_2C4304_C5C7B0.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/808A5B_E0E1D4_2C4304_C5C7B0.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/808A5B_E0E1D4_2C4304_C5C7B0.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/808A5B_E0E1D4_2C4304_C5C7B0.png",
+  "index": 354,
+  "title": "808A5B_E0E1D4_2C4304_C5C7B0",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/808A5B_E0E1D4_2C4304_C5C7B0-preview.png",
+  "colors": [
+    {
+      "color": "808A5B",
+      "name": "Avocado"
+    },
+    {
+      "color": "E0E1D4",
+      "name": "Moon Mist"
+    },
+    {
+      "color": "2C4304",
+      "name": "Madras"
+    },
+    {
+      "color": "C5C7B0",
+      "name": "Foggy Gray"
+    }
+  ]
+}

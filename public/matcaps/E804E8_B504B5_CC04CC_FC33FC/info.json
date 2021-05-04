@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/E804E8_B504B5_CC04CC_FC33FC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/E804E8_B504B5_CC04CC_FC33FC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/E804E8_B504B5_CC04CC_FC33FC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/E804E8_B504B5_CC04CC_FC33FC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/E804E8_B504B5_CC04CC_FC33FC.png",
+  "index": 659,
+  "title": "E804E8_B504B5_CC04CC_FC33FC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/E804E8_B504B5_CC04CC_FC33FC-preview.png",
+  "colors": [
+    {
+      "color": "E804E8",
+      "name": "Magenta / Fuchsia"
+    },
+    {
+      "color": "B504B5",
+      "name": "Violet Eggplant"
+    },
+    {
+      "color": "CC04CC",
+      "name": "Purple Pizzazz"
+    },
+    {
+      "color": "FC33FC",
+      "name": "Razzle Dazzle Rose"
+    }
+  ]
+}

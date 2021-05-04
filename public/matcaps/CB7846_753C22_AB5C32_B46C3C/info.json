@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CB7846_753C22_AB5C32_B46C3C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CB7846_753C22_AB5C32_B46C3C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CB7846_753C22_AB5C32_B46C3C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CB7846_753C22_AB5C32_B46C3C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CB7846_753C22_AB5C32_B46C3C.png",
+  "index": 607,
+  "title": "CB7846_753C22_AB5C32_B46C3C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CB7846_753C22_AB5C32_B46C3C-preview.png",
+  "colors": [
+    {
+      "color": "CB7846",
+      "name": "Raw Sienna"
+    },
+    {
+      "color": "753C22",
+      "name": "Red Robin"
+    },
+    {
+      "color": "AB5C32",
+      "name": "Paarl"
+    },
+    {
+      "color": "B46C3C",
+      "name": "Brown Rust"
+    }
+  ]
+}

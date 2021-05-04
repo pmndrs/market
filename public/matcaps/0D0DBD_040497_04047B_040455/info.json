@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/0D0DBD_040497_04047B_040455.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/0D0DBD_040497_04047B_040455.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/0D0DBD_040497_04047B_040455.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/0D0DBD_040497_04047B_040455.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/0D0DBD_040497_04047B_040455.png",
+  "index": 15,
+  "title": "0D0DBD_040497_04047B_040455",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/0D0DBD_040497_04047B_040455-preview.png",
+  "colors": [
+    {
+      "color": "0D0DBD",
+      "name": "Dark Blue"
+    },
+    {
+      "color": "040497",
+      "name": "Ultramarine"
+    },
+    {
+      "color": "04047B",
+      "name": "Navy Blue"
+    },
+    {
+      "color": "040455",
+      "name": "Gulf Blue"
+    }
+  ]
+}

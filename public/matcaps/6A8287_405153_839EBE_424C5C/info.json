@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6A8287_405153_839EBE_424C5C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6A8287_405153_839EBE_424C5C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6A8287_405153_839EBE_424C5C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6A8287_405153_839EBE_424C5C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6A8287_405153_839EBE_424C5C.png",
+  "index": 272,
+  "title": "6A8287_405153_839EBE_424C5C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6A8287_405153_839EBE_424C5C-preview.png",
+  "colors": [
+    {
+      "color": "6A8287",
+      "name": "Slate Gray"
+    },
+    {
+      "color": "405153",
+      "name": "Limed Spruce"
+    },
+    {
+      "color": "839EBE",
+      "name": "Nepal"
+    },
+    {
+      "color": "424C5C",
+      "name": "River Bed"
+    }
+  ]
+}

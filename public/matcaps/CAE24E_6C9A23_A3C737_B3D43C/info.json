@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CAE24E_6C9A23_A3C737_B3D43C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CAE24E_6C9A23_A3C737_B3D43C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CAE24E_6C9A23_A3C737_B3D43C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CAE24E_6C9A23_A3C737_B3D43C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CAE24E_6C9A23_A3C737_B3D43C.png",
+  "index": 602,
+  "title": "CAE24E_6C9A23_A3C737_B3D43C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CAE24E_6C9A23_A3C737_B3D43C-preview.png",
+  "colors": [
+    {
+      "color": "CAE24E",
+      "name": "Wattle"
+    },
+    {
+      "color": "6C9A23",
+      "name": "Olive Drab"
+    },
+    {
+      "color": "A3C737",
+      "name": "Atlantis"
+    },
+    {
+      "color": "B3D43C",
+      "name": "Conifer"
+    }
+  ]
+}

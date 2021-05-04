@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/496DBA_94C9F2_72A7E2_84B4EC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/496DBA_94C9F2_72A7E2_84B4EC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/496DBA_94C9F2_72A7E2_84B4EC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/496DBA_94C9F2_72A7E2_84B4EC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/496DBA_94C9F2_72A7E2_84B4EC.png",
+  "index": 143,
+  "title": "496DBA_94C9F2_72A7E2_84B4EC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/496DBA_94C9F2_72A7E2_84B4EC-preview.png",
+  "colors": [
+    {
+      "color": "496DBA",
+      "name": "San Marino"
+    },
+    {
+      "color": "94C9F2",
+      "name": "Jordy Blue"
+    },
+    {
+      "color": "72A7E2",
+      "name": "Havelock Blue"
+    },
+    {
+      "color": "84B4EC",
+      "name": "Jordy Blue"
+    }
+  ]
+}

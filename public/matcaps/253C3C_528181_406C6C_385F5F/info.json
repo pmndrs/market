@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/253C3C_528181_406C6C_385F5F.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/253C3C_528181_406C6C_385F5F.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/253C3C_528181_406C6C_385F5F.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/253C3C_528181_406C6C_385F5F.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/253C3C_528181_406C6C_385F5F.png",
+  "index": 39,
+  "title": "253C3C_528181_406C6C_385F5F",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/253C3C_528181_406C6C_385F5F-preview.png",
+  "colors": [
+    {
+      "color": "253C3C",
+      "name": "Outer Space"
+    },
+    {
+      "color": "528181",
+      "name": "Cutty Sark"
+    },
+    {
+      "color": "406C6C",
+      "name": "William"
+    },
+    {
+      "color": "385F5F",
+      "name": "William"
+    }
+  ]
+}

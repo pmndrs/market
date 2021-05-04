@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/45432C_808361_B8C8BC_A5A27A.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/45432C_808361_B8C8BC_A5A27A.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/45432C_808361_B8C8BC_A5A27A.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/45432C_808361_B8C8BC_A5A27A.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/45432C_808361_B8C8BC_A5A27A.png",
+  "index": 123,
+  "title": "45432C_808361_B8C8BC_A5A27A",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/45432C_808361_B8C8BC_A5A27A-preview.png",
+  "colors": [
+    {
+      "color": "45432C",
+      "name": "Mondo"
+    },
+    {
+      "color": "808361",
+      "name": "Flax Smoke"
+    },
+    {
+      "color": "B8C8BC",
+      "name": "Powder Ash"
+    },
+    {
+      "color": "A5A27A",
+      "name": "Hillary"
+    }
+  ]
+}

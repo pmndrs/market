@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/181F1F_475057_616566_525C62.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/181F1F_475057_616566_525C62.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/181F1F_475057_616566_525C62.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/181F1F_475057_616566_525C62.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/181F1F_475057_616566_525C62.png",
+  "index": 24,
+  "title": "181F1F_475057_616566_525C62",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/181F1F_475057_616566_525C62-preview.png",
+  "colors": [
+    {
+      "color": "181F1F",
+      "name": "Woodsmoke"
+    },
+    {
+      "color": "475057",
+      "name": "Mako"
+    },
+    {
+      "color": "616566",
+      "name": "Nevada"
+    },
+    {
+      "color": "525C62",
+      "name": "Trout"
+    }
+  ]
+}

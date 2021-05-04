@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/EEECFB_BFB6D5_D0C8EB_CCC4DC.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/EEECFB_BFB6D5_D0C8EB_CCC4DC.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/EEECFB_BFB6D5_D0C8EB_CCC4DC.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/EEECFB_BFB6D5_D0C8EB_CCC4DC.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/EEECFB_BFB6D5_D0C8EB_CCC4DC.png",
+  "index": 673,
+  "title": "EEECFB_BFB6D5_D0C8EB_CCC4DC",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/EEECFB_BFB6D5_D0C8EB_CCC4DC-preview.png",
+  "colors": [
+    {
+      "color": "EEECFB",
+      "name": "Moon Raker"
+    },
+    {
+      "color": "BFB6D5",
+      "name": "Lavender Gray"
+    },
+    {
+      "color": "D0C8EB",
+      "name": "Prelude"
+    },
+    {
+      "color": "CCC4DC",
+      "name": "Blue Haze"
+    }
+  ]
+}

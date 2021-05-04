@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/434240_D3D3CF_898784_A4A49F.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/434240_D3D3CF_898784_A4A49F.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/434240_D3D3CF_898784_A4A49F.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/434240_D3D3CF_898784_A4A49F.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/434240_D3D3CF_898784_A4A49F.png",
+  "index": 118,
+  "title": "434240_D3D3CF_898784_A4A49F",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/434240_D3D3CF_898784_A4A49F-preview.png",
+  "colors": [
+    {
+      "color": "434240",
+      "name": "Merlin"
+    },
+    {
+      "color": "D3D3CF",
+      "name": "Quill Gray"
+    },
+    {
+      "color": "898784",
+      "name": "Natural Gray"
+    },
+    {
+      "color": "A4A49F",
+      "name": "Delta"
+    }
+  ]
+}

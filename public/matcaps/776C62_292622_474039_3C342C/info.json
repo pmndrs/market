@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/776C62_292622_474039_3C342C.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/776C62_292622_474039_3C342C.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/776C62_292622_474039_3C342C.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/776C62_292622_474039_3C342C.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/776C62_292622_474039_3C342C.png",
+  "index": 321,
+  "title": "776C62_292622_474039_3C342C",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/776C62_292622_474039_3C342C-preview.png",
+  "colors": [
+    {
+      "color": "776C62",
+      "name": "Sandstone"
+    },
+    {
+      "color": "292622",
+      "name": "Dune"
+    },
+    {
+      "color": "474039",
+      "name": "Armadillo"
+    },
+    {
+      "color": "3C342C",
+      "name": "Taupe"
+    }
+  ]
+}

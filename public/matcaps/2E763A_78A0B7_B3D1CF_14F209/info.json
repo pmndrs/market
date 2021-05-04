@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/2E763A_78A0B7_B3D1CF_14F209.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/2E763A_78A0B7_B3D1CF_14F209.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/2E763A_78A0B7_B3D1CF_14F209.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/2E763A_78A0B7_B3D1CF_14F209.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/2E763A_78A0B7_B3D1CF_14F209.png",
+  "index": 58,
+  "title": "2E763A_78A0B7_B3D1CF_14F209",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/2E763A_78A0B7_B3D1CF_14F209-preview.png",
+  "colors": [
+    {
+      "color": "2E763A",
+      "name": "Sea Green"
+    },
+    {
+      "color": "78A0B7",
+      "name": "Ship Cove"
+    },
+    {
+      "color": "B3D1CF",
+      "name": "Jet Stream"
+    },
+    {
+      "color": "14F209",
+      "name": "Green"
+    }
+  ]
+}

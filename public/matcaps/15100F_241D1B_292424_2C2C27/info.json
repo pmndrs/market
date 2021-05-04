@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/15100F_241D1B_292424_2C2C27.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/15100F_241D1B_292424_2C2C27.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/15100F_241D1B_292424_2C2C27.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/15100F_241D1B_292424_2C2C27.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/15100F_241D1B_292424_2C2C27.png",
+  "index": 20,
+  "title": "15100F_241D1B_292424_2C2C27",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/15100F_241D1B_292424_2C2C27-preview.png",
+  "colors": [
+    {
+      "color": "15100F",
+      "name": "Cocoa Brown"
+    },
+    {
+      "color": "241D1B",
+      "name": "Cocoa Brown"
+    },
+    {
+      "color": "292424",
+      "name": "Mine Shaft"
+    },
+    {
+      "color": "2C2C27",
+      "name": "Tuatara"
+    }
+  ]
+}

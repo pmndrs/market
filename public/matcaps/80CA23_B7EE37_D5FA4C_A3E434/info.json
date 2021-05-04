@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/80CA23_B7EE37_D5FA4C_A3E434.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/80CA23_B7EE37_D5FA4C_A3E434.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/80CA23_B7EE37_D5FA4C_A3E434.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/80CA23_B7EE37_D5FA4C_A3E434.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/80CA23_B7EE37_D5FA4C_A3E434.png",
+  "index": 356,
+  "title": "80CA23_B7EE37_D5FA4C_A3E434",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/80CA23_B7EE37_D5FA4C_A3E434-preview.png",
+  "colors": [
+    {
+      "color": "80CA23",
+      "name": "Atlantis"
+    },
+    {
+      "color": "B7EE37",
+      "name": "Pear"
+    },
+    {
+      "color": "D5FA4C",
+      "name": "Golden Fizz"
+    },
+    {
+      "color": "A3E434",
+      "name": "Conifer"
+    }
+  ]
+}

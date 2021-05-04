@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/8E6767_D9C4C4_C8ACAC_B89898.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/8E6767_D9C4C4_C8ACAC_B89898.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/8E6767_D9C4C4_C8ACAC_B89898.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/8E6767_D9C4C4_C8ACAC_B89898.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/8E6767_D9C4C4_C8ACAC_B89898.png",
+  "index": 399,
+  "title": "8E6767_D9C4C4_C8ACAC_B89898",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/8E6767_D9C4C4_C8ACAC_B89898-preview.png",
+  "colors": [
+    {
+      "color": "8E6767",
+      "name": "Opium"
+    },
+    {
+      "color": "D9C4C4",
+      "name": "Wafer"
+    },
+    {
+      "color": "C8ACAC",
+      "name": "Cold Turkey"
+    },
+    {
+      "color": "B89898",
+      "name": "Thatch"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/CCC5C9_3B2B2B_67585B_7F7375.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/CCC5C9_3B2B2B_67585B_7F7375.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/CCC5C9_3B2B2B_67585B_7F7375.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/CCC5C9_3B2B2B_67585B_7F7375.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/CCC5C9_3B2B2B_67585B_7F7375.png",
+  "index": 612,
+  "title": "CCC5C9_3B2B2B_67585B_7F7375",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/CCC5C9_3B2B2B_67585B_7F7375-preview.png",
+  "colors": [
+    {
+      "color": "CCC5C9",
+      "name": "Pale Slate"
+    },
+    {
+      "color": "3B2B2B",
+      "name": "Woody Brown"
+    },
+    {
+      "color": "67585B",
+      "name": "Zambezi"
+    },
+    {
+      "color": "7F7375",
+      "name": "Empress"
+    }
+  ]
+}

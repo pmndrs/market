@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/6E524D_8496C5_AF6624_100B11.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/6E524D_8496C5_AF6624_100B11.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/6E524D_8496C5_AF6624_100B11.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/6E524D_8496C5_AF6624_100B11.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/6E524D_8496C5_AF6624_100B11.png",
+  "index": 285,
+  "title": "6E524D_8496C5_AF6624_100B11",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/6E524D_8496C5_AF6624_100B11-preview.png",
+  "colors": [
+    {
+      "color": "6E524D",
+      "name": "Ferra"
+    },
+    {
+      "color": "8496C5",
+      "name": "Polo Blue"
+    },
+    {
+      "color": "AF6624",
+      "name": "Desert"
+    },
+    {
+      "color": "100B11",
+      "name": "Cinder"
+    }
+  ]
+}

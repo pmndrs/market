@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/C1AA92_AD6E29_737889_CED1D7.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/C1AA92_AD6E29_737889_CED1D7.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/C1AA92_AD6E29_737889_CED1D7.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/C1AA92_AD6E29_737889_CED1D7.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/C1AA92_AD6E29_737889_CED1D7.png",
+  "index": 564,
+  "title": "C1AA92_AD6E29_737889_CED1D7",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/C1AA92_AD6E29_737889_CED1D7-preview.png",
+  "colors": [
+    {
+      "color": "C1AA92",
+      "name": "Indian Khaki"
+    },
+    {
+      "color": "AD6E29",
+      "name": "Copper"
+    },
+    {
+      "color": "737889",
+      "name": "Storm Gray"
+    },
+    {
+      "color": "CED1D7",
+      "name": "Ghost"
+    }
+  ]
+}

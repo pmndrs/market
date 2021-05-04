@@ -1,0 +1,28 @@
+{
+  "64": "https://github.com/nidorx/matcaps/raw/master/1024/7E5344_22120E_CCAB9C_8D919D.png",
+  "128": "https://github.com/nidorx/matcaps/raw/master/1024/7E5344_22120E_CCAB9C_8D919D.png",
+  "256": "https://github.com/nidorx/matcaps/raw/master/1024/7E5344_22120E_CCAB9C_8D919D.png",
+  "512": "https://github.com/nidorx/matcaps/raw/master/1024/7E5344_22120E_CCAB9C_8D919D.png",
+  "1024": "https://github.com/nidorx/matcaps/raw/master/1024/7E5344_22120E_CCAB9C_8D919D.png",
+  "index": 346,
+  "title": "7E5344_22120E_CCAB9C_8D919D",
+  "preview": "https://github.com//nidorx/matcaps/raw/master/preview/7E5344_22120E_CCAB9C_8D919D-preview.png",
+  "colors": [
+    {
+      "color": "7E5344",
+      "name": "Spicy Mix"
+    },
+    {
+      "color": "22120E",
+      "name": "Night Rider"
+    },
+    {
+      "color": "CCAB9C",
+      "name": "Rodeo Dust"
+    },
+    {
+      "color": "8D919D",
+      "name": "Manatee"
+    }
+  ]
+}
