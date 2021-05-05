@@ -1,17 +1,17 @@
 import useStore from '@/helpers/store'
 import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
-import ModelInfo from '../../components/ModelInfo'
+import MaterialInfo from '../../components/MaterialInfo'
 import { useEffect } from 'react'
 import { Leva } from 'leva'
-// import { getAllMatcapsLinks } from '@/helpers/getAllMatcaps'
-// import getMatcap from '@/helpers/getMatcap'
+import { getAllMaterialLinks } from '@/helpers/getAllMatcaps'
+import getMaterial from '@/helpers/getMaterial'
 
-const Viewer = dynamic(() => import('@/components/canvas/Model'), {
+const Viewer = dynamic(() => import('@/components/canvas/Material'), {
   ssr: false,
 })
 
-const Page = ({ title, model }) => {
+const Page = ({ title, material }) => {
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
@@ -19,7 +19,7 @@ const Page = ({ title, model }) => {
   return (
     <Layout title={title}>
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
-        <ModelInfo {...model} />
+        <MaterialInfo {...material} />
         <div className='min-w-full min-h-full col-span-2'>
           <div
             className='absolute z-10 hidden right-[-60px] sm:block top-[-10px]'
@@ -27,7 +27,7 @@ const Page = ({ title, model }) => {
           >
             <Leva fill />
           </div>
-          {/* <Viewer buffer={model.buffer} /> */}
+          <Viewer {...material} />
         </div>
       </main>
     </Layout>
@@ -37,21 +37,19 @@ const Page = ({ title, model }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  // const matcap = getMatcap(params.name)
-  const matcap = {}
+  const material = getMaterial(params.name)
   return {
     props: {
-      matcap,
-      title: matcap.title,
+      material,
+      title: material.name,
     },
   }
 }
 
 export async function getStaticPaths() {
-  // const matcaps = getAllMatcapsLinks()
-  const matcaps = []
+  const materials = getAllMaterialLinks()
   return {
-    paths: matcaps,
+    paths: materials,
     fallback: false,
   }
 }

@@ -37,7 +37,7 @@ const getAllMatcaps = () => {
   return materials.filter((a) => a)
 }
 
-export const getAllMatcapsLinks = () => {
+export const getAllMaterialLinks = () => {
   const resources = path.join(process.cwd(), 'public/materials')
   const folders = fs.readdirSync(resources)
   const models = folders
