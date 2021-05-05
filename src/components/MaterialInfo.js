@@ -1,13 +1,4 @@
-import copy from 'clipboard-copy'
-import useStore from '@/helpers/store'
-import parse from '@react-three/gltfjsx'
-
-const licenses = {
-  1: {
-    link: "https://creativecommons.org/share-your-work/public-domain/cc0/'",
-    name: 'CC0',
-  },
-}
+import { licenses } from '../helpers/constants/licenses'
 
 const ModelInfo = (material) => {
   return (

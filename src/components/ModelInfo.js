@@ -4,17 +4,11 @@ import parse from '@react-three/gltfjsx'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import { licenses } from '../helpers/constants/licenses'
 import Tippy from '@tippyjs/react'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
-}
-
-const licenses = {
-  1: {
-    link: "https://creativecommons.org/share-your-work/public-domain/cc0/'",
-    name: 'CC0',
-  },
 }
 
 const ModelInfo = (model) => {

@@ -35,13 +35,15 @@ const useStore = create((set, get) => {
     setRequests: (requests) => {
       set({ requests })
     },
-    submitRequest: async ({ request, description }) => {
+    submitRequest: async ({ request, description, category }) => {
       const user = get().user
       const requests = get().requests
+
       if (!user) return null
       const newRequest = {
         request,
         description,
+        category,
         upvotes: [user.id],
         user_id: user.id,
         created: new Date(),
