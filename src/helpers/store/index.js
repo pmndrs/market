@@ -1,5 +1,5 @@
 import create from 'zustand'
-import { supabase } from '../helpers/initSupabase'
+import { supabase } from '../../helpers/initSupabase'
 
 const useStore = create((set, get) => {
   return {
@@ -16,11 +16,10 @@ const useStore = create((set, get) => {
     search: '',
     setSearch: (e) => {
       const search = e.target.value
-      const models = get().currentModels
       const defaultModels = get().defaultModels
       set({ search: search })
       if (search.length) {
-        const searchResults = models.filter((model) => {
+        const searchResults = defaultModels.filter((model) => {
           return (
             model.info.category.includes(search.toLowerCase()) ||
             model.url.toLowerCase().includes(search.toLowerCase()) ||
@@ -36,13 +35,15 @@ const useStore = create((set, get) => {
     setRequests: (requests) => {
       set({ requests })
     },
-    submitRequest: async ({ request, description }) => {
+    submitRequest: async ({ request, description, category }) => {
       const user = get().user
       const requests = get().requests
+
       if (!user) return null
       const newRequest = {
         request,
         description,
+        category,
         upvotes: [user.id],
         user_id: user.id,
         created: new Date(),

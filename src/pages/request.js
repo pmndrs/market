@@ -1,7 +1,7 @@
 import useStore from '@/helpers/store'
 import Layout from '@/components/layout/'
 import { supabase } from '../helpers/initSupabase'
-import ModelRequestForm from '@/components/ModelRequestForm'
+import AssetRequestForm from '@/components/AssetRequestForm'
 import { useEffect } from 'react'
 import Tippy from '@tippyjs/react'
 
@@ -29,10 +29,10 @@ const Request = ({ user, requests: requestsServer }) => {
               onClick={() => useStore.setState({ requesting: !requesting })}
               className='relative items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-transparent shadow-sm rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-gray-500'
             >
-              Request a Model
+              Request an Asset
             </button>
           </div>
-          {requesting && <ModelRequestForm onSubmit={submitRequest} />}
+          {requesting && <AssetRequestForm onSubmit={submitRequest} />}
         </>
       )}
       <div className='mt-10 overflow-hidden bg-white shadow sm:rounded-md'>
@@ -90,6 +90,9 @@ const Request = ({ user, requests: requestsServer }) => {
                   </div>
                 </div>
                 <p className='block mr-10 text-xs text-gray-800 truncate'>
+                  <span className='inline-flex items-center px-3 mr-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full py-0.5'>
+                    {request.category}
+                  </span>
                   {new Date(request.created).toLocaleString('en-US', {
                     month: 'long',
                     day: '2-digit',

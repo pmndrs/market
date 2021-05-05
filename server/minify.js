@@ -3,6 +3,7 @@ const fsExtra = require('fs-extra')
 var glob = require('glob')
 const imagemin = require('imagemin')
 const imageminPngquant = require('imagemin-pngquant')
+const imageminJpegtran = require('imagemin-jpegtran')
 
 const processGltf = gltfPipeline.processGltf
 glob('public/resources/**/*.gltf', {}, function (er, files) {
@@ -13,21 +14,24 @@ glob('public/resources/**/*.gltf', {}, function (er, files) {
         dracoOptions: {
           compressionLevel: 10,
         },
-      }).then(function (results) {
-        fsExtra.writeJsonSync(file, results.gltf)
       })
+        .then(function (results) {
+          fsExtra.writeJsonSync(file, results.gltf)
+        })
+        .catch(() => {})
     } catch {
       //
     }
   })
 })
 
-glob('public/resources/**/*.png', {}, async function (er, files) {
+glob('public/resources/**/*.{jpg,png}', {}, async function (er, files) {
   files.forEach(async (file) => {
     const newFile = await imagemin([file], {
       plugins: [
+        imageminJpegtran(),
         imageminPngquant({
-          quality: [0.5, 0.6],
+          quality: [0.6, 0.8],
         }),
       ],
     })
