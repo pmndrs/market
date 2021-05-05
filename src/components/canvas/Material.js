@@ -5,38 +5,43 @@ import { useControls } from 'leva'
 
 const Model = ({ url, category }) => {
   const ref = useRef()
-
+  const lightControls =
+    category === 'matcaps'
+      ? {}
+      : {
+          intensity: {
+            value: 1,
+            min: 0,
+            max: 2,
+            step: 0.1,
+            label: 'light intensity',
+          },
+          preset: {
+            value: 'rembrandt',
+            options: ['rembrandt', 'portrait', 'upfront', 'soft'],
+          },
+          environment: {
+            value: 'city',
+            options: [
+              '',
+              'sunset',
+              'dawn',
+              'night',
+              'warehouse',
+              'forest',
+              'apartment',
+              'studio',
+              'city',
+              'park',
+              'lobby',
+            ],
+          },
+        }
   const controls = useControls(
     {
       autoRotate: true,
       contactShadow: true,
-      intensity: {
-        value: 1,
-        min: 0,
-        max: 2,
-        step: 0.1,
-        label: 'light intensity',
-      },
-      preset: {
-        value: 'rembrandt',
-        options: ['rembrandt', 'portrait', 'upfront', 'soft'],
-      },
-      environment: {
-        value: 'city',
-        options: [
-          '',
-          'sunset',
-          'dawn',
-          'night',
-          'warehouse',
-          'forest',
-          'apartment',
-          'studio',
-          'city',
-          'park',
-          'lobby',
-        ],
-      },
+      ...lightControls,
     },
     { collapsed: true }
   )
@@ -86,3 +91,5 @@ export default function ModelComponent(props) {
     </Canvas>
   )
 }
+
+useGLTF.preload('/suzanne.gltf')
