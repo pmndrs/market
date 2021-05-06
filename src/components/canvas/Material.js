@@ -18,7 +18,7 @@ const PBR = ({ links, displacementScale }) => {
     return acc
   }, {})
   return (
-    <Sphere args={[1, 100, 100]}>
+    <Sphere args={[1, 200, 200]}>
       <meshPhysicalMaterial
         {...textures}
         displacementScale={displacementScale}
@@ -34,7 +34,7 @@ const Model = ({ url, category, links }) => {
       ? {}
       : {
           displacement: {
-            value: 0.2,
+            value: 0.1,
             min: 0,
             max: 1,
             step: 0.1,
