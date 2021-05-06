@@ -28,7 +28,27 @@ const PBR = ({ links, displacementScale }) => {
   )
 }
 
-const Model = ({ url, category, links }) => {
+const MatCap = ({ url }) => {
+  const [matcap] = useTexture([url])
+  const group = useRef()
+  const { nodes } = useGLTF('/suzanne.gltf')
+
+  return (
+    <group ref={group} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Suzanne.geometry}
+        position={[0, 0.19, -0.04]}
+        attach='material'
+      >
+        <meshMatcapMaterial matcap={matcap} />
+      </mesh>
+    </group>
+  )
+}
+
+const Material = ({ url, info: { category, links } }) => {
   const ref = useRef()
   const lightControls =
     category === 'matcaps'
@@ -77,9 +97,6 @@ const Model = ({ url, category, links }) => {
     },
     { collapsed: true }
   )
-  const [matcap] = useTexture([url])
-  const group = useRef()
-  const { nodes } = useGLTF('/suzanne.gltf')
 
   return (
     <>
@@ -92,17 +109,7 @@ const Model = ({ url, category, links }) => {
         shadowBias={-0.001}
       >
         {category === 'matcaps' ? (
-          <group ref={group} dispose={null}>
-            <mesh
-              castShadow
-              receiveShadow
-              geometry={nodes.Suzanne.geometry}
-              position={[0, 0.19, -0.04]}
-              attach='material'
-            >
-              <meshMatcapMaterial matcap={matcap} />
-            </mesh>
-          </group>
+          <MatCap url={url} />
         ) : (
           <PBR links={links} displacementScale={controls.displacement} />
         )}
@@ -112,7 +119,7 @@ const Model = ({ url, category, links }) => {
   )
 }
 
-export default function ModelComponent(props) {
+export default function MaterialComponent(props) {
   return (
     <Canvas
       shadows
@@ -123,7 +130,7 @@ export default function ModelComponent(props) {
       <color attach='background' color='white' />
       <ambientLight intensity={0.25} />
       <Suspense fallback={null}>
-        <Model {...props} />
+        <Material {...props} />
       </Suspense>
     </Canvas>
   )

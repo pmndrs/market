@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-export const getSize = (filePath) => {
+export const getSize = (filePath, justNumber = false) => {
   var stats = fs.statSync(filePath)
   var fileSizeInBytes = stats.size
   let size
@@ -10,6 +10,8 @@ export const getSize = (filePath) => {
   } else {
     if (!size) size = fileSizeInBytes / 1000
   }
+
+  if (justNumber) return { size }
   return {
     highPoly: size > 500,
     size:

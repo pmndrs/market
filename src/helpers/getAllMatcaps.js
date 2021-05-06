@@ -15,8 +15,24 @@ const getAllMatcaps = () => {
         const filePath = path.join(resources, folder, filename)
         const fileContents = fs.readFileSync(filePath, 'utf-8')
         material.url = folder
+
         if (filename.includes('.json')) {
-          material.info = JSON.parse(fileContents)
+          const info = JSON.parse(fileContents)
+
+          if (info.links) {
+            info.sizes = {}
+            Object.values(info.links).map((link, i) => {
+              const mapLink = path.join(process.cwd(), `public${link}`)
+              console.log(mapLink)
+              const { size } = getSize(mapLink, true)
+              const name = Object.keys(info.links)[i]
+              info.sizes[name] = size
+            })
+          }
+          material = {
+            ...material,
+            info,
+          }
         }
 
         if (filename.includes('render.')) {

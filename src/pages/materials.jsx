@@ -1,10 +1,10 @@
+import { getMaterialSize } from '@/helpers/getMaterialSize'
 import useStore from '@/helpers/store/materials'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import { SearchIcon } from '@heroicons/react/solid'
 import getAllMatcaps from '@/helpers/getAllMatcaps'
 import Link from 'next/link'
-import { shuffle } from '../helpers/shuffle'
 
 const Index = ({ title, materials }) => {
   const { search, currentMaterials, setSearch } = useStore((state) => ({
@@ -13,7 +13,7 @@ const Index = ({ title, materials }) => {
     setSearch: state.setSearch,
   }))
   useEffect(() => {
-    useStore.setState({ currentMaterials: shuffle(materials) })
+    useStore.setState({ currentMaterials: materials })
     useStore.setState({ defaultMaterials: materials })
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -66,7 +66,7 @@ const Index = ({ title, materials }) => {
                   {material.info?.name}
                 </p>
                 <p className='flex block text-sm font-medium text-gray-500'>
-                  {material.size}
+                  {getMaterialSize(material)}
                 </p>
               </a>
             </Link>

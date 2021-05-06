@@ -4,7 +4,6 @@ import Model from '@/components/Model'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
-import { shuffle } from '../helpers/shuffle'
 
 const Index = ({ title, models }) => {
   const { search, currentModels, setSearch } = useStore((state) => ({
@@ -13,7 +12,7 @@ const Index = ({ title, models }) => {
     setSearch: state.setSearch,
   }))
   useEffect(() => {
-    useStore.setState({ currentModels: shuffle(models) })
+    useStore.setState({ currentModels: models })
     useStore.setState({ defaultModels: models })
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps

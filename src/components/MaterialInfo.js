@@ -1,30 +1,19 @@
+import useStore from '@/helpers/store/materials'
 import { licenses } from '../helpers/constants/licenses'
-import JSZip from 'jszip'
-import { saveAs } from 'file-saver'
+
+import { getMaterialSize } from '../helpers/getMaterialSize'
 
 const ModelInfo = (material) => {
-  const generateZip = async () => {
-    var zip = new JSZip()
-    const images = Object.values(material.links)
-    const a = images.map(async (image) => {
-      const parts = image.split('/')
-      const name = parts[parts.length - 1]
-      const data = await fetch(image).then((a) => a.blob())
-      console.log(data)
-      zip.file(name, data)
-    })
-
-    await Promise.all(a)
-    const pbrImages = await zip.generateAsync({ type: 'blob' })
-    saveAs(pbrImages, `${material.folder}.zip`)
-  }
+  const { createZip } = useStore((state) => ({
+    createZip: state.createZip,
+  }))
 
   return (
     <div className='mt-5'>
       <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
         <img
           src={material.image}
-          alt={material.name}
+          alt={material.info.name}
           className='object-cover pointer-events-none'
         />
       </div>
@@ -32,31 +21,31 @@ const ModelInfo = (material) => {
         <span className='text-gray-600'>Created by: </span>
         <a
           target='_blank'
-          href={material.creatorLink}
+          href={material.info.creatorLink}
           rel='noreferrer'
           className='font-bold'
         >
-          {material.creator}
+          {material.info.creator}
         </a>
         <span className='block'>
           <span className='text-gray-600'>License: </span>{' '}
-          {licenses[material.license] ? (
+          {licenses[material.info.license] ? (
             <a
               target='_blank'
-              href={licenses[material.license].link}
+              href={licenses[material.info.license].link}
               rel='noreferrer'
               className='font-bold'
             >
-              {licenses[material.license].name}
+              {licenses[material.info.license].name}
             </a>
           ) : (
-            <span className='font-bold'>{material.license}</span>
+            <span className='font-bold'>{material.info.license}</span>
           )}
         </span>
         <span className='flex items-center'>
           <span className='pr-2 text-gray-600 '>Size: </span>{' '}
           <span className='inline-flex font-bold'>
-            <span>{material.size}</span>
+            <span>{getMaterialSize(material)}</span>
           </span>
         </span>
         {material.category && (
@@ -79,7 +68,7 @@ const ModelInfo = (material) => {
           ) : (
             <button
               className='block w-full py-2 text-center text-white bg-gray-800'
-              onClick={generateZip}
+              onClick={() => createZip(material)}
             >
               Download
             </button>

@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       material,
-      title: material.name,
+      title: material.info.name,
     },
   }
 }
