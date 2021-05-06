@@ -6,7 +6,7 @@ const imageminPngquant = require('imagemin-pngquant')
 const imageminJpegtran = require('imagemin-jpegtran')
 
 const processGltf = gltfPipeline.processGltf
-glob('public/resources/**/*.gltf', {}, function (er, files) {
+glob('public/**/*.gltf', {}, function (er, files) {
   files.forEach((file) => {
     try {
       const gltf = fsExtra.readJsonSync(file)
@@ -25,7 +25,7 @@ glob('public/resources/**/*.gltf', {}, function (er, files) {
   })
 })
 
-glob('public/resources/**/*.{jpg,png}', {}, async function (er, files) {
+glob('public/**/*.{jpg,png}', {}, async function (er, files) {
   files.forEach(async (file) => {
     const newFile = await imagemin([file], {
       plugins: [

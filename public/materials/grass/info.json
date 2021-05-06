@@ -1,0 +1,14 @@
+{
+  "name": "Grass",
+  "creator": "cc0textures",
+  "creatorLink": "https://cc0textures.com/view?id=Grass001",
+  "license": 1,
+  "category": "PBR",
+  "links": {
+    "aoMap": "/materials/grass/Grass001_1K_AmbientOcclusion.jpg",
+    "map": "/materials/grass/Grass001_1K_Color.jpg",
+    "displacementMap": "/materials/grass/Grass001_1K_Displacement.jpg",
+    "normalMap": "/materials/grass/Grass001_1K_Normal.jpg",
+    "roughnessMap": "/materials/grass/Grass001_1K_Roughness.jpg"
+  }
+}

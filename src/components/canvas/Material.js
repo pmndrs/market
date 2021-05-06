@@ -90,7 +90,7 @@ const Model = ({ url, category, links }) => {
         environment={controls.environment}
         shadowBias={-0.001}
       >
-        {category === 'matcaps' && (
+        {category === 'matcaps' ? (
           <group ref={group} dispose={null}>
             <mesh
               castShadow
@@ -102,8 +102,9 @@ const Model = ({ url, category, links }) => {
               <meshMatcapMaterial matcap={matcap} />
             </mesh>
           </group>
+        ) : (
+          <PBR links={links} displacementScale={controls.displacement} />
         )}
-        <PBR links={links} displacementScale={controls.displacement} />
       </Stage>
       <OrbitControls ref={ref} autoRotate={controls.autoRotate} />
     </>
