@@ -1,13 +1,30 @@
 import useStore from '@/helpers/store/materials'
-import { licenses } from '../helpers/constants/licenses'
+import { licenses } from '@/helpers/constants/licenses'
+import { getMaterialSize } from '@/helpers/getMaterialSize'
+import { useState } from 'react'
 
-import { getMaterialSize } from '../helpers/getMaterialSize'
-
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 const ModelInfo = (material) => {
-  const { createZip } = useStore((state) => ({
+  const [tab, setTab] = useState('r3f')
+  const { createZip, createCodeDownload } = useStore((state) => ({
     createZip: state.createZip,
+    createCodeDownload: state.createCodeDownload,
   }))
 
+  const tabs = [
+    {
+      name: 'React Three Fiber',
+      onClick: () => setTab('r3f'),
+      current: tab === 'r3f',
+    },
+    {
+      name: 'Three.js',
+      onClick: () => setTab('three'),
+      current: tab === 'three',
+    },
+  ]
   return (
     <div className='mt-5'>
       <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
@@ -48,32 +65,81 @@ const ModelInfo = (material) => {
             <span>{getMaterialSize(material)}</span>
           </span>
         </span>
-        {material.category && (
+        {material.info.category && (
           <>
             <span className='text-gray-600'>Category: </span>
             <span className='inline-flex items-center px-2 mt-1 text-xs font-medium text-gray-800 bg-gray-100 rounded py-0.5'>
-              {material.category}
+              {material.info.category}
             </span>
           </>
         )}
-        <div className='mt-7'>
-          {material.category === 'matcaps' ? (
+        <div className='my-4'>
+          {material.info.category === 'matcaps' && (
+            <div>
+              <div className='sm:hidden'>
+                <label htmlFor='tabs' className='sr-only'>
+                  Select a tab
+                </label>
+                <select
+                  id='tabs'
+                  name='tabs'
+                  className='block w-full py-2 pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+                  defaultValue={tabs.find((tab) => tab.current).name}
+                >
+                  {tabs.map((tab) => (
+                    <option key={tab.name}>{tab.name}</option>
+                  ))}
+                </select>
+              </div>
+              <div className='hidden sm:block'>
+                <div className='border-b border-gray-200'>
+                  <nav className='flex -mb-px space-x-8' aria-label='Tabs'>
+                    {tabs.map((tab) => (
+                      <button
+                        key={tab.name}
+                        onClick={tab.onClick}
+                        className={classNames(
+                          tab.current
+                            ? 'border-indigo-500 text-indigo-600'
+                            : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                          'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+                        )}
+                        aria-current={tab.current ? 'page' : undefined}
+                      >
+                        {tab.name}
+                      </button>
+                    ))}
+                  </nav>
+                </div>
+              </div>
+            </div>
+          )}
+          {tab === 'r3f' && (
             <a
-              className='block w-full py-2 text-center text-white bg-gray-800'
+              className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer'
               download
-              href={material.url}
+              onClick={() => createCodeDownload(material)}
             >
-              Download
+              Download starter project
             </a>
-          ) : (
-            <button
-              className='block w-full py-2 text-center text-white bg-gray-800'
-              onClick={() => createZip(material)}
-            >
-              Download
-            </button>
           )}
         </div>
+        {material.info.category === 'matcaps' ? (
+          <a
+            className='block w-full py-2 text-center text-white bg-gray-800'
+            download
+            href={material.url}
+          >
+            Download Matcap
+          </a>
+        ) : (
+          <button
+            className='block w-full py-2 text-center text-white bg-gray-800'
+            onClick={() => createZip(material)}
+          >
+            Download Textures
+          </button>
+        )}
       </aside>
     </div>
   )

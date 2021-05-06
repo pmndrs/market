@@ -1,12 +1,29 @@
 import create from 'zustand'
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
+import { createCode } from '../code/matcapStarter'
 
 const useStore = create((set, get) => {
   return {
     defaultMaterials: null,
     currentMaterials: [],
     search: '',
+    createCodeDownload: async (material) => {
+      const parts = material.url.split('/')
+      const name = parts[parts.length - 1]
+      const data = await fetch(material.url).then((a) => a.blob())
+      const suzanne = await fetch('/suzanne.gltf').then((a) => a.text())
+
+      const code = createCode(suzanne, name, data)
+      var zip = new JSZip()
+
+      code.map((file) => {
+        zip.file(file.filename, file.code)
+      })
+
+      const codeZip = await zip.generateAsync({ type: 'blob' })
+      saveAs(codeZip, `starter-matcap-${name.split('.')[0]}.zip`)
+    },
     createZip: async (material) => {
       var zip = new JSZip()
       const images = Object.values(material.info.links)
