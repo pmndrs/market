@@ -21,6 +21,7 @@ const PBR = ({ links, displacementScale }) => {
     <Sphere args={[1, 200, 200]}>
       <meshPhysicalMaterial
         {...textures}
+        side={THREE.DoubleSide}
         displacementScale={displacementScale}
       />
     </Sphere>
@@ -41,7 +42,7 @@ const Model = ({ url, category, links }) => {
             label: 'displacement scale',
           },
           intensity: {
-            value: 1,
+            value: 0.1,
             min: 0,
             max: 2,
             step: 0.1,
