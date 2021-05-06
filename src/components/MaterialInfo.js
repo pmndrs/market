@@ -1,6 +1,24 @@
 import { licenses } from '../helpers/constants/licenses'
+import JSZip from 'jszip'
+import { saveAs } from 'file-saver'
 
 const ModelInfo = (material) => {
+  const generateZip = async () => {
+    var zip = new JSZip()
+    const images = Object.values(material.links)
+    const a = images.map(async (image) => {
+      const parts = image.split('/')
+      const name = parts[parts.length - 1]
+      const data = await fetch(image).then((a) => a.blob())
+      console.log(data)
+      zip.file(name, data)
+    })
+
+    await Promise.all(a)
+    const pbrImages = await zip.generateAsync({ type: 'blob' })
+    saveAs(pbrImages, `${material.folder}.zip`)
+  }
+
   return (
     <div className='mt-5'>
       <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
@@ -50,13 +68,22 @@ const ModelInfo = (material) => {
           </>
         )}
         <div className='mt-7'>
-          <a
-            className='block w-full py-2 text-center text-white bg-gray-800'
-            download
-            href={material.url}
-          >
-            Download
-          </a>
+          {material.category === 'matcaps' ? (
+            <a
+              className='block w-full py-2 text-center text-white bg-gray-800'
+              download
+              href={material.url}
+            >
+              Download
+            </a>
+          ) : (
+            <button
+              className='block w-full py-2 text-center text-white bg-gray-800'
+              onClick={generateZip}
+            >
+              Download
+            </button>
+          )}
         </div>
       </aside>
     </div>

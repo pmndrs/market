@@ -38,6 +38,8 @@
     "@tailwindcss/forms": "^0.3.2",
     "@tippyjs/react": "^4.2.5",
     "clipboard-copy": "^4.0.1",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.6.0",
     "leva": "^0.9.9",
     "next": "^10.2.0",
     "react": "^17.0.2",

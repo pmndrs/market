@@ -18,6 +18,7 @@ const getMaterial = (name) => {
           ...JSON.parse(fileContents),
         }
       }
+      material.folder = name
 
       if (filename.includes('render.')) {
         material.image = `/materials/${name}/${filename}`
