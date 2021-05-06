@@ -9,7 +9,6 @@ const getMaterial = (name) => {
   if (fs.statSync(newPath).isDirectory()) {
     // eslint-disable-next-line array-callback-return
     fs.readdirSync(newPath).map((filename) => {
-      console.log(material)
       const filePath = path.join(resources, name, filename)
       const fileContents = fs.readFileSync(filePath, 'utf-8')
 

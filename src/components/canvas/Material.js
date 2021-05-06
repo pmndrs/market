@@ -17,7 +17,6 @@ const PBR = ({ links, displacementScale }) => {
 
     return acc
   }, {})
-  console.log(textures)
   return (
     <Sphere args={[1, 100, 100]}>
       <meshPhysicalMaterial
