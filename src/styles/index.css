@@ -20,23 +20,3 @@
 a {
   @apply text-indigo-700;
 }
-
-.login-component
-  .sbui-typography-text.sbui-auth-label.sbui-typography-text-secondary {
-  @apply hidden;
-}
-
-.login-component .sbui-typography-link {
-  @apply text-gray-600 underline;
-}
-
-.login-component .sbui-btn-primary {
-  @apply rounded w-full py-2 text-center text-white bg-gray-800;
-}
-
-.login-component .sbui-btn-primary svg {
-  @apply hidden;
-}
-.login-component .sbui-btn-primary:hover {
-  @apply rounded w-full py-2 text-center text-white bg-gray-600;
-}

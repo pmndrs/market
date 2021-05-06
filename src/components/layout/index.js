@@ -18,10 +18,10 @@ const Layout = ({ children, title, center }) => {
   return (
     <>
       <Header />
-      <div className='bg-white children'>
+      <div className='flex flex-col min-h-screen bg-white children'>
         <Nav />
 
-        <div className='py-10'>
+        <main className='flex-1 py-10'>
           <header>
             <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
               <h1
@@ -41,7 +41,7 @@ const Layout = ({ children, title, center }) => {
               {children}
             </div>
           </main>
-        </div>
+        </main>
         <Footer />
       </div>
     </>
