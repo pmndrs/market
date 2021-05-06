@@ -20,14 +20,15 @@ const getMaterial = (name) => {
         }
       }
 
-      if (filename.includes('render.png')) {
+      if (filename.includes('render.')) {
         material.image = `/materials/${name}/${filename}`
-      }
-      if (filename.includes('.jpg')) {
-        const { size } = getSize(filePath)
+      } else {
+        if (filename.includes('.jpg')) {
+          const { size } = getSize(filePath)
 
-        material.size = size
-        material.url = `/materials/${name}/${filename}`
+          material.size = size
+          material.url = `/materials/${name}/${filename}`
+        }
       }
     })
 

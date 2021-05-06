@@ -1,0 +1,15 @@
+{
+  "name": "Wood Floor",
+  "creator": "cc0textures",
+  "creatorLink": "https://cc0textures.com/view?id=WoodFloor043",
+  "license": 1,
+  "category": "PBR",
+  "links": {
+    "aoMap": "/materials/wood-floor-43/WoodFloor043_1K_AmbientOcclusion.jpg",
+    "map": "/materials/wood-floor-43/WoodFloor043_1K_Color.jpg",
+    "displacementMap": "/materials/wood-floor-43/WoodFloor043_1K_Displacement.jpg",
+    "metalnessMap": "/materials/wood-floor-43/WoodFloor043_1K_Metalness.jpg",
+    "normalMap": "/materials/wood-floor-43/WoodFloor043_1K_Normal.jpg",
+    "roughnessMap": "/materials/wood-floor-43/WoodFloor043_1K_Roughness.jpg"
+  }
+}

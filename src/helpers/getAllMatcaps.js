@@ -19,13 +19,13 @@ const getAllMatcaps = () => {
           material.info = JSON.parse(fileContents)
         }
 
-        if (filename.includes('.png')) {
+        if (filename.includes('render.')) {
           material.preview = `/materials/${folder}/${filename}`
-        }
-
-        if (filename.includes('.exr') || filename.includes('.jpg')) {
-          const { size } = getSize(filePath)
-          material.size = size
+        } else {
+          if (filename.includes('.exr') || filename.includes('.jpg')) {
+            const { size } = getSize(filePath)
+            material.size = size
+          }
         }
       })
       return material

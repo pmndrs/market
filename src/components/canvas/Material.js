@@ -1,14 +1,46 @@
+import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF, Stage, useTexture } from '@react-three/drei'
+import {
+  OrbitControls,
+  useGLTF,
+  Stage,
+  useTexture,
+  Sphere,
+} from '@react-three/drei'
 import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
 
-const Model = ({ url, category }) => {
+const PBR = ({ links, displacementScale }) => {
+  const texturesLoader = useTexture([...Object.values(links)])
+  const textures = Object.keys(links).reduce((acc, curr, i) => {
+    acc[curr] = texturesLoader[i]
+
+    return acc
+  }, {})
+  console.log(textures)
+  return (
+    <Sphere args={[1, 100, 100]}>
+      <meshPhysicalMaterial
+        {...textures}
+        displacementScale={displacementScale}
+      />
+    </Sphere>
+  )
+}
+
+const Model = ({ url, category, links }) => {
   const ref = useRef()
   const lightControls =
     category === 'matcaps'
       ? {}
       : {
+          displacement: {
+            value: 0.2,
+            min: 0,
+            max: 1,
+            step: 0.1,
+            label: 'displacement scale',
+          },
           intensity: {
             value: 1,
             min: 0,
@@ -48,6 +80,7 @@ const Model = ({ url, category }) => {
   const [matcap] = useTexture([url])
   const group = useRef()
   const { nodes } = useGLTF('/suzanne.gltf')
+
   return (
     <>
       <Stage
@@ -58,17 +91,20 @@ const Model = ({ url, category }) => {
         environment={controls.environment}
         shadowBias={-0.001}
       >
-        <group ref={group} dispose={null}>
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.Suzanne.geometry}
-            position={[0, 0.19, -0.04]}
-            attach='material'
-          >
-            {category === 'matcaps' && <meshMatcapMaterial matcap={matcap} />}
-          </mesh>
-        </group>
+        {category === 'matcaps' && (
+          <group ref={group} dispose={null}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Suzanne.geometry}
+              position={[0, 0.19, -0.04]}
+              attach='material'
+            >
+              <meshMatcapMaterial matcap={matcap} />
+            </mesh>
+          </group>
+        )}
+        <PBR links={links} displacementScale={controls.displacement} />
       </Stage>
       <OrbitControls ref={ref} autoRotate={controls.autoRotate} />
     </>
