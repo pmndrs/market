@@ -3,7 +3,7 @@ import useStore from '@/helpers/store/materials'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import { SearchIcon } from '@heroicons/react/solid'
-import getAllMatcaps from '@/helpers/getAllMatcaps'
+import getAllMaterials from '@/helpers/getAllMaterials'
 import Link from 'next/link'
 
 const Index = ({ title, materials }) => {
@@ -79,7 +79,7 @@ const Index = ({ title, materials }) => {
 export default Index
 
 export async function getStaticProps() {
-  const materials = getAllMatcaps()
+  const materials = getAllMaterials()
 
   return {
     props: {

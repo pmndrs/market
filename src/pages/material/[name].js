@@ -4,7 +4,7 @@ import Layout from '@/components/layout/'
 import MaterialInfo from '../../components/MaterialInfo'
 import { useEffect } from 'react'
 import { Leva } from 'leva'
-import { getAllMaterialLinks } from '@/helpers/getAllMatcaps'
+import { getAllMaterialLinks } from '@/helpers/getAllMaterials'
 import getMaterial from '@/helpers/getMaterial'
 
 const Viewer = dynamic(() => import('@/components/canvas/Material'), {
