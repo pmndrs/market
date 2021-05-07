@@ -23,7 +23,7 @@ const footerLinks = [
   },
   {
     name: 'fathom',
-    link: '#',
+    link: 'https://app.usefathom.com/share/jksizfzi/market.pmnd.rs',
     icon: (props) => (
       <svg
         xmlns='http://www.w3.org/2000/svg'
