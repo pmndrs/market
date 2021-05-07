@@ -3,12 +3,32 @@ import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
 import { createCode } from '../code/matcaps/r3f'
 import { createCode as createThreeCode } from '../code/matcaps/three'
+import { createCode as createR3FPBRCode } from '../code/pbr/r3f'
 
 const useStore = create((set, get) => {
   return {
     defaultMaterials: null,
     currentMaterials: [],
     search: '',
+    createPBRCodeDownload: async (material, tab) => {
+      let code = ''
+      if (tab === 'r3f') {
+        code = await createR3FPBRCode(material.info.links)
+      }
+
+      var zip = new JSZip()
+
+      code.map((file) => {
+        return zip.file(file.filename, file.code)
+      })
+
+      const codeZip = await zip.generateAsync({ type: 'blob' })
+      saveAs(
+        codeZip,
+        `starter-pbr-${window.location.pathname.split('/material/')[1]}.zip`
+      )
+    },
+
     createMatcapCodeDownload: async (material, tab) => {
       const parts = material.url.split('/')
       const name = parts[parts.length - 1]

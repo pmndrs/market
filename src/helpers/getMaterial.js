@@ -19,7 +19,6 @@ const getMaterial = (name) => {
           info.sizes = {}
           Object.values(info.links).map((link, i) => {
             const mapLink = path.join(process.cwd(), `public${link}`)
-            console.log(mapLink)
             const { size } = getSize(mapLink, true)
             const name = Object.keys(info.links)[i]
             info.sizes[name] = size
