@@ -4,6 +4,7 @@ import { saveAs } from 'file-saver'
 import { createCode } from '../code/matcaps/r3f'
 import { createCode as createThreeCode } from '../code/matcaps/three'
 import { createCode as createR3FPBRCode } from '../code/pbr/r3f'
+import { createCode as createThreePBRCode } from '../code/pbr/three'
 
 const useStore = create((set, get) => {
   return {
@@ -14,6 +15,8 @@ const useStore = create((set, get) => {
       let code = ''
       if (tab === 'r3f') {
         code = await createR3FPBRCode(material.info.links)
+      } else {
+        code = await createThreePBRCode(material.info.links)
       }
 
       var zip = new JSZip()

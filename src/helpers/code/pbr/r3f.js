@@ -1,26 +1,7 @@
 import commonr3fCode from '../common/r3f'
+import { getImages, getName } from './common'
 
 export const createCode = async (files) => {
-  const getName = (image) => {
-    const parts = image.split('/')
-    const name = parts[parts.length - 1]
-
-    return name
-  }
-  const getImages = async () => {
-    const images = Object.values(files)
-    const promises = images.map(async (image) => {
-      const name = getName(image)
-      const data = await fetch(image).then((a) => a.blob())
-
-      return { filename: `public/${name}`, code: data }
-    })
-
-    const all = await Promise.all(promises)
-
-    return all
-  }
-
   return [
     ...commonr3fCode,
     {
@@ -53,7 +34,6 @@ export const createCode = async (files) => {
         
 `,
     },
-
-    ...(await getImages()),
+    ...(await getImages(files, 'public')),
   ]
 }
