@@ -3,10 +3,35 @@ import 'tippy.js/dist/tippy.css' // optional
 import { useState, useEffect } from 'react'
 import { supabase } from '../helpers/initSupabase'
 import useStore from '@/helpers/store'
+import * as Fathom from 'fathom-client'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }) {
   const user = supabase.auth.user()
   const session = supabase.auth.session()
+  const router = useRouter()
+
+  useEffect(() => {
+    // Initialize Fathom when the app loads
+    // Example: yourdomain.com
+    //  - Do not include https://
+    //  - This must be an exact match of your domain.
+    //  - If you're using www. for your domain, make sure you include that here.
+    Fathom.load('YOUR_FATHOM_TRACKING_CODE', {
+      includedDomains: ['yourdomain.com'],
+    })
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview()
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete)
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete)
+    }
+  }, [])
 
   useEffect(() => {
     useStore.setState({ user })

@@ -20,7 +20,7 @@ const Index = ({ title, materials }) => {
   }, [])
   const heading = search
     ? `Search for ${search}`
-    : `All Models (${currentMaterials.length})`
+    : `All Materials (${currentMaterials.length})`
   return (
     <Layout title={heading}>
       <div>
