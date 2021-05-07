@@ -27,6 +27,7 @@ const getAllMatcaps = () => {
               const { size } = getSize(mapLink, true)
               const name = Object.keys(info.links)[i]
               info.sizes[name] = size
+              return null
             })
           }
           material = {

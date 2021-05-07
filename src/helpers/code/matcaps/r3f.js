@@ -98,7 +98,7 @@ export const createCode = (suzanne, filename, matcap) => [
     import { useGLTF, useTexture } from "@react-three/drei";
     
     const Model = () => {
-      const [matcap] = useTexture(["basic_1.jpg"]);
+      const [matcap] = useTexture(["${filename}"]);
       const group = useRef();
       const { nodes } = useGLTF("/suzanne.gltf");
       return (

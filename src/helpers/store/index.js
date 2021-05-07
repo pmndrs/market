@@ -1,5 +1,4 @@
 import create from 'zustand'
-import { supabase } from '../../helpers/initSupabase'
 
 const useStore = create((set, get) => {
   return {

@@ -8,9 +8,9 @@ function classNames(...classes) {
 }
 const ModelInfo = (material) => {
   const [tab, setTab] = useState('r3f')
-  const { createZip, createCodeDownload } = useStore((state) => ({
+  const { createZip, createMatcapCodeDownload } = useStore((state) => ({
     createZip: state.createZip,
-    createCodeDownload: state.createCodeDownload,
+    createMatcapCodeDownload: state.createMatcapCodeDownload,
   }))
 
   const tabs = [
@@ -114,15 +114,13 @@ const ModelInfo = (material) => {
               </div>
             </div>
           )}
-          {tab === 'r3f' && (
-            <a
-              className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer'
-              download
-              onClick={() => createCodeDownload(material)}
-            >
-              Download starter project
-            </a>
-          )}
+          <a
+            className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer'
+            download
+            onClick={() => createMatcapCodeDownload(material, tab)}
+          >
+            Download starter project
+          </a>
         </div>
         {material.info.category === 'matcaps' ? (
           <a
