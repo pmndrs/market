@@ -162,7 +162,7 @@ const ModelInfo = (model) => {
           </div>
 
           <button
-            className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer disabled:opacity-75 disabled:cursor-auto'
+            className='block w-full py-2 mt-3 text-center text-white bg-gray-800 rounded cursor-pointer disabled:opacity-75 disabled:cursor-auto'
             onClick={() => createModelDownload()}
             disabled={!parsedBuffer}
           >
@@ -170,13 +170,13 @@ const ModelInfo = (model) => {
           </button>
         </div>
         <button
-          className='block w-full py-2 text-center text-white bg-gray-800 disabled:opacity-75'
+          className='block w-full py-2 text-center text-white bg-gray-800 rounded disabled:opacity-75'
           onClick={copyToClipboard}
           disabled={!parsedBuffer}
         >
           Copy JSX Code
         </button>
-        <span className='relative z-0 inline-flex w-full mt-4 shadow-sm rounded-md'>
+        <span className='relative z-0 inline-flex w-full mt-4 rounded shadow-sm'>
           <a
             href={model.gltfTextured ? model.gltfTextured : model.gltf}
             download
@@ -184,57 +184,61 @@ const ModelInfo = (model) => {
           >
             <button
               type='button'
-              className='w-full px-4 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 rounded-l-md hover:bg-indigo-500 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500'
+              className={`w-full px-4 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 ${
+                model.gltfTextured ? 'rounded-l ' : 'rounded '
+              }`}
             >
-              Download
+              Download Model
             </button>
           </a>
-          <Menu as='span' className='relative block -ml-px'>
-            {({ open }) => (
-              <>
-                <Menu.Button className='relative inline-flex items-center h-full px-2 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 rounded-r-md focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 align-center'>
-                  <span className='sr-only'>Open options</span>
-                  <ChevronDownIcon className='w-5 h-5' aria-hidden='true' />
-                </Menu.Button>
-                <Transition
-                  show={open}
-                  as={Fragment}
-                  enter='transition ease-out duration-100'
-                  enterFrom='transform opacity-0 scale-95'
-                  enterTo='transform opacity-100 scale-100'
-                  leave='transition ease-in duration-75'
-                  leaveFrom='transform opacity-100 scale-100'
-                  leaveTo='transform opacity-0 scale-95'
-                >
-                  <Menu.Items
-                    static
-                    className='absolute right-0 w-56 mt-2 -mr-1 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none'
+          {model.gltfTextured && (
+            <Menu as='span' className='relative block -ml-px'>
+              {({ open }) => (
+                <>
+                  <Menu.Button className='relative inline-flex items-center h-full px-2 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 rounded-r-md focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 align-center'>
+                    <span className='sr-only'>Open options</span>
+                    <ChevronDownIcon className='w-5 h-5' aria-hidden='true' />
+                  </Menu.Button>
+                  <Transition
+                    show={open}
+                    as={Fragment}
+                    enter='transition ease-out duration-100'
+                    enterFrom='transform opacity-0 scale-95'
+                    enterTo='transform opacity-100 scale-100'
+                    leave='transition ease-in duration-75'
+                    leaveFrom='transform opacity-100 scale-100'
+                    leaveTo='transform opacity-0 scale-95'
                   >
-                    <div className='py-1'>
-                      {items.map((item) => (
-                        <Menu.Item key={item.name}>
-                          {({ active }) => (
-                            <a
-                              download
-                              href={item.href}
-                              className={classNames(
-                                active
-                                  ? 'bg-gray-100 text-gray-900'
-                                  : 'text-gray-700',
-                                'block px-4 py-2 text-sm'
-                              )}
-                            >
-                              {item.name}
-                            </a>
-                          )}
-                        </Menu.Item>
-                      ))}
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </>
-            )}
-          </Menu>
+                    <Menu.Items
+                      static
+                      className='absolute right-0 w-56 mt-2 -mr-1 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none'
+                    >
+                      <div className='py-1'>
+                        {items.map((item) => (
+                          <Menu.Item key={item.name}>
+                            {({ active }) => (
+                              <a
+                                download
+                                href={item.href}
+                                className={classNames(
+                                  active
+                                    ? 'bg-gray-100 text-gray-900'
+                                    : 'text-gray-700',
+                                  'block px-4 py-2 text-sm'
+                                )}
+                              >
+                                {item.name}
+                              </a>
+                            )}
+                          </Menu.Item>
+                        ))}
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </>
+              )}
+            </Menu>
+          )}
         </span>
       </aside>
     </div>
