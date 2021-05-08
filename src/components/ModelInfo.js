@@ -14,9 +14,9 @@ function classNames(...classes) {
 
 const ModelInfo = (model) => {
   const [tab, setTab] = useState('r3f')
-  const { parsedBuffer, createR3FCodeDownload } = useStore((s) => ({
+  const { parsedBuffer, createModelDownloadZip } = useStore((s) => ({
     parsedBuffer: s.parsedBuffer,
-    createR3FCodeDownload: s.createR3FCodeDownload,
+    createModelDownloadZip: s.createModelDownloadZip,
   }))
 
   const createCode = () => {
@@ -32,10 +32,8 @@ const ModelInfo = (model) => {
   }
 
   const createModelDownload = () => {
-    if (tab === 'r3f') {
-      const code = createCode()
-      createR3FCodeDownload(model, code, tab)
-    }
+    const code = createCode()
+    createModelDownloadZip(model, code, tab)
   }
 
   const items = [
@@ -169,13 +167,15 @@ const ModelInfo = (model) => {
             Download starter project
           </button>
         </div>
-        <button
-          className='block w-full py-2 text-center text-white bg-gray-800 rounded disabled:opacity-75'
-          onClick={copyToClipboard}
-          disabled={!parsedBuffer}
-        >
-          Copy JSX Code
-        </button>
+        {tab === 'r3f' && (
+          <button
+            className='block w-full py-2 text-center text-white bg-gray-800 rounded disabled:opacity-75'
+            onClick={copyToClipboard}
+            disabled={!parsedBuffer}
+          >
+            Copy JSX Code
+          </button>
+        )}
         <span className='relative z-0 inline-flex w-full mt-4 rounded shadow-sm'>
           <a
             href={model.gltfTextured ? model.gltfTextured : model.gltf}

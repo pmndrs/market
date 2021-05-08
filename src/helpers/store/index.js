@@ -2,6 +2,7 @@ import create from 'zustand'
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
 import { createCode as createR3FModelCode } from '../code/model/r3f'
+import { createCode as createThreeModelCode } from '../code/model/three'
 
 const useStore = create((set, get) => {
   return {
@@ -15,13 +16,12 @@ const useStore = create((set, get) => {
     currentModels: [],
     parseBuffer: null,
     search: '',
-    createR3FCodeDownload: async (model, jsx, tab) => {
+    createModelDownloadZip: async (model, jsx, tab) => {
       let code = ''
       if (tab === 'r3f') {
         code = await createR3FModelCode(model, jsx)
       } else {
-        return
-        // code = await createThreePBRCode(material.info.links)
+        code = await createThreeModelCode(model)
       }
 
       var zip = new JSZip()
