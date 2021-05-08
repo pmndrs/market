@@ -6,24 +6,53 @@ import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { licenses } from '../helpers/constants/licenses'
 import Tippy from '@tippyjs/react'
+import { useState } from 'react'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 const ModelInfo = (model) => {
-  const { parsedBuffer } = useStore((s) => ({ parsedBuffer: s.parsedBuffer }))
+  const [tab, setTab] = useState('r3f')
+  const { parsedBuffer, createR3FCodeDownload } = useStore((s) => ({
+    parsedBuffer: s.parsedBuffer,
+    createR3FCodeDownload: s.createR3FCodeDownload,
+  }))
 
-  const copyToClipboard = () => {
+  const createCode = () => {
     const code = parse(`${model.url}.gltf`, parsedBuffer, {
       printwidth: 100,
     })
-    copy(code)
+
+    return code
+  }
+
+  const copyToClipboard = () => {
+    copy(createCode())
+  }
+
+  const createModelDownload = () => {
+    if (tab === 'r3f') {
+      const code = createCode()
+      createR3FCodeDownload(model, code, tab)
+    }
   }
 
   const items = [
     { name: 'Download Untextured', href: model.gltf },
     { name: 'Download Textured', href: model.gltfTextured },
+  ]
+  const tabs = [
+    {
+      name: 'React Three Fiber',
+      onClick: () => setTab('r3f'),
+      current: tab === 'r3f',
+    },
+    {
+      name: 'Three.js',
+      onClick: () => setTab('three'),
+      current: tab === 'three',
+    },
   ]
 
   return (
@@ -92,74 +121,121 @@ const ModelInfo = (model) => {
             </span>
           </>
         )}
-        <div className='mt-7'>
-          <button
-            className='block w-full py-2 text-center text-white bg-gray-800'
-            onClick={copyToClipboard}
-          >
-            Copy JSX Code
-          </button>
-          <span className='relative z-0 inline-flex w-full mt-4 shadow-sm rounded-md'>
-            <a
-              href={model.gltfTextured ? model.gltfTextured : model.gltf}
-              download
-              className='relative inline-flex items-center justify-center flex-grow'
-            >
-              <button
-                type='button'
-                className='w-full px-4 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 rounded-l-md hover:bg-indigo-500 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500'
+        <div className='my-4'>
+          <div>
+            <div className='sm:hidden'>
+              <label htmlFor='tabs' className='sr-only'>
+                Select a tab
+              </label>
+              <select
+                id='tabs'
+                name='tabs'
+                className='block w-full py-2 pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+                defaultValue={tabs.find((tab) => tab.current).name}
               >
-                Download
-              </button>
-            </a>
-            <Menu as='span' className='relative block -ml-px'>
-              {({ open }) => (
-                <>
-                  <Menu.Button className='relative inline-flex items-center h-full px-2 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 rounded-r-md focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 align-center'>
-                    <span className='sr-only'>Open options</span>
-                    <ChevronDownIcon className='w-5 h-5' aria-hidden='true' />
-                  </Menu.Button>
-                  <Transition
-                    show={open}
-                    as={Fragment}
-                    enter='transition ease-out duration-100'
-                    enterFrom='transform opacity-0 scale-95'
-                    enterTo='transform opacity-100 scale-100'
-                    leave='transition ease-in duration-75'
-                    leaveFrom='transform opacity-100 scale-100'
-                    leaveTo='transform opacity-0 scale-95'
-                  >
-                    <Menu.Items
-                      static
-                      className='absolute right-0 w-56 mt-2 -mr-1 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none'
+                {tabs.map((tab) => (
+                  <option key={tab.name}>{tab.name}</option>
+                ))}
+              </select>
+            </div>
+            <div className='hidden sm:block'>
+              <div className='border-b border-gray-200'>
+                <nav className='flex -mb-px space-x-8' aria-label='Tabs'>
+                  {tabs.map((tab) => (
+                    <button
+                      key={tab.name}
+                      onClick={tab.onClick}
+                      className={classNames(
+                        tab.current
+                          ? 'border-indigo-500 text-indigo-600'
+                          : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                        'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+                      )}
+                      aria-current={tab.current ? 'page' : undefined}
                     >
-                      <div className='py-1'>
-                        {items.map((item) => (
-                          <Menu.Item key={item.name}>
-                            {({ active }) => (
-                              <a
-                                download
-                                href={item.href}
-                                className={classNames(
-                                  active
-                                    ? 'bg-gray-100 text-gray-900'
-                                    : 'text-gray-700',
-                                  'block px-4 py-2 text-sm'
-                                )}
-                              >
-                                {item.name}
-                              </a>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </div>
-                    </Menu.Items>
-                  </Transition>
-                </>
-              )}
-            </Menu>
-          </span>
+                      {tab.name}
+                    </button>
+                  ))}
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <button
+            className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer disabled:opacity-75 disabled:cursor-auto'
+            onClick={() => createModelDownload()}
+            disabled={!parsedBuffer}
+          >
+            Download starter project
+          </button>
         </div>
+        <button
+          className='block w-full py-2 text-center text-white bg-gray-800 disabled:opacity-75'
+          onClick={copyToClipboard}
+          disabled={!parsedBuffer}
+        >
+          Copy JSX Code
+        </button>
+        <span className='relative z-0 inline-flex w-full mt-4 shadow-sm rounded-md'>
+          <a
+            href={model.gltfTextured ? model.gltfTextured : model.gltf}
+            download
+            className='relative inline-flex items-center justify-center flex-grow'
+          >
+            <button
+              type='button'
+              className='w-full px-4 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 rounded-l-md hover:bg-indigo-500 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500'
+            >
+              Download
+            </button>
+          </a>
+          <Menu as='span' className='relative block -ml-px'>
+            {({ open }) => (
+              <>
+                <Menu.Button className='relative inline-flex items-center h-full px-2 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 rounded-r-md focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 align-center'>
+                  <span className='sr-only'>Open options</span>
+                  <ChevronDownIcon className='w-5 h-5' aria-hidden='true' />
+                </Menu.Button>
+                <Transition
+                  show={open}
+                  as={Fragment}
+                  enter='transition ease-out duration-100'
+                  enterFrom='transform opacity-0 scale-95'
+                  enterTo='transform opacity-100 scale-100'
+                  leave='transition ease-in duration-75'
+                  leaveFrom='transform opacity-100 scale-100'
+                  leaveTo='transform opacity-0 scale-95'
+                >
+                  <Menu.Items
+                    static
+                    className='absolute right-0 w-56 mt-2 -mr-1 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none'
+                  >
+                    <div className='py-1'>
+                      {items.map((item) => (
+                        <Menu.Item key={item.name}>
+                          {({ active }) => (
+                            <a
+                              download
+                              href={item.href}
+                              className={classNames(
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700',
+                                'block px-4 py-2 text-sm'
+                              )}
+                            >
+                              {item.name}
+                            </a>
+                          )}
+                        </Menu.Item>
+                      ))}
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </>
+            )}
+          </Menu>
+        </span>
       </aside>
     </div>
   )
