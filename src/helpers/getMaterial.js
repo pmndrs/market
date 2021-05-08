@@ -1,15 +1,17 @@
 import path from 'path'
 import fs from 'fs'
 import { getSize } from './getFileSize'
+import { getNextAndPrev } from './getNextAndPrev'
 
 const getMaterial = (name) => {
-  const resources = path.join(process.cwd(), 'public/materials')
-  var material = {}
-  const newPath = path.join(resources, name)
+  const materialsFolder = path.join(process.cwd(), 'public/materials')
+  const nextAndPrev = getNextAndPrev(materialsFolder, name)
+  var material = { ...nextAndPrev }
+  const newPath = path.join(materialsFolder, name)
   if (fs.statSync(newPath).isDirectory()) {
     // eslint-disable-next-line array-callback-return
     fs.readdirSync(newPath).map((filename) => {
-      const filePath = path.join(resources, name, filename)
+      const filePath = path.join(materialsFolder, name, filename)
       const fileContents = fs.readFileSync(filePath, 'utf-8')
 
       if (filename.includes('.json')) {
