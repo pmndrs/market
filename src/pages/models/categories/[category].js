@@ -44,7 +44,7 @@ export async function getStaticPaths() {
   const categories = await data.json()
   const paths = categories
     .map((cat) => cat.name)
-    .map((cat) => `/categories/${cat}`)
+    .map((cat) => `/models/categories/${cat}`)
 
   return {
     paths,

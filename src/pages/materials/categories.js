@@ -16,13 +16,13 @@ const Categories = ({ title, categories }) => {
           <li key={category.name} className='relative'>
             <Link
               className='absolute inset-0 focus:outline-none'
-              href={`/categories/${category.name}`}
+              href={`/materials/categories/${category.name}`}
             >
               <a>
                 <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
                   <img
                     src={`https://api.market.pmnd.rs${
-                      randomModel(category.models).image
+                      randomModel(category.materials).preview
                     }`}
                     alt={category.name}
                     className='object-cover pointer-events-none group-hover:opacity-75'
@@ -43,7 +43,7 @@ const Categories = ({ title, categories }) => {
 export default Categories
 
 export async function getStaticProps() {
-  const data = await fetch('https://api.market.pmnd.rs/models/categories')
+  const data = await fetch('https://api.market.pmnd.rs/materials/categories')
   const categories = await data.json()
 
   return {
