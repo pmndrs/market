@@ -5,10 +5,7 @@ const { serverRuntimeConfig } = getConfig()
 
 export default function handler(req, res) {
   const a = fs.readFileSync(
-    path.join(
-      serverRuntimeConfig.PROJECT_ROOT,
-      './public/materials/basic-1/info.json'
-    )
+    path.join(serverRuntimeConfig.PROJECT_ROOT, './materials/basic-1/info.json')
   )
 
   res.status(200).json(a)
