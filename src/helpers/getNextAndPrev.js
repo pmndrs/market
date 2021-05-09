@@ -25,7 +25,7 @@ export const getNextAndPrev = (folder, name) => {
   if (currentIndex > 0) {
     const prevInfoPath = path.join(folder, prevDir, 'info.json')
     data.prev = {
-      url: nextDir,
+      url: prevDir,
       ...JSON.parse(fs.readFileSync(prevInfoPath, 'utf-8')),
     }
   }

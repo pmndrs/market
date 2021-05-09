@@ -11,12 +11,17 @@ import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
 
 const PBR = ({ links, displacementScale }) => {
-  const texturesLoader = useTexture([...Object.values(links)])
+  const texturesLoader = useTexture([
+    ...Object.values(links).map(
+      (link) => `https://api.market.pmnd.rs/files${link}`
+    ),
+  ])
   const textures = Object.keys(links).reduce((acc, curr, i) => {
     acc[curr] = texturesLoader[i]
 
     return acc
   }, {})
+
   return (
     <Sphere args={[1, 200, 200]}>
       <meshPhysicalMaterial
@@ -29,7 +34,7 @@ const PBR = ({ links, displacementScale }) => {
 }
 
 const MatCap = ({ url }) => {
-  const [matcap] = useTexture([url])
+  const [matcap] = useTexture(['https://api.market.pmnd.rs' + url])
   const group = useRef()
   const { nodes } = useGLTF('/suzanne.gltf')
 

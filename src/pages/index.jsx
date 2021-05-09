@@ -1,5 +1,4 @@
 import useStore from '@/helpers/store'
-import getAllModels from '@/helpers/getAllModels'
 import Model from '@/components/Model'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
@@ -53,7 +52,8 @@ const Index = ({ title, models }) => {
 export default Index
 
 export async function getStaticProps() {
-  const models = getAllModels()
+  const data = await fetch('https://api.market.pmnd.rs/models')
+  const models = await data.json()
 
   return {
     props: {

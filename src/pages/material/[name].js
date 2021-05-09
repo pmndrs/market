@@ -4,8 +4,6 @@ import Layout from '@/components/layout/'
 import MaterialInfo from '../../components/MaterialInfo'
 import { useEffect } from 'react'
 import { Leva } from 'leva'
-import { getAllMaterialLinks } from '@/helpers/getAllMaterials'
-import getMaterial from '@/helpers/getMaterial'
 
 const Viewer = dynamic(() => import('@/components/canvas/Material'), {
   ssr: false,
@@ -15,7 +13,6 @@ const Page = ({ title, material }) => {
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
-  console.log(material)
   return (
     <Layout title={title}>
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
@@ -37,7 +34,10 @@ const Page = ({ title, material }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const material = getMaterial(params.name)
+  const data = await fetch(
+    'https://api.market.pmnd.rs/materials/material?name=' + params.name
+  )
+  const material = await data.json()
   return {
     props: {
       material,
@@ -47,9 +47,10 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const materials = getAllMaterialLinks()
+  const data = await fetch('https://api.market.pmnd.rs/materials/paths')
+  const paths = await data.json()
   return {
-    paths: materials,
+    paths,
     fallback: false,
   }
 }

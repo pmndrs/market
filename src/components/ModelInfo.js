@@ -57,7 +57,7 @@ const ModelInfo = (model) => {
     <div className='mt-5'>
       <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
         <img
-          src={model.image}
+          src={`https://api.market.pmnd.rs/${model.image}`}
           alt={model.info.name}
           className='object-cover pointer-events-none'
         />
@@ -178,7 +178,9 @@ const ModelInfo = (model) => {
         )}
         <span className='relative z-0 inline-flex w-full mt-4 rounded shadow-sm'>
           <a
-            href={model.gltfTextured ? model.gltfTextured : model.gltf}
+            href={`https://api.market.pmnd.rs${
+              model.gltfTextured ? model.gltfTextured : model.gltf
+            }`}
             download
             className='relative inline-flex items-center justify-center flex-grow'
           >
@@ -219,7 +221,7 @@ const ModelInfo = (model) => {
                             {({ active }) => (
                               <a
                                 download
-                                href={item.href}
+                                href={`https://api.market.pmnd.rs${item.href}`}
                                 className={classNames(
                                   active
                                     ? 'bg-gray-100 text-gray-900'

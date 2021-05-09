@@ -34,7 +34,7 @@ const ModelInfo = (material) => {
     <div className='mt-5'>
       <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
         <img
-          src={material.image}
+          src={`https://api.market.pmnd.rs/${material.image}`}
           alt={material.info.name}
           className='object-cover pointer-events-none'
         />
@@ -135,7 +135,7 @@ const ModelInfo = (material) => {
           <a
             className='block w-full py-2 text-center text-white bg-gray-800'
             download
-            href={material.url}
+            href={`https://api.market.pmnd.rs${material.url}`}
           >
             Download Matcap
           </a>
