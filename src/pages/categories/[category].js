@@ -1,9 +1,7 @@
 import useStore from '@/helpers/store'
-import getAllModelsInCategory from '@/helpers/getAllModelsInCategory'
 import Layout from '@/components/layout/'
 import Model from '@/components/Model'
 import { useEffect } from 'react'
-import getAllCategories from '@/helpers/getAllCategories'
 
 const Page = ({ title, models }) => {
   useEffect(() => {
@@ -24,7 +22,12 @@ const Page = ({ title, models }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const models = getAllModelsInCategory(params.category)
+  const data = await fetch('https://api.market.pmnd.rs/models')
+  const allModels = await data.json()
+  const models = allModels.filter(
+    (model) =>
+      model.info.category.toLowerCase() === params.category.toLowerCase()
+  )
   const capitalizeFirstLetter = ([first, ...rest]) =>
     first.toUpperCase() + rest.join('')
 
@@ -37,12 +40,14 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const categiories = getAllCategories()
+  const data = await fetch('https://api.market.pmnd.rs/models/categories')
+  const categories = await data.json()
+  const paths = categories
     .map((cat) => cat.name)
     .map((cat) => `/categories/${cat}`)
 
   return {
-    paths: categiories,
+    paths,
     fallback: false,
   }
 }

@@ -1,5 +1,4 @@
 import useStore from '@/helpers/store'
-import getAllCategories from '@/helpers/getAllCategories'
 import Link from 'next/link'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
@@ -22,7 +21,9 @@ const Categories = ({ title, categories }) => {
               <a>
                 <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
                   <img
-                    src={randomModel(category.models).image}
+                    src={`https://api.market.pmnd.rs${
+                      randomModel(category.models).image
+                    }`}
                     alt={category.name}
                     className='object-cover pointer-events-none group-hover:opacity-75'
                   />
@@ -42,7 +43,8 @@ const Categories = ({ title, categories }) => {
 export default Categories
 
 export async function getStaticProps() {
-  const categories = getAllCategories()
+  const data = await fetch('https://api.market.pmnd.rs/models/categories')
+  const categories = await data.json()
 
   return {
     props: {
