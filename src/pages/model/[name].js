@@ -1,6 +1,4 @@
 import useStore from '@/helpers/store'
-import { getAllModelLinks } from '@/helpers/getAllModels'
-import getModel from '@/helpers/getModel'
 import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
 import ModelInfo from '../../components/ModelInfo'
@@ -37,8 +35,10 @@ const Page = ({ title, model }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const model = getModel(params.name)
-
+  const data = await fetch(
+    'https://api.market.pmnd.rs/models/model?name=' + params.name
+  )
+  const model = await data.json()
   return {
     props: {
       model,
@@ -48,9 +48,10 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const models = getAllModelLinks()
+  const data = await fetch('https://api.market.pmnd.rs/models/paths')
+  const paths = await data.json()
   return {
-    paths: models,
+    paths,
     fallback: false,
   }
 }
