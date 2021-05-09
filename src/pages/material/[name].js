@@ -15,7 +15,6 @@ const Page = ({ title, material }) => {
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
-  console.log(material)
   return (
     <Layout title={title}>
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
