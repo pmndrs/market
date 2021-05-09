@@ -3,7 +3,6 @@ import useStore from '@/helpers/store/materials'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import { SearchIcon } from '@heroicons/react/solid'
-import getAllMaterials from '@/helpers/getAllMaterials'
 import Link from 'next/link'
 
 const Index = ({ title, materials }) => {
@@ -56,7 +55,7 @@ const Index = ({ title, materials }) => {
                   </span>{' '}
                   <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
                     <img
-                      src={material.preview}
+                      src={'https://api.market.pmnd.rs/' + material.preview}
                       alt=''
                       className='object-cover pointer-events-none group-hover:opacity-75'
                     />
@@ -79,8 +78,8 @@ const Index = ({ title, materials }) => {
 export default Index
 
 export async function getStaticProps() {
-  const materials = getAllMaterials()
-
+  const data = await fetch('https://api.market.pmnd.rs/materials')
+  const materials = await data.json()
   return {
     props: {
       materials,
