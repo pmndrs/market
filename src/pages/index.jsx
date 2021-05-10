@@ -5,10 +5,11 @@ import { SearchIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
 
 const Index = ({ title, models }) => {
-  const { search, currentModels, setSearch } = useStore((state) => ({
+  const { search, user, currentModels, setSearch } = useStore((state) => ({
     search: state.search,
     currentModels: state.currentModels,
     setSearch: state.setSearch,
+    user: state.user,
   }))
   useEffect(() => {
     useStore.setState({ currentModels: models })
@@ -16,6 +17,7 @@ const Index = ({ title, models }) => {
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+  console.log(user)
   const heading = search
     ? `Search for ${search}`
     : `All Models (${currentModels.length})`

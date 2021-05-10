@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Tippy from '@tippyjs/react'
+import FavoriteButton from './FavoriteButton'
 
 const Model = (model) => {
   return (
@@ -22,10 +23,13 @@ const Model = (model) => {
               />
             </div>
           </div>
-          <p className='block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none'>
-            {model.info?.name}
-          </p>
-          <p className='flex block text-sm font-medium text-gray-500'>
+          <div className='flex items-end justify-between'>
+            <p className='block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none'>
+              {model.info?.name}
+            </p>
+            <FavoriteButton type='models' asset={model} />
+          </div>
+          <p className='block text-sm font-medium text-gray-500'>
             {model.highPoly && (
               <Tippy content='Large model'>
                 <svg

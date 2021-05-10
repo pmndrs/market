@@ -3,6 +3,7 @@ import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
 import { createCode as createR3FModelCode } from '../code/model/r3f'
 import { createCode as createThreeModelCode } from '../code/model/three'
+import { supabase } from '@/helpers/initSupabase'
 
 const useStore = create((set, get) => {
   return {
@@ -51,6 +52,46 @@ const useStore = create((set, get) => {
         set({ currentModels: searchResults })
       } else {
         set({ currentModels: defaultModels })
+      }
+    },
+    toggleFavorite: async (asset, type) => {
+      const user = get().user
+      const favoriteName = `${type}/${asset.url}`
+      const currentFavorites = user.profile.favorites
+      if (currentFavorites && currentFavorites.includes(favoriteName)) {
+        const favorites = currentFavorites.filter((fav) => fav !== favoriteName)
+        console.log(favorites)
+        await supabase
+          .from('profiles')
+          .update({ favorites })
+          .eq('user_id', user.id)
+        set({
+          user: {
+            ...user,
+            profile: {
+              ...user.profile,
+              favorites,
+            },
+          },
+        })
+      } else {
+        const favorites = currentFavorites
+          ? [...currentFavorites, favoriteName]
+          : [favoriteName]
+        await supabase
+          .from('profiles')
+          .update({ favorites })
+          .eq('user_id', user.id)
+
+        set({
+          user: {
+            ...user,
+            profile: {
+              ...user.profile,
+              favorites,
+            },
+          },
+        })
       }
     },
   }

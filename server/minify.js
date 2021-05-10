@@ -2,8 +2,8 @@ const gltfPipeline = require('gltf-pipeline')
 const fsExtra = require('fs-extra')
 var glob = require('glob')
 const imagemin = require('imagemin')
-const imageminPngquant = require('imagemin-pngquant')
 const imageminJpegtran = require('imagemin-jpegtran')
+const imageminOptipng = require('imagemin-optipng')
 
 const processGltf = gltfPipeline.processGltf
 glob('public/**/*.gltf', {}, function (er, files) {
@@ -28,12 +28,7 @@ glob('public/**/*.gltf', {}, function (er, files) {
 glob('public/**/*.{jpg,png}', {}, async function (er, files) {
   files.forEach(async (file) => {
     const newFile = await imagemin([file], {
-      plugins: [
-        imageminJpegtran(),
-        imageminPngquant({
-          quality: [0.6, 0.8],
-        }),
-      ],
+      plugins: [imageminJpegtran(), imageminOptipng()],
     })
 
     fsExtra.removeSync(file)

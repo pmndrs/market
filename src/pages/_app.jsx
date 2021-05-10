@@ -17,8 +17,8 @@ function MyApp({ Component, pageProps }) {
     //  - Do not include https://
     //  - This must be an exact match of your domain.
     //  - If you're using www. for your domain, make sure you include that here.
-    Fathom.load('YOUR_FATHOM_TRACKING_CODE', {
-      includedDomains: ['yourdomain.com'],
+    Fathom.load('JKSIZFZI', {
+      includedDomains: ['https://market.pmnd.rs/'],
     })
 
     function onRouteChangeComplete() {
@@ -33,8 +33,27 @@ function MyApp({ Component, pageProps }) {
     }
   }, [])
 
+  const fetchUserProfile = async (id) => {
+    const { data } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('user_id', id)
+
+    return data[0]
+  }
+
+  const setUser = async () => {
+    const profile = await fetchUserProfile(user.id)
+    useStore.setState({
+      user: {
+        ...user,
+        profile,
+      },
+    })
+  }
+
   useEffect(() => {
-    useStore.setState({ user })
+    if (user) setUser()
   }, [user])
 
   const [authView, setAuthView] = useState('sign_in')
@@ -45,7 +64,13 @@ function MyApp({ Component, pageProps }) {
         if (event === 'USER_UPDATED')
           setTimeout(() => setAuthView('sign_in'), 1000)
         if (session) {
-          useStore.setState({ user: session?.user })
+          const profile = await fetchUserProfile(session?.user.id)
+          useStore.setState({
+            user: {
+              ...session?.user,
+              profile,
+            },
+          })
         } else {
           useStore.setState({ user: null })
         }
@@ -61,7 +86,7 @@ function MyApp({ Component, pageProps }) {
           const { user } = session
           const { data } = await supabase
             .from('profiles')
-            .select('user_id')
+            .select('*')
             .eq('user_id', user.id)
 
           if (!data.length) {
@@ -72,6 +97,12 @@ function MyApp({ Component, pageProps }) {
                 avatar: user.user_metadata.avatar_url,
               },
             ])
+            useStore.setState({
+              user: {
+                ...user,
+                profile: data[0],
+              },
+            })
           }
         }
       }
