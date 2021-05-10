@@ -1,7 +1,8 @@
+import { Fragment } from 'react'
+import PopOverMenu from './PopOverMenu'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Logo from '../Logo'
-import { Fragment } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { supabase } from '@/helpers/initSupabase'
@@ -17,18 +18,23 @@ const Nav = () => {
     user: state.user,
   }))
 
-  const navigation = [
-    { name: 'All Models', href: '/', current: pathname === '/' },
+  const models = [
+    { name: 'All Models', href: '/' },
     {
       name: 'Categories',
       href: '/models/categories',
-      current: pathname === '/models/categories',
     },
+  ]
+
+  const materials = [
+    { name: 'All Materials', href: '/' },
     {
-      name: 'Materials',
-      href: '/materials',
-      current: pathname === '/materials',
+      name: 'Categories',
+      href: '/materials/categories',
     },
+  ]
+
+  const navigation = [
     {
       name: 'Request an Asset',
       href: '/request',
@@ -50,15 +56,17 @@ const Nav = () => {
                     </a>
                   </Link>
                 </div>
-                <div className='hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8'>
+                <div className='items-center hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8'>
+                  <PopOverMenu menu={models} title='Models' />
+                  <PopOverMenu menu={materials} title='Materials' />
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
                         className={classNames(
                           item.current
-                            ? 'border-indigo-500 text-gray-900'
+                            ? 'text-gray-900'
                             : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                          'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                          'inline-flex items-center px-1 pt-1 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
