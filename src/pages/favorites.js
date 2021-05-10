@@ -3,8 +3,7 @@ import { supabase } from '../helpers/initSupabase'
 import Material from '@/components/Material'
 import Model from '@/components/Model'
 
-const Request = ({ favorites }) => {
-  console.log(favorites)
+const Favorites = ({ favorites }) => {
   return (
     <Layout title={'Your Favorites'}>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
@@ -27,7 +26,7 @@ const Request = ({ favorites }) => {
   )
 }
 
-export default Request
+export default Favorites
 
 export async function getServerSideProps({ req }) {
   const { user } = await supabase.auth.api.getUserByCookie(req)

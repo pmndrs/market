@@ -60,7 +60,7 @@ const useStore = create((set, get) => {
       const currentFavorites = user.profile.favorites
       if (currentFavorites && currentFavorites.includes(favoriteName)) {
         const favorites = currentFavorites.filter((fav) => fav !== favoriteName)
-        console.log(favorites)
+
         await supabase
           .from('profiles')
           .update({ favorites })

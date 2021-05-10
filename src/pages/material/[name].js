@@ -3,9 +3,7 @@ import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
 import MaterialInfo from '../../components/MaterialInfo'
 import { useEffect } from 'react'
-
 import { API_ENDPOINT } from '@/helpers/constants/api'
-import Link from 'next/link'
 import NextAndPrev from '@/components/NextAndPrev'
 
 const Viewer = dynamic(() => import('@/components/canvas/Material'), {
@@ -16,7 +14,6 @@ const Page = ({ title, material }) => {
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
-  console.log(material)
   return (
     <Layout title={title}>
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
