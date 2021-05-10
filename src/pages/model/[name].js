@@ -5,6 +5,7 @@ import ModelInfo from '../../components/ModelInfo'
 import { useEffect } from 'react'
 import { Leva } from 'leva'
 import { API_ENDPOINT } from '@/helpers/constants/api'
+import NextAndPrev from '@/components/NextAndPrev'
 
 const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
@@ -18,14 +19,12 @@ const Page = ({ title, model }) => {
   return (
     <Layout title={title}>
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
-        <ModelInfo {...model} />
         <div className='min-w-full min-h-full col-span-2'>
-          <div className='absolute right-0 z-10 hidden sm:block'>
-            <Leva fill />
-          </div>
           <Viewer buffer={model.buffer} />
         </div>
+        <ModelInfo {...model} />
       </main>
+      <NextAndPrev {...model} />
     </Layout>
   )
 }

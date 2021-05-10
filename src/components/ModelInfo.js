@@ -8,6 +8,7 @@ import { licenses } from '../helpers/constants/licenses'
 import Tippy from '@tippyjs/react'
 import { useState } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
+import { Leva } from 'leva'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -56,12 +57,8 @@ const ModelInfo = (model) => {
 
   return (
     <div className='mt-5'>
-      <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
-        <img
-          src={`${API_ENDPOINT}${model.image}`}
-          alt={model.info.name}
-          className='object-cover pointer-events-none'
-        />
+      <div className='z-10 hidden mb-6 sm:block w-[70%]'>
+        <Leva fill />
       </div>
       <aside className='relative'>
         <span className='text-gray-600'>Created by: </span>
