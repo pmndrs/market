@@ -1,5 +1,4 @@
 import useStore from '@/helpers/store'
-import Link from 'next/link'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import Category from '@/components/Category'
@@ -10,7 +9,6 @@ const Categories = ({ title, categories }) => {
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  const randomModel = (items) => items[Math.floor(Math.random() * items.length)]
   return (
     <Layout title='Categories'>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>

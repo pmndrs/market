@@ -12,11 +12,6 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
   useEffect(() => {
-    // Initialize Fathom when the app loads
-    // Example: yourdomain.com
-    //  - Do not include https://
-    //  - This must be an exact match of your domain.
-    //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load('JKSIZFZI', {
       includedDomains: ['https://market.pmnd.rs/'],
     })
@@ -31,7 +26,7 @@ function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', onRouteChangeComplete)
     }
-  }, [])
+  }, [router.events])
 
   const fetchUserProfile = async (id) => {
     const { data } = await supabase
@@ -42,6 +37,7 @@ function MyApp({ Component, pageProps }) {
     return data[0]
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const setUser = async () => {
     const profile = await fetchUserProfile(user.id)
     useStore.setState({
@@ -54,7 +50,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (user) setUser()
-  }, [user])
+  }, [setUser, user])
 
   const [authView, setAuthView] = useState('sign_in')
   useEffect(() => {

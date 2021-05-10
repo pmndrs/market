@@ -1,5 +1,4 @@
 import useStore from '@/helpers/store'
-import Link from 'next/link'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import Category from '@/components/Category'

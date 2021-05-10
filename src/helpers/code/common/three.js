@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const commonThreeCode = [
   {
     filename: 'package.json',
