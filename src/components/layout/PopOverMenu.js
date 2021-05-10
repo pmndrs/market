@@ -40,7 +40,7 @@ export default function PopOverMenu({ menu, title }) {
           >
             <Popover.Panel
               static
-              className='absolute z-10 w-screen max-w-[200px] px-2 mt-3 left-1/2 transform -translate-x-1/2 sm:px-0'
+              className='absolute z-10 w-screen px-2 mt-3 max-w-[200px] left-1/2 transform -translate-x-1/2 sm:px-0'
             >
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
                 <div className='relative px-5 py-6 bg-white grid gap-6 sm:gap-8 sm:p-4'>

@@ -51,14 +51,14 @@ const AssetRequestForm = ({ onSubmit }) => {
       </div>
       <div className='mt-4'>
         <label
-          htmlFor='location'
+          htmlFor='type'
           className='block text-sm font-medium text-gray-700'
         >
-          Location
+          What is the type of asset?
         </label>
         <select
-          id='location'
-          name='location'
+          id='type'
+          name='type'
           className='block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
           defaultValue='Model'
           value={category}
