@@ -10,7 +10,6 @@ const useStore = create((set, get) => {
     submitRequest: async ({ request, description, category = 'Model' }) => {
       const user = get().user
       const requests = get().requests
-      console.log('here')
       if (!user) return null
       const newRequest = {
         request,
