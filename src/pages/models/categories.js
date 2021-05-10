@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import Category from '@/components/Category'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Categories = ({ title, categories }) => {
   useEffect(() => {
@@ -24,7 +25,7 @@ const Categories = ({ title, categories }) => {
 export default Categories
 
 export async function getStaticProps() {
-  const data = await fetch('https://api.market.pmnd.rs/models/categories')
+  const data = await fetch(`${API_ENDPOINT}/models/categories`)
   const categories = await data.json()
 
   return {

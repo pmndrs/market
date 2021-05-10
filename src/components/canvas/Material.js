@@ -9,12 +9,11 @@ import {
 } from '@react-three/drei'
 import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const PBR = ({ links, displacementScale }) => {
   const texturesLoader = useTexture([
-    ...Object.values(links).map(
-      (link) => `https://api.market.pmnd.rs/files${link}`
-    ),
+    ...Object.values(links).map((link) => `${API_ENDPOINT}/files${link}`),
   ])
   const textures = Object.keys(links).reduce((acc, curr, i) => {
     acc[curr] = texturesLoader[i]
@@ -34,7 +33,7 @@ const PBR = ({ links, displacementScale }) => {
 }
 
 const MatCap = ({ url }) => {
-  const [matcap] = useTexture(['https://api.market.pmnd.rs' + url])
+  const [matcap] = useTexture([API_ENDPOINT + url])
   const group = useRef()
   const { nodes } = useGLTF('/suzanne.gltf')
 

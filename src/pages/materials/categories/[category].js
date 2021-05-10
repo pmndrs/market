@@ -2,6 +2,7 @@ import useStore from '@/helpers/store'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import Material from '@/components/Material'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Page = ({ title, materials }) => {
   useEffect(() => {
@@ -22,7 +23,7 @@ const Page = ({ title, materials }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const data = await fetch('https://api.market.pmnd.rs/materials')
+  const data = await fetch(`${API_ENDPOINT}/materials`)
   const allMaterials = await data.json()
   const materials = allMaterials.filter(
     (material) =>
@@ -40,7 +41,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const data = await fetch('https://api.market.pmnd.rs/materials/categories')
+  const data = await fetch(`${API_ENDPOINT}/materials/categories`)
   const categories = await data.json()
   const paths = categories
     .map((cat) => cat.name)

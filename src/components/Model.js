@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Tippy from '@tippyjs/react'
 import FavoriteButton from './FavoriteButton'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Model = (model) => {
   return (
@@ -17,7 +18,7 @@ const Model = (model) => {
             </span>{' '}
             <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
               <img
-                src={`https://api.market.pmnd.rs/${model.image}`}
+                src={`${API_ENDPOINT}${model.image}`}
                 alt=''
                 className='object-cover pointer-events-none group-hover:opacity-75'
               />

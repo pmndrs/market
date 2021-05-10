@@ -1,3 +1,5 @@
+import { API_ENDPOINT } from '@/helpers/constants/api'
+
 export const getName = (image) => {
   const parts = image.split('/')
   const name = parts[parts.length - 1]
@@ -6,7 +8,7 @@ export const getName = (image) => {
 }
 export const getImages = async (files, path) => {
   const images = Object.values(files).map(
-    (link) => `https://api.market.pmnd.rs/files${link}`
+    (link) => `${API_ENDPOINT}/files${link}`
   )
   const promises = images.map(async (image) => {
     const name = getName(image)

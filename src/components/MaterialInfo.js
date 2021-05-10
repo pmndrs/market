@@ -2,6 +2,7 @@ import useStore from '@/helpers/store/materials'
 import { licenses } from '@/helpers/constants/licenses'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
 import { useState } from 'react'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -34,7 +35,7 @@ const ModelInfo = (material) => {
     <div className='mt-5'>
       <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
         <img
-          src={`https://api.market.pmnd.rs/${material.image}`}
+          src={`${API_ENDPOINT}${material.image}`}
           alt={material.info.name}
           className='object-cover pointer-events-none'
         />
@@ -135,7 +136,7 @@ const ModelInfo = (material) => {
           <a
             className='block w-full py-2 text-center text-white bg-gray-800'
             download
-            href={`https://api.market.pmnd.rs${material.url}`}
+            href={`${API_ENDPOINT}${material.url}`}
           >
             Download Matcap
           </a>

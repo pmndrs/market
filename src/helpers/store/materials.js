@@ -5,6 +5,7 @@ import { createCode } from '../code/matcaps/r3f'
 import { createCode as createThreeCode } from '../code/matcaps/three'
 import { createCode as createR3FPBRCode } from '../code/pbr/r3f'
 import { createCode as createThreePBRCode } from '../code/pbr/three'
+import { API_ENDPOINT } from '../constants/api'
 
 const useStore = create((set, get) => {
   return {
@@ -35,9 +36,9 @@ const useStore = create((set, get) => {
     createMatcapCodeDownload: async (material, tab) => {
       const parts = material.url.split('/')
       const name = parts[parts.length - 1]
-      const data = await fetch(
-        'https://api.market.pmnd.rs' + material.url
-      ).then((a) => a.blob())
+      const data = await fetch(API_ENDPOINT + material.url).then((a) =>
+        a.blob()
+      )
       const suzanne = await fetch('/suzanne.gltf').then((a) => a.text())
       let code = ''
       if (tab === 'r3f') {
@@ -58,7 +59,7 @@ const useStore = create((set, get) => {
     createZip: async (material) => {
       var zip = new JSZip()
       const images = Object.values(material.info.links).map(
-        (link) => `https://api.market.pmnd.rs/files${link}`
+        (link) => `${API_ENDPOINT}/files${link}`
       )
       const a = images.map(async (image) => {
         const parts = image.split('/')

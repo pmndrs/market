@@ -7,6 +7,7 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import { licenses } from '../helpers/constants/licenses'
 import Tippy from '@tippyjs/react'
 import { useState } from 'react'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -57,7 +58,7 @@ const ModelInfo = (model) => {
     <div className='mt-5'>
       <div className='block mb-5 overflow-hidden bg-gray-100 rounded group w-80'>
         <img
-          src={`https://api.market.pmnd.rs/${model.image}`}
+          src={`${API_ENDPOINT}${model.image}`}
           alt={model.info.name}
           className='object-cover pointer-events-none'
         />
@@ -178,7 +179,7 @@ const ModelInfo = (model) => {
         )}
         <span className='relative z-0 inline-flex w-full mt-4 rounded shadow-sm'>
           <a
-            href={`https://api.market.pmnd.rs${
+            href={`${API_ENDPOINT}${
               model.gltfTextured ? model.gltfTextured : model.gltf
             }`}
             download
@@ -221,7 +222,7 @@ const ModelInfo = (model) => {
                             {({ active }) => (
                               <a
                                 download
-                                href={`https://api.market.pmnd.rs${item.href}`}
+                                href={`${API_ENDPOINT}${item.href}`}
                                 className={classNames(
                                   active
                                     ? 'bg-gray-100 text-gray-900'

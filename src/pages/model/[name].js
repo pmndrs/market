@@ -4,6 +4,7 @@ import Layout from '@/components/layout/'
 import ModelInfo from '../../components/ModelInfo'
 import { useEffect } from 'react'
 import { Leva } from 'leva'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
@@ -19,10 +20,7 @@ const Page = ({ title, model }) => {
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
         <ModelInfo {...model} />
         <div className='min-w-full min-h-full col-span-2'>
-          <div
-            className='absolute z-10 hidden right-[-60px] sm:block top-[-10px]'
-            style={{ transform: 'translateX(50%)' }}
-          >
+          <div className='absolute right-0 z-10 hidden sm:block'>
             <Leva fill />
           </div>
           <Viewer buffer={model.buffer} />
@@ -35,9 +33,7 @@ const Page = ({ title, model }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(
-    'https://api.market.pmnd.rs/models/model?name=' + params.name
-  )
+  const data = await fetch(`${API_ENDPOINT}/models/model?name=${params.name}`)
   const model = await data.json()
   return {
     props: {
@@ -48,7 +44,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const data = await fetch('https://api.market.pmnd.rs/models/paths')
+  const data = await fetch(`${API_ENDPOINT}/models/paths`)
   const paths = await data.json()
   return {
     paths,

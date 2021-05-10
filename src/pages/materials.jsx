@@ -3,6 +3,7 @@ import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import { SearchIcon } from '@heroicons/react/solid'
 import Material from '@/components/Material'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Index = ({ title, materials }) => {
   const { search, currentMaterials, setSearch } = useStore((state) => ({
@@ -51,7 +52,7 @@ const Index = ({ title, materials }) => {
 export default Index
 
 export async function getStaticProps() {
-  const data = await fetch('https://api.market.pmnd.rs/materials')
+  const data = await fetch(`${API_ENDPOINT}/materials`)
   const materials = await data.json()
   return {
     props: {

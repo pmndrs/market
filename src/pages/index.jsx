@@ -3,6 +3,7 @@ import Model from '@/components/Model'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Index = ({ title, models }) => {
   const { search, user, currentModels, setSearch } = useStore((state) => ({
@@ -54,7 +55,7 @@ const Index = ({ title, models }) => {
 export default Index
 
 export async function getStaticProps() {
-  const data = await fetch('https://api.market.pmnd.rs/models')
+  const data = await fetch(`${API_ENDPOINT}/models`)
   const models = await data.json()
 
   return {
