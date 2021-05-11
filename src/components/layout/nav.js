@@ -27,7 +27,7 @@ const Nav = () => {
   ]
 
   const materials = [
-    { name: 'All Materials', href: '/' },
+    { name: 'All Materials', href: '/materials' },
     {
       name: 'Categories',
       href: '/materials/categories',
