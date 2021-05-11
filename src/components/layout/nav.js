@@ -34,6 +34,14 @@ const Nav = () => {
     },
   ]
 
+  const hdris = [
+    { name: 'All HDRIs', href: '/hdris' },
+    {
+      name: 'Categories',
+      href: '/hdris/categories',
+    },
+  ]
+
   const navigation = [
     {
       name: 'Request an Asset',
@@ -59,6 +67,7 @@ const Nav = () => {
                 <div className='items-center hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8'>
                   <PopOverMenu menu={models} title='Models' />
                   <PopOverMenu menu={materials} title='Materials' />
+                  <PopOverMenu menu={hdris} title='HDRIs' />
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a

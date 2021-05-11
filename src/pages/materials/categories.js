@@ -14,7 +14,7 @@ const Categories = ({ title, categories }) => {
     <Layout title='Categories'>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {categories.map((category) => (
-          <Category {...category} key={category.name} material />
+          <Category {...category} key={category.name} type='material' />
         ))}
       </ul>
     </Layout>

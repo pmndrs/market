@@ -9,7 +9,7 @@ const useStore = create((set, get) => {
     defaultHdri: null,
     currentHdri: [],
     search: '',
-    createModelDownloadZip: async (model, jsx, tab) => {
+    createHDRIDownload: async (model, jsx, tab) => {
       let code = ''
       if (tab === 'r3f') {
         code = await createR3FModelCode(model, jsx)

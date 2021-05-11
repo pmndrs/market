@@ -13,7 +13,7 @@ const Categories = ({ title, categories }) => {
     <Layout title='Categories'>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {categories.map((category) => (
-          <Category {...category} key={category.name} type='model' />
+          <Category {...category} key={category.name} type='hdri' />
         ))}
       </ul>
     </Layout>
@@ -23,7 +23,7 @@ const Categories = ({ title, categories }) => {
 export default Categories
 
 export async function getStaticProps() {
-  const data = await fetch(`${API_ENDPOINT}/models/categories`)
+  const data = await fetch(`${API_ENDPOINT}/hdri/categories`)
   const categories = await data.json()
 
   return {
