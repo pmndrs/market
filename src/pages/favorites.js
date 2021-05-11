@@ -1,6 +1,6 @@
 import Layout from '@/components/layout/'
 import { supabase } from '../helpers/initSupabase'
-import Material from '@/components/Material'
+import Asset from '@/components/Asset'
 import Model from '@/components/Model'
 
 const Favorites = ({ favorites }) => {
@@ -11,7 +11,7 @@ const Favorites = ({ favorites }) => {
           favorite.type === 'models' ? (
             <Model {...favorite} key={favorite.info.name} />
           ) : (
-            <Material
+            <Asset
               {...{
                 ...favorite,
                 preview: favorite.image,

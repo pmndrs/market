@@ -35,7 +35,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       hdri,
-      title: hdri.info.name,
+      title: hdri.name,
     },
   }
 }

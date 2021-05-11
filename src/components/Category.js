@@ -18,9 +18,7 @@ const Category = (category) => {
           <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
             <img
               src={`https://api.market.pmnd.rs${
-                category.material
-                  ? item(category.materials).preview
-                  : item(category[key[category.type]]).image
+                item(category[key[category.type]]).thumbnail
               }`}
               alt={category.name}
               className='object-cover pointer-events-none group-hover:opacity-75'

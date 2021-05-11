@@ -36,9 +36,9 @@ const useStore = create((set, get) => {
       if (search.length) {
         const searchResults = defaultHdri.filter((hdri) => {
           return (
-            hdri.info.category.includes(search.toLowerCase()) ||
-            hdri.url.toLowerCase().includes(search.toLowerCase()) ||
-            hdri.info.name.toLowerCase().includes(search.toLowerCase())
+            hdri.category.includes(search.toLowerCase()) ||
+            hdri.id.toLowerCase().includes(search.toLowerCase()) ||
+            hdri.name.toLowerCase().includes(search.toLowerCase())
           )
         })
         set({ currentHdri: searchResults })

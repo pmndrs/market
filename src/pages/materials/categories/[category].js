@@ -1,7 +1,7 @@
 import useStore from '@/helpers/store'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
-import Material from '@/components/Material'
+import Asset from '@/components/Asset'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Page = ({ title, materials }) => {
@@ -13,7 +13,7 @@ const Page = ({ title, materials }) => {
     <Layout title={`Models in ${title}`}>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {materials.map((material) => (
-          <Material {...material} key={material.info.name} />
+          <Asset {...material} key={material.id} />
         ))}
       </ul>
     </Layout>
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
   const allMaterials = await data.json()
   const materials = allMaterials.filter(
     (material) =>
-      material.info.category.toLowerCase() === params.category.toLowerCase()
+      material.category.toLowerCase() === params.category.toLowerCase()
   )
   const capitalizeFirstLetter = ([first, ...rest]) =>
     first.toUpperCase() + rest.join('')

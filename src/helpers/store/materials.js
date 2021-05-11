@@ -15,9 +15,9 @@ const useStore = create((set, get) => {
     createPBRCodeDownload: async (material, tab) => {
       let code = ''
       if (tab === 'r3f') {
-        code = await createR3FPBRCode(material.info.links)
+        code = await createR3FPBRCode(material.maps)
       } else {
-        code = await createThreePBRCode(material.info.links)
+        code = await createThreePBRCode(material.maps)
       }
 
       var zip = new JSZip()
@@ -58,8 +58,8 @@ const useStore = create((set, get) => {
     },
     createZip: async (material) => {
       var zip = new JSZip()
-      const images = Object.values(material.info.links).map(
-        (link) => `${API_ENDPOINT}/files${link}`
+      const images = Object.values(material.maps).map(
+        (link) => `${API_ENDPOINT}${link}`
       )
       const a = images.map(async (image) => {
         const parts = image.split('/')
@@ -79,10 +79,8 @@ const useStore = create((set, get) => {
       if (search.length) {
         const searchResults = defaultMaterials.filter((material) => {
           return (
-            material.info.category
-              .toLowerCase()
-              .includes(search.toLowerCase()) ||
-            material.info.name.toLowerCase().includes(search.toLowerCase())
+            material.category.toLowerCase().includes(search.toLowerCase()) ||
+            material.name.toLowerCase().includes(search.toLowerCase())
           )
         })
         set({ currentMaterials: searchResults })

@@ -37,7 +37,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       material,
-      title: material.info.name,
+      title: material.name,
     },
   }
 }

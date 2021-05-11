@@ -34,25 +34,25 @@ const HDRIInfo = (hdri) => {
         <span className='text-gray-600'>Created by: </span>
         <a
           target='_blank'
-          href={hdri.info.creatorLink}
+          href={hdri.creator.link}
           rel='noreferrer'
           className='font-bold'
         >
-          {hdri.info.creator}
+          {hdri.creator.name}
         </a>
         <span className='block'>
           <span className='text-gray-600'>License: </span>{' '}
-          {licenses[hdri.info.license] ? (
+          {licenses[hdri.license] ? (
             <a
               target='_blank'
-              href={licenses[hdri.info.license].link}
+              href={licenses[hdri.license].link}
               rel='noreferrer'
               className='font-bold'
             >
-              {licenses[hdri.info.license].name}
+              {licenses[hdri.license].name}
             </a>
           ) : (
-            <span className='font-bold'>{hdri.info.license}</span>
+            <span className='font-bold'>{hdri.license}</span>
           )}
         </span>
         <span className='flex items-center'>
@@ -61,11 +61,11 @@ const HDRIInfo = (hdri) => {
             <span>{hdri.size}</span>
           </span>
         </span>
-        {hdri.info.category && (
+        {hdri.category && (
           <>
             <span className='text-gray-600'>Category: </span>
             <span className='inline-flex items-center px-2 mt-1 text-xs font-medium text-gray-800 bg-gray-100 rounded py-0.5'>
-              {hdri.info.category}
+              {hdri.category}
             </span>
           </>
         )}

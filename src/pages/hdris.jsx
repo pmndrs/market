@@ -1,10 +1,9 @@
 import useStore from '@/helpers/store/hdri'
-import Model from '@/components/Model'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
-import HDRI from '@/components/Hdri'
+import Asset from '@/components/Asset'
 
 const Index = ({ title, hdris }) => {
   const { search, currentHdri, setSearch } = useStore((state) => ({
@@ -44,7 +43,7 @@ const Index = ({ title, hdris }) => {
       </div>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {currentHdri.map((hdri, i) => (
-          <HDRI {...hdri} key={i} />
+          <Asset {...hdri} key={i} />
         ))}
       </ul>
     </Layout>
