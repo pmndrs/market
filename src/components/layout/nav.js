@@ -52,7 +52,7 @@ const Nav = () => {
                 <div className='flex items-center flex-shrink-0'>
                   <Link href='/'>
                     <a>
-                      <Logo width='100' />
+                      <Logo width='70' />
                     </a>
                   </Link>
                 </div>
