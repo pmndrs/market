@@ -22,19 +22,28 @@ const Request = ({ user, requests: requestsServer }) => {
 
   return (
     <Layout title={'Model Requests'}>
-      {user && (
-        <>
-          <div className='flex justify-end'>
-            <button
-              onClick={() => useStore.setState({ requesting: !requesting })}
-              className='relative items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-transparent shadow-sm rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-gray-500'
-            >
-              Request an Asset
-            </button>
-          </div>
-          {requesting && <AssetRequestForm onSubmit={submitRequest} />}
-        </>
-      )}
+      <>
+        <div className='flex justify-end'>
+          <Tippy
+            content={'You need an account to request an asset'}
+            disabled={user}
+          >
+            <div>
+              <button
+                disabled={!user}
+                onClick={() =>
+                  user ? useStore.setState({ requesting: !requesting }) : null
+                }
+                className='relative items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-transparent shadow-sm rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-gray-500 disabled:opacity-60 disabled:cursor-auto'
+              >
+                Request an Asset
+              </button>
+            </div>
+          </Tippy>
+        </div>
+        {requesting && <AssetRequestForm onSubmit={submitRequest} />}
+      </>
+
       <div className='mt-10 overflow-hidden bg-white shadow sm:rounded-md'>
         <ul className='divide-y divide-gray-200'>
           {requests.map((request) => (
@@ -91,7 +100,7 @@ const Request = ({ user, requests: requestsServer }) => {
                 </div>
                 <p className='block mr-10 text-xs text-gray-800 truncate'>
                   <span className='inline-flex items-center px-3 mr-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full py-0.5'>
-                    {request.category}
+                    {request.category || 'Model'}
                   </span>
                   {new Date(request.created).toLocaleString('en-US', {
                     month: 'long',

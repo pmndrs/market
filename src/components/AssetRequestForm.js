@@ -66,6 +66,7 @@ const AssetRequestForm = ({ onSubmit }) => {
         >
           <option>Model</option>
           <option>Material</option>
+          <option>HDRI</option>
         </select>
       </div>
       <button

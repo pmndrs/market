@@ -48,6 +48,11 @@ const Nav = () => {
       href: '/request',
       current: pathname === '/request',
     },
+    {
+      name: 'Submit an Asset',
+      href: '/add-asset',
+      current: pathname === '/add-asset',
+    },
   ]
 
   return (
