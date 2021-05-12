@@ -4,8 +4,10 @@ import FavoriteButton from './FavoriteButton'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import Tippy from '@tippyjs/react'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
+import useStore from '@/helpers/store'
 
 const HDRI = (asset) => {
+  const user = useStore((store) => store.user)
   return (
     <li className='relative'>
       <Link
@@ -29,7 +31,7 @@ const HDRI = (asset) => {
             <p className='block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none'>
               {asset.name}
             </p>
-            <FavoriteButton asset={asset} />
+            {user && <FavoriteButton asset={asset} />}
           </div>
           <p className='flex text-sm font-medium text-gray-500'>
             {asset.highPoly && (
