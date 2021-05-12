@@ -12,9 +12,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
   useEffect(() => {
-    Fathom.load('JKSIZFZI', {
-      includedDomains: ['https://market.pmnd.rs/'],
-    })
+    Fathom.load('JKSIZFZI')
 
     function onRouteChangeComplete() {
       Fathom.trackPageview()
@@ -26,7 +24,7 @@ function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', onRouteChangeComplete)
     }
-  }, [router.events])
+  }, [])
 
   const fetchUserProfile = async (id) => {
     const { data } = await supabase
