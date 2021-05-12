@@ -30,12 +30,12 @@ const Page = ({ title, hdri }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(`${API_ENDPOINT}/hdri/hdri?name=${params.name}`)
+  const data = await fetch(`${API_ENDPOINT}/hdri/${params.name}`)
   const hdri = await data.json()
   return {
     props: {
       hdri,
-      title: hdri.info.name,
+      title: hdri.name,
     },
   }
 }

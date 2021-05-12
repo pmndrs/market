@@ -11,11 +11,11 @@ import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 
-const PBR = ({ links, displacementScale }) => {
+const PBR = ({ maps, displacementScale }) => {
   const texturesLoader = useTexture([
-    ...Object.values(links).map((link) => `${API_ENDPOINT}/files${link}`),
+    ...Object.values(maps).map((link) => `${API_ENDPOINT}${link}`),
   ])
-  const textures = Object.keys(links).reduce((acc, curr, i) => {
+  const textures = Object.keys(maps).reduce((acc, curr, i) => {
     acc[curr] = texturesLoader[i]
 
     return acc
@@ -52,7 +52,7 @@ const MatCap = ({ url }) => {
   )
 }
 
-const Material = ({ url, info: { category, links } }) => {
+const Material = ({ url, category, maps }) => {
   const ref = useRef()
   const lightControls =
     category === 'matcaps'
@@ -115,7 +115,7 @@ const Material = ({ url, info: { category, links } }) => {
         {category === 'matcaps' ? (
           <MatCap url={url} />
         ) : (
-          <PBR links={links} displacementScale={controls.displacement} />
+          <PBR maps={maps} displacementScale={controls.displacement} />
         )}
       </Stage>
       <OrbitControls ref={ref} autoRotate={controls.autoRotate} />

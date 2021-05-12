@@ -41,25 +41,25 @@ const ModelInfo = (material) => {
         <span className='text-gray-600'>Created by: </span>
         <a
           target='_blank'
-          href={material.info.creatorLink}
+          href={material.creator.link}
           rel='noreferrer'
           className='font-bold'
         >
-          {material.info.creator}
+          {material.creator.name}
         </a>
         <span className='block'>
           <span className='text-gray-600'>License: </span>{' '}
-          {licenses[material.info.license] ? (
+          {licenses[material.license] ? (
             <a
               target='_blank'
-              href={licenses[material.info.license].link}
+              href={licenses[material.license].link}
               rel='noreferrer'
               className='font-bold'
             >
-              {licenses[material.info.license].name}
+              {licenses[material.license].name}
             </a>
           ) : (
-            <span className='font-bold'>{material.info.license}</span>
+            <span className='font-bold'>{material.license}</span>
           )}
         </span>
         <span className='flex items-center'>
@@ -68,11 +68,11 @@ const ModelInfo = (material) => {
             <span>{getMaterialSize(material)}</span>
           </span>
         </span>
-        {material.info.category && (
+        {material.category && (
           <>
             <span className='text-gray-600'>Category: </span>
             <span className='inline-flex items-center px-2 mt-1 text-xs font-medium text-gray-800 bg-gray-100 rounded py-0.5'>
-              {material.info.category}
+              {material.category}
             </span>
           </>
         )}
@@ -119,7 +119,7 @@ const ModelInfo = (material) => {
           <button
             className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer'
             onClick={() => {
-              if (material.info.category === 'matcaps') {
+              if (material.category === 'matcaps') {
                 createMatcapCodeDownload(material, tab)
               } else {
                 createPBRCodeDownload(material, tab)
@@ -129,7 +129,7 @@ const ModelInfo = (material) => {
             Download starter project
           </button>
         </div>
-        {material.info.category === 'matcaps' ? (
+        {material.category === 'matcaps' ? (
           <a
             className='block w-full py-2 text-center text-white bg-gray-800'
             download

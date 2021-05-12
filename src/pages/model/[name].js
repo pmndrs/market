@@ -32,12 +32,17 @@ const Page = ({ title, model }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(`${API_ENDPOINT}/models/model?name=${params.name}`)
+  const data = await fetch(`${API_ENDPOINT}/models/${params.name}`)
   const model = await data.json()
+  const data1 = await fetch(`${API_ENDPOINT}/models/${params.name}/buffer`)
+  const buffer = await data1.text()
   return {
     props: {
-      model,
-      title: model.info.name,
+      model: {
+        ...model,
+        buffer,
+      },
+      title: model.name,
     },
   }
 }

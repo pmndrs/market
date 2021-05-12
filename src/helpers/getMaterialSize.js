@@ -1,7 +1,7 @@
 export const getMaterialSize = (material) => {
-  if (!material.info.sizes) return material.size
+  if (!material.sizes) return material.size
 
-  const size = Object.values(material.info.sizes).reduce((acc, curr) => {
+  const size = Object.values(material.sizes).reduce((acc, curr) => {
     acc = acc + curr
     return acc
   }, 0)

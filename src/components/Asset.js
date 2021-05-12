@@ -1,24 +1,25 @@
 import React from 'react'
 import Link from 'next/link'
-import Tippy from '@tippyjs/react'
 import FavoriteButton from './FavoriteButton'
 import { API_ENDPOINT } from '@/helpers/constants/api'
+import Tippy from '@tippyjs/react'
+import { getMaterialSize } from '@/helpers/getMaterialSize'
 
-const Model = (model) => {
+const HDRI = (asset) => {
   return (
-    <li key={model.id} className='relative'>
+    <li className='relative'>
       <Link
         className='absolute inset-0 focus:outline-none'
-        href={'/' + model.id}
+        href={'/' + asset.id}
       >
         <a>
           <div className='relative'>
             <span className='absolute right-0 z-10 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>
-              {model.category}
+              {asset.category}
             </span>{' '}
             <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
               <img
-                src={`${API_ENDPOINT}${model.thumbnail}`}
+                src={`${API_ENDPOINT}${asset.thumbnail}`}
                 alt=''
                 className='object-cover pointer-events-none group-hover:opacity-75'
               />
@@ -26,12 +27,12 @@ const Model = (model) => {
           </div>
           <div className='flex items-end justify-between'>
             <p className='block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none'>
-              {model.name}
+              {asset.name}
             </p>
-            <FavoriteButton type='models' asset={model} />
+            <FavoriteButton asset={asset} />
           </div>
           <p className='flex text-sm font-medium text-gray-500'>
-            {model.highPoly && (
+            {asset.highPoly && (
               <Tippy content='Large model'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -49,7 +50,7 @@ const Model = (model) => {
                 </svg>
               </Tippy>
             )}
-            {model.size}
+            {getMaterialSize(asset)}
           </p>
         </a>
       </Link>
@@ -57,4 +58,4 @@ const Model = (model) => {
   )
 }
 
-export default Model
+export default HDRI

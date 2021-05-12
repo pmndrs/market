@@ -7,9 +7,7 @@ export const getName = (image) => {
   return name
 }
 export const getImages = async (files, path) => {
-  const images = Object.values(files).map(
-    (link) => `${API_ENDPOINT}/files${link}`
-  )
+  const images = Object.values(files).map((link) => `${API_ENDPOINT}${link}`)
   const promises = images.map(async (image) => {
     const name = getName(image)
     const data = await fetch(image).then((a) => a.blob())

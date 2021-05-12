@@ -2,7 +2,7 @@ import useStore from '@/helpers/store/materials'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import { SearchIcon } from '@heroicons/react/solid'
-import Material from '@/components/Material'
+import Asset from '@/components/Asset'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Index = ({ title, materials }) => {
@@ -43,7 +43,7 @@ const Index = ({ title, materials }) => {
       </div>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {currentMaterials.map((material) => (
-          <Material {...material} key={material.image} />
+          <Asset {...material} key={material.id} />
         ))}
       </ul>
     </Layout>
