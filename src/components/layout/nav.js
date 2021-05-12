@@ -129,6 +129,20 @@ const Nav = () => {
                               )}
                             </Menu.Item>
                             <Menu.Item>
+                              {() => (
+                                <a
+                                  href='https://documenter.getpostman.com/view/476520/TzRUC7y1'
+                                  className={
+                                    'block px-4 py-2 text-sm text-gray-700 w-full text-center'
+                                  }
+                                  target='_blank'
+                                  rel='noreferrer'
+                                >
+                                  API Docs
+                                </a>
+                              )}
+                            </Menu.Item>
+                            <Menu.Item>
                               {({ active }) => (
                                 <button
                                   onClick={() => supabase.auth.signOut()}
