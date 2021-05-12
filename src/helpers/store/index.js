@@ -44,9 +44,9 @@ const useStore = create((set, get) => {
       if (search.length) {
         const searchResults = defaultModels.filter((model) => {
           return (
-            model.info.category.includes(search.toLowerCase()) ||
-            model.url.toLowerCase().includes(search.toLowerCase()) ||
-            model.info.name.toLowerCase().includes(search.toLowerCase())
+            model.category.includes(search.toLowerCase()) ||
+            model.id.toLowerCase().includes(search.toLowerCase()) ||
+            model.name.toLowerCase().includes(search.toLowerCase())
           )
         })
         set({ currentModels: searchResults })

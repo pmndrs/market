@@ -6,15 +6,12 @@ import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Model = (model) => {
   return (
-    <li key={model.image} className='relative'>
-      <Link
-        className='absolute inset-0 focus:outline-none'
-        href={`/model/${model.url}`}
-      >
+    <li key={model.id} className='relative'>
+      <Link className='absolute inset-0 focus:outline-none' href={model.id}>
         <a>
           <div className='relative'>
             <span className='absolute right-0 z-10 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>
-              {model.info.category}
+              {model.category}
             </span>{' '}
             <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
               <img
@@ -26,11 +23,11 @@ const Model = (model) => {
           </div>
           <div className='flex items-end justify-between'>
             <p className='block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none'>
-              {model.info?.name}
+              {model.name}
             </p>
             <FavoriteButton type='models' asset={model} />
           </div>
-          <p className='block text-sm font-medium text-gray-500'>
+          <p className='flex text-sm font-medium text-gray-500'>
             {model.highPoly && (
               <Tippy content='Large model'>
                 <svg
