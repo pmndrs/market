@@ -1,5 +1,5 @@
 import useStore from '@/helpers/store'
-import Model from '@/components/Model'
+import Asset from '@/components/Asset'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
@@ -44,7 +44,7 @@ const Index = ({ title, models }) => {
       </div>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {currentModels.map((model, i) => (
-          <Model {...model} key={i} />
+          <Asset {...model} key={i} />
         ))}
       </ul>
     </Layout>

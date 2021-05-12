@@ -7,7 +7,7 @@ export const createCode = (model, code) => [
     code,
   },
   {
-    filename: `public/${model.url}.gltf`,
+    filename: `public/model.gltf`,
     code: model.buffer,
   },
 ]

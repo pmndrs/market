@@ -54,9 +54,9 @@ const useStore = create((set, get) => {
         set({ currentModels: defaultModels })
       }
     },
-    toggleFavorite: async (asset, type) => {
+    toggleFavorite: async (type, name) => {
       const user = get().user
-      const favoriteName = `${type}/${asset.url}`
+      const favoriteName = `${type}/${name}`
       const currentFavorites = user.profile.favorites
       if (currentFavorites && currentFavorites.includes(favoriteName)) {
         const favorites = currentFavorites.filter((fav) => fav !== favoriteName)

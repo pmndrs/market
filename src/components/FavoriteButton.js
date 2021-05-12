@@ -1,6 +1,7 @@
 import useStore from '@/helpers/store'
 
-const FavoriteButton = ({ type, asset }) => {
+const FavoriteButton = ({ asset }) => {
+  const [type, name] = asset.id.split('/')
   const user = useStore((state) => state.user)
   const toggleFavorite = useStore((state) => state.toggleFavorite)
   return (
@@ -8,11 +9,11 @@ const FavoriteButton = ({ type, asset }) => {
       className='z-90'
       onClick={async (e) => {
         e.preventDefault()
-        toggleFavorite(asset, type)
+        toggleFavorite(type, name)
       }}
     >
       {user?.profile?.favorites &&
-      user.profile.favorites.includes(`${type}/${asset.url}`) ? (
+      user.profile.favorites.includes(`${type}/${name}`) ? (
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='w-5 h-5 text-red-600'

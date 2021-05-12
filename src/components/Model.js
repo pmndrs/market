@@ -7,7 +7,10 @@ import { API_ENDPOINT } from '@/helpers/constants/api'
 const Model = (model) => {
   return (
     <li key={model.id} className='relative'>
-      <Link className='absolute inset-0 focus:outline-none' href={model.id}>
+      <Link
+        className='absolute inset-0 focus:outline-none'
+        href={'/' + model.id}
+      >
         <a>
           <div className='relative'>
             <span className='absolute right-0 z-10 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>

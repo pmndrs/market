@@ -1,9 +1,6 @@
 import copy from 'clipboard-copy'
 import useStore from '@/helpers/store'
 import parse from '@react-three/gltfjsx'
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
 import { licenses } from '../helpers/constants/licenses'
 import Tippy from '@tippyjs/react'
 import { useState } from 'react'
@@ -22,7 +19,7 @@ const ModelInfo = (model) => {
   }))
 
   const createCode = () => {
-    const code = parse(`${model.url}.gltf`, parsedBuffer, {
+    const code = parse(`model.gltf`, parsedBuffer, {
       printwidth: 100,
     })
 
@@ -38,10 +35,6 @@ const ModelInfo = (model) => {
     createModelDownloadZip(model, code, tab)
   }
 
-  const items = [
-    { name: 'Download Untextured', href: model.gltf },
-    { name: 'Download Textured', href: model.gltfTextured },
-  ]
   const tabs = [
     {
       name: 'React Three Fiber',
@@ -64,25 +57,38 @@ const ModelInfo = (model) => {
         <span className='text-gray-600'>Created by: </span>
         <a
           target='_blank'
-          href={model.info.creatorLink}
+          href={model.creator.link}
           rel='noreferrer'
           className='font-bold'
         >
-          {model.info.creator}
+          {model.creator.name}
         </a>
-        <span className='block'>
-          <span className='text-gray-600'>License: </span>{' '}
-          {licenses[model.info.license] ? (
+        {model.team && (
+          <div>
+            <span className='text-gray-600'>Team: </span>
             <a
               target='_blank'
-              href={licenses[model.info.license].link}
+              href={model.team.link}
               rel='noreferrer'
               className='font-bold'
             >
-              {licenses[model.info.license].name}
+              {model.team.name}
+            </a>
+          </div>
+        )}
+        <span className='block'>
+          <span className='text-gray-600'>License: </span>{' '}
+          {licenses[model.license] ? (
+            <a
+              target='_blank'
+              href={licenses[model.license].link}
+              rel='noreferrer'
+              className='font-bold'
+            >
+              {licenses[model.license].name}
             </a>
           ) : (
-            <span className='font-bold'>{model.info.license}</span>
+            <span className='font-bold'>{model.license}</span>
           )}
         </span>
         <span className='flex items-center'>
@@ -109,11 +115,11 @@ const ModelInfo = (model) => {
             <span>{model.size}</span>
           </span>
         </span>
-        {model.info.category && (
+        {model.category && (
           <>
             <span className='text-gray-600'>Category: </span>
             <span className='inline-flex items-center px-2 mt-1 text-xs font-medium text-gray-800 bg-gray-100 rounded py-0.5'>
-              {model.info.category}
+              {model.category}
             </span>
           </>
         )}
@@ -176,69 +182,17 @@ const ModelInfo = (model) => {
         )}
         <span className='relative z-0 inline-flex w-full mt-4 rounded shadow-sm'>
           <a
-            href={`${API_ENDPOINT}${
-              model.gltfTextured ? model.gltfTextured : model.gltf
-            }`}
+            href={`${API_ENDPOINT}${model.gltf}`}
             download
             className='relative inline-flex items-center justify-center flex-grow'
           >
             <button
               type='button'
-              className={`w-full px-4 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 ${
-                model.gltfTextured ? 'rounded-l ' : 'rounded '
-              }`}
+              className={`w-full px-4 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded`}
             >
               Download Model
             </button>
           </a>
-          {model.gltfTextured && (
-            <Menu as='span' className='relative block -ml-px'>
-              {({ open }) => (
-                <>
-                  <Menu.Button className='relative inline-flex items-center h-full px-2 py-2 font-medium text-white bg-indigo-600 border border-indigo-300 hover:bg-indigo-500 rounded-r-md focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 align-center'>
-                    <span className='sr-only'>Open options</span>
-                    <ChevronDownIcon className='w-5 h-5' aria-hidden='true' />
-                  </Menu.Button>
-                  <Transition
-                    show={open}
-                    as={Fragment}
-                    enter='transition ease-out duration-100'
-                    enterFrom='transform opacity-0 scale-95'
-                    enterTo='transform opacity-100 scale-100'
-                    leave='transition ease-in duration-75'
-                    leaveFrom='transform opacity-100 scale-100'
-                    leaveTo='transform opacity-0 scale-95'
-                  >
-                    <Menu.Items
-                      static
-                      className='absolute right-0 w-56 mt-2 -mr-1 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none'
-                    >
-                      <div className='py-1'>
-                        {items.map((item) => (
-                          <Menu.Item key={item.name}>
-                            {({ active }) => (
-                              <a
-                                download
-                                href={`${API_ENDPOINT}${item.href}`}
-                                className={classNames(
-                                  active
-                                    ? 'bg-gray-100 text-gray-900'
-                                    : 'text-gray-700',
-                                  'block px-4 py-2 text-sm'
-                                )}
-                              >
-                                {item.name}
-                              </a>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </div>
-                    </Menu.Items>
-                  </Transition>
-                </>
-              )}
-            </Menu>
-          )}
         </span>
       </aside>
     </div>

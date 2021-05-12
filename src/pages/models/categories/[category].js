@@ -26,8 +26,7 @@ export async function getStaticProps({ params }) {
   const data = await fetch(`${API_ENDPOINT}/models`)
   const allModels = await data.json()
   const models = allModels.filter(
-    (model) =>
-      model.info.category.toLowerCase() === params.category.toLowerCase()
+    (model) => model.category.toLowerCase() === params.category.toLowerCase()
   )
   const capitalizeFirstLetter = ([first, ...rest]) =>
     first.toUpperCase() + rest.join('')
