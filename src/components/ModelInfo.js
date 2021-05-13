@@ -11,6 +11,17 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+function Creator(props) {
+
+  console.log("creator ", props)
+
+  return (
+    <a target='_blank' href={props.link} rel='noreferrer' className='font-bold'>
+      {props.name}
+    </a>
+  )
+}
+
 const ModelInfo = (model) => {
   const [tab, setTab] = useState('r3f')
   const { parsedBuffer, createModelDownloadZip } = useStore((s) => ({
@@ -48,21 +59,24 @@ const ModelInfo = (model) => {
     },
   ]
 
+  console.log(model.creator)
+
   return (
     <div className='mt-5'>
       <div className='z-10 hidden mb-6 sm:block w-[70%]'>
         <Leva fill />
       </div>
       <aside className='relative'>
-        <span className='text-gray-600'>Created by: </span>
-        <a
-          target='_blank'
-          href={model.creator.link}
-          rel='noreferrer'
-          className='font-bold'
-        >
-          {model.creator.name}
-        </a>
+
+        <div>
+          <span className='text-gray-600'>Created by: </span>
+          {Array.isArray(model.creator) ? (<ul>
+            {model.creator.map((creator, i) => <li key={i}><Creator {...creator} /></li>)}
+            </ul>) : (
+            <Creator {...model.creator} />
+          )}
+        </div>
+
         {model.team && (
           <div>
             <span className='text-gray-600'>Team: </span>
@@ -76,6 +90,7 @@ const ModelInfo = (model) => {
             </a>
           </div>
         )}
+        
         <span className='block'>
           <span className='text-gray-600'>License: </span>{' '}
           {licenses[model.license] ? (
