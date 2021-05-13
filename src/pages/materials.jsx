@@ -24,7 +24,7 @@ const Index = ({ title, materials }) => {
     <Layout title={heading}>
       <div>
         <label htmlFor='search' className='sr-only'>
-          Search for modules
+          Search for materials
         </label>
         <div className='relative mt-6 rounded-md shadow-sm'>
           <input
