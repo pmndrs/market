@@ -1,11 +1,16 @@
-import copy from 'clipboard-copy'
-import useStore from '@/helpers/store'
-import parse from '@react-three/gltfjsx'
-import { licenses } from '../helpers/constants/licenses'
-import Tippy from '@tippyjs/react'
 import { useState } from 'react'
-import { API_ENDPOINT } from '@/helpers/constants/api'
+
+import copy from 'clipboard-copy'
+import parse from '@react-three/gltfjsx'
+import Tippy from '@tippyjs/react'
+
 import { Leva } from 'leva'
+
+import useStore from '@/helpers/store'
+import { licenses } from '@/helpers/constants/licenses'
+import { API_ENDPOINT } from '@/helpers/constants/api'
+
+import CreatorInfo from './CreatorInfo'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -54,15 +59,22 @@ const ModelInfo = (model) => {
         <Leva fill />
       </div>
       <aside className='relative'>
-        <span className='text-gray-600'>Created by: </span>
-        <a
-          target='_blank'
-          href={model.creator.link}
-          rel='noreferrer'
-          className='font-bold'
-        >
-          {model.creator.name}
-        </a>
+        <div>
+          <span className='text-gray-600'>Created by: </span>
+          {Array.isArray(model.creator) ? (
+            <ul>
+              {model.creator.map((creator, i) => (
+                <>
+                  <CreatorInfo {...creator} />
+                  {i < model.creator.length - 1 && ', '}
+                </>
+              ))}
+            </ul>
+          ) : (
+            <CreatorInfo {...model.creator} />
+          )}
+        </div>
+
         {model.team && (
           <div>
             <span className='text-gray-600'>Team: </span>
@@ -76,6 +88,7 @@ const ModelInfo = (model) => {
             </a>
           </div>
         )}
+
         <span className='block'>
           <span className='text-gray-600'>License: </span>{' '}
           {licenses[model.license] ? (
