@@ -32,6 +32,7 @@ const ModelInfo = (material) => {
       current: tab === 'three',
     },
   ]
+  
   return (
     <div className='mt-5'>
       <div className='z-10 hidden mb-6 sm:block w-[70%]'>

@@ -16,7 +16,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const ModelInfo = (model) => {
+const ModelInfo = ({ model, creator, team }) => {
+  
   const [tab, setTab] = useState('r3f')
   const { parsedBuffer, createModelDownloadZip } = useStore((s) => ({
     parsedBuffer: s.parsedBuffer,
@@ -61,30 +62,30 @@ const ModelInfo = (model) => {
       <aside className='relative'>
         <div>
           <span className='text-gray-600'>Created by: </span>
-          {Array.isArray(model.creator) ? (
+          {Array.isArray(creator) ? (
             <ul>
-              {model.creator.map((creator, i) => (
+              {creator.map((creator, i) => (
                 <>
                   <CreatorInfo {...creator} />
-                  {i < model.creator.length - 1 && ', '}
+                  {i < creator.length - 1 && ', '}
                 </>
               ))}
             </ul>
           ) : (
-            <CreatorInfo {...model.creator} />
+            <CreatorInfo {...creator} />
           )}
         </div>
 
-        {model.team && (
+        {team && (
           <div>
             <span className='text-gray-600'>Team: </span>
             <a
               target='_blank'
-              href={model.team.link}
+              href={team.link}
               rel='noreferrer'
               className='font-bold'
             >
-              {model.team.name}
+              {team.name}
             </a>
           </div>
         )}

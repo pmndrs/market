@@ -11,7 +11,7 @@ const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
 })
 
-const Page = ({ title, model }) => {
+const Page = ({ title, model, creator, team }) => {
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
@@ -22,7 +22,7 @@ const Page = ({ title, model }) => {
         <div className='min-w-full min-h-full col-span-2'>
           <Viewer buffer={model.buffer} />
         </div>
-        <ModelInfo {...model} />
+        <ModelInfo model={model} creator={creator} team={team} />
       </main>
       <NextAndPrev {...model} />
     </Layout>
@@ -31,17 +31,39 @@ const Page = ({ title, model }) => {
 
 export default Page
 
+function fetchJSON(url) {
+  return fetch(`${API_ENDPOINT}/${url}`)
+    .then((data) => data.json())
+    .catch((err) => {
+      console.log(err)
+    })
+}
+
 export async function getStaticProps({ params }) {
-  const data = await fetch(`${API_ENDPOINT}/models/${params.name}`)
-  const model = await data.json()
-  const data1 = await fetch(`${API_ENDPOINT}/models/${params.name}/buffer`)
-  const buffer = await data1.text()
+  const buffer = await fetch(
+    `${API_ENDPOINT}/models/${params.name}/buffer`
+  ).then((data) => data.text())
+
+  const model = await fetchJSON(`/models/${params.name}`)
+
+  const creator =
+    typeof model.creator === 'string'
+      ? await fetchJSON(`/creators/${model.creator}`)
+      : model.creator
+      
+  const team =
+    typeof model.team === 'string'
+      ? await fetchJSON(`/teams/${model.team}`)
+      : (model.team || null)
+
   return {
     props: {
       model: {
         ...model,
         buffer,
       },
+      creator,
+      team,
       title: model.name,
     },
   }
