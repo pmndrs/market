@@ -15,7 +15,7 @@ const AddHdri = () => (
         <code>
           {`my-hdri/
 ├─ info.json
-├─ render.png
+├─ thumbnail.(png|jpg)
 ├─ your-file.hdr`}
         </code>
       </pre>

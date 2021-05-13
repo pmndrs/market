@@ -15,7 +15,7 @@ const AddModel = () => (
         <code>
           {`my-model/
 ├─ info.json
-├─ render.png
+├─ thumbnail.(png|jpg)
 ├─ model.gltf`}
         </code>
       </pre>

@@ -15,7 +15,7 @@ const AddPBR = () => (
         <code>
           {`my-material/
 ├─ info.json
-├─ render.png
+├─ thumbnail.(png|jpg)
 ├─ material_Color.jpg
 ├─ material_Displacement.jpg
 ├─ material_Normal.jpg

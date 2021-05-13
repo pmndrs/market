@@ -20,7 +20,7 @@ const AddMatcap = () => (
         <code>
           {`my-material/
 ├─ info.json
-├─ render.png
+├─ thumbnail.(png|jpg)
 ├─ your-file.jpg`}
         </code>
       </pre>
