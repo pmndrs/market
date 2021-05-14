@@ -15,7 +15,6 @@
     "analyze": "ANALYZE=true next build",
     "start": "next start",
     "minify": "node server/minify.js",
-    "prepare": "husky install",
     "postbuild": "next-sitemap"
   },
   "lint-staged": {
@@ -53,7 +52,6 @@
     "@babel/core": "^7.12.17",
     "autoprefixer": "^10.2.5",
     "babel-eslint": "^10.0.0",
-    "babel-plugin-glsl": "^1.0.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-config-react-app": "^6.0.0",
@@ -69,7 +67,6 @@
     "fs-extra": "^9.1.0",
     "glob": "^7.1.6",
     "gltf-pipeline": "^3.0.2",
-    "husky": "^6.0.0",
     "imagemin": "^7.0.1",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
