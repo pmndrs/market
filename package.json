@@ -15,7 +15,8 @@
     "analyze": "ANALYZE=true next build",
     "start": "next start",
     "minify": "node server/minify.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postbuild": "next-sitemap"
   },
   "lint-staged": {
     "*.{js,jsx,json,md}": [
@@ -73,6 +74,7 @@
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "lint-staged": "^10.5.4",
+    "next-sitemap": "^1.6.57",
     "node-fetch": "^2.6.1",
     "postcss": "^8.2.9",
     "prettier": "^2.2.1"
