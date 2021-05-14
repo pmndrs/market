@@ -1,8 +1,11 @@
 import Link from 'next/link'
 
-const item = (items) => items[Math.floor(Math.random() * items.length)]
+const item = (items = []) => items[Math.floor(Math.random() * items.length)]
 
 const Category = (category) => {
+
+  console.log(category)
+  
   return (
     <li className='relative'>
       <Link

@@ -5,23 +5,25 @@ import Category from '@/components/Category'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import { useRouter } from 'next/router'
 
-const Categories = ({ title, categories }) => {
-  const { query } = useRouter()
+const Categories = ({ title, categories, type }) => {
 
   useEffect(() => {
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
   return (
     <Layout title='Categories'>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
+
         {categories.map((category) => (
           <Category
             {...category}
             key={category.name}
-            type={query.categoryType}
+            type={type}
           />
         ))}
+
       </ul>
     </Layout>
   )
@@ -30,14 +32,16 @@ const Categories = ({ title, categories }) => {
 export default Categories
 
 export async function getStaticProps(ctx) {
-  const type = ctx.params.categoryType
+  const type = ctx.params.itemType
 
-  const data = await fetch(`${API_ENDPOINT}/${type}/categories`)
-  const categories = await data.json()
+  console.log(`${API_ENDPOINT}/${type}/categories`)
+  
+  const categories = await fetch(`${API_ENDPOINT}/${type}/categories`).then(res => res.json())
 
   return {
     props: {
       categories,
+      type,
       title: 'Categories',
     },
   }

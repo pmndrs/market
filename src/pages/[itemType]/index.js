@@ -1,25 +1,26 @@
-import useStore from '@/helpers/store/hdri'
+import useStore from '@/helpers/store'
+import Asset from '@/components/Asset'
 import Layout from '@/components/layout/'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
-import Asset from '@/components/Asset'
 
-const Index = ({ title, hdris }) => {
-  const { search, currentHdri, setSearch } = useStore((state) => ({
+const Index = ({ title, models }) => {
+  const { search, user, currentModels, setSearch } = useStore((state) => ({
     search: state.search,
-    currentHdri: state.currentHdri,
+    currentModels: state.currentModels,
     setSearch: state.setSearch,
+    user: state.user,
   }))
   useEffect(() => {
-    useStore.setState({ currentHdri: hdris })
-    useStore.setState({ defaultHdri: hdris })
+    useStore.setState({ currentModels: models })
+    useStore.setState({ defaultModels: models })
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   const heading = search
     ? `Search for ${search}`
-    : `All HDRIs (${currentHdri.length})`
+    : `All Models (${currentModels.length})`
   return (
     <Layout title={heading}>
       <div>
@@ -34,7 +35,7 @@ const Index = ({ title, hdris }) => {
             value={search}
             onChange={setSearch}
             className='block w-full pr-10 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
-            placeholder='Search for HDRIs'
+            placeholder='Search for models'
           />
           <div className='absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none'>
             <SearchIcon className='w-5 h-5 text-gray-400' aria-hidden='true' />
@@ -42,8 +43,8 @@ const Index = ({ title, hdris }) => {
         </div>
       </div>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
-        {currentHdri.map((hdri, i) => (
-          <Asset {...hdri} key={i} />
+        {currentModels.map((model, i) => (
+          <Asset {...model} key={i} />
         ))}
       </ul>
     </Layout>
@@ -52,14 +53,15 @@ const Index = ({ title, hdris }) => {
 
 export default Index
 
-export async function getStaticProps() {
-  const data = await fetch(`${API_ENDPOINT}/hdris`)
-  const hdris = await data.json()
+export async function getServerSideProps({ params }) {
+  const data = await fetch(`${API_ENDPOINT}/${params.itemType}`).then((res) =>
+    res.json()
+  )
 
   return {
     props: {
-      hdris,
-      title: 'HDRIs',
+      models: data,
+      title: 'Models',
     },
   }
 }

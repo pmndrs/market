@@ -22,20 +22,23 @@ const Page = ({ title, assets, type }) => {
 
 export default Page
 
-export async function getStaticProps({ params }) {
-  const data = await fetch(`${API_ENDPOINT}/${params.categoryType}`)
-  const allModels = await data.json()
-  const assets = allModels.filter(
-    (asset) => asset.category.toLowerCase() === params.category.toLowerCase()
-  )
-  const capitalizeFirstLetter = ([first, ...rest]) =>
+const capitalizeFirstLetter = ([first, ...rest]) =>
     first.toUpperCase() + rest.join('')
 
+export async function getStaticProps({ params }) {
+  const data = await fetch(`${API_ENDPOINT}/${params.itemType}`).then(res => res.json())
+
+  const assets = data.filter(
+    (asset) => asset.category.toLowerCase() === params.categoryType.toLowerCase()
+  )
+
+  console.log(assets)
+  
   return {
     props: {
-      type: capitalizeFirstLetter(params.categoryType),
+      type: capitalizeFirstLetter(params.itemType),
       assets,
-      title: capitalizeFirstLetter(params.category),
+      title: capitalizeFirstLetter(params.categoryType),
     },
   }
 }
@@ -44,8 +47,7 @@ export async function getStaticPaths() {
   const types = ['/models/', '/materials/', '/hdris/']
 
   const allPaths = types.map(async (type) => {
-    const data = await fetch(`${API_ENDPOINT}${type}categories`)
-    const categories = await data.json()
+    const categories = await fetch(`${API_ENDPOINT}${type}categories`).then(res => res.json())
 
     return categories
       .map((cat) => cat.name)

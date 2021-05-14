@@ -7,6 +7,9 @@ import useStore from '@/helpers/store'
 
 const HDRI = (asset) => {
   const user = useStore((store) => store.user)
+
+  console.log(asset)
+  
   return (
     <li className='relative'>
       <Link
