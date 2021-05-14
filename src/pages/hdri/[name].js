@@ -30,7 +30,7 @@ const Page = ({ title, hdri }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(`${API_ENDPOINT}/hdri/${params.name}`)
+  const data = await fetch(`${API_ENDPOINT}/hdris/${params.name}`)
   const hdri = await data.json()
   return {
     props: {
@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const data = await fetch(`${API_ENDPOINT}/hdri/paths`)
+  const data = await fetch(`${API_ENDPOINT}/hdris/paths`)
   const paths = await data.json()
   return {
     paths,

@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import FavoriteButton from './FavoriteButton'
-import { API_ENDPOINT } from '@/helpers/constants/api'
 import Tippy from '@tippyjs/react'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
 import useStore from '@/helpers/store'
@@ -21,7 +20,7 @@ const HDRI = (asset) => {
             </span>{' '}
             <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
               <img
-                src={`${API_ENDPOINT}${asset.thumbnail}`}
+                src={`${asset.thumbnail}`}
                 alt=''
                 className='object-cover pointer-events-none group-hover:opacity-75'
               />

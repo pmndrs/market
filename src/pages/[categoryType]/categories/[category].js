@@ -2,7 +2,7 @@ import useStore from '@/helpers/store'
 import Layout from '@/components/layout/'
 import Asset from '@/components/Asset'
 import { useEffect } from 'react'
-import { API_ENDPOINT, endpointPaths } from '@/helpers/constants/api'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Page = ({ title, assets, type }) => {
   useEffect(() => {
@@ -23,9 +23,7 @@ const Page = ({ title, assets, type }) => {
 export default Page
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(
-    `${API_ENDPOINT}/${endpointPaths[params.categoryType]}`
-  )
+  const data = await fetch(`${API_ENDPOINT}/${params.categoryType}`)
   const allModels = await data.json()
   const assets = allModels.filter(
     (asset) => asset.category.toLowerCase() === params.category.toLowerCase()
@@ -46,9 +44,7 @@ export async function getStaticPaths() {
   const types = ['/models/', '/materials/', '/hdris/']
 
   const allPaths = types.map(async (type) => {
-    const data = await fetch(
-      `${API_ENDPOINT}${type === '/hdris/' ? '/hdri/' : type}categories`
-    )
+    const data = await fetch(`${API_ENDPOINT}${type}categories`)
     const categories = await data.json()
 
     return categories

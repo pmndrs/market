@@ -1,7 +1,6 @@
 import useStore from '@/helpers/store/hdri'
 import { licenses } from '@/helpers/constants/licenses'
 import { useState } from 'react'
-import { API_ENDPOINT } from '@/helpers/constants/api'
 import { Leva } from 'leva'
 
 function classNames(...classes) {
@@ -120,7 +119,7 @@ const HDRIInfo = (hdri) => {
         </div>
         <a
           className='block w-full py-2 text-center text-white bg-gray-800'
-          href={API_ENDPOINT + hdri.file}
+          href={hdri.file}
           download
         >
           Download HDRI

@@ -2,7 +2,6 @@ import useStore from '@/helpers/store/materials'
 import { licenses } from '@/helpers/constants/licenses'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
 import { useState } from 'react'
-import { API_ENDPOINT } from '@/helpers/constants/api'
 import { Leva } from 'leva'
 
 function classNames(...classes) {
@@ -32,7 +31,7 @@ const ModelInfo = (material) => {
       current: tab === 'three',
     },
   ]
-  
+
   return (
     <div className='mt-5'>
       <div className='z-10 hidden mb-6 sm:block w-[70%]'>
@@ -134,7 +133,7 @@ const ModelInfo = (material) => {
           <a
             className='block w-full py-2 text-center text-white bg-gray-800'
             download
-            href={`${API_ENDPOINT}${material.url}`}
+            href={`${material.url}`}
           >
             Download Matcap
           </a>

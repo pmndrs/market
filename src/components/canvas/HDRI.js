@@ -1,24 +1,7 @@
-import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import {
-  CubeTexture,
-  CubeTextureLoader,
-  Texture,
-  PMREMGenerator,
-  Scene,
-} from 'three'
-import { RGBELoader } from 'three-stdlib'
-import {
-  OrbitControls,
-  useGLTF,
-  Stage,
-  useTexture,
-  Sphere,
-  Environment,
-} from '@react-three/drei'
+import { OrbitControls, useGLTF, Environment } from '@react-three/drei'
 import React, { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
-import { API_ENDPOINT } from '@/helpers/constants/api'
 
 export default function MaterialComponent(props) {
   const ref = useRef()
@@ -39,11 +22,7 @@ export default function MaterialComponent(props) {
       <Suspense fallback={null}>
         <>
           <React.Suspense fallback={null}>
-            <Environment
-              background={true}
-              path={''}
-              files={API_ENDPOINT + props.file}
-            />
+            <Environment background={true} path={''} files={props.file} />
             <mesh>
               <sphereBufferGeometry args={[2, 128, 32]} />
               <meshStandardMaterial metalness={1} roughness={0} />

@@ -2,7 +2,7 @@ import useStore from '@/helpers/store'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import Category from '@/components/Category'
-import { API_ENDPOINT, endpointPaths } from '@/helpers/constants/api'
+import { API_ENDPOINT } from '@/helpers/constants/api'
 import { useRouter } from 'next/router'
 
 const Categories = ({ title, categories }) => {
@@ -32,7 +32,7 @@ export default Categories
 export async function getStaticProps(ctx) {
   const type = ctx.params.categoryType
 
-  const data = await fetch(`${API_ENDPOINT}/${endpointPaths[type]}/categories`)
+  const data = await fetch(`${API_ENDPOINT}/${type}/categories`)
   const categories = await data.json()
 
   return {

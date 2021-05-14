@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
 import ModelInfo from '../../components/ModelInfo'
 import { useEffect } from 'react'
-import { Leva } from 'leva'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import NextAndPrev from '@/components/NextAndPrev'
 
@@ -11,18 +10,17 @@ const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
 })
 
-const Page = ({ title, model, creator, team }) => {
+const Page = ({ title, model }) => {
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
-
   return (
     <Layout title={title}>
       <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
         <div className='min-w-full min-h-full col-span-2'>
           <Viewer buffer={model.buffer} />
         </div>
-        <ModelInfo model={model} creator={creator} team={team} />
+        <ModelInfo {...model} />
       </main>
       <NextAndPrev {...model} />
     </Layout>
@@ -50,20 +48,20 @@ export async function getStaticProps({ params }) {
     typeof model.creator === 'string'
       ? await fetchJSON(`/creators/${model.creator}`)
       : model.creator
-      
+
   const team =
     typeof model.team === 'string'
       ? await fetchJSON(`/teams/${model.team}`)
-      : (model.team || null)
+      : model.team || null
 
   return {
     props: {
       model: {
         ...model,
         buffer,
+        creator,
+        team,
       },
-      creator,
-      team,
       title: model.name,
     },
   }

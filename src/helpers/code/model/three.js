@@ -22,7 +22,9 @@ export const createCode = (model) => [
     /* Preloader */
     preloader.init(new GLTFResolver());
     preloader
-      .load([{ id: "model", type: "gltf", url: "assets/${model.url}.gltf" }])
+      .load([{ id: "model", type: "gltf", url: "assets/${
+        model.id.split('model/')[1]
+      }.gltf" }])
       .then(([model]) => {
         onResize();
         animate();
@@ -48,7 +50,7 @@ export const createCode = (model) => [
 `,
   },
   {
-    filename: `src/assets/${model.url}.gltf`,
+    filename: `src/assets/${model.id.split('model/')[1]}.gltf`,
     code: model.buffer,
   },
 ]

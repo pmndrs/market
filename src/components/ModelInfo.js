@@ -8,7 +8,6 @@ import { Leva } from 'leva'
 
 import useStore from '@/helpers/store'
 import { licenses } from '@/helpers/constants/licenses'
-import { API_ENDPOINT } from '@/helpers/constants/api'
 
 import CreatorInfo from './CreatorInfo'
 
@@ -16,8 +15,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const ModelInfo = ({ model, creator, team }) => {
-  
+const ModelInfo = (model) => {
   const [tab, setTab] = useState('r3f')
   const { parsedBuffer, createModelDownloadZip } = useStore((s) => ({
     parsedBuffer: s.parsedBuffer,
@@ -62,9 +60,9 @@ const ModelInfo = ({ model, creator, team }) => {
       <aside className='relative'>
         <div>
           <span className='text-gray-600'>Created by: </span>
-          {Array.isArray(creator) ? (
+          {Array.isArray(model.creator) ? (
             <ul>
-              {creator.map((creator, i) => (
+              {model.creator.map((creator, i) => (
                 <>
                   <CreatorInfo {...creator} />
                   {i < creator.length - 1 && ', '}
@@ -72,20 +70,20 @@ const ModelInfo = ({ model, creator, team }) => {
               ))}
             </ul>
           ) : (
-            <CreatorInfo {...creator} />
+            <CreatorInfo {...model.creator} />
           )}
         </div>
 
-        {team && (
+        {model.team && (
           <div>
             <span className='text-gray-600'>Team: </span>
             <a
               target='_blank'
-              href={team.link}
+              href={model.team.link}
               rel='noreferrer'
               className='font-bold'
             >
-              {team.name}
+              {model.team.name}
             </a>
           </div>
         )}
@@ -196,7 +194,7 @@ const ModelInfo = ({ model, creator, team }) => {
         )}
         <span className='relative z-0 inline-flex w-full mt-4 rounded shadow-sm'>
           <a
-            href={`${API_ENDPOINT}${model.gltf}`}
+            href={model.file}
             download
             className='relative inline-flex items-center justify-center flex-grow'
           >

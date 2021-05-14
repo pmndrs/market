@@ -9,12 +9,9 @@ import {
 } from '@react-three/drei'
 import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
-import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const PBR = ({ maps, displacementScale }) => {
-  const texturesLoader = useTexture([
-    ...Object.values(maps).map((link) => `${API_ENDPOINT}${link}`),
-  ])
+  const texturesLoader = useTexture([...Object.values(maps)])
   const textures = Object.keys(maps).reduce((acc, curr, i) => {
     acc[curr] = texturesLoader[i]
 
@@ -32,8 +29,8 @@ const PBR = ({ maps, displacementScale }) => {
   )
 }
 
-const MatCap = ({ url }) => {
-  const [matcap] = useTexture([API_ENDPOINT + url])
+const MatCap = ({ file }) => {
+  const [matcap] = useTexture([file])
   const group = useRef()
   const { nodes } = useGLTF('/suzanne.gltf')
 
@@ -52,7 +49,7 @@ const MatCap = ({ url }) => {
   )
 }
 
-const Material = ({ url, category, maps }) => {
+const Material = ({ file, category, maps }) => {
   const ref = useRef()
   const lightControls =
     category === 'matcaps'
@@ -113,7 +110,7 @@ const Material = ({ url, category, maps }) => {
         shadowBias={-0.001}
       >
         {category === 'matcaps' ? (
-          <MatCap url={url} />
+          <MatCap file={file} />
         ) : (
           <PBR maps={maps} displacementScale={controls.displacement} />
         )}
