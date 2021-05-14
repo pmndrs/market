@@ -4,6 +4,7 @@ import FavoriteButton from './FavoriteButton'
 import Tippy from '@tippyjs/react'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
 import useStore from '@/helpers/store'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const HDRI = (asset) => {
   const user = useStore((store) => store.user)

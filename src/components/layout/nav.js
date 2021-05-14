@@ -64,7 +64,7 @@ const Nav = () => {
               <div className='flex'>
                 <div className='flex items-center flex-shrink-0'>
                   <Link href='/'>
-                    <a>
+                    <a aria-label='Go Home'>
                       <Logo width='70' />
                     </a>
                   </Link>
