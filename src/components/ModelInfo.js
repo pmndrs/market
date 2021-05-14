@@ -206,6 +206,12 @@ const ModelInfo = (model) => {
             </button>
           </a>
         </span>
+        <button
+          className='block w-full py-2 mt-4 text-center text-white bg-gray-800'
+          onClick={() => copy(model.file)}
+        >
+          Copy direct link
+        </button>
       </aside>
     </div>
   )

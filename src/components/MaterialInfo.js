@@ -1,3 +1,4 @@
+import copy from 'clipboard-copy'
 import useStore from '@/helpers/store/materials'
 import { licenses } from '@/helpers/constants/licenses'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
@@ -130,13 +131,21 @@ const ModelInfo = (material) => {
           </button>
         </div>
         {material.category === 'matcaps' ? (
-          <a
-            className='block w-full py-2 text-center text-white bg-gray-800'
-            download
-            href={`${material.url}`}
-          >
-            Download Matcap
-          </a>
+          <>
+            <a
+              className='block w-full py-2 text-center text-white bg-gray-800'
+              download
+              href={`${material.url}`}
+            >
+              Download Matcap
+            </a>
+            <button
+              className='block w-full mt-4 py-2 text-center text-white bg-gray-800'
+              onClick={() => copy(material.file)}
+            >
+              Copy direct link
+            </button>
+          </>
         ) : (
           <button
             className='block w-full py-2 text-center text-white bg-gray-800'

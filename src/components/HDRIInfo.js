@@ -1,3 +1,4 @@
+import copy from 'clipboard-copy'
 import useStore from '@/helpers/store/hdri'
 import { licenses } from '@/helpers/constants/licenses'
 import { useState } from 'react'
@@ -124,6 +125,12 @@ const HDRIInfo = (hdri) => {
         >
           Download HDRI
         </a>
+        <button
+          className='block w-full py-2 mt-4 text-center text-white bg-gray-800'
+          onClick={() => copy(hdri.file)}
+        >
+          Copy direct link
+        </button>
       </aside>
     </div>
   )
