@@ -7,6 +7,9 @@ import useStore from '@/helpers/store'
 
 const HDRI = (asset) => {
   const user = useStore((store) => store.user)
+  if (asset.category === 'food') {
+    console.log(asset)
+  }
   return (
     <li className='relative'>
       <Link
@@ -19,11 +22,29 @@ const HDRI = (asset) => {
               {asset.category}
             </span>{' '}
             <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
-              <img
-                src={`${asset.thumbnail}`}
-                alt=''
-                className='object-cover pointer-events-none group-hover:opacity-75'
-              />
+              {asset.unprocessed ? (
+                <div className='relative group-hover:opacity-75'>
+                  <img
+                    src='/bg.png'
+                    alt=''
+                    className='absolute object-cover top-[-30px]'
+                  />
+                  <img
+                    src={`${asset.thumbnail}`}
+                    alt=''
+                    style={{
+                      transform: 'scale(1.5)',
+                    }}
+                    className='absolute top-[-150px] z-10'
+                  />
+                </div>
+              ) : (
+                <img
+                  src={`${asset.thumbnail}`}
+                  alt=''
+                  className='object-cover pointer-events-none group-hover:opacity-75'
+                />
+              )}
             </div>
           </div>
           <div className='flex items-end justify-between'>
