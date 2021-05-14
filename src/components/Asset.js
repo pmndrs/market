@@ -28,20 +28,23 @@ const HDRI = (asset) => {
                     src='/bg.png'
                     alt=''
                     className='absolute object-cover top-[-30px]'
+                    loading="lazy"
                   />
                   <img
                     src={`${asset.thumbnail}`}
-                    alt=''
+                    alt={asset.name}
                     style={{
                       transform: 'scale(1.5)',
                     }}
+                    loading="lazy"
                     className='absolute top-[-150px] z-10'
                   />
                 </div>
               ) : (
                 <img
                   src={`${asset.thumbnail}`}
-                  alt=''
+                  alt={asset.name}
+                  loading="lazy"
                   className='object-cover pointer-events-none group-hover:opacity-75'
                 />
               )}
