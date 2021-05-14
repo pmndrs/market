@@ -4,6 +4,9 @@ const FavoriteButton = ({ asset }) => {
   const [type, name] = asset.id.split('/')
   const user = useStore((state) => state.user)
   const toggleFavorite = useStore((state) => state.toggleFavorite)
+  const liked =
+    user?.profile?.favorites &&
+    user.profile.favorites.includes(`${type}/${name}`)
   return (
     <button
       className='z-90'
@@ -11,9 +14,9 @@ const FavoriteButton = ({ asset }) => {
         e.preventDefault()
         toggleFavorite(type, name)
       }}
+      aria-label={liked ? `Unfavorite ${type}` : `Favorite ${type}`}
     >
-      {user?.profile?.favorites &&
-      user.profile.favorites.includes(`${type}/${name}`) ? (
+      {liked ? (
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='w-5 h-5 text-red-600'
