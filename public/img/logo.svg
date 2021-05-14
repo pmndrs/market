@@ -1,6 +1,1 @@
-<svg viewBox="0 0 800 800" fill="black" xmlns="http://www.w3.org/2000/svg">
-  <rect x="280" y="560" width="240" height="240" fill="inherit" />
-  <rect x="280" y="280" width="240" height="240" fill="inherit" />
-  <rect y="280" width="240" height="240" fill="inherit" />
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M560 0H280V240H560V520H800V0H560Z" fill="inherit" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="#000" viewBox="0 0 800 800"><rect width="240" height="240" x="280" y="560" fill="inherit"/><rect width="240" height="240" x="280" y="280" fill="inherit"/><rect width="240" height="240" y="280" fill="inherit"/><path fill="inherit" fill-rule="evenodd" d="M560 0H280V240H560V520H800V0H560Z" clip-rule="evenodd"/></svg>
