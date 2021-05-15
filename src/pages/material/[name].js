@@ -29,7 +29,7 @@ const Page = ({ title, material }) => {
 
 export default Page
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const data = await fetch(`${API_ENDPOINT}/materials/${params.name}`)
   const material = await data.json()
   return {
@@ -37,14 +37,5 @@ export async function getStaticProps({ params }) {
       material,
       title: material.name,
     },
-  }
-}
-
-export async function getStaticPaths() {
-  const data = await fetch(`${API_ENDPOINT}/materials/paths`)
-  const paths = await data.json()
-  return {
-    paths,
-    fallback: false,
   }
 }
