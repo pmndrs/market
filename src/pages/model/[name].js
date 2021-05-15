@@ -16,7 +16,7 @@ const Page = ({ title, model }) => {
   }, [title])
   return (
     <Layout title={title}>
-      <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
+      <main className='block my-10 sm:grid sm:grid-cols-3 gap-x-4 gap-y-8'>
         <div className='min-w-full min-h-full col-span-2'>
           <Viewer buffer={model.buffer} />
         </div>
