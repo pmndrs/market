@@ -26,7 +26,6 @@ const Asset = (asset) => {
                     src='/bg.jpg'
                     alt=''
                     className='absolute object-cover top-[-30px]'
-                    loading='lazy'
                   />
                   <img
                     src={`${asset.thumbnail}`}
@@ -35,7 +34,7 @@ const Asset = (asset) => {
                       transform: 'scale(1.5) translateY(-36%)',
                     }}
                     loading='lazy'
-                    className='absolute  z-10'
+                    className='absolute z-10 min-w-full min-h-[280px]'
                   />
                 </div>
               ) : (
