@@ -5,11 +5,9 @@ import Tippy from '@tippyjs/react'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
 import useStore from '@/helpers/store'
 
-const HDRI = (asset) => {
+const Asset = (asset) => {
   const user = useStore((store) => store.user)
-  if (asset.category === 'food') {
-    console.log(asset)
-  }
+
   return (
     <li className='relative'>
       <Link
@@ -28,7 +26,7 @@ const HDRI = (asset) => {
                     src='/bg.png'
                     alt=''
                     className='absolute object-cover top-[-30px]'
-                    loading="lazy"
+                    loading='lazy'
                   />
                   <img
                     src={`${asset.thumbnail}`}
@@ -36,7 +34,7 @@ const HDRI = (asset) => {
                     style={{
                       transform: 'scale(1.5)',
                     }}
-                    loading="lazy"
+                    loading='lazy'
                     className='absolute top-[-150px] z-10'
                   />
                 </div>
@@ -44,7 +42,7 @@ const HDRI = (asset) => {
                 <img
                   src={`${asset.thumbnail}`}
                   alt={asset.name}
-                  loading="lazy"
+                  loading='lazy'
                   className='object-cover pointer-events-none group-hover:opacity-75'
                 />
               )}
@@ -83,4 +81,4 @@ const HDRI = (asset) => {
   )
 }
 
-export default HDRI
+export default Asset
