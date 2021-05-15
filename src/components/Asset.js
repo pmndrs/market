@@ -23,7 +23,7 @@ const Asset = (asset) => {
               {asset.unprocessed ? (
                 <div className='relative group-hover:opacity-75'>
                   <img
-                    src='/bg.png'
+                    src='/bg.jpg'
                     alt=''
                     className='absolute object-cover top-[-30px]'
                     loading='lazy'
