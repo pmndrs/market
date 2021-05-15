@@ -37,7 +37,7 @@ function fetchJSON(url) {
     })
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const buffer = await fetch(
     `${API_ENDPOINT}/models/${params.name}/buffer`
   ).then((data) => data.text())
@@ -64,14 +64,5 @@ export async function getStaticProps({ params }) {
       },
       title: model.name,
     },
-  }
-}
-
-export async function getStaticPaths() {
-  const data = await fetch(`${API_ENDPOINT}/models/paths`)
-  const paths = await data.json()
-  return {
-    paths,
-    fallback: false,
   }
 }
