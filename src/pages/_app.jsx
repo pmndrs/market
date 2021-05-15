@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', onRouteChangeComplete)
     }
-  }, [])
+  }, [router.events])
 
   const fetchUserProfile = async (id) => {
     const { data } = await supabase

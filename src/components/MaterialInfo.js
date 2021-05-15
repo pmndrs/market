@@ -4,10 +4,8 @@ import { licenses } from '@/helpers/constants/licenses'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
 import { useState } from 'react'
 import { Leva } from 'leva'
+import classNames from '@/helpers/classNames'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 const ModelInfo = (material) => {
   const [tab, setTab] = useState('r3f')
   const {
@@ -140,7 +138,7 @@ const ModelInfo = (material) => {
               Download Matcap
             </a>
             <button
-              className='block w-full mt-4 py-2 text-center text-white bg-gray-800'
+              className='block w-full py-2 mt-4 text-center text-white bg-gray-800'
               onClick={() => copy(material.file)}
             >
               Copy direct link

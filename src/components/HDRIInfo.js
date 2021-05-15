@@ -3,10 +3,8 @@ import useStore from '@/helpers/store/hdri'
 import { licenses } from '@/helpers/constants/licenses'
 import { useState } from 'react'
 import { Leva } from 'leva'
+import classNames from '@/helpers/classNames'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 const HDRIInfo = (hdri) => {
   const [tab, setTab] = useState('r3f')
   const { createHDRIDownload } = useStore((state) => ({

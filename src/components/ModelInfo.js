@@ -10,10 +10,7 @@ import useStore from '@/helpers/store'
 import { licenses } from '@/helpers/constants/licenses'
 
 import CreatorInfo from './CreatorInfo'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import classNames from '@/helpers/classNames'
 
 const ModelInfo = (model) => {
   const [tab, setTab] = useState('r3f')

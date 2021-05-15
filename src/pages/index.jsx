@@ -6,11 +6,10 @@ import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 
 const Index = ({ title, models }) => {
-  const { search, user, currentModels, setSearch } = useStore((state) => ({
+  const { search, currentModels, setSearch } = useStore((state) => ({
     search: state.search,
     currentModels: state.currentModels,
     setSearch: state.setSearch,
-    user: state.user,
   }))
   useEffect(() => {
     useStore.setState({ currentModels: models })

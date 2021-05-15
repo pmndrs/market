@@ -2,10 +2,7 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import classNames from '@/helpers/classNames'
 
 export default function PopOverMenu({ menu, title }) {
   return (
