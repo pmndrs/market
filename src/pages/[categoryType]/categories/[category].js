@@ -22,7 +22,7 @@ const Page = ({ title, assets, type }) => {
 
 export default Page
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const data = await fetch(`${API_ENDPOINT}/${params.categoryType}`)
   const allModels = await data.json()
   const assets = allModels.filter(
@@ -37,25 +37,5 @@ export async function getStaticProps({ params }) {
       assets,
       title: capitalizeFirstLetter(params.category),
     },
-  }
-}
-
-export async function getStaticPaths() {
-  const types = ['/models/', '/materials/', '/hdris/']
-
-  const allPaths = types.map(async (type) => {
-    const data = await fetch(`${API_ENDPOINT}${type}categories`)
-    const categories = await data.json()
-
-    return categories
-      .map((cat) => cat.name)
-      .map((cat) => `${type}categories/${cat}`)
-  })
-
-  const paths = await Promise.all(allPaths)
-
-  return {
-    paths: paths.flat(),
-    fallback: false,
   }
 }
