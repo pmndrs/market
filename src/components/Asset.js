@@ -32,10 +32,10 @@ const Asset = (asset) => {
                     src={`${asset.thumbnail}`}
                     alt={asset.name}
                     style={{
-                      transform: 'scale(1.5)',
+                      transform: 'scale(1.5) translateY(-36%)',
                     }}
                     loading='lazy'
-                    className='absolute top-[-150px] z-10'
+                    className='absolute  z-10'
                   />
                 </div>
               ) : (
