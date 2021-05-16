@@ -23,7 +23,7 @@ const PBR = ({ maps, displacementScale }) => {
         {...textures}
         side={THREE.DoubleSide}
         displacementScale={displacementScale}
-        metalness={1}
+        metalness={textures.metalnessMap ? 1 : 0}
       />
     </Sphere>
   )
