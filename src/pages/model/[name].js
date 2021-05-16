@@ -44,23 +44,11 @@ export async function getServerSideProps({ params }) {
 
   const model = await fetchJSON(`/models/${params.name}`)
 
-  const creator =
-    typeof model.creator === 'string'
-      ? await fetchJSON(`/creators/${model.creator}`)
-      : model.creator
-
-  const team =
-    typeof model.team === 'string'
-      ? await fetchJSON(`/teams/${model.team}`)
-      : model.team || null
-
   return {
     props: {
       model: {
         ...model,
         buffer,
-        creator,
-        team,
       },
       title: model.name,
     },
