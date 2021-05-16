@@ -1,27 +1,35 @@
 import copy from 'clipboard-copy'
 import useStore from '@/helpers/store/hdri'
-import { licenses } from '@/helpers/constants/licenses'
 import { useState } from 'react'
 import { Leva } from 'leva'
-import classNames from '@/helpers/classNames'
+import DownloadButton from './info/DownloadButton'
+import Tabs from './info/Tabs'
+import License from './info/License'
+import Creators from './info/Creators'
+import Category from './info/Category'
 
 const HDRIInfo = (hdri) => {
-  const [tab, setTab] = useState('r3f')
+  const [tab, setTab] = useState('hdri')
   const { createHDRIDownload } = useStore((state) => ({
     createHDRIDownload: state.createHDRIDownload,
   }))
 
   const tabs = [
     {
-      name: 'React Three Fiber',
-      onClick: () => setTab('r3f'),
-      current: tab === 'r3f',
+      name: 'HDRI',
+      onClick: () => setTab('hdri'),
+      current: tab === 'hdri',
     },
-    {
-      name: 'Three.js',
-      onClick: () => setTab('three'),
-      current: tab === 'three',
-    },
+    // {
+    //   name: 'React Three Fiber',
+    //   onClick: () => setTab('r3f'),
+    //   current: tab === 'r3f',
+    // },
+    // {
+    //   name: 'Three.js',
+    //   onClick: () => setTab('three'),
+    //   current: tab === 'three',
+    // },
   ]
   return (
     <div className='mt-5'>
@@ -29,84 +37,17 @@ const HDRIInfo = (hdri) => {
         <Leva fill />
       </div>
       <aside className='relative'>
-        <span className='text-gray-600'>Created by: </span>
-        <a
-          target='_blank'
-          href={hdri.creator.link}
-          rel='noreferrer'
-          className='font-bold'
-        >
-          {hdri.creator.name}
-        </a>
-        <span className='block'>
-          <span className='text-gray-600'>License: </span>{' '}
-          {licenses[hdri.license] ? (
-            <a
-              target='_blank'
-              href={licenses[hdri.license].link}
-              rel='noreferrer'
-              className='font-bold'
-            >
-              {licenses[hdri.license].name}
-            </a>
-          ) : (
-            <span className='font-bold'>{hdri.license}</span>
-          )}
-        </span>
+        <Creators team={hdri.team} creator={hdri.creator} />
+        <License license={hdri.license} />
         <span className='flex items-center'>
           <span className='pr-2 text-gray-600 '>Size: </span>{' '}
           <span className='inline-flex font-bold'>
             <span>{hdri.size}</span>
           </span>
         </span>
-        {hdri.category && (
-          <>
-            <span className='text-gray-600'>Category: </span>
-            <span className='inline-flex items-center px-2 mt-1 text-xs font-medium text-gray-800 bg-gray-100 rounded py-0.5'>
-              {hdri.category}
-            </span>
-          </>
-        )}
+        <Category category={hdri.category} path='hdris' />
         <div className='my-4'>
-          <div>
-            <div className='sm:hidden'>
-              <label htmlFor='tabs' className='sr-only'>
-                Select a tab
-              </label>
-              <select
-                id='tabs'
-                name='tabs'
-                className='block w-full py-2 pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
-                defaultValue={tabs.find((tab) => tab.current).name}
-              >
-                {tabs.map((tab) => (
-                  <option key={tab.name}>{tab.name}</option>
-                ))}
-              </select>
-            </div>
-            <div className='hidden sm:block'>
-              <div className='border-b border-gray-200'>
-                <nav className='flex -mb-px space-x-8' aria-label='Tabs'>
-                  {tabs.map((tab) => (
-                    <button
-                      key={tab.name}
-                      onClick={tab.onClick}
-                      className={classNames(
-                        tab.current
-                          ? 'border-indigo-500 text-indigo-600'
-                          : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
-                        'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
-                      )}
-                      aria-current={tab.current ? 'page' : undefined}
-                    >
-                      {tab.name}
-                    </button>
-                  ))}
-                </nav>
-              </div>
-            </div>
-          </div>
-
+          <Tabs tabs={tabs} />
           {/* <button
             className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer'
             onClick={() => {
@@ -116,19 +57,12 @@ const HDRIInfo = (hdri) => {
             Download starter project
           </button> */}
         </div>
-        <a
-          className='block w-full py-2 text-center text-white bg-gray-800'
-          href={hdri.file}
-          download
-        >
+        <DownloadButton href={hdri.file} download>
           Download HDRI
-        </a>
-        <button
-          className='block w-full py-2 mt-4 text-center text-white bg-gray-800'
-          onClick={() => copy(hdri.file)}
-        >
+        </DownloadButton>
+        <DownloadButton onClick={() => copy(hdri.file)}>
           Copy direct link
-        </button>
+        </DownloadButton>
       </aside>
     </div>
   )

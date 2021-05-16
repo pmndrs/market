@@ -17,13 +17,13 @@ const PBR = ({ maps, displacementScale }) => {
 
     return acc
   }, {})
-
   return (
     <Sphere args={[1, 200, 200]}>
       <meshPhysicalMaterial
         {...textures}
         side={THREE.DoubleSide}
         displacementScale={displacementScale}
+        metalness={1}
       />
     </Sphere>
   )
