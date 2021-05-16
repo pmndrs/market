@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import copy from 'clipboard-copy'
 import parse from '@react-three/gltfjsx'
@@ -12,6 +12,7 @@ import Tabs from './info/Tabs'
 import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'
+import Views from './info/Views'
 
 const ModelInfo = (model) => {
   const [tab, setTab] = useState('model')
@@ -89,6 +90,7 @@ const ModelInfo = (model) => {
           </span>
         </span>
         <Category category={model.category} path='models' />
+        <Views id={model.id} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
 

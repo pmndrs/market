@@ -56,10 +56,10 @@ const Material = ({ file, category, maps }) => {
       ? {}
       : {
           displacement: {
-            value: 0.1,
+            value: 0.02,
             min: 0,
             max: 1,
-            step: 0.1,
+            step: 0.05,
             label: 'displacement scale',
           },
           intensity: {

@@ -8,6 +8,7 @@ import Tabs from './info/Tabs'
 import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'
+import Views from './info/Views'
 
 const ModelInfo = (material) => {
   const [tab, setTab] = useState('material')
@@ -54,6 +55,7 @@ const ModelInfo = (material) => {
           </span>
         </span>
         <Category category={material.category} path='materials' />
+        <Views id={material.id} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
           {tab !== 'material' && (

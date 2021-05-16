@@ -7,6 +7,7 @@ import Tabs from './info/Tabs'
 import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'
+import Views from './info/Views'
 
 const HDRIInfo = (hdri) => {
   const [tab, setTab] = useState('hdri')
@@ -46,6 +47,7 @@ const HDRIInfo = (hdri) => {
           </span>
         </span>
         <Category category={hdri.category} path='hdris' />
+        <Views id={hdri.id} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
           {/* <button
