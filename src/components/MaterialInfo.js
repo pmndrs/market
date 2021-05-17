@@ -60,7 +60,7 @@ const ModelInfo = (material) => {
           </span>
         </span>
         <Category category={material.category} path='materials' />
-        <Views id={material.id} />
+        <Views views={material.views} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
           {tab !== 'material' && (

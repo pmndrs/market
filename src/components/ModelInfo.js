@@ -95,7 +95,7 @@ const ModelInfo = (model) => {
           </span>
         </span>
         <Category category={model.category} path='models' />
-        <Views id={model.id} />
+        <Views views={model.views} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
 

@@ -52,7 +52,7 @@ const HDRIInfo = (hdri) => {
           </span>
         </span>
         <Category category={hdri.category} path='hdris' />
-        <Views id={hdri.id} />
+        <Views views={hdri.views} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
           {/* <button
