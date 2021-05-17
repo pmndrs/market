@@ -5,44 +5,11 @@ import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 import { useControls } from 'leva'
 import { useAsset } from 'use-asset'
 import useStore from '@/helpers/store'
+import { lightControls, defaultControls } from './controls'
 
 const Model = ({ buffer }) => {
   const ref = useRef()
-
-  const controls = useControls(
-    {
-      autoRotate: true,
-      contactShadow: true,
-      intensity: {
-        value: 1,
-        min: 0,
-        max: 2,
-        step: 0.1,
-        label: 'light intensity',
-      },
-      preset: {
-        value: 'rembrandt',
-        options: ['rembrandt', 'portrait', 'upfront', 'soft'],
-      },
-      environment: {
-        value: 'city',
-        options: [
-          '',
-          'sunset',
-          'dawn',
-          'night',
-          'warehouse',
-          'forest',
-          'apartment',
-          'studio',
-          'city',
-          'park',
-          'lobby',
-        ],
-      },
-    },
-    { collapsed: true }
-  )
+  const controls = useControls({ ...defaultControls, ...lightControls })
 
   const scene = useAsset(
     async ([buffer]) => {

@@ -9,6 +9,7 @@ import {
 } from '@react-three/drei'
 import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
+import { defaultControls, lightControls } from './controls'
 
 const PBR = ({ maps, displacementScale }) => {
   const texturesLoader = useTexture([...Object.values(maps)])
@@ -51,7 +52,7 @@ const MatCap = ({ file }) => {
 
 const Material = ({ file, category, maps }) => {
   const ref = useRef()
-  const lightControls =
+  const otherControls =
     category === 'matcaps'
       ? {}
       : {
@@ -62,42 +63,12 @@ const Material = ({ file, category, maps }) => {
             step: 0.05,
             label: 'displacement scale',
           },
-          intensity: {
-            value: 0.1,
-            min: 0,
-            max: 2,
-            step: 0.1,
-            label: 'light intensity',
-          },
-          preset: {
-            value: 'rembrandt',
-            options: ['rembrandt', 'portrait', 'upfront', 'soft'],
-          },
-          environment: {
-            value: 'city',
-            options: [
-              '',
-              'sunset',
-              'dawn',
-              'night',
-              'warehouse',
-              'forest',
-              'apartment',
-              'studio',
-              'city',
-              'park',
-              'lobby',
-            ],
-          },
+          ...lightControls,
         }
-  const controls = useControls(
-    {
-      autoRotate: true,
-      contactShadow: true,
-      ...lightControls,
-    },
-    { collapsed: true }
-  )
+  const controls = useControls({
+    ...defaultControls,
+    ...otherControls,
+  })
 
   return (
     <>

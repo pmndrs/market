@@ -2,16 +2,11 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Environment } from '@react-three/drei'
 import React, { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
+import { defaultControls } from './controls'
 
 export default function MaterialComponent(props) {
   const ref = useRef()
-  const controls = useControls(
-    {
-      autoRotate: true,
-      contactShadow: true,
-    },
-    { collapsed: true }
-  )
+  const controls = useControls(defaultControls)
   return (
     <Canvas
       shadows

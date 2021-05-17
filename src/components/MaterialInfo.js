@@ -43,7 +43,12 @@ const ModelInfo = (material) => {
   return (
     <div className='mt-5'>
       <div className='z-10 hidden mb-6 sm:block w-[70%]'>
-        <Leva fill />
+        <Leva
+          fill
+          titleBar={{
+            drag: false,
+          }}
+        />
       </div>
       <aside className='relative'>
         <Creators team={material.team} creator={material.creator} />
