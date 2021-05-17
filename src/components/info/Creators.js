@@ -5,14 +5,12 @@ const Creators = ({ creator, team }) => (
     <div>
       <span className='text-gray-600'>Created by: </span>
       {Array.isArray(creator) ? (
-        <ul>
-          {creator.map((creator, i) => (
-            <>
-              <CreatorInfo {...creator} />
-              {i < creator.length - 1 && ', '}
-            </>
-          ))}
-        </ul>
+        creator.map((c, i) => (
+          <>
+            <CreatorInfo {...c} />
+            {i < creator.length - 1 && ', '}
+          </>
+        ))
       ) : (
         <CreatorInfo {...creator} />
       )}
