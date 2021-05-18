@@ -6,10 +6,15 @@ import { useControls } from 'leva'
 import { useAsset } from 'use-asset'
 import useStore from '@/helpers/store'
 import { lightControls, defaultControls } from './controls'
+import { useEffect } from 'react/cjs/react.development'
 
 const Model = ({ buffer }) => {
   const ref = useRef()
-  const controls = useControls({ ...defaultControls, ...lightControls })
+  const controls = useControls({
+    ...defaultControls,
+    ...lightControls,
+    wireframe: false,
+  })
 
   const scene = useAsset(
     async ([buffer]) => {
@@ -32,6 +37,14 @@ const Model = ({ buffer }) => {
       (obj) => obj.isMesh && (obj.castShadow = obj.receiveShadow = true)
     )
   }, [scene])
+
+  useEffect(() => {
+    scene.traverse((obj) => {
+      if (obj.isMesh && obj.material) {
+        obj.material.wireframe = controls.wireframe
+      }
+    })
+  }, [scene, controls.wireframe])
 
   return (
     <>
