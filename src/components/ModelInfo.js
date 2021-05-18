@@ -22,7 +22,7 @@ const ModelInfo = (model) => {
   }))
 
   const createCode = () => {
-    const code = parse('model.gltf', parsedBuffer, {
+    const code = parse(model.file, parsedBuffer, {
       printwidth: 100,
     })
 
