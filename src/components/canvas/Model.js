@@ -1,19 +1,18 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stage } from '@react-three/drei'
-import { Suspense, useRef, useLayoutEffect } from 'react'
+import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 import { useControls } from 'leva'
 import { useAsset } from 'use-asset'
 import useStore from '@/helpers/store'
 import { lightControls, defaultControls } from './controls'
-import { useEffect } from 'react/cjs/react.development'
 
 const Model = ({ buffer }) => {
   const ref = useRef()
   const controls = useControls({
     ...defaultControls,
-    ...lightControls,
     wireframe: false,
+    ...lightControls,
   })
 
   const scene = useAsset(
