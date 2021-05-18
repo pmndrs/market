@@ -1,10 +1,9 @@
-const DownloadButton = ({ children, onClick, href, ...props }) => {
-  if (href) {
+const DownloadButton = ({ children, onClick, ...props }) => {
+  if (props.href) {
     return (
       <a
         className='block w-full py-2 text-center text-white bg-gray-800'
         download
-        href={href}
         {...props}
       >
         {children}

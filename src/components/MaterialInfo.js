@@ -81,7 +81,7 @@ const ModelInfo = (material) => {
         {tab === 'material' ? (
           material.category === 'matcaps' ? (
             <>
-              <DownloadButton href={`${material.url}`}>
+              <DownloadButton href={material.file}>
                 Download Matcap
               </DownloadButton>
               <DownloadButton onClick={() => copy(material.file)}>
