@@ -22,15 +22,26 @@ const ModelInfo = (model) => {
   }))
 
   const createCode = () => {
-    const code = parse(`model.gltf`, parsedBuffer, {
+    const code = parse(model.file, parsedBuffer, {
       printwidth: 100,
     })
 
     return code
   }
 
-  const copyToClipboard = () => {
+  const copyToJSXSceneCode = () => {
     copy(createCode())
+  }
+
+  const copyPrimitiveCode = () => {
+    const code = `
+  function Model(props) {
+    const { scene } = useGLTF('${model.file}')
+    return <primitive object={scene} {...props} />
+  }    
+  `
+
+    copy(code)
   }
 
   const createModelDownload = () => {
@@ -109,13 +120,17 @@ const ModelInfo = (model) => {
           )}
         </div>
         {tab === 'r3f' && (
-          <button
-            className='block w-full py-2 text-center text-white bg-gray-800 rounded disabled:opacity-75'
-            onClick={copyToClipboard}
-            disabled={!parsedBuffer}
-          >
-            Copy JSX Code
-          </button>
+          <>
+            <DownloadButton
+              onClick={copyToJSXSceneCode}
+              disabled={!parsedBuffer}
+            >
+              Copy JSX Scene Graph
+            </DownloadButton>
+            <DownloadButton onClick={copyPrimitiveCode}>
+              Copy Primitive Import
+            </DownloadButton>
+          </>
         )}
         {tab === 'model' && (
           <>
