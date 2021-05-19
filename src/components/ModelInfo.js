@@ -28,9 +28,9 @@ const ModelInfo = (model) => {
   )
 
   useEffect(() => {
-    createBuffer(router.query.name)
-  }, [createBuffer, router.query.name])
-
+    if (tab === 'r3f') createBuffer(router.query.name)
+  }, [tab, createBuffer, router.query.name])
+  console.log(parsedBuffer)
   const createCode = () => {
     const code = parse(model.file, parsedBuffer, {
       printwidth: 100,
