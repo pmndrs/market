@@ -1,111 +1,31 @@
 import '@/styles/index.css'
 import 'tippy.js/dist/tippy.css' // optional
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { supabase } from '../helpers/initSupabase'
-import useStore from '@/helpers/store'
-import * as Fathom from 'fathom-client'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import ProgressBar from '@badrap/bar-of-progress'
+import useHandleLogin from '@/helpers/hooks/useHandleLogin'
+import useFathom from '@/helpers/hooks/useFathom'
+
+const progress = new ProgressBar({
+  size: 3,
+  color: '#2e298b',
+  delay: 100,
+  className: 'progress',
+})
 
 function MyApp({ Component, pageProps }) {
   const user = supabase.auth.user()
   const session = supabase.auth.session()
   const router = useRouter()
+  useHandleLogin()
+  useFathom()
 
   useEffect(() => {
-    Fathom.load('JKSIZFZI')
-
-    function onRouteChangeComplete() {
-      Fathom.trackPageview()
-    }
-    // Record a pageview when route changes
-    router.events.on('routeChangeComplete', onRouteChangeComplete)
-
-    // Unassign event listener
-    return () => {
-      router.events.off('routeChangeComplete', onRouteChangeComplete)
-    }
-  }, [router.events])
-
-  const fetchUserProfile = async (id) => {
-    const { data } = await supabase
-      .from('profiles')
-      .select('*')
-      .eq('user_id', id)
-
-    return data[0]
-  }
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const setUser = async () => {
-    const profile = await fetchUserProfile(user.id)
-    useStore.setState({
-      user: {
-        ...user,
-        profile,
-      },
-    })
-  }
-
-  useEffect(() => {
-    if (user) setUser()
-  }, [setUser, user])
-
-  const [authView, setAuthView] = useState('sign_in')
-  useEffect(() => {
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        if (event === 'PASSWORD_RECOVERY') setAuthView('forgotten_password')
-        if (event === 'USER_UPDATED')
-          setTimeout(() => setAuthView('sign_in'), 1000)
-        if (session) {
-          const profile = await fetchUserProfile(session?.user.id)
-          useStore.setState({
-            user: {
-              ...session?.user,
-              profile,
-            },
-          })
-        } else {
-          useStore.setState({ user: null })
-        }
-
-        fetch('/api/auth', {
-          method: 'POST',
-          headers: new Headers({ 'Content-Type': 'application/json' }),
-          credentials: 'same-origin',
-          body: JSON.stringify({ event, session }),
-        }).then((res) => res.json())
-
-        if (event === 'SIGNED_IN') {
-          const { user } = session
-          const { data } = await supabase
-            .from('profiles')
-            .select('*')
-            .eq('user_id', user.id)
-
-          if (!data.length) {
-            await supabase.from('profiles').insert([
-              {
-                user_id: user.id,
-                name: user.user_metadata.full_name || user.email,
-                avatar: user.user_metadata.avatar_url,
-              },
-            ])
-            useStore.setState({
-              user: {
-                ...user,
-                profile: data[0],
-              },
-            })
-          }
-        }
-      }
-    )
-
-    return () => {
-      authListener.unsubscribe()
-    }
+    router.events.on('routeChangeStart', progress.start)
+    router.events.on('routeChangeComplete', progress.finish)
+    router.events.on('routeChangeError', progress.finish)
   }, [])
 
   return (
@@ -171,12 +91,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <Component
-        user={user}
-        session={session}
-        authView={authView}
-        {...pageProps}
-      />
+      <Component user={user} session={session} {...pageProps} />
     </>
   )
 }

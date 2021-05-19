@@ -20,3 +20,7 @@
 a {
   @apply text-indigo-700;
 }
+
+.progress {
+  box-shadow: none;
+}

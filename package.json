@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.1.2",
     "@headlessui/react": "^1.1.1",
     "@heroicons/react": "^1.0.1",
     "@react-spring/web": "^9.1.2",

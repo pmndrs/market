@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import classNames from '@/helpers/classNames'
+import Link from 'next/link'
 
 export default function PopOverMenu({ menu, title }) {
   return (
@@ -42,18 +43,16 @@ export default function PopOverMenu({ menu, title }) {
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
                 <div className='relative px-5 py-6 bg-white grid gap-6 sm:gap-8 sm:p-4'>
                   {menu.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className='block p-3 -m-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150'
-                    >
-                      <p className='text-base font-medium text-gray-900'>
-                        {item.name}
-                      </p>
-                      <p className='mt-1 text-sm text-gray-500'>
-                        {item.description}
-                      </p>
-                    </a>
+                    <Link key={item.name} href={item.href}>
+                      <a className='block p-3 -m-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150'>
+                        <p className='text-base font-medium text-gray-900'>
+                          {item.name}
+                        </p>
+                        <p className='mt-1 text-sm text-gray-500'>
+                          {item.description}
+                        </p>
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>
