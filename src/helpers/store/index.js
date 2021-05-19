@@ -1,3 +1,4 @@
+import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 import create from 'zustand'
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
@@ -5,6 +6,7 @@ import { createCode as createR3FModelCode } from '../code/model/r3f'
 import { createCode as createThreeModelCode } from '../code/model/three'
 import { supabase } from '@/helpers/initSupabase'
 import { sortAssets } from './utils'
+import { API_ENDPOINT } from '../constants/api'
 
 const useStore = create((set, get) => {
   return {
@@ -103,6 +105,21 @@ const useStore = create((set, get) => {
           },
         })
       }
+    },
+    createBuffer: async (name) => {
+      const buffer = await fetch(
+        `${API_ENDPOINT}/models/${name}/buffer`
+      ).then((data) => data.text())
+
+      const gltfLoader = new GLTFLoader()
+      const dracoloader = new DRACOLoader()
+      dracoloader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
+      gltfLoader.setDRACOLoader(dracoloader)
+      gltfLoader.setMeshoptDecoder(MeshoptDecoder)
+      const result = await new Promise((resolve, reject) =>
+        gltfLoader.parse(buffer, '', resolve, reject)
+      )
+      useStore.setState({ parsedBuffer: result })
     },
   }
 })

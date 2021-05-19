@@ -14,13 +14,22 @@ import Creators from './info/Creators'
 import Category from './info/Category'
 import Views from './info/Views'
 import toast from 'react-hot-toast'
+import { useRouter } from 'next/router'
 
 const ModelInfo = (model) => {
+  const router = useRouter()
   const [tab, setTab] = useState('model')
-  const { parsedBuffer, createModelDownloadZip } = useStore((s) => ({
-    parsedBuffer: s.parsedBuffer,
-    createModelDownloadZip: s.createModelDownloadZip,
-  }))
+  const { createBuffer, parsedBuffer, createModelDownloadZip } = useStore(
+    (s) => ({
+      createBuffer: s.createBuffer,
+      parsedBuffer: s.parsedBuffer,
+      createModelDownloadZip: s.createModelDownloadZip,
+    })
+  )
+
+  useEffect(() => {
+    createBuffer(router.query.name)
+  }, [createBuffer, router.query.name])
 
   const createCode = () => {
     const code = parse(model.file, parsedBuffer, {

@@ -18,7 +18,7 @@ const Page = ({ title, model }) => {
     <Layout title={title}>
       <main className='block my-10 sm:grid sm:grid-cols-3 gap-x-4 gap-y-8'>
         <div className='min-w-full min-h-full col-span-2'>
-          <Viewer buffer={model.buffer} />
+          <Viewer {...model} />
         </div>
         <ModelInfo {...model} />
       </main>
@@ -38,18 +38,11 @@ function fetchJSON(url) {
 }
 
 export async function getServerSideProps({ params }) {
-  const buffer = await fetch(
-    `${API_ENDPOINT}/models/${params.name}/buffer`
-  ).then((data) => data.text())
-
   const model = await fetchJSON(`/models/${params.name}`)
 
   return {
     props: {
-      model: {
-        ...model,
-        buffer,
-      },
+      model,
       title: model.name,
     },
   }
