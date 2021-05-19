@@ -5,7 +5,7 @@ const AddMatcap = () => (
   <>
     <p>
       First create a folder with the name of your matcap, please do not leave
-      spaces between the name, so instead of saying <code>rusted-metal</code>{' '}
+      spaces between the name, so instead of saying <code>rusted metal</code>
       you should do <code>rusted-metal</code>
     </p>
 
