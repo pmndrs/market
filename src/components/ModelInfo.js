@@ -13,6 +13,7 @@ import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'
 import Views from './info/Views'
+import toast from 'react-hot-toast'
 
 const ModelInfo = (model) => {
   const [tab, setTab] = useState('model')
@@ -29,20 +30,11 @@ const ModelInfo = (model) => {
     return code
   }
 
-  const copyToJSXSceneCode = () => {
-    copy(createCode())
-  }
-
-  const copyPrimitiveCode = () => {
-    const code = `
+  const primitiveCode = `
   function Model(props) {
     const { scene } = useGLTF('${model.file}')
     return <primitive object={scene} {...props} />
-  }    
-  `
-
-    copy(code)
-  }
+  }    `
 
   const createModelDownload = () => {
     const code = createCode()
@@ -112,7 +104,12 @@ const ModelInfo = (model) => {
 
           {tab !== 'model' && (
             <DownloadButton
-              onClick={() => createModelDownload()}
+              onClick={() =>
+                toast.promise(copy(createModelDownload()), {
+                  loading: 'Generating project',
+                  success: 'Downloaded',
+                })
+              }
               disabled={!parsedBuffer}
             >
               Download starter project
@@ -122,12 +119,24 @@ const ModelInfo = (model) => {
         {tab === 'r3f' && (
           <>
             <DownloadButton
-              onClick={copyToJSXSceneCode}
+              onClick={() =>
+                toast.promise(copy(createCode()), {
+                  loading: 'Generating code',
+                  success: 'Copied',
+                })
+              }
               disabled={!parsedBuffer}
             >
               Copy JSX Scene Graph
             </DownloadButton>
-            <DownloadButton onClick={copyPrimitiveCode}>
+            <DownloadButton
+              onClick={() =>
+                toast.promise(copy(primitiveCode), {
+                  loading: 'Generating code',
+                  success: 'Copied',
+                })
+              }
+            >
               Copy Primitive Import
             </DownloadButton>
           </>
@@ -137,7 +146,14 @@ const ModelInfo = (model) => {
             <DownloadButton href={model.file} download style={{ marginTop: 0 }}>
               Download Model
             </DownloadButton>
-            <DownloadButton onClick={() => copy(model.file)}>
+            <DownloadButton
+              onClick={() =>
+                toast.promise(copy(model.file), {
+                  loading: 'Generating Link',
+                  success: 'Copied',
+                })
+              }
+            >
               Copy direct link
             </DownloadButton>
           </>

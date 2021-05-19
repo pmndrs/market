@@ -7,6 +7,7 @@ import Head from 'next/head'
 import ProgressBar from '@badrap/bar-of-progress'
 import useHandleLogin from '@/helpers/hooks/useHandleLogin'
 import useFathom from '@/helpers/hooks/useFathom'
+import { Toaster } from 'react-hot-toast'
 
 const progress = new ProgressBar({
   size: 3,
@@ -92,6 +93,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component user={user} session={session} {...pageProps} />
+      <Toaster />
     </>
   )
 }

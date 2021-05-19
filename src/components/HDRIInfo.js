@@ -8,6 +8,7 @@ import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'
 import Views from './info/Views'
+import toast from 'react-hot-toast'
 
 const HDRIInfo = (hdri) => {
   const [tab, setTab] = useState('hdri')
@@ -67,7 +68,14 @@ const HDRIInfo = (hdri) => {
         <DownloadButton href={hdri.file} download>
           Download HDRI
         </DownloadButton>
-        <DownloadButton onClick={() => copy(hdri.file)}>
+        <DownloadButton
+          onClick={() =>
+            toast.promise(copy(hdri.file), {
+              loading: 'Generating Link',
+              success: 'Copied',
+            })
+          }
+        >
           Copy direct link
         </DownloadButton>
       </aside>

@@ -9,6 +9,7 @@ import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'
 import Views from './info/Views'
+import toast from 'react-hot-toast'
 
 const ModelInfo = (material) => {
   const [tab, setTab] = useState('material')
@@ -67,11 +68,15 @@ const ModelInfo = (material) => {
             <button
               className='block w-full py-2 mt-3 text-center text-white bg-gray-800 cursor-pointer'
               onClick={() => {
-                if (material.category === 'matcaps') {
-                  createMatcapCodeDownload(material, tab)
-                } else {
-                  createPBRCodeDownload(material, tab)
-                }
+                const promise =
+                  material.category === 'matcaps'
+                    ? createMatcapCodeDownload(material, tab)
+                    : createPBRCodeDownload(material, tab)
+
+                toast.promise(promise, {
+                  loading: 'Generating Starter Project',
+                  success: 'Ready',
+                })
               }}
             >
               Download starter project
@@ -84,7 +89,14 @@ const ModelInfo = (material) => {
               <DownloadButton href={material.file}>
                 Download Matcap
               </DownloadButton>
-              <DownloadButton onClick={() => copy(material.file)}>
+              <DownloadButton
+                onClick={() =>
+                  toast.promise(copy(material.file), {
+                    loading: 'Copying',
+                    success: 'Copied to Clipboard',
+                  })
+                }
+              >
                 Copy direct link
               </DownloadButton>
             </>
@@ -92,14 +104,27 @@ const ModelInfo = (material) => {
             <>
               <DownloadButton
                 onClick={() =>
-                  copy(`
-                const textures = ${JSON.stringify(material.maps, null, 2)}
-                `)
+                  toast.promise(
+                    copy(`
+                  const textures = ${JSON.stringify(material.maps, null, 2)}
+                  `),
+                    {
+                      loading: 'Copying',
+                      success: 'Copied to Clipboard',
+                    }
+                  )
                 }
               >
                 Copy direct links
               </DownloadButton>
-              <DownloadButton onClick={() => createZip(material)}>
+              <DownloadButton
+                onClick={() =>
+                  toast.promise(createZip(material), {
+                    loading: 'Generating Zip',
+                    success: 'Downloaded',
+                  })
+                }
+              >
                 Download Textures
               </DownloadButton>
             </>
