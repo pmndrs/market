@@ -41,7 +41,11 @@ const Request = ({ user, requests: requestsServer }) => {
             </div>
           </Tippy>
         </div>
-        {requesting && <AssetRequestForm onSubmit={submitRequest} />}
+        {requesting && (
+          <AssetRequestForm
+            onSubmit={(props) => submitRequest({ ...props, user })}
+          />
+        )}
       </>
 
       <div className='mt-10 overflow-hidden bg-white shadow sm:rounded-md'>
