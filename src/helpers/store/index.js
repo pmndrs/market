@@ -1,4 +1,3 @@
-import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 import create from 'zustand'
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
@@ -107,6 +106,8 @@ const useStore = create((set, get) => {
       }
     },
     createBuffer: async (name) => {
+      const stlib = await import('three-stdlib')
+      const { GLTFLoader, DRACOLoader, MeshoptDecoder } = stlib
       const buffer = await fetch(
         `${API_ENDPOINT}/models/${name}/buffer`
       ).then((data) => data.text())
