@@ -1,13 +1,10 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stage } from '@react-three/drei'
+import { OrbitControls, Stage, useGLTF } from '@react-three/drei'
 import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
-import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 import { useControls } from 'leva'
-import { useAsset } from 'use-asset'
-import useStore from '@/helpers/store'
 import { lightControls, defaultControls } from './controls'
 
-const Model = ({ buffer }) => {
+const Model = ({ file }) => {
   const ref = useRef()
   const controls = useControls({
     ...defaultControls,
@@ -15,21 +12,7 @@ const Model = ({ buffer }) => {
     ...lightControls,
   })
 
-  const scene = useAsset(
-    async ([buffer]) => {
-      const gltfLoader = new GLTFLoader()
-      const dracoloader = new DRACOLoader()
-      dracoloader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
-      gltfLoader.setDRACOLoader(dracoloader)
-      gltfLoader.setMeshoptDecoder(MeshoptDecoder)
-      const result = await new Promise((resolve, reject) =>
-        gltfLoader.parse(buffer, '', resolve, reject)
-      )
-      useStore.setState({ parsedBuffer: result })
-      return result.scenes[0]
-    },
-    [buffer]
-  )
+  const { scene } = useGLTF(file)
 
   useLayoutEffect(() => {
     void scene.traverse(
@@ -71,7 +54,6 @@ export default function ModelComponent(props) {
       camera={{ position: [0, 0, 150], fov: 50 }}
     >
       <color attach='background' color='white' />
-      <ambientLight intensity={0.25} />
       <Suspense fallback={null}>
         <Model {...props} />
       </Suspense>
