@@ -30,7 +30,7 @@ const ModelInfo = (model) => {
   useEffect(() => {
     if (tab === 'r3f') createBuffer(router.query.name)
   }, [tab, createBuffer, router.query.name])
-  console.log(parsedBuffer)
+
   const createCode = () => {
     const code = parse(model.file, parsedBuffer, {
       printwidth: 100,
@@ -43,7 +43,7 @@ const ModelInfo = (model) => {
   function Model(props) {
     const { scene } = useGLTF('${model.file}')
     return <primitive object={scene} {...props} />
-  }    `
+  }`
 
   const createModelDownload = () => {
     const code = createCode()
