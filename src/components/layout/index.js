@@ -12,7 +12,7 @@ const Header = () => {
   )
 }
 
-const Layout = ({ children, title, center }) => {
+const Layout = ({ children, title, center, noTitle }) => {
   const events = useStore((s) => s.events)
 
   return (
@@ -23,15 +23,17 @@ const Layout = ({ children, title, center }) => {
 
         <main className='flex-1 py-10'>
           <header>
-            <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
-              <h1
-                className={`text-3xl font-bold leading-tight text-gray-900 ${
-                  center ? 'text-center' : ''
-                }`}
-              >
-                {title || 'All Models'}
-              </h1>
-            </div>
+            {!noTitle && (
+              <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
+                <h1
+                  className={`text-3xl font-bold leading-tight text-gray-900 ${
+                    center ? 'text-center' : ''
+                  }`}
+                >
+                  {title || 'All Models'}
+                </h1>
+              </div>
+            )}
           </header>
           <main>
             <div
