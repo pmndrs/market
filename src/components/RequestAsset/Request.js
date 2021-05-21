@@ -1,14 +1,14 @@
 import { supabase } from '@/helpers/initSupabase'
-import useStore from '@/helpers/store'
+import useStore from '@/helpers/store/'
+import useRequestsStore from '@/helpers/store/requests'
 import Tippy from '@tippyjs/react'
 import Link from 'next/link'
 import Button from '../Button'
 
 const Request = (request) => {
-  const { user, vote } = useStore((s) => ({
-    user: s.user,
-    vote: s.vote,
-  }))
+  const user = useStore((s) => s.user)
+
+  const vote = useRequestsStore((s) => s.vote)
 
   const closeRequest = async () => {
     var id = window.prompt('What is the id?', '')
@@ -39,6 +39,7 @@ const Request = (request) => {
           >
             <div className='flex items-center flex-shrink-0 mr-6'>
               <Tippy
+                disabled={user && !request.upvotes.includes(user?.id)}
                 content={
                   user
                     ? 'You have already voted'
@@ -49,7 +50,7 @@ const Request = (request) => {
                   <button
                     className='text-green-600 disabled:text-gray-300 disabled:cursor-default'
                     disabled={!user || request.upvotes.includes(user?.id)}
-                    onClick={() => vote(request.id, request.upvotes)}
+                    onClick={() => vote(request.id, request.upvotes, user.id)}
                   >
                     <svg
                       xmlns='http://www.w3.org/2000/svg'

@@ -32,12 +32,11 @@ const useStore = create((set, get) => {
         set({ requests })
       }
     },
-    vote: async (id, upvotes) => {
+    vote: async (id, upvotes, userId) => {
       const requests = get().requests
-      const user = get().user
       const newRequests = requests.map((req) => {
         if (req.id === id) {
-          return { ...req, upvotes: [...req.upvotes, user.id] }
+          return { ...req, upvotes: [...req.upvotes, userId] }
         }
 
         return req
@@ -45,7 +44,7 @@ const useStore = create((set, get) => {
       set({ requests: newRequests })
       const { error } = await supabase
         .from('requests')
-        .update({ upvotes: [...upvotes, user.id] })
+        .update({ upvotes: [...upvotes, userId] })
         .match({ id })
 
       if (error) {
