@@ -1,43 +1,65 @@
 import useStore from '@/helpers/store/requests'
 import Layout from '@/components/layout/'
 import { supabase } from '../helpers/initSupabase'
-import AssetRequestForm from '@/components/AssetRequestForm'
+import AssetRequestForm from '@/components/RequestAsset/AssetRequestForm'
+import Request from '@/components/RequestAsset/Request'
 import { useEffect } from 'react'
 import Tippy from '@tippyjs/react'
+import { useState } from 'react'
+import classNames from '@/helpers/classNames'
+import Button from '@/components/Button'
 
-const Request = ({ user, requests: requestsServer }) => {
-  const { requesting, vote, submitRequest, setRequests, requests } = useStore(
+const RequestPage = ({ user, requests: requestsServer }) => {
+  const [tab, setTab] = useState('open')
+  const { requesting, submitRequest, setRequests, requests } = useStore(
     (s) => ({
       requesting: s.requesting,
       submitRequest: s.submitRequest,
       setRequests: s.setRequests,
       requests: s.requests,
-      vote: s.vote,
     })
   )
+  const tabs = [
+    { name: 'Open', onClick: () => setTab('open'), current: tab === 'open' },
+    {
+      name: 'Closed',
+      onClick: () => setTab('closed'),
+      current: tab === 'closed',
+    },
+  ]
 
   useEffect(() => {
     setRequests(requestsServer)
   }, [requestsServer, setRequests])
 
+  const currentRequests =
+    tab === 'open'
+      ? requests.filter((r) => !r.closed)
+      : requests.filter((r) => r.closed)
+
   return (
-    <Layout title={'Model Requests'}>
+    <Layout noTitle>
       <>
-        <div className='flex justify-end'>
+        <div className='flex justify-between py-10'>
+          <h1
+            className={`text-3xl font-bold leading-tight text-gray-900 
+                  `}
+          >
+            Model Requests
+          </h1>
           <Tippy
             content={'You need an account to request an asset'}
             disabled={user}
           >
             <div>
-              <button
+              <Button
                 disabled={!user}
                 onClick={() =>
                   user ? useStore.setState({ requesting: !requesting }) : null
                 }
-                className='relative items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-transparent shadow-sm rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-gray-500 disabled:opacity-60 disabled:cursor-auto'
               >
                 Request an Asset
-              </button>
+              </Button>
             </div>
           </Tippy>
         </div>
@@ -47,73 +69,49 @@ const Request = ({ user, requests: requestsServer }) => {
           />
         )}
       </>
-
+      <div>
+        <div className='sm:hidden'>
+          <label htmlFor='tabs' className='sr-only'>
+            Select a tab
+          </label>
+          <select
+            id='tabs'
+            name='tabs'
+            className='block w-full py-2 pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+            defaultValue={tabs.find((tab) => tab.current).name}
+            onChange={(e) => setTab(e.target.value)}
+          >
+            {tabs.map((tab) => (
+              <option key={tab.name}>{tab.name}</option>
+            ))}
+          </select>
+        </div>
+        <div className='hidden sm:block'>
+          <div className='border-b border-gray-200'>
+            <nav className='flex -mb-px space-x-8' aria-label='Tabs'>
+              {tabs.map((tab) => (
+                <button
+                  key={tab.name}
+                  onClick={tab.onClick}
+                  className={classNames(
+                    tab.current
+                      ? 'border-indigo-500 text-indigo-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                    'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+                  )}
+                  aria-current={tab.current ? 'page' : undefined}
+                >
+                  {tab.name}
+                </button>
+              ))}
+            </nav>
+          </div>
+        </div>
+      </div>
       <div className='mt-10 overflow-hidden bg-white shadow sm:rounded-md'>
         <ul className='divide-y divide-gray-200'>
-          {requests.map((request) => (
-            <li key={request.id}>
-              <div className='flex items-center justify-between'>
-                <div className='px-4 py-4 sm:px-6'>
-                  <div className='flex items-center'>
-                    <div className='flex items-center flex-shrink-0 mr-6'>
-                      <Tippy
-                        content={
-                          user
-                            ? 'You have already voted'
-                            : 'You need an account to vote'
-                        }
-                      >
-                        <div>
-                          <button
-                            className='text-green-600 disabled:text-gray-300 disabled:cursor-default'
-                            disabled={
-                              !user || request.upvotes.includes(user?.id)
-                            }
-                            onClick={() => vote(request.id, request.upvotes)}
-                          >
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              className='w-6 h-6'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              stroke='currentColor'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M5 15l7-7 7 7'
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </Tippy>
-                      <p className='inline-flex px-2 text-lg font-bold leading-5'>
-                        {request.upvotes.length}
-                      </p>
-                    </div>
-                    <div>
-                      <p className='text-sm font-medium text-indigo-600 truncate'>
-                        {request.request}
-                      </p>{' '}
-                      <p className='block mt-2 text-xs text-gray-800 truncate'>
-                        {request.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <p className='block mr-10 text-xs text-gray-800 truncate'>
-                  <span className='inline-flex items-center px-3 mr-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full py-0.5'>
-                    {request.category || 'Model'}
-                  </span>
-                  {new Date(request.created).toLocaleString('en-US', {
-                    month: 'long',
-                    day: '2-digit',
-                    year: 'numeric',
-                  })}
-                </p>
-              </div>
-            </li>
+          {currentRequests.map((request) => (
+            <Request closed={tab === 'closed'} {...request} key={request.id} />
           ))}
         </ul>
       </div>
@@ -121,7 +119,7 @@ const Request = ({ user, requests: requestsServer }) => {
   )
 }
 
-export default Request
+export default RequestPage
 
 export async function getServerSideProps({ req }) {
   const { user } = await supabase.auth.api.getUserByCookie(req)
