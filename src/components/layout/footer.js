@@ -10,7 +10,7 @@ const footerLinks = [
   },
   {
     name: 'GitHub',
-    href: 'https://github.com/pmndrs',
+    href: 'https://github.com/pmndrs/market',
     icon: (props) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
