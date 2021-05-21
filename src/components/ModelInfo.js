@@ -8,7 +8,7 @@ import { Leva } from 'leva'
 
 import useStore from '@/helpers/store'
 import DownloadButton from './info/DownloadButton'
-import Tabs from './info/Tabs'
+import Tabs from './Tabs'
 import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'

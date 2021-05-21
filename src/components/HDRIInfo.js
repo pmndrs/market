@@ -1,9 +1,9 @@
 import copy from 'clipboard-copy'
-import useStore from '@/helpers/store/hdri'
+// import useStore from '@/helpers/store/hdri'
 import { useState } from 'react'
 import { Leva } from 'leva'
 import DownloadButton from './info/DownloadButton'
-import Tabs from './info/Tabs'
+import Tabs from './Tabs'
 import License from './info/License'
 import Creators from './info/Creators'
 import Category from './info/Category'
@@ -12,9 +12,9 @@ import toast from 'react-hot-toast'
 
 const HDRIInfo = (hdri) => {
   const [tab, setTab] = useState('hdri')
-  const { createHDRIDownload } = useStore((state) => ({
-    createHDRIDownload: state.createHDRIDownload,
-  }))
+  // const { createHDRIDownload } = useStore((state) => ({
+  //   createHDRIDownload: state.createHDRIDownload,
+  // }))
 
   const tabs = [
     {
