@@ -1,6 +1,6 @@
 const Stats = ({ stats, size }) => {
   const items = [
-    { name: 'Mesh Size', stat: size },
+    { name: 'Model Size', stat: size },
     { name: 'Meshes', stat: stats.meshes.properties.length },
     {
       name: 'Faces',
