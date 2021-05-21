@@ -33,7 +33,7 @@ const UserMenu = ({ user }) => {
               >
                 <Menu.Items
                   static
-                  className='absolute right-0 w-48 py-1 mt-2 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none'
+                  className='absolute right-0 w-48 py-1 mt-2 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none z-[100]'
                 >
                   <Menu.Item>
                     {({ active }) => (
