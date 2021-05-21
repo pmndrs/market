@@ -28,7 +28,6 @@ const Stats = ({ stats, size }) => {
     { name: 'Memory Consumption', stat: stats.memoryConsumption },
   ].filter((e) => e)
 
-  console.log(stats)
   return (
     <div>
       <h3 className='text-lg font-medium text-gray-900 leading-6'>
