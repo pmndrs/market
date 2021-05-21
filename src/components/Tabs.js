@@ -13,7 +13,9 @@ const Tabs = ({ tabs }) => {
           className='block w-full py-2 pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
           defaultValue={tabs.find((tab) => tab.current).name}
           onChange={(e) =>
-            tabs.find((tab) => tab.current).name.onClick(e.target.value)
+            tabs
+              .find((tab) => tab.name === e.target.value)
+              .onClick(e.target.value)
           }
         >
           {tabs.map((tab) => (

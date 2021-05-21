@@ -11,7 +11,6 @@ const Request = (request) => {
   }))
 
   const closeRequest = async () => {
-    console.log('here')
     var id = window.prompt('What is the id?', '')
     if (id) {
       await supabase
@@ -76,7 +75,7 @@ const Request = (request) => {
             <div>
               <p className='text-sm font-medium text-indigo-600 truncate'>
                 {request.request}
-              </p>{' '}
+              </p>
               <p className='block mt-2 text-xs text-gray-800 truncate'>
                 {request.description}
               </p>
