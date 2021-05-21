@@ -82,6 +82,18 @@ const ModelInfo = (model) => {
         <Creators team={model.team} creator={model.creator} />
 
         <License license={model.license} />
+        {model.faces && (
+          <span className='block'>
+            <span className='text-gray-600'>Faces: </span>{' '}
+            <span className='font-bold'>{model.faces}</span>
+          </span>
+        )}
+        {model.vertices && (
+          <span className='block'>
+            <span className='text-gray-600'>Vertices: </span>{' '}
+            <span className='font-bold'>{model.vertices}</span>
+          </span>
+        )}
         <span className='flex items-center'>
           <span className='pr-2 text-gray-600 '>Size: </span>{' '}
           <span className='inline-flex font-bold'>
