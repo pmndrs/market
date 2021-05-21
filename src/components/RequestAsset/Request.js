@@ -90,7 +90,6 @@ const Request = (request) => {
         >
           {user?.profile && user.profile.admin && !request.closed && (
             <Button className='mr-5' onClick={closeRequest}>
-              {' '}
               Close
             </Button>
           )}

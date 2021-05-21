@@ -8,6 +8,7 @@ import Tippy from '@tippyjs/react'
 import { useState } from 'react'
 import classNames from '@/helpers/classNames'
 import Button from '@/components/Button'
+import Tabs from '@/components/Tabs'
 
 const RequestPage = ({ user, requests: requestsServer }) => {
   const [tab, setTab] = useState('open')
@@ -19,14 +20,6 @@ const RequestPage = ({ user, requests: requestsServer }) => {
       requests: s.requests,
     })
   )
-  const tabs = [
-    { name: 'Open', onClick: () => setTab('open'), current: tab === 'open' },
-    {
-      name: 'Closed',
-      onClick: () => setTab('closed'),
-      current: tab === 'closed',
-    },
-  ]
 
   useEffect(() => {
     setRequests(requestsServer)
@@ -69,45 +62,20 @@ const RequestPage = ({ user, requests: requestsServer }) => {
           />
         )}
       </>
-      <div>
-        <div className='sm:hidden'>
-          <label htmlFor='tabs' className='sr-only'>
-            Select a tab
-          </label>
-          <select
-            id='tabs'
-            name='tabs'
-            className='block w-full py-2 pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
-            defaultValue={tabs.find((tab) => tab.current).name}
-            onChange={(e) => setTab(e.target.value)}
-          >
-            {tabs.map((tab) => (
-              <option key={tab.name}>{tab.name}</option>
-            ))}
-          </select>
-        </div>
-        <div className='hidden sm:block'>
-          <div className='border-b border-gray-200'>
-            <nav className='flex -mb-px space-x-8' aria-label='Tabs'>
-              {tabs.map((tab) => (
-                <button
-                  key={tab.name}
-                  onClick={tab.onClick}
-                  className={classNames(
-                    tab.current
-                      ? 'border-indigo-500 text-indigo-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
-                    'whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
-                  )}
-                  aria-current={tab.current ? 'page' : undefined}
-                >
-                  {tab.name}
-                </button>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </div>
+      <Tabs
+        tabs={[
+          {
+            name: 'Open',
+            onClick: () => setTab('open'),
+            current: tab === 'open',
+          },
+          {
+            name: 'Closed',
+            onClick: () => setTab('closed'),
+            current: tab === 'closed',
+          },
+        ]}
+      />
       <div className='mt-10 overflow-hidden bg-white shadow sm:rounded-md'>
         <ul className='divide-y divide-gray-200'>
           {currentRequests.map((request) => (
