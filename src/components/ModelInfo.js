@@ -80,44 +80,7 @@ const ModelInfo = (model) => {
       </div>
       <aside className='relative'>
         <Creators team={model.team} creator={model.creator} />
-
         <License license={model.license} />
-        {model.faces && (
-          <span className='block'>
-            <span className='text-gray-600'>Faces: </span>{' '}
-            <span className='font-bold'>{model.faces}</span>
-          </span>
-        )}
-        {model.vertices && (
-          <span className='block'>
-            <span className='text-gray-600'>Vertices: </span>{' '}
-            <span className='font-bold'>{model.vertices}</span>
-          </span>
-        )}
-        <span className='flex items-center'>
-          <span className='pr-2 text-gray-600 '>Size: </span>{' '}
-          <span className='inline-flex font-bold'>
-            {model.highPoly && (
-              <Tippy content='Large model'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='w-5 h-5 mr-1 text-yellow-600'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
-                  />
-                </svg>
-              </Tippy>
-            )}
-            <span>{model.size}</span>
-          </span>
-        </span>
         <Category category={model.category} path='models' />
         <Views views={model.views} />
         <div className='my-4'>
