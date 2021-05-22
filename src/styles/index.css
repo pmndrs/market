@@ -24,3 +24,7 @@ a {
 .progress {
   box-shadow: none;
 }
+
+.portal-ref > div {
+  transform: none !important;
+}
