@@ -15,17 +15,6 @@ function rgbToHex({ r, g, b }) {
   return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
 }
 
-function hexToRgb(hex) {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-  return result
-    ? {
-        r: parseInt(result[1], 16) / 255,
-        g: parseInt(result[2], 16) / 255,
-        b: parseInt(result[3], 16) / 255,
-      }
-    : null
-}
-
 const Model = ({ file, portalRef }) => {
   const [materialsEditor, setMaterialsEditor] = useState({})
   const { scene } = useGLTF(file)
@@ -87,7 +76,7 @@ const Model = ({ file, portalRef }) => {
       <primitive object={scene} />
       <Html portal={portalRef}>
         <div className='flex mt-10 background-white'>
-          <nav className='space-y-1 mr-5'>
+          <nav className='mr-5 space-y-1'>
             {Object.keys(materialsEditor).map((item) => (
               <button
                 key={item.name}
@@ -149,7 +138,7 @@ const Model = ({ file, portalRef }) => {
                 if (val.type === 'color') {
                   return (
                     <>
-                      <span className='mb-2 block font-medium text-gray-800 capitalize'>
+                      <span className='block mb-2 font-medium text-gray-800 capitalize'>
                         Color
                       </span>
                       <ChromePicker
