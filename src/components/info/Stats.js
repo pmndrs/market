@@ -25,7 +25,7 @@ const Stats = ({ stats, size }) => {
       stat: stats.extensions.join(', '),
       small: true,
     },
-    { name: 'Memory Consumption', stat: stats.memoryConsumption },
+    { name: 'Memory Consumption', stat: `~${stats.memoryConsumption}` },
   ].filter((e) => e)
 
   return (
