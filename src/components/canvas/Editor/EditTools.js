@@ -29,7 +29,7 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
       <button onClick={() => router.back()}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          className='h-10 w-10'
+          className='w-10 h-10'
           fill='none'
           viewBox='0 0 24 24'
           stroke='currentColor'
@@ -44,6 +44,7 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
       </button>
       <div className='flex mt-10 background-white'>
         <nav className='mr-5 space-y-1'>
+          <h2 className='px-3 py-2 text-base font-bold'>Materials</h2>
           {Object.keys(materialsEditor).map((item) => (
             <button
               key={item.name}
@@ -59,30 +60,33 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
             </button>
           ))}
         </nav>
-        {Object.keys(materialsEditor).map((material) => (
-          <div
-            key={material}
-            className={`${activeTab === material ? '' : 'hidden'}`}
-          >
-            {Object.keys(materialsEditor[material]).map((property) => {
-              const val = materialsEditor[material][property]
-              const props = {
-                material,
-                property,
-                setMaterialsEditor,
-                value: val.value,
-              }
-              if (val.type === 'range') {
-                return <RangeSlider {...props} />
-              }
-              if (val.type === 'color') {
-                return <ColorPicker {...props} />
-              }
+        <section>
+          {activeTab && <h2 className='py-2 text-base font-bold'>Edit</h2>}
+          {Object.keys(materialsEditor).map((material) => (
+            <div
+              key={material}
+              className={`${activeTab === material ? '' : 'hidden'}`}
+            >
+              {Object.keys(materialsEditor[material]).map((property) => {
+                const val = materialsEditor[material][property]
+                const props = {
+                  material,
+                  property,
+                  setMaterialsEditor,
+                  value: val.value,
+                }
+                if (val.type === 'range') {
+                  return <RangeSlider {...props} />
+                }
+                if (val.type === 'color') {
+                  return <ColorPicker {...props} />
+                }
 
-              return null
-            })}
-          </div>
-        ))}
+                return null
+              })}
+            </div>
+          ))}
+        </section>
       </div>
       <Button className='fixed bottom-5 left-5' onClick={save}>
         Download Model

@@ -28,3 +28,8 @@ a {
 .portal-ref > div {
   transform: none !important;
 }
+
+.chrome-picker {
+  box-shadow: none !important;
+  @apply bg-gray-100 border border-gray-200 rounded-md !important;
+}
