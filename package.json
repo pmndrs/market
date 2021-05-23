@@ -29,6 +29,7 @@
     "@badrap/bar-of-progress": "^0.1.2",
     "@headlessui/react": "^1.1.1",
     "@heroicons/react": "^1.0.1",
+    "@reach/slider": "^0.15.0",
     "@react-spring/web": "^9.1.2",
     "@react-three/drei": "^4.3.3",
     "@react-three/fiber": "^6.0.19",
