@@ -6,6 +6,7 @@ import { useControls } from 'leva'
 import { lightControls, defaultControls } from '../controls'
 import { useState } from 'react'
 import EditTools from './EditTools'
+import Head from 'next/head'
 
 function rgbToHex({ r, g, b }) {
   return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
@@ -95,6 +96,9 @@ export default function ModelComponent(props) {
 
   return (
     <div className='min-h-screen grid grid-cols-4'>
+      <Head>
+        <title>Material Editor - market</title>
+      </Head>
       <div className='portal-ref' ref={portal}></div>
       <Loader />
       <Canvas
