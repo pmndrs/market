@@ -37,7 +37,7 @@ const UserMenu = ({ user }) => {
                 >
                   <Menu.Item>
                     {({ active }) => (
-                      <Link href='favorites'>
+                      <Link href='/favorites'>
                         <a
                           className={classNames(
                             active ? 'bg-gray-100' : '',

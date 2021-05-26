@@ -7,12 +7,14 @@ import { API_ENDPOINT } from '@/helpers/constants/api'
 import NextAndPrev from '@/components/NextAndPrev'
 import Error from '../404'
 import Stats from '@/components/info/Stats'
+import FavoriteButton from '@/components/FavoriteButton'
 
 const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
 })
 
 const Page = ({ title, model, notFound }) => {
+  const { user } = useStore()
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
@@ -21,7 +23,10 @@ const Page = ({ title, model, notFound }) => {
   return (
     <Layout title={title}>
       <main className='block my-10 sm:grid sm:grid-cols-3 gap-x-4 gap-y-8'>
-        <div className='min-w-full min-h-full col-span-2'>
+        <div className='relative min-w-full min-h-full col-span-2'>
+          <div className='absolute z-10 right-5 scale-150 top-5 transform'>
+            {user && <FavoriteButton asset={model} />}
+          </div>
           <Viewer {...model} />
         </div>
         <ModelInfo {...model} />
