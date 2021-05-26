@@ -1,5 +1,6 @@
+import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { Html, OrbitControls, Stage, useGLTF } from '@react-three/drei'
+import { Html, Loader, OrbitControls, Stage, useGLTF } from '@react-three/drei'
 import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { useControls } from 'leva'
 import { lightControls, defaultControls } from '../controls'
@@ -17,7 +18,6 @@ const Model = ({ file, portalRef }) => {
   useEffect(() => {
     scene.traverse((object) => {
       if (object.material && object.isMesh) {
-        console.log(object.material)
         setMaterialsEditor((oldMaterials) => ({
           ...oldMaterials,
           [object.material.name]: {
@@ -33,6 +33,7 @@ const Model = ({ file, portalRef }) => {
               type: 'range',
               value: object.material.roughness,
             },
+
             metalness: {
               type: 'range',
               value: object.material.metalness,
@@ -40,6 +41,11 @@ const Model = ({ file, portalRef }) => {
             opacity: {
               type: 'range',
               value: object.material.opacity,
+            },
+            side: {
+              type: 'select',
+              value: object.material.side,
+              options: ['FrontSide', 'BackSide', 'DoubleSide'],
             },
           },
         }))
@@ -78,6 +84,7 @@ export default function ModelComponent(props) {
   return (
     <div className='min-h-screen grid grid-cols-4'>
       <div className='portal-ref' ref={portal}></div>
+      <Loader />
       <Canvas
         style={{ height: '100vh', gridColumnStart: 2, gridColumnEnd: -1 }}
         shadows

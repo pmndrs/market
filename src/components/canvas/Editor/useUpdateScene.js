@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { Color, DoubleSide, FrontSide } from 'three'
+import { Color } from 'three'
+import * as THREE from 'three'
 
 export const useUpdateScene = ({ materialsEditor, scene }) => {
   useEffect(() => {
@@ -14,8 +15,7 @@ export const useUpdateScene = ({ materialsEditor, scene }) => {
           obj.material.metalness = currentMaterial.metalness.value
 
           obj.material.transparent = currentMaterial.opacity !== 1
-          obj.material.side =
-            currentMaterial.opacity !== 1 ? DoubleSide : FrontSide
+          obj.material.side = THREE[currentMaterial.side.value]
 
           obj.material.opacity = currentMaterial.opacity.value
         }

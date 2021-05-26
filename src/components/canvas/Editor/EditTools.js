@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import RangeSlider from './RangeSlider'
 import ColorPicker from './ColorPicker'
 import { useUpdateScene } from './useUpdateScene'
+import Select from './Select'
 
 const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
   const [activeTab, setActiveTab] = useState()
@@ -80,6 +81,10 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
                 }
                 if (val.type === 'color') {
                   return <ColorPicker {...props} />
+                }
+
+                if (val.type === 'select') {
+                  return <Select {...props} options={val.options} />
                 }
 
                 return null
