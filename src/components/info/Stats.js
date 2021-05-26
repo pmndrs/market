@@ -42,7 +42,11 @@ const Stats = ({ stats, size }) => {
             <dt className='text-sm font-medium text-gray-500 truncate'>
               {item.name}
             </dt>
-            <dd className='mt-1 text-3xl font-semibold text-gray-900'>
+            <dd
+              className={`${
+                item.small ? `text-xs` : `text-3xl`
+              } mt-1  font-semibold text-gray-900`}
+            >
               {typeof item.stat === 'boolean' ? (
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -70,9 +74,7 @@ const Stats = ({ stats, size }) => {
                   )}
                 </svg>
               ) : (
-                <span className={`${item.small ? 'text-xs' : ''}`}>
-                  {item.stat}
-                </span>
+                item.stat
               )}
             </dd>
           </div>
