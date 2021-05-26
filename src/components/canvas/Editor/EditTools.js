@@ -76,8 +76,16 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
                   setMaterialsEditor,
                   value: val.value,
                 }
+
                 if (val.type === 'range') {
-                  return <RangeSlider {...props} />
+                  return (
+                    <RangeSlider
+                      {...props}
+                      max={val.max}
+                      min={val.min}
+                      step={val.step}
+                    />
+                  )
                 }
                 if (val.type === 'color') {
                   return <ColorPicker {...props} />

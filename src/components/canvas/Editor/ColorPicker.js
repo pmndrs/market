@@ -7,8 +7,8 @@ const ColorPicker = ({ property, value, material, setMaterialsEditor }) => {
         ...m,
         [material]: {
           ...m[material],
-          color: {
-            type: 'color',
+          [property]: {
+            ...m[material][property],
             value: val.hex,
           },
         },
@@ -18,7 +18,7 @@ const ColorPicker = ({ property, value, material, setMaterialsEditor }) => {
   return (
     <>
       <span className='block mb-2 font-medium text-gray-800 capitalize'>
-        Color
+        {property}
       </span>
       <ChromePicker
         key={property}

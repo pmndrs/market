@@ -1,7 +1,15 @@
 import { Slider } from '@reach/slider'
 import '@reach/slider/styles.css'
 
-const RangeSlider = ({ material, property, value, setMaterialsEditor }) => {
+const RangeSlider = ({
+  material,
+  property,
+  value,
+  setMaterialsEditor,
+  min,
+  max,
+  step,
+}) => {
   const onRangeChange = (val) => {
     setMaterialsEditor((materials) => {
       return {
@@ -16,6 +24,11 @@ const RangeSlider = ({ material, property, value, setMaterialsEditor }) => {
       }
     })
   }
+  const props = {
+    min: 0,
+    max: property === 'emissiveIntensity' ? 100 : 0,
+    step: property === 'emissiveIntensity' ? 0.5 : 0.1,
+  }
   return (
     <div className='mt-2'>
       <label
@@ -25,9 +38,7 @@ const RangeSlider = ({ material, property, value, setMaterialsEditor }) => {
         {property}
       </label>
       <Slider
-        min={0}
-        step={0.01}
-        max={1}
+        {...props}
         className='w-full'
         type='range'
         id={material}

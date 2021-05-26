@@ -47,6 +47,18 @@ const Model = ({ file, portalRef }) => {
               value: object.material.side,
               options: ['FrontSide', 'BackSide', 'DoubleSide'],
             },
+            emissive: {
+              type: 'color',
+              value: rgbToHex({
+                r: parseInt(object.material.emissive.r * 255),
+                g: parseInt(object.material.emissive.g * 255),
+                b: parseInt(object.material.emissive.b * 255),
+              }),
+            },
+            emissiveIntensity: {
+              type: 'range',
+              value: object.material.emissiveIntensity,
+            },
           },
         }))
       }
