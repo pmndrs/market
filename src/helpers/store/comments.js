@@ -43,7 +43,7 @@ const useCommentsStore = create((set, get) => {
             ...get().comments,
             {
               ...newComment,
-              id: 'FAKE-ID',
+              id: `FAKE-ID-${Date.now().toString()}`,
               created_at: addHours(Date.now(), -2),
               profiles: {
                 avatar: user.profile.avatar,
@@ -53,7 +53,6 @@ const useCommentsStore = create((set, get) => {
           ],
         })
       } catch (e) {
-        console.log(e)
         toast.error('There has been a problem creating your comment')
       }
     },
