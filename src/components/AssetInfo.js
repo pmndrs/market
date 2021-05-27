@@ -184,13 +184,7 @@ const AssetInfo = (asset) => {
 
           {tab === 'model' && (
             <>
-              <DownloadButton
-                href={asset.file}
-                download
-                style={{ marginTop: 0 }}
-              >
-                Download Model
-              </DownloadButton>
+              <DownloadButton href={asset.file}>Download Model</DownloadButton>
               <DownloadButton
                 onClick={() =>
                   toast.promise(copy(asset.file), {
@@ -252,9 +246,7 @@ const AssetInfo = (asset) => {
           ) : null}
           {tab === 'hdri' && (
             <>
-              <DownloadButton href={asset.file} download>
-                Download HDRI
-              </DownloadButton>
+              <DownloadButton href={asset.file}>Download HDRI</DownloadButton>
               <DownloadButton
                 onClick={() =>
                   toast.promise(copy(asset.file), {
