@@ -14,7 +14,6 @@ import License from './info/License'
 import Size from './info/Size'
 import Creators from './info/Creators'
 import Category from './info/Category'
-import Views from './info/Views'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/router'
 
@@ -91,7 +90,7 @@ const AssetInfo = (asset) => {
             : createPBRCodeDownload(asset, tab)
         break
       case 'hdri':
-        promise = createHdriCodeDownload(asset, tab)
+        promise = createHDRIDownload(asset, tab)
         break
       default:
         promise = copy(createModelDownload()) // model case
@@ -144,7 +143,6 @@ const AssetInfo = (asset) => {
           />
         )}
         <Category category={asset.category} path={`${assetType.value}s`} />
-        <Views views={asset.views} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
 

@@ -7,7 +7,7 @@ export const createCode = (hdri, tab) => [
     code: `
   import React, { Suspense, useRef } from "react";
   import { Canvas } from "@react-three/fiber";
-  import { OrbitControls, Stage } from "@react-three/drei";
+  import { OrbitControls, Stage, Environment } from "@react-three/drei";
   
   export default function App() {  
     return (
@@ -18,7 +18,7 @@ export const createCode = (hdri, tab) => [
       camera={{ position: [0, 0, 10], fov: 50 }}
     >
       <Suspense fallback={null}>
-        <Environment background={true} path={''} files={${hdri.file}} />
+        <Environment background={true} path={''} files={'${hdri.file}'} />
         <mesh>
           <sphereBufferGeometry args={[2, 128, 32]} />
           <meshStandardMaterial metalness={1} roughness={0} />
