@@ -1,7 +1,7 @@
 import useStore from '@/helpers/store'
 import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
-import HDRIInfo from '../../components/HDRIInfo'
+import AssetInfo from '@/components/AssetInfo'
 import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import NextAndPrev from '@/components/NextAndPrev'
@@ -27,7 +27,7 @@ const Page = ({ title, hdri, notFound }) => {
           </div>{' '}
           <Viewer {...hdri} />
         </div>
-        <HDRIInfo {...hdri} />
+        <AssetInfo {...hdri} />
       </main>
       <NextAndPrev {...hdri} />
     </Layout>

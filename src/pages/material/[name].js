@@ -1,7 +1,7 @@
 import useStore from '@/helpers/store'
 import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
-import MaterialInfo from '../../components/MaterialInfo'
+import AssetInfo from '../../components/AssetInfo'
 import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import NextAndPrev from '@/components/NextAndPrev'
@@ -27,7 +27,7 @@ const Page = ({ title, material, notFound }) => {
           </div>
           <Viewer {...material} />
         </div>
-        <MaterialInfo {...material} />
+        <AssetInfo {...material} />
       </main>
       <NextAndPrev {...material} />
     </Layout>
