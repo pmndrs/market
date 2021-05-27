@@ -17,21 +17,17 @@ const Comment = ({ profiles, comment, created_at }) => {
           />
         </div>
         <div>
-          <div className='text-sm'>
-            <a href='#' className='font-medium text-gray-900'>
-              {profiles.name}
-            </a>
-          </div>
+          <span className='text-sm font-medium text-gray-900'>
+            {profiles.name}
+          </span>
           <div className='mt-1 text-sm text-gray-700'>
-            <p>
-              <ReactMarkdown disallowedElements={['img']}>
-                {comment}
-              </ReactMarkdown>
-            </p>
+            <ReactMarkdown disallowedElements={['img']}>
+              {comment}
+            </ReactMarkdown>
           </div>
-          <div className='mt-2 text-sm space-x-2'>
-            <span className='font-medium text-gray-500'>{date}</span>
-          </div>
+          <span className='mt-2 text-sm font-medium text-gray-500 space-x-2'>
+            {date}
+          </span>
         </div>
       </div>
     </li>
