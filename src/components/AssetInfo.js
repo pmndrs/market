@@ -200,7 +200,7 @@ const AssetInfo = (asset) => {
           {tab === 'material' ? (
             asset.category === 'matcaps' ? (
               <>
-                <DownloadButton href={asset.file}>
+                <DownloadButton href={asset.file} target='_blank'>
                   Download Matcap
                 </DownloadButton>
                 <DownloadButton
