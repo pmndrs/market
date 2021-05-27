@@ -8,6 +8,7 @@ import NextAndPrev from '@/components/NextAndPrev'
 import Error from '../404'
 import Stats from '@/components/info/Stats'
 import FavoriteButton from '@/components/FavoriteButton'
+import Comments from '@/components/comments'
 
 const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
@@ -33,6 +34,7 @@ const Page = ({ title, model, notFound }) => {
       </main>
       <Stats stats={model.stats} size={model.size} />
       <NextAndPrev {...model} />
+      <Comments id={model.id} />
     </Layout>
   )
 }
