@@ -27,10 +27,7 @@ const Comments = ({ id }) => {
                   <Comment {...comment} key={comment.id} />
                 ))
               ) : (
-                <h2
-                  id='comments-empty'
-                  className='py-6 text-lg font-medium text-center text-gray-900 leading-6'
-                >
+                <h2 className='py-6 text-lg font-medium text-center text-gray-900 leading-6'>
                   No comments yet 😞
                 </h2>
               )}
