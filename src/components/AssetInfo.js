@@ -54,8 +54,9 @@ const AssetInfo = (asset) => {
   }))
 
   useEffect(() => {
-    if (tab === 'r3f') createBuffer(router.query.name)
-  }, [tab, createBuffer, router.query.name])
+    if (assetType.value === 'model' && tab === 'r3f')
+      createBuffer(router.query.name)
+  }, [tab, createBuffer, router.query.name, assetType.value])
 
   const createCode = () => {
     const code = parse(asset.file, parsedBuffer, {
@@ -77,6 +78,29 @@ const AssetInfo = (asset) => {
     }
     const code = createCode()
     createModelDownloadZip(asset, code, tab)
+  }
+
+  const handleStarterDownload = () => {
+    let promise
+
+    switch (assetType.value) {
+      case 'material':
+        promise =
+          asset.category === 'matcaps'
+            ? createMatcapCodeDownload(asset, tab)
+            : createPBRCodeDownload(asset, tab)
+        break
+      case 'hdri':
+        promise = createHdriCodeDownload(asset, tab)
+        break
+      default:
+        promise = copy(createModelDownload()) // model case
+    }
+
+    toast.promise(promise, {
+      loading: 'Generating Starter Project',
+      success: 'Downloaded',
+    })
   }
 
   const tabs = [
@@ -126,22 +150,7 @@ const AssetInfo = (asset) => {
 
           {tab !== assetType.value && (
             <DownloadButton
-              onClick={() => {
-                let promise = copy(createModelDownload())
-                if (assetType.value === 'material') {
-                  promise =
-                    asset.category === 'matcaps'
-                      ? createMatcapCodeDownload(asset, tab)
-                      : createPBRCodeDownload(asset, tab)
-                } else if (assetType.value === 'hdri') {
-                  promise = createHDRIDownload(asset, tab)
-                }
-
-                toast.promise(promise, {
-                  loading: 'Generating Starter Project',
-                  success: 'Downloaded',
-                })
-              }}
+              onClick={handleStarterDownload}
               disabled={assetType.value === 'model' && !parsedBuffer}
             >
               Download starter project
