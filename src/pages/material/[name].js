@@ -5,6 +5,7 @@ import AssetInfo from '../../components/AssetInfo'
 import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import NextAndPrev from '@/components/NextAndPrev'
+import Rating from '@/components/rating'
 import Error from '../404'
 import FavoriteButton from '@/components/FavoriteButton'
 
@@ -30,6 +31,7 @@ const Page = ({ title, material, notFound }) => {
         <AssetInfo {...material} />
       </main>
       <NextAndPrev {...material} />
+      <Rating id={material.id} />
     </Layout>
   )
 }
