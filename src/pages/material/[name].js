@@ -8,6 +8,7 @@ import NextAndPrev from '@/components/NextAndPrev'
 import Rating from '@/components/rating'
 import Error from '../404'
 import FavoriteButton from '@/components/FavoriteButton'
+import Comments from '@/components/comments'
 
 const Viewer = dynamic(() => import('@/components/canvas/Material'), {
   ssr: false,
@@ -32,6 +33,7 @@ const Page = ({ title, material, notFound }) => {
       </main>
       <NextAndPrev {...material} />
       <Rating id={material.id} />
+      <Comments id={material.id} />
     </Layout>
   )
 }

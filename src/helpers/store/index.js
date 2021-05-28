@@ -6,6 +6,7 @@ import { createCode as createThreeModelCode } from '../code/model/three'
 import { supabase } from '@/helpers/initSupabase'
 import { sortAssets } from './utils'
 import { API_ENDPOINT } from '../constants/api'
+import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 
 const useStore = create((set, get) => {
   return {
@@ -106,8 +107,6 @@ const useStore = create((set, get) => {
       }
     },
     createBuffer: async (name) => {
-      const stlib = await import('three-stdlib')
-      const { GLTFLoader, DRACOLoader, MeshoptDecoder } = stlib
       const buffer = await fetch(
         `${API_ENDPOINT}/models/${name}/buffer`
       ).then((data) => data.text())

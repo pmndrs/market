@@ -8,6 +8,7 @@ import NextAndPrev from '@/components/NextAndPrev'
 import Rating from '@/components/rating'
 import Error from '../404'
 import FavoriteButton from '@/components/FavoriteButton'
+import Comments from '@/components/comments'
 
 const Viewer = dynamic(() => import('@/components/canvas/HDRI'), {
   ssr: false,
@@ -32,6 +33,7 @@ const Page = ({ title, hdri, notFound }) => {
       </main>
       <NextAndPrev {...hdri} />
       <Rating id={hdri.id} />
+      <Comments id={hdri.id} />
     </Layout>
   )
 }
