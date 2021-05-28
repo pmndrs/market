@@ -1,54 +1,30 @@
-import { useRef } from 'react'
-import useStore from '@/helpers/store'
-import useRatingStore from '@/helpers/store/rating'
+import { useEffect } from 'react'
+import useRatingsStore from '@/helpers/store/rating'
+import StarRating from './StarRating'
 
-const numStars = 5
-const Rating = () => {
-  const ratingContainer = useRef()
-  const { user } = useStore()
-  const { rating, currentUserRating, addRating } = useRatingStore()
+const Rating = ({ id }) => {
+  const { getRatings } = useRatingsStore()
 
-  const setRating = (e) => {
-    const stars = e.target.getElementsByClassName('star')
-    Array.from(stars).forEach((star) => {
-      star.style.color = rating >= star.dataset.value ? 'yellow' : 'gray'
-    })
-  }
-
-  const handleHover = (e) => {
-    const stars = e.target.parentElement.getElementsByClassName('star')
-    const hoverValue = e.target.dataset.value
-    Array.from(stars).forEach((star) => {
-      star.style.color = hoverValue >= star.dataset.value ? 'yellow' : 'gray'
-    })
-  }
-
-  const handleClick = (e) => {
-    let newRating = e.target.dataset.value
-    addRating(user, newRating)
-  }
+  useEffect(() => {
+    getRatings(id)
+  }, [id, getRatings])
 
   return (
-    <div
-      ref={ratingContainer}
-      className='rating'
-      data-rating={currentUserRating}
-      onMouseOut={setRating}
-    >
-      {[...Array(+numStars).keys()].map((n) => {
-        return (
-          <span
-            className='star'
-            key={n + 1}
-            data-value={n + 1}
-            onMouseOver={handleHover}
-            onClick={handleClick}
-          >
-            &#9733;
-          </span>
-        )
-      })}
-    </div>
+    <section aria-labelledby='ratings-title'>
+      <h2
+        id='ratings-title'
+        className='py-6 text-lg font-medium text-gray-900 leading-6'
+      >
+        Reviews
+      </h2>
+      <div className='bg-white shadow sm:rounded-lg sm:overflow-hidden'>
+        <div className='divide-y divide-gray-200'>
+          <div className='px-4 py-6 sm:px-6'>
+            <StarRating id={id} />
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
