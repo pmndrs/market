@@ -4,7 +4,7 @@ import useRatingStore from '@/helpers/store/rating'
 import Star from './Star'
 
 const numStars = 5
-const Rating = ({ id }) => {
+const StarRating = ({ id }) => {
   const { user } = useStore()
   const { rating, addRating } = useRatingStore()
   const [selection, setSelection] = useState(0)
@@ -37,4 +37,4 @@ const Rating = ({ id }) => {
   )
 }
 
-export default Rating
+export default StarRating
