@@ -1,14 +1,14 @@
 import toast from 'react-hot-toast'
 import create from 'zustand'
 import { supabase } from '../initSupabase'
+import getRatingsMean from '../getRatingsMean'
 
 const useRatingStore = create((set, get) => {
   return {
     rating: 0,
-    currentRating: 0,
-    getRating: async (id) => {
-      const rating = await supabase
-        .from('rating')
+    getRatings: async (id) => {
+      const ratings = await supabase
+        .from('ratings')
         .select(
           `
           user_id,
@@ -23,36 +23,40 @@ const useRatingStore = create((set, get) => {
         `
         )
         .eq('asset_id', id)
-      set({ rating: rating.data })
+      set({ rating: getRatingsMean(ratings.data) })
     },
-    addRating: async (user, assetId) => {
-      const rating = get().currentRating
-
+    addRating: async (userRating, user, assetId) => {
       try {
         const newRating = {
           user_id: user.profile.id,
-          rating,
+          rating: userRating,
           asset_id: assetId,
         }
-        await supabase.from('rating').insert([newRating])
 
-        set({ currentRating: 0 })
-        set({
-          rating: [
-            ...get().rating,
-            {
-              ...newRating,
-              id: `FAKE-ID-${Date.now().toString()}`,
-              // created_at: addHours(Date.now(), -2),
-              profiles: {
-                avatar: user.profile.avatar,
-                name: user.profile.name,
-              },
-            },
-          ],
-        })
+        const ratings = await supabase
+          .from('ratings')
+          .select('id')
+          .eq('user_id', user.profile.id)
+          .eq('asset_id', assetId)
+
+        if (ratings.data.length === 0) {
+          await supabase
+            .from('ratings')
+            .insert([newRating])
+            .eq('user_id', user.profile.id)
+            .eq('asset_id', assetId)
+        } else {
+          await supabase
+            .from('ratings')
+            .update(newRating)
+            .eq('user_id', user.profile.id)
+            .eq('asset_id', assetId)
+        }
+
+        await get().getRatings(assetId)
+        toast.success('Rating updated successfully')
       } catch (e) {
-        toast.error('There has been a problem creating your rating')
+        toast.error('There has been a problem adding your rating')
       }
     },
   }
