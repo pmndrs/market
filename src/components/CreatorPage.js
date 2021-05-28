@@ -1,12 +1,24 @@
 import Asset from './Asset'
 import Layout from './layout'
 
+const Title = ({ children }) => (
+  <h2 className='mt-12 text-xl font-medium text-gray-900 -mb-2.5'>
+    {children}
+  </h2>
+)
+
+const List = ({ children }) => (
+  <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
+    {children}
+  </ul>
+)
+
 const CreatorPage = ({ title, creator }) => {
   return (
     <Layout title={title} noTitle>
       <div className='flex items-center'>
         <img
-          className='w-20 h-20 mr-4 rounded'
+          className='w-20 h-auto mr-4 rounded'
           src={creator.logo}
           alt={creator.name}
         />
@@ -37,35 +49,34 @@ const CreatorPage = ({ title, creator }) => {
           </a>
         </div>
       </div>
-
       {creator.models.length ? (
         <>
-          <h2 className='mt-12 text-xl font-medium text-gray-900'>Models</h2>
-          <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
+          <Title>Models</Title>
+          <List>
             {creator.models.map((model, i) => (
               <Asset {...model} key={i} />
             ))}
-          </ul>
+          </List>
         </>
       ) : null}
       {creator.materials.length ? (
         <>
-          <h2 className='mt-12 text-xl font-medium text-gray-900'>Materials</h2>
-          <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
+          <Title>Materials</Title>
+          <List>
             {creator.materials.map((material, i) => (
               <Asset {...material} key={i} />
             ))}
-          </ul>
+          </List>
         </>
       ) : null}
       {creator.hdris.length ? (
         <>
-          <h2 className='mt-12 text-xl font-medium text-gray-900'>HDRI's</h2>
-          <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
+          <Title>HDRI{"'"}s</Title>
+          <List>
             {creator.hdris.map((hdri, i) => (
               <Asset {...hdri} key={i} />
             ))}
-          </ul>
+          </List>
         </>
       ) : null}
     </Layout>
