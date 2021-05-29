@@ -15,7 +15,7 @@ export default function MaterialComponent(props) {
       camera={{ position: [0, 0, 10], fov: 50 }}
     >
       <Suspense fallback={null}>
-        <Environment background={true} path={''} files={props.file} />
+        <Environment background={true} files={props.file} />
         <mesh>
           <sphereBufferGeometry args={[2, 128, 32]} />
           <meshStandardMaterial metalness={1} roughness={0} />
