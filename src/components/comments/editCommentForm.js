@@ -1,4 +1,4 @@
-import SubmitButton from './SubmitButton'
+import SubmitButton from './submitButton'
 import Textarea from './Textarea'
 
 const EditCommentForm = ({ onSubmit, onChange, value, onCancel }) => {
