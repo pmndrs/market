@@ -2,7 +2,7 @@ import useStore from '@/helpers/store'
 import useCommentsStore from '@/helpers/store/comments'
 import { addHours, formatDistanceToNow } from 'date-fns'
 import ReactMarkdown from 'react-markdown'
-import { useState } from 'react/'
+import { useState } from 'react'
 import Modal from './deleteModal'
 
 const Comment = ({ profiles, comment, created_at, id }) => {
