@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import copy from 'clipboard-copy'
-import parse from '@react-three/gltfjsx'
+import { parse } from '@react-three/gltfjsx'
 
 import { Leva } from 'leva'
 import useStore from '@/helpers/store'
