@@ -2,7 +2,7 @@ import useStore from '@/helpers/store'
 import useCommentsStore from '@/helpers/store/comments'
 import { QuestionMarkCircleIcon } from '@heroicons/react/solid'
 import Tippy from '@tippyjs/react'
-import SubmitButton from './SubmitButton'
+import SubmitButton from './submitButton'
 import Textarea from './Textarea'
 
 const AddACommentForm = ({ assetId }) => {
