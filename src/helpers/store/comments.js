@@ -1,4 +1,5 @@
 import { addHours } from 'date-fns'
+import { comment } from 'postcss'
 import toast from 'react-hot-toast'
 import create from 'zustand'
 import { supabase } from '../initSupabase'
@@ -14,6 +15,7 @@ const useCommentsStore = create((set, get) => {
           `
           user_id,
           profiles (
+            user_id,
             avatar,
             name
           ),
@@ -26,6 +28,19 @@ const useCommentsStore = create((set, get) => {
         .eq('asset_id', id)
       set({ comments: comments.data })
     },
+    deleteComment: async (commentid) => {
+      try {
+        await supabase.from('comments').delete().match({ id: commentid })
+
+        set({
+          comments: [
+            ...get().comments.filter((comment) => comment.id !== commentid),
+          ],
+        })
+      } catch (e) {
+        toast.error('There has been a problem creating your comment')
+      }
+    },
     createComment: async (user, assetId) => {
       const comment = get().currentComment
 
@@ -35,17 +50,15 @@ const useCommentsStore = create((set, get) => {
           comment,
           asset_id: assetId,
         }
-        await supabase.from('comments').insert([newComment])
-
+        const newComments = await supabase.from('comments').insert([newComment])
         set({ currentComment: '' })
         set({
           comments: [
             ...get().comments,
             {
-              ...newComment,
-              id: `FAKE-ID-${Date.now().toString()}`,
-              created_at: addHours(Date.now(), -2),
+              ...newComments.data[0],
               profiles: {
+                user_id: user.id,
                 avatar: user.profile.avatar,
                 name: user.profile.name,
               },
