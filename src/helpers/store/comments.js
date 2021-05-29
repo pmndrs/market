@@ -53,14 +53,14 @@ const useCommentsStore = create((set, get) => {
         set({
           comments: [
             ...get().comments,
-            {
-              ...newComments.data[0],
+            ...newComments.data.map((comment) => ({
+              ...comment,
               profiles: {
                 user_id: user.id,
                 avatar: user.profile.avatar,
                 name: user.profile.name,
               },
-            },
+            })),
           ],
         })
       } catch (e) {
