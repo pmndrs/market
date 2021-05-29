@@ -3,7 +3,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationIcon, XIcon } from '@heroicons/react/outline'
 
-export default function Modal({ onClickDelete, closeModal }) {
+export default function Modal({ onConfirm, closeModal, text, title }) {
   const [open, setOpen] = useState(true)
 
   return (
@@ -70,12 +70,10 @@ export default function Modal({ onClickDelete, closeModal }) {
                     as='h3'
                     className='text-lg font-medium text-gray-900 leading-6'
                   >
-                    Delete Comment
+                    {title}
                   </Dialog.Title>
                   <div className='mt-2'>
-                    <p className='text-sm text-gray-500'>
-                      Are you sure you want to delete this comment?
-                    </p>
+                    <p className='text-sm text-gray-500'>{text}</p>
                   </div>
                 </div>
               </div>
@@ -84,7 +82,7 @@ export default function Modal({ onClickDelete, closeModal }) {
                   type='button'
                   className='inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm'
                   onClick={() => {
-                    onClickDelete()
+                    onConfirm()
                     setOpen(false)
                   }}
                 >

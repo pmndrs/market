@@ -36,7 +36,31 @@ const useCommentsStore = create((set, get) => {
           ],
         })
       } catch (e) {
-        toast.error('There has been a problem creating your comment')
+        toast.error('There has been a problem delting your comment')
+      }
+    },
+    updateComment: async (user, id, newComment) => {
+      try {
+        const newComments = await supabase
+          .from('comments')
+          .update({ comment: newComment })
+          .match({ id })
+        const newCommentData = newComments.data[0]
+        set({
+          comments: [
+            ...get().comments.map((comment) => {
+              if (comment.id === id) {
+                return {
+                  ...comment,
+                  comment: newCommentData.comment,
+                }
+              }
+              return comment
+            }),
+          ],
+        })
+      } catch (e) {
+        toast.error('There has been a problem updating your comment')
       }
     },
     createComment: async (user, assetId) => {
