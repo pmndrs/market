@@ -1,4 +1,4 @@
-// @js-ignore
+// -ignore
 module.exports = {
   extends: [
     'eslint:recommended',
@@ -19,5 +19,5 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
   },
   settings: {},
-  plugins: ['import'],
+  plugins: [' '],
 }
