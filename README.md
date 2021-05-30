@@ -61,3 +61,7 @@ All assets and API can be found here: https://github.com/pmndrs/market-assets
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Sponsors
+
+- [Paypal](https://www.paypal.com/donate?business=RBHMVN4AQGQE2&item_name=Donation&currency_code=BRL)
