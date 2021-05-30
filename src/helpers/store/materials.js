@@ -5,13 +5,20 @@ import { createCode } from '../code/matcaps/r3f'
 import { createCode as createThreeCode } from '../code/matcaps/three'
 import { createCode as createR3FPBRCode } from '../code/pbr/r3f'
 import { createCode as createThreePBRCode } from '../code/pbr/three'
-import { API_ENDPOINT } from '../constants/api'
+import { sortAssets } from './utils'
 
 const useStore = create((set, get) => {
   return {
     defaultMaterials: null,
     currentMaterials: [],
     search: '',
+    order: 'alphabetic',
+    setOrder: (order, materials) => {
+      set({ order })
+      const currentMaterials = materials || get().currentMaterials
+
+      return sortAssets(order, currentMaterials)
+    },
     createPBRCodeDownload: async (material, tab) => {
       let code = ''
       if (tab === 'r3f') {
@@ -34,11 +41,9 @@ const useStore = create((set, get) => {
     },
 
     createMatcapCodeDownload: async (material, tab) => {
-      const parts = material.url.split('/')
-      const name = parts[parts.length - 1]
-      const data = await fetch(API_ENDPOINT + material.url).then((a) =>
-        a.blob()
-      )
+      const parts = material.id.split('/')
+      const name = parts[1]
+      const data = await fetch(material.file).then((a) => a.blob())
       const suzanne = await fetch('/suzanne.gltf').then((a) => a.text())
       let code = ''
       if (tab === 'r3f') {
@@ -58,9 +63,7 @@ const useStore = create((set, get) => {
     },
     createZip: async (material) => {
       var zip = new JSZip()
-      const images = Object.values(material.maps).map(
-        (link) => `${API_ENDPOINT}${link}`
-      )
+      const images = Object.values(material.maps)
       const a = images.map(async (image) => {
         const parts = image.split('/')
         const name = parts[parts.length - 1]
@@ -75,6 +78,8 @@ const useStore = create((set, get) => {
     setSearch: (e) => {
       const search = e.target.value
       const defaultMaterials = get().defaultMaterials
+      const order = get().order
+      const setOrder = get().setOrder
       set({ search: search })
       if (search.length) {
         const searchResults = defaultMaterials.filter((material) => {
@@ -83,9 +88,9 @@ const useStore = create((set, get) => {
             material.name.toLowerCase().includes(search.toLowerCase())
           )
         })
-        set({ currentMaterials: searchResults })
+        set({ currentMaterials: setOrder(order, searchResults) })
       } else {
-        set({ currentMaterials: defaultMaterials })
+        set({ currentMaterials: setOrder(order, defaultMaterials) })
       }
     },
   }

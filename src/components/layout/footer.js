@@ -10,7 +10,7 @@ const footerLinks = [
   },
   {
     name: 'GitHub',
-    href: 'https://github.com/pmndrs',
+    href: 'https://github.com/pmndrs/market',
     icon: (props) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
@@ -85,7 +85,7 @@ const Footer = () => {
           ))}
         </div>
         <div className='mt-8 md:mt-0 md:order-1'>
-          <p className='text-base text-center text-gray-400'>
+          <p className='text-base text-center text-gray-500'>
             &copy; {new Date().getFullYear()} pmndrs.
           </p>
         </div>

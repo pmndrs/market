@@ -1,70 +1,32 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stage } from '@react-three/drei'
-import { Suspense, useRef, useLayoutEffect } from 'react'
-import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
+import { OrbitControls, Stage, useGLTF } from '@react-three/drei'
+import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { useControls } from 'leva'
-import { useAsset } from 'use-asset'
-import useStore from '@/helpers/store'
+import { lightControls, defaultControls } from './controls'
 
-const Model = ({ buffer }) => {
+const Model = ({ file }) => {
   const ref = useRef()
+  const controls = useControls({
+    ...defaultControls,
+    wireframe: false,
+    ...lightControls,
+  })
 
-  const controls = useControls(
-    {
-      autoRotate: true,
-      contactShadow: true,
-      intensity: {
-        value: 1,
-        min: 0,
-        max: 2,
-        step: 0.1,
-        label: 'light intensity',
-      },
-      preset: {
-        value: 'rembrandt',
-        options: ['rembrandt', 'portrait', 'upfront', 'soft'],
-      },
-      environment: {
-        value: 'city',
-        options: [
-          '',
-          'sunset',
-          'dawn',
-          'night',
-          'warehouse',
-          'forest',
-          'apartment',
-          'studio',
-          'city',
-          'park',
-          'lobby',
-        ],
-      },
-    },
-    { collapsed: true }
-  )
-
-  const scene = useAsset(
-    async ([buffer]) => {
-      const gltfLoader = new GLTFLoader()
-      const dracoloader = new DRACOLoader()
-      dracoloader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
-      gltfLoader.setDRACOLoader(dracoloader)
-      gltfLoader.setMeshoptDecoder(MeshoptDecoder)
-      const result = await new Promise((resolve, reject) =>
-        gltfLoader.parse(buffer, '', resolve, reject)
-      )
-      useStore.setState({ parsedBuffer: result })
-      return result.scenes[0]
-    },
-    [buffer]
-  )
+  const { scene } = useGLTF(file)
 
   useLayoutEffect(() => {
     void scene.traverse(
       (obj) => obj.isMesh && (obj.castShadow = obj.receiveShadow = true)
     )
   }, [scene])
+
+  useEffect(() => {
+    scene.traverse((obj) => {
+      if (obj.isMesh && obj.material) {
+        obj.material.wireframe = controls.wireframe
+      }
+    })
+  }, [scene, controls.wireframe])
 
   return (
     <>
@@ -92,7 +54,6 @@ export default function ModelComponent(props) {
       camera={{ position: [0, 0, 150], fov: 50 }}
     >
       <color attach='background' color='white' />
-      <ambientLight intensity={0.25} />
       <Suspense fallback={null}>
         <Model {...props} />
       </Suspense>

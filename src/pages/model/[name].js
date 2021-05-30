@@ -1,79 +1,63 @@
 import useStore from '@/helpers/store'
 import dynamic from 'next/dynamic'
 import Layout from '@/components/layout/'
-import ModelInfo from '../../components/ModelInfo'
+import AssetInfo from '../../components/AssetInfo'
 import { useEffect } from 'react'
-import { Leva } from 'leva'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import NextAndPrev from '@/components/NextAndPrev'
+import Error from '../404'
+import Stats from '@/components/info/Stats'
+import FavoriteButton from '@/components/FavoriteButton'
+import Comments from '@/components/comments'
 
 const Viewer = dynamic(() => import('@/components/canvas/Model'), {
   ssr: false,
 })
 
-const Page = ({ title, model, creator, team }) => {
+const Page = ({ title, model, notFound }) => {
+  const { user } = useStore()
   useEffect(() => {
     useStore.setState({ title })
   }, [title])
+  if (notFound) return <Error />
 
   return (
     <Layout title={title}>
-      <main className='my-10 grid sm:grid-cols-3 gap-x-4 gap-y-8'>
-        <div className='min-w-full min-h-full col-span-2'>
-          <Viewer buffer={model.buffer} />
+      <main className='block my-10 sm:grid sm:grid-cols-3 gap-x-4 gap-y-8'>
+        <div className='relative min-w-full min-h-full col-span-2'>
+          <div className='absolute z-10 right-5 scale-150 top-5 transform'>
+            {user && <FavoriteButton asset={model} />}
+          </div>
+          <Viewer {...model} />
         </div>
-        <ModelInfo model={model} creator={creator} team={team} />
+        <AssetInfo {...model} />
       </main>
+      <Stats stats={model.stats} size={model.size} />
       <NextAndPrev {...model} />
+      <Comments id={model.id} />
     </Layout>
   )
 }
 
 export default Page
 
-function fetchJSON(url) {
-  return fetch(`${API_ENDPOINT}/${url}`)
-    .then((data) => data.json())
-    .catch((err) => {
-      console.log(err)
-    })
-}
+export async function getServerSideProps({ params }) {
+  try {
+    const model = await fetch(
+      `${API_ENDPOINT}/models/${params.name}`
+    ).then((rsp) => rsp.json())
 
-export async function getStaticProps({ params }) {
-  const buffer = await fetch(
-    `${API_ENDPOINT}/models/${params.name}/buffer`
-  ).then((data) => data.text())
-
-  const model = await fetchJSON(`/models/${params.name}`)
-
-  const creator =
-    typeof model.creator === 'string'
-      ? await fetchJSON(`/creators/${model.creator}`)
-      : model.creator
-      
-  const team =
-    typeof model.team === 'string'
-      ? await fetchJSON(`/teams/${model.team}`)
-      : (model.team || null)
-
-  return {
-    props: {
-      model: {
-        ...model,
-        buffer,
+    return {
+      props: {
+        model,
+        title: model.name,
       },
-      creator,
-      team,
-      title: model.name,
-    },
-  }
-}
-
-export async function getStaticPaths() {
-  const data = await fetch(`${API_ENDPOINT}/models/paths`)
-  const paths = await data.json()
-  return {
-    paths,
-    fallback: false,
+    }
+  } catch {
+    return {
+      props: {
+        notFound: true,
+      },
+    }
   }
 }

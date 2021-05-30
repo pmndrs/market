@@ -1,13 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import FavoriteButton from './FavoriteButton'
-import { API_ENDPOINT } from '@/helpers/constants/api'
 import Tippy from '@tippyjs/react'
 import { getMaterialSize } from '@/helpers/getMaterialSize'
 import useStore from '@/helpers/store'
 
-const HDRI = (asset) => {
+const Asset = (asset) => {
   const user = useStore((store) => store.user)
+
   return (
     <li className='relative'>
       <Link
@@ -20,11 +20,31 @@ const HDRI = (asset) => {
               {asset.category}
             </span>{' '}
             <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
-              <img
-                src={`${API_ENDPOINT}${asset.thumbnail}`}
-                alt=''
-                className='object-cover pointer-events-none group-hover:opacity-75'
-              />
+              {asset.unprocessed ? (
+                <div className='relative group-hover:opacity-75'>
+                  <img
+                    src='/bg.jpg'
+                    alt=''
+                    className='absolute object-cover top-[-30px]'
+                  />
+                  <img
+                    src={`${asset.thumbnail}`}
+                    alt={asset.name}
+                    style={{
+                      transform: 'scale(1.5) translateY(-36%)',
+                    }}
+                    loading='lazy'
+                    className='absolute z-10 min-w-full min-h-[280px]'
+                  />
+                </div>
+              ) : (
+                <img
+                  src={`${asset.thumbnail}`}
+                  alt={asset.name}
+                  loading='lazy'
+                  className='object-cover pointer-events-none group-hover:opacity-75'
+                />
+              )}
             </div>
           </div>
           <div className='flex items-end justify-between'>
@@ -60,4 +80,4 @@ const HDRI = (asset) => {
   )
 }
 
-export default HDRI
+export default Asset

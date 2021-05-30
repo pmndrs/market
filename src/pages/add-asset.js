@@ -3,11 +3,8 @@ import AddMatcap from '@/components/AddAsset/Matcap'
 import AddModel from '@/components/AddAsset/Model'
 import AddPBR from '@/components/AddAsset/PBR'
 import Layout from '@/components/layout/'
+import classNames from '@/helpers/classNames'
 import { useState } from 'react'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 const AddAsset = () => {
   const [selectedTab, setSelectedTab] = useState('models')

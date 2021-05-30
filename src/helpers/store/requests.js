@@ -7,16 +7,21 @@ const useStore = create((set, get) => {
     setRequests: (requests) => {
       set({ requests })
     },
-    submitRequest: async ({ request, description, category = 'Model' }) => {
-      const user = get().user
+    submitRequest: async ({
+      request,
+      description = '',
+      category = 'Model',
+      user,
+    }) => {
       const requests = get().requests
       if (!user) return null
+
       const newRequest = {
         request,
-        description,
-        category,
-        upvotes: [user.id],
-        user_id: user.id,
+        description: description || '',
+        category: category || 'Model',
+        upvotes: [user?.id],
+        user_id: user?.id,
         created: new Date(),
       }
       set({ requests: [{ id: 'fake-id', ...newRequest }, ...requests] })
@@ -27,12 +32,11 @@ const useStore = create((set, get) => {
         set({ requests })
       }
     },
-    vote: async (id, upvotes) => {
+    vote: async (id, upvotes, userId) => {
       const requests = get().requests
-      const user = get().user
       const newRequests = requests.map((req) => {
         if (req.id === id) {
-          return { ...req, upvotes: [...req.upvotes, user.id] }
+          return { ...req, upvotes: [...req.upvotes, userId] }
         }
 
         return req
@@ -40,7 +44,7 @@ const useStore = create((set, get) => {
       set({ requests: newRequests })
       const { error } = await supabase
         .from('requests')
-        .update({ upvotes: [...upvotes, user.id] })
+        .update({ upvotes: [...upvotes, userId] })
         .match({ id })
 
       if (error) {

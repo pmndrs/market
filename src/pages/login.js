@@ -2,8 +2,9 @@ import { supabase } from '../helpers/initSupabase'
 import Layout from '@/components/layout'
 import { useRouter } from 'next/router'
 
-const Index = ({ user, authView }) => {
+const Index = ({ user }) => {
   const router = useRouter()
+
   if (user) {
     router.push('/')
   }

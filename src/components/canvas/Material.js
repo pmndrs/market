@@ -9,31 +9,29 @@ import {
 } from '@react-three/drei'
 import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
-import { API_ENDPOINT } from '@/helpers/constants/api'
+import { defaultControls, lightControls } from './controls'
 
 const PBR = ({ maps, displacementScale }) => {
-  const texturesLoader = useTexture([
-    ...Object.values(maps).map((link) => `${API_ENDPOINT}${link}`),
-  ])
+  const texturesLoader = useTexture([...Object.values(maps)])
   const textures = Object.keys(maps).reduce((acc, curr, i) => {
     acc[curr] = texturesLoader[i]
 
     return acc
   }, {})
-
   return (
     <Sphere args={[1, 200, 200]}>
       <meshPhysicalMaterial
         {...textures}
         side={THREE.DoubleSide}
         displacementScale={displacementScale}
+        metalness={textures.metalnessMap ? 1 : 0}
       />
     </Sphere>
   )
 }
 
-const MatCap = ({ url }) => {
-  const [matcap] = useTexture([API_ENDPOINT + url])
+const MatCap = ({ file }) => {
+  const [matcap] = useTexture([file])
   const group = useRef()
   const { nodes } = useGLTF('/suzanne.gltf')
 
@@ -52,55 +50,25 @@ const MatCap = ({ url }) => {
   )
 }
 
-const Material = ({ url, category, maps }) => {
+const Material = ({ file, category, maps }) => {
   const ref = useRef()
-  const lightControls =
+  const otherControls =
     category === 'matcaps'
       ? {}
       : {
           displacement: {
-            value: 0.1,
+            value: 0.02,
             min: 0,
             max: 1,
-            step: 0.1,
+            step: 0.05,
             label: 'displacement scale',
           },
-          intensity: {
-            value: 0.1,
-            min: 0,
-            max: 2,
-            step: 0.1,
-            label: 'light intensity',
-          },
-          preset: {
-            value: 'rembrandt',
-            options: ['rembrandt', 'portrait', 'upfront', 'soft'],
-          },
-          environment: {
-            value: 'city',
-            options: [
-              '',
-              'sunset',
-              'dawn',
-              'night',
-              'warehouse',
-              'forest',
-              'apartment',
-              'studio',
-              'city',
-              'park',
-              'lobby',
-            ],
-          },
+          ...lightControls,
         }
-  const controls = useControls(
-    {
-      autoRotate: true,
-      contactShadow: true,
-      ...lightControls,
-    },
-    { collapsed: true }
-  )
+  const controls = useControls({
+    ...defaultControls,
+    ...otherControls,
+  })
 
   return (
     <>
@@ -113,7 +81,7 @@ const Material = ({ url, category, maps }) => {
         shadowBias={-0.001}
       >
         {category === 'matcaps' ? (
-          <MatCap url={url} />
+          <MatCap file={file} />
         ) : (
           <PBR maps={maps} displacementScale={controls.displacement} />
         )}
