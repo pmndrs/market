@@ -16,6 +16,7 @@ import Creators from './info/Creators'
 import Category from './info/Category'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/router'
+import Rating from './info/rating'
 
 const assetTabHeader = [
   { label: 'Model', value: 'model' },
@@ -143,6 +144,7 @@ const AssetInfo = (asset) => {
           />
         )}
         <Category category={asset.category} path={`${assetType.value}s`} />
+        <Rating id={asset.id} />
         <div className='my-4'>
           <Tabs tabs={tabs} />
 

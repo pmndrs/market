@@ -5,7 +5,6 @@ import AssetInfo from '@/components/AssetInfo'
 import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
 import NextAndPrev from '@/components/NextAndPrev'
-import Rating from '@/components/rating'
 import Error from '../404'
 import FavoriteButton from '@/components/FavoriteButton'
 import Comments from '@/components/comments'
@@ -32,7 +31,6 @@ const Page = ({ title, hdri, notFound }) => {
         <AssetInfo {...hdri} />
       </main>
       <NextAndPrev {...hdri} />
-      <Rating id={hdri.id} />
       <Comments id={hdri.id} />
     </Layout>
   )

@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import useStore from '@/helpers/store'
 import useRatingStore from '@/helpers/store/rating'
 import Star from './Star'
 
-const numStars = 5
+const KEY = 'star-id'
+const NUM_STARS = 5
+
 const StarRating = ({ id }) => {
   const { user } = useStore()
   const { rating, addRating } = useRatingStore()
@@ -12,13 +14,13 @@ const StarRating = ({ id }) => {
 
   const handleHover = (e) => {
     let starId = 0
-    if (e && e.target && e.target.getAttribute('star-id')) {
-      starId = e.target.getAttribute('star-id')
+    if (e && e.target && e.target.getAttribute(KEY)) {
+      starId = e.target.getAttribute(KEY)
     }
     setSelection(starId)
   }
 
-  const handleClick = async (e) => {
+  const handleClick = async () => {
     setUpdating(true)
     await addRating(selection, user, id)
     setUpdating(false)
@@ -26,12 +28,12 @@ const StarRating = ({ id }) => {
 
   return (
     <div
-      className='text-center'
+      className='flex ml-1'
       onMouseOver={handleHover}
       onMouseOut={() => (!updating ? handleHover(null) : false)}
       onClick={handleClick}
     >
-      {[...Array(+numStars).keys()].map((n) => {
+      {[...Array(+NUM_STARS).keys()].map((n) => {
         return (
           <Star
             key={`${id}-star-${n}`}

@@ -29,7 +29,7 @@ const useRatingStore = create((set, get) => {
       try {
         const newRating = {
           user_id: user.profile.id,
-          rating: userRating,
+          rating: userRating.toString(),
           asset_id: assetId,
         }
 
@@ -56,6 +56,7 @@ const useRatingStore = create((set, get) => {
         await get().getRatings(assetId)
         toast.success('Rating updated successfully')
       } catch (e) {
+        console.log(e)
         toast.error('There has been a problem adding your rating')
       }
     },
