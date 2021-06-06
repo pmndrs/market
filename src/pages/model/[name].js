@@ -28,7 +28,7 @@ const Page = ({ title, model, notFound }) => {
           <div className='absolute z-10 right-5 scale-150 top-5 transform'>
             {user && <FavoriteButton asset={model} />}
           </div>
-          <Viewer {...model} />
+          <Viewer {...model} url={model.file} />
         </div>
         <AssetInfo {...model} />
       </main>
@@ -43,9 +43,9 @@ export default Page
 
 export async function getServerSideProps({ params }) {
   try {
-    const model = await fetch(
-      `${API_ENDPOINT}/models/${params.name}`
-    ).then((rsp) => rsp.json())
+    const model = await fetch(`${API_ENDPOINT}/models/${params.name}`).then(
+      (rsp) => rsp.json()
+    )
 
     return {
       props: {

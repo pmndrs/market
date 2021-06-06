@@ -26,7 +26,7 @@ const Page = ({ title, material, notFound }) => {
           <div className='absolute z-10 right-5 scale-150 top-5 transform'>
             {user && <FavoriteButton asset={material} />}
           </div>
-          <Viewer {...material} />
+          <Viewer {...material} category={material.category} id={material.id} />
         </div>
         <AssetInfo {...material} />
       </main>

@@ -5,7 +5,7 @@ const Creators = ({ creator, team }) => (
   <>
     <div>
       <span className='text-gray-600'>Created by: </span>
-      {!creator.page ? (
+      {!creator.url ? (
         Array.isArray(creator) ? (
           creator.map((c, i) => (
             <>
@@ -26,7 +26,7 @@ const Creators = ({ creator, team }) => (
     {team && (
       <div>
         <span className='text-gray-600'>Team: </span>
-        {!team.page ? (
+        {!team.url ? (
           <a
             target='_blank'
             href={team.link}
