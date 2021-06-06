@@ -1,4 +1,5 @@
 const Stats = ({ stats, size }) => {
+  if (Object.keys(stats).length === 0) return null
   const items = [
     { name: 'Model Size', stat: size },
     { name: 'Meshes', stat: stats.meshes.properties.length },
