@@ -26,7 +26,7 @@ const Page = ({ title, hdri, notFound }) => {
           <div className='absolute z-10 right-5 scale-150 top-5 transform'>
             {user && <FavoriteButton asset={hdri} />}
           </div>{' '}
-          <Viewer {...hdri} />
+          <Viewer {...hdri} id={hdri.id} />
         </div>
         <AssetInfo {...hdri} />
       </main>

@@ -9,7 +9,7 @@ const NextAndPrev = (asset) => {
             Previous
           </h5>
           <div className='text-xl capitalize'>
-            <Link href={asset.prev.url}>
+            <Link href={'/' + asset.prev.id}>
               <a className='text-gray-900'>{asset.prev.name}</a>
             </Link>
           </div>
@@ -22,7 +22,7 @@ const NextAndPrev = (asset) => {
             Next
           </h5>
           <div className='text-xl capitalize'>
-            <Link href={asset.next.url}>
+            <Link href={'/' + asset.next.id}>
               <a className='text-gray-900'>{asset.next.name}</a>
             </Link>
           </div>
