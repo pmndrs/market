@@ -32,7 +32,7 @@ const Page = ({ title, model, notFound }) => {
         </div>
         <AssetInfo {...model} />
       </main>
-      <Stats stats={model.stats} size={model.size} />
+      {model.stats && <Stats stats={model.stats} size={model.size} />}
       <NextAndPrev {...model} />
       <Comments id={model.id} />
     </Layout>
