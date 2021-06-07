@@ -1,0 +1,16 @@
+import { useState } from 'react'
+import Step1 from './Step1'
+import Step2 from './Step2'
+
+const AddAsset = () => {
+  const [step, setStep] = useState(2)
+
+  if (step === 1) {
+    return <Step1 onClick={() => setStep(2)} />
+  }
+  if (step === 2) {
+    return <Step2 onClick={() => setStep(3)} />
+  }
+}
+
+export default AddAsset

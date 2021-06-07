@@ -94,6 +94,7 @@ function MyApp({ Component, pageProps }) {
 
       <Component user={user} session={session} {...pageProps} />
       <Toaster />
+      <script src='https://www.gstatic.com/draco/v1/decoders/draco_decoder.js' />
     </>
   )
 }

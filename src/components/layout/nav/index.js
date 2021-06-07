@@ -31,7 +31,7 @@ const Nav = () => {
                 <div className='items-center hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8'>
                   {Object.values(dropdownMenus).map((menu, i) => (
                     <PopOverMenu
-                      key={menu}
+                      key={i}
                       menu={menu}
                       title={Object.keys(dropdownMenus)[i]}
                     />
