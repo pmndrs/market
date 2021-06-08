@@ -16,10 +16,22 @@ const Asset = (asset) => {
       >
         <a>
           <div className='relative'>
+            {!asset.approved && (
+              <div className='absolute top-[50%] left-[50%] z-[100] text-gray-900 transform translate-x-[-50%] translate-y-[-50%] w-full text-center'>
+                Pending Approval
+              </div>
+            )}
             <span className='absolute right-0 z-10 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>
               {asset.category}
             </span>{' '}
-            <div className='block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'>
+            <div
+              className={
+                'block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'
+              }
+              style={{
+                opacity: asset.approved ? 1 : 0.5,
+              }}
+            >
               {asset.unprocessed ? (
                 <div className='relative group-hover:opacity-75'>
                   <img

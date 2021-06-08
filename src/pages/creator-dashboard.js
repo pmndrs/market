@@ -19,7 +19,6 @@ export default Assets
 
 export async function getServerSideProps({ req }) {
   const { user } = await supabase.auth.api.getUserByCookie(req)
-  console.log(user)
   if (!user) {
     return {
       redirect: {
