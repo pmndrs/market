@@ -10,6 +10,7 @@ import { supabase } from '@/helpers/initSupabase'
 import useStore from '@/helpers/store'
 import CreatorSelect from './CreatorSelect'
 import TeamSelect from './TeamSelect'
+import Button from '../Button'
 
 const Step2 = ({ onClick }) => {
   const assetState = useAddAssetStore()
@@ -35,13 +36,9 @@ const Step2 = ({ onClick }) => {
 
           <TeamSelect />
           <div className='flex justify-end'>
-            <button
-              onClick={onClick}
-              type='submit'
-              className='ml-3 inline-flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-            >
-              Next Step
-            </button>
+            <Button onClick={onClick} disabled={!assetState.model}>
+              Submit Asset
+            </Button>
           </div>
         </div>
       </form>

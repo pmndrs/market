@@ -15,14 +15,17 @@ const assetTypes = [
   {
     name: 'HDRI',
     url: 'hdris',
+    disabled: true,
   },
   {
     name: 'PBR Material',
     url: 'materials',
+    disabled: true,
   },
   {
     name: 'Matcap',
     url: 'materials',
+    disabled: true,
   },
 ]
 
@@ -48,6 +51,7 @@ const useAddAssetStore = create((set, get) => {
     license: licenses[0],
     category: '',
     slug: '',
+    slugAvailable: true,
     availableCats: [],
     thumbnail: '',
     stats: {},
@@ -98,7 +102,7 @@ const useAddAssetStore = create((set, get) => {
     createAsset: async () => {
       const state = get()
       const data = {
-        _id: `${state.selectedType.url}/${state.slug}`,
+        _id: `${state.selectedType.url.slice(0, -1)}/${state.slug}`,
         name: state.name,
         category: state.category,
         stats: state.stats,

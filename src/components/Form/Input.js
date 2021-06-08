@@ -1,4 +1,4 @@
-const Input = ({ label, id, value, onChange }) => {
+const Input = ({ label, id, value, onChange, Error }) => {
   return (
     <div>
       {label && (
@@ -16,6 +16,7 @@ const Input = ({ label, id, value, onChange }) => {
           onChange={(e) => onChange(e.target.value)}
         />
       </div>
+      {Error && <Error />}
     </div>
   )
 }

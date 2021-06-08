@@ -11,6 +11,7 @@ const VerticalSelect = ({ options, value, onChange, label }) => {
       <div className='mt-1 bg-white rounded-md shadow-sm -space-y-px'>
         {options.map((setting, settingIdx) => (
           <RadioGroup.Option
+            disabled={setting.disabled}
             key={setting.name}
             value={setting}
             className={({ checked }) =>
@@ -20,7 +21,8 @@ const VerticalSelect = ({ options, value, onChange, label }) => {
                   ? 'rounded-bl-md rounded-br-md'
                   : '',
                 checked ? 'bg-blue-50 border-blue-200 z-10' : 'border-gray-200',
-                'relative border p-4 flex cursor-pointer focus:outline-none'
+                'relative border p-4 flex cursor-pointer focus:outline-none',
+                setting.disabled ? 'opacity-30 cursor-default' : ''
               )
             }
           >
@@ -32,7 +34,8 @@ const VerticalSelect = ({ options, value, onChange, label }) => {
                       ? 'bg-blue-600 border-transparent'
                       : 'bg-white border-gray-300',
                     active ? 'ring-2 ring-offset-2 ring-blue-500' : '',
-                    'h-4 w-4 mt-0.5 cursor-pointer rounded-full border flex items-center justify-center'
+                    'h-4 w-4 mt-0.5 cursor-pointer rounded-full border flex items-center justify-center',
+                    setting.disabled ? 'opacity-30 cursor-default' : ''
                   )}
                   aria-hidden='true'
                 >

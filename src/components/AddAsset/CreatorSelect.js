@@ -1,6 +1,7 @@
 import { supabase } from '@/helpers/initSupabase'
 import useAddAssetStore from '@/helpers/store/addAsset'
 import { useEffect, useState } from 'react'
+import Input from '../Form/Input'
 
 const CreatorSelect = () => {
   const assetState = useAddAssetStore()

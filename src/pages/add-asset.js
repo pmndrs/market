@@ -7,7 +7,7 @@ const Page = () => {
 
   if (!user) return null
   return (
-    <Layout title={'Add your own asset'}>
+    <Layout title={'Add your own asset'} center>
       <AddAsset />
     </Layout>
   )

@@ -7,6 +7,7 @@ function FileDrop({
   showPreview = true,
   maxSize = 1000000,
   label,
+  description,
 }) {
   const [preview, setPreview] = useState(null)
   const [success, setSuccess] = useState(false)
@@ -67,6 +68,11 @@ function FileDrop({
       >
         {label}
       </label>
+      {description && (
+        <span className='block text-xs font-medium text-gray-500 my-1'>
+          {description}
+        </span>
+      )}
       <div
         {...getRootProps({
           className:

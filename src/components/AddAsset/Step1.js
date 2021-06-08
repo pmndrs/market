@@ -6,6 +6,8 @@ import FileDrop from '@/components/Form/FileDrop'
 import { slugify } from '@/helpers/slugify'
 import useAddAssetStore from '@/helpers/store/addAsset'
 import FancySelect from '../Form/FancySelect'
+import { supabase } from '@/helpers/initSupabase'
+import Button from '../Button'
 
 const Step1 = ({ onClick }) => {
   const assetState = useAddAssetStore()
@@ -16,9 +18,32 @@ const Step1 = ({ onClick }) => {
 
   useEffect(() => {
     if (assetState.name) {
-      useAddAssetStore.setState({ slug: slugify(assetState.name) })
+      const slug = slugify(assetState.name)
+
+      useAddAssetStore.setState({ slug })
+      checkAvailability(slug)
     }
   }, [assetState.name])
+
+  const checkAvailability = async (slug) => {
+    const type = assetState.selectedType.url.slice(0, -1)
+
+    const { data } = await supabase
+      .from(assetState.selectedType.url)
+      .select('id')
+      .filter('_id', 'eq', `${type}/${slug}`)
+
+    useAddAssetStore.setState({ slugAvailable: !!!data.length })
+  }
+
+  const updateSlug = (slug) => {
+    useAddAssetStore.setState({ slug })
+    if (slug) {
+      checkAvailability(slug)
+    } else {
+      useAddAssetStore.setState({ slugAvailable: false })
+    }
+  }
 
   return (
     <main className='max-w-lg mx-auto pt-10 pb-12 px-4 lg:pb-16'>
@@ -40,7 +65,14 @@ const Step1 = ({ onClick }) => {
             key='slug'
             label='Slug'
             value={assetState.slug}
-            onChange={(slug) => useAddAssetStore.setState({ slug })}
+            onChange={updateSlug}
+            Error={() => {
+              return !assetState.slugAvailable ? (
+                <p className='mt-2 text-sm text-red-600' id='email-error'>
+                  The slug is not available
+                </p>
+              ) : null
+            }}
           />
 
           <VerticalSelect
@@ -58,17 +90,33 @@ const Step1 = ({ onClick }) => {
 
           <FancySelect />
           <FileDrop
+            description={
+              <>
+                To create a render a resolution of 420*320px is enough and you
+                can find the starter blender file we used in most of our shots{' '}
+                <a
+                  target='_blank'
+                  href='https://github.com/pmndrs/market-assets/blob/main/starter.blend'
+                >
+                  in the repo
+                </a>
+                , please feel free to create your own renders.
+              </>
+            }
             label=' Upload your thumbnail'
             onChange={assetState.uploadFile}
           />
           <div className='flex justify-end'>
-            <button
+            <Button
+              disabled={
+                !assetState.slugAvailable ||
+                !assetState.category ||
+                !assetState.thumbnail
+              }
               onClick={onClick}
-              type='submit'
-              className='ml-3 inline-flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
             >
               Next Step
-            </button>
+            </Button>
           </div>
         </div>
       </form>
