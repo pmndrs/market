@@ -2,6 +2,8 @@ import toast from 'react-hot-toast'
 import create from 'zustand'
 import { supabase } from '../initSupabase'
 import { getStats } from '../getStats'
+import useStore from '.'
+import { slugify } from '../slugify'
 const assetTypes = [
   {
     name: 'Model',
@@ -49,6 +51,15 @@ const useAddAssetStore = create((set, get) => {
     model: null,
     creatorMe: true,
     creator: {
+      slug: '',
+      name: '',
+      link: '',
+      imageLink: '',
+      donateLink: '',
+    },
+    partOfTeam: false,
+    team: {
+      slug: '',
       name: '',
       link: '',
       imageLink: '',
@@ -81,6 +92,19 @@ const useAddAssetStore = create((set, get) => {
       set({ model: file, stats })
     },
     createAsset: async () => {
+      const { user } = useStore()
+
+      if (get().creatorMe) {
+        set({
+          creator: {
+            slug: slugify(user.profile.name),
+            name: user.profile.name,
+            link: '',
+            imageLink: user.profile.avatar,
+            donateLink: '',
+          },
+        })
+      }
       const { data: modelData } = await supabase.storage
         .from(get().selectedType.url)
         .upload(`${get().slug}/model.gltf`, get().model)
