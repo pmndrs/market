@@ -45,13 +45,8 @@ Some needs to know:
 
 ## Roadmap
 
-- comments
-- ratings
-- allow aseet uploads
 - components category
 - npm package with this
-- Creator pages
-- Team Pages
 - material editor
 
 ## Appendix

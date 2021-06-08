@@ -26,8 +26,8 @@ const Step3 = () => {
           <p className='mt-4 text-sm max-w-[300px] m-auto '>
             Your asset will be reviewed to be a part of the website, you can
             check the status in{' '}
-            <Link href={`/creator-portal`}>
-              <a>your creator portal</a>
+            <Link href={`/creator-dashboard`}>
+              <a>your creator dashboard</a>
             </Link>
             .
           </p>
