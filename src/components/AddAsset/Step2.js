@@ -27,6 +27,97 @@ const Step2 = ({ onClick }) => {
             onChange={assetState.uploadModel}
             label='Upload your model (max 5mb)'
           />
+          <div>
+            <label
+              htmlFor='upload'
+              className='block text-sm font-medium text-gray-700'
+            >
+              Creator
+            </label>
+
+            <div className='flex items-center mt-2'>
+              <input
+                onChange={(e) =>
+                  useAddAssetStore.setState({ creatorMe: e.target.checked })
+                }
+                checked={assetState.creatorMe}
+                id='creator_me'
+                name='creator_me'
+                type='checkbox'
+                className='h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded'
+              />
+              <label
+                htmlFor='creator_me'
+                className='ml-2 block text-sm text-gray-900'
+              >
+                I am the creator
+              </label>
+            </div>
+            {!assetState.creatorMe && (
+              <>
+                <div className='mt-4'>
+                  <Input
+                    key='creator-name'
+                    label='Name'
+                    value={assetState.creator.name}
+                    onChange={(name) =>
+                      useAddAssetStore.setState({
+                        creator: {
+                          ...assetState.creator,
+                          name,
+                        },
+                      })
+                    }
+                  />
+                </div>
+                <div className='mt-2'>
+                  <Input
+                    key='creator-link'
+                    label='Link'
+                    value={assetState.creator.link}
+                    onChange={(link) =>
+                      useAddAssetStore.setState({
+                        creator: {
+                          ...assetState.creator,
+                          link,
+                        },
+                      })
+                    }
+                  />
+                </div>{' '}
+                <div className='mt-2'>
+                  <Input
+                    key='creator-imageLink'
+                    label='Image Link'
+                    value={assetState.creator.imageLink}
+                    onChange={(imageLink) =>
+                      useAddAssetStore.setState({
+                        creator: {
+                          ...assetState.creator,
+                          imageLink,
+                        },
+                      })
+                    }
+                  />
+                </div>{' '}
+                <div className='mt-2'>
+                  <Input
+                    key='creator-donateLink'
+                    label='Donate Link'
+                    value={assetState.creator.donateLink}
+                    onChange={(donateLink) =>
+                      useAddAssetStore.setState({
+                        creator: {
+                          ...assetState.creator,
+                          donateLink,
+                        },
+                      })
+                    }
+                  />
+                </div>
+              </>
+            )}
+          </div>
           <div className='flex justify-end'>
             <button
               onClick={onClick}

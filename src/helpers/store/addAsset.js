@@ -1,6 +1,7 @@
 import toast from 'react-hot-toast'
 import create from 'zustand'
 import { supabase } from '../initSupabase'
+import { getStats } from '../getStats'
 const assetTypes = [
   {
     name: 'Model',
@@ -44,30 +45,49 @@ const useAddAssetStore = create((set, get) => {
     slug: '',
     availableCats: [],
     thumbnail: '',
+    stats: {},
+    model: null,
+    creatorMe: true,
+    creator: {
+      name: '',
+      link: '',
+      imageLink: '',
+      donateLink: '',
+    },
     uploadFile: async (file) => {
       const slug = get().slug
       if (!slug) {
         toast.error('Before Uploading you need to fill in the slug')
         return
       }
-      const { data } = await supabase.storage
-        .from(get().selectedType.url)
-        .upload(`${slug}/thumbnail.png`, file)
 
-      set({ thumbnail: data })
+      set({ thumbnail: file })
     },
     uploadModel: async (file) => {
       const slug = get().slug
-      // if (!slug) {
-      //   toast.error('Before Uploading you need to fill in the slug')
-      //   return
-      // }
-      const { data } = await supabase.storage
-        .from(get().selectedType.url)
-        .upload(`${'aaa'}/model.gltf`, file)
-      console.log(data)
+      if (!slug) {
+        toast.error('Before Uploading you need to fill in the slug')
+        return
+      }
+      const reader = new FileReader()
+      const text = await new Promise((resolve, reject) => {
+        reader.onload = (event) => resolve(event.target.result)
+        reader.onerror = (error) => reject(error)
+        reader.readAsText(file)
+      })
+      const json = JSON.parse(text)
+      const stats = getStats(json)
 
-      set({ thumbnail: data })
+      set({ model: file, stats })
+    },
+    createAsset: async () => {
+      const { data: modelData } = await supabase.storage
+        .from(get().selectedType.url)
+        .upload(`${get().slug}/model.gltf`, get().model)
+
+      const { data: thumbnailData } = await supabase.storage
+        .from(get().selectedType.url)
+        .upload(`${get().slug}/thumbnail.png`, get().thumbnail)
     },
   }
 })

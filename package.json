@@ -26,9 +26,9 @@
     ]
   },
   "dependencies": {
-
     "@badrap/bar-of-progress": "^0.1.2",
-
+    "@gltf-transform/core": "^0.11.3",
+    "@gltf-transform/functions": "^0.11.3",
     "@headlessui/react": "^1.2.0",
     "@heroicons/react": "^1.0.1",
     "@react-spring/web": "^9.2.1",
@@ -40,10 +40,8 @@
     "@tailwindcss/forms": "^0.3.2",
     "@tippyjs/react": "^4.2.5",
     "antd": "^4.16.1",
-
     "clipboard-copy": "^4.0.1",
     "date-fns": "^2.22.1",
-
     "file-saver": "^2.0.5",
     "jszip": "^3.6.0",
     "leva": "^0.9.10",

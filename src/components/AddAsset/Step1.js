@@ -43,43 +43,6 @@ const Step1 = ({ onClick }) => {
             onChange={(slug) => useAddAssetStore.setState({ slug })}
           />
 
-          <div className='space-y-2'>
-            <div className='space-y-1'>
-              <label
-                htmlFor='add_team_members'
-                className='block text-sm font-medium text-gray-700'
-              >
-                Add Team Members
-              </label>
-              <p id='add_team_members_helper' className='sr-only'>
-                Search by email address
-              </p>
-              <div className='flex'>
-                <div className='flex-grow'>
-                  <input
-                    type='text'
-                    name='add_team_members'
-                    id='add_team_members'
-                    className='block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border-gray-300 rounded-md'
-                    placeholder='Email address'
-                    aria-describedby='add_team_members_helper'
-                  />
-                </div>
-                <span className='ml-3'>
-                  <button
-                    type='button'
-                    className='bg-white inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-                  >
-                    <PlusIcon
-                      className='-ml-2 mr-1 h-5 w-5 text-gray-400'
-                      aria-hidden='true'
-                    />
-                    <span>Add</span>
-                  </button>
-                </span>
-              </div>
-            </div>
-          </div>
           <VerticalSelect
             value={assetState.selectedType}
             onChange={(s) => useAddAssetStore.setState({ selectedType: s })}
