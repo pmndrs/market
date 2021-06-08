@@ -83,7 +83,7 @@ function FileDrop({
         <input id='upload' {...getInputProps()} />
         <p className='p-0 m-0'>
           {!success
-            ? "Drag 'n' drop some files here, or click to select files"
+            ? "Drag 'n' drop a file here, or click a file"
             : 'Thank you'}
         </p>
       </div>
