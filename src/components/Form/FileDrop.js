@@ -9,6 +9,7 @@ function FileDrop({
   label,
 }) {
   const [preview, setPreview] = useState(null)
+  const [success, setSuccess] = useState(false)
   const {
     getRootProps,
     getInputProps,
@@ -21,6 +22,7 @@ function FileDrop({
     maxSize,
     multiple: false,
     onDrop: (acceptedFiles) => {
+      setSuccess(true)
       if (acceptedFiles && acceptedFiles[0]) {
         onChange(acceptedFiles[0])
         showPreview && setPreview(URL.createObjectURL(acceptedFiles[0]))
@@ -74,7 +76,9 @@ function FileDrop({
       >
         <input id='upload' {...getInputProps()} />
         <p className='p-0 m-0'>
-          Drag 'n' drop some files here, or click to select files
+          {!success
+            ? "Drag 'n' drop some files here, or click to select files"
+            : 'Thank you'}
         </p>
       </div>
       <aside className='flex flex-row flex-wrap mt-6'>{thumbs}</aside>

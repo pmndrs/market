@@ -29,7 +29,7 @@ const Step2 = ({ onClick }) => {
             accept='.gltf'
             showPreview={false}
             onChange={assetState.uploadModel}
-            label='Upload your model (max 5mb)'
+            label='Upload your model (max 5mb). Only GLTF files are accepted'
           />
           <CreatorSelect />
 

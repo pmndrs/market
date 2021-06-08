@@ -35,11 +35,6 @@ const useNav = () => {
       href: '/request',
       current: pathname === '/request',
     },
-    {
-      name: 'Submit an Asset',
-      href: '/add-asset',
-      current: pathname === '/add-asset',
-    },
   ]
 
   const mobileNav = [
@@ -62,11 +57,6 @@ const useNav = () => {
       name: 'Request an Asset',
       href: '/request',
       current: pathname === '/request',
-    },
-    {
-      name: 'Submit an Asset',
-      href: '/add-asset',
-      current: pathname === '/add-asset',
     },
   ]
 

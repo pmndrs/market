@@ -4,6 +4,9 @@ import { supabase } from '../initSupabase'
 import { getStats } from '../getStats'
 import useStore from '.'
 import { slugify } from '../slugify'
+import { getSize } from './formatSize'
+
+const url = 'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/'
 const assetTypes = [
   {
     name: 'Model',
@@ -88,30 +91,47 @@ const useAddAssetStore = create((set, get) => {
       })
       const json = JSON.parse(text)
       const stats = getStats(json)
+      const { size, highPoly } = getSize(file.size)
 
-      set({ model: file, stats })
+      set({ model: file, stats, size, highPoly })
     },
     createAsset: async () => {
-      const { user } = useStore()
-
-      if (get().creatorMe) {
+      const state = get()
+      const data = {
+        _id: `${state.selectedType.url}/${state.slug}`,
+        name: state.name,
+        category: state.category,
+        stats: state.stats,
+        license: state.license.value,
+        size: state.size,
+        highPoly: state.highPoly,
+        user_id: user.profile.id,
+      }
+      if (state.creatorMe) {
         set({
           creator: {
             slug: slugify(user.profile.name),
             name: user.profile.name,
-            link: '',
             imageLink: user.profile.avatar,
-            donateLink: '',
           },
         })
       }
       const { data: modelData } = await supabase.storage
-        .from(get().selectedType.url)
-        .upload(`${get().slug}/model.gltf`, get().model)
-
+        .from(state.selectedType.url)
+        .upload(`${state.slug}/model.gltf`, state.model)
+      const model = `${url}${modelData.Key}`
       const { data: thumbnailData } = await supabase.storage
-        .from(get().selectedType.url)
-        .upload(`${get().slug}/thumbnail.png`, get().thumbnail)
+        .from(state.selectedType.url)
+        .upload(`${state.slug}/thumbnail.png`, state.thumbnail)
+      const thumbnail = `${url}${thumbnailData.Key}`
+
+      console.log({
+        thumbnail,
+        model,
+        creator: state.creator,
+        team: state.partOfTeam ? state.team : null,
+        ...data,
+      })
     },
   }
 })
