@@ -11,7 +11,7 @@ const Input = ({ label, id, value, onChange, Error }) => {
           id={id}
           name={id}
           type='text'
-          className='block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300 rounded-md'
+          className='block w-full border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md'
           value={value}
           onChange={(e) => onChange(e.target.value)}
         />

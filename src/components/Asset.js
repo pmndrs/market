@@ -17,7 +17,7 @@ const Asset = (asset) => {
         <a>
           <div className='relative'>
             {!asset.approved && (
-              <div className='absolute top-[50%] left-[50%] z-[100] text-gray-900 transform translate-x-[-50%] translate-y-[-50%] w-full text-center'>
+              <div className='absolute w-full text-center text-gray-900 top-[50%] left-[50%] z-[100] transform translate-x-[-50%] translate-y-[-50%]'>
                 Pending Approval
               </div>
             )}

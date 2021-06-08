@@ -24,7 +24,7 @@ const Assets = ({ assets: starterAssets }) => {
             <Asset {...asset} />
             <Button
               onClick={() => approveAsset(asset._id, asset.id)}
-              className='bg-green-600 mt-4 w-full'
+              className='w-full mt-4 bg-green-600'
             >
               Approve
             </Button>

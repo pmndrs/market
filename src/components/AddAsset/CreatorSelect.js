@@ -1,4 +1,5 @@
 import { supabase } from '@/helpers/initSupabase'
+import { slugify } from '@/helpers/slugify'
 import useAddAssetStore from '@/helpers/store/addAsset'
 import { useEffect, useState } from 'react'
 import Input from '../Form/Input'
@@ -23,6 +24,7 @@ const CreatorSelect = () => {
         },
       })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assetState.creator.name])
 
   return (
@@ -43,11 +45,11 @@ const CreatorSelect = () => {
           id='creator_me'
           name='creator_me'
           type='checkbox'
-          className='h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded'
+          className='w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500'
         />
         <label
           htmlFor='creator_me'
-          className='ml-2 block text-sm text-gray-900'
+          className='block ml-2 text-sm text-gray-900'
         >
           I am the creator
         </label>
@@ -64,7 +66,7 @@ const CreatorSelect = () => {
             <select
               id='creator'
               name='creator'
-              className='mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+              className='block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
               value={assetState.creatorID}
               onChange={(e) =>
                 useAddAssetStore.setState({
@@ -74,12 +76,14 @@ const CreatorSelect = () => {
             >
               <option>Please select a creator</option>
               {creators.map((creator) => (
-                <option value={creator.id}>{creator.name}</option>
+                <option value={creator.id} key={creator.id}>
+                  {creator.name}
+                </option>
               ))}
             </select>
           </div>
           <div className='mt-4'>
-            <span className='block text-sm font-medium text-gray-700 mb-2'>
+            <span className='block mb-2 text-sm font-medium text-gray-700'>
               Or create a new one
             </span>
             <Input

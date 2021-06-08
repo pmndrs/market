@@ -175,7 +175,6 @@ const useAddAssetStore = create((set, get) => {
         license: state.license.value,
         user_id: user.profile.id,
         approved: false,
-        user_id: user.profile.id,
         size: state.size,
       }
       set({ loadingText: 'Uploading your model' })

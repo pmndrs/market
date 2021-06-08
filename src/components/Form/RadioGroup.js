@@ -39,9 +39,9 @@ const VerticalSelect = ({ options, value, onChange, label }) => {
                   )}
                   aria-hidden='true'
                 >
-                  <span className='rounded-full bg-white w-1.5 h-1.5' />
+                  <span className='bg-white rounded-full w-1.5 h-1.5' />
                 </span>
-                <div className='ml-3 flex flex-col'>
+                <div className='flex flex-col ml-3'>
                   <RadioGroup.Label
                     as='span'
                     className={classNames(

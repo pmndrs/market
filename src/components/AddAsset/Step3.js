@@ -5,12 +5,12 @@ const Step3 = () => {
   const { loadingText, createdAsset } = useAddAssetStore()
   return (
     <div className='text-center'>
-      <p className='text-xl mt-6'>{loadingText}...</p>
+      <p className='mt-6 text-xl'>{loadingText}...</p>
       {createdAsset && (
         <>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-12 text-green-600 w-12 m-auto mb-4'
+            className='w-12 h-12 m-auto mb-4 text-green-600'
             viewBox='0 0 20 20'
             fill='currentColor'
           >
@@ -23,7 +23,7 @@ const Step3 = () => {
           <Link href={`/${createdAsset}`}>
             <a className='font-bold'>You can go check your model</a>
           </Link>
-          <p className='mt-4 text-sm max-w-[300px] m-auto '>
+          <p className='m-auto mt-4 text-sm max-w-[300px]'>
             Your asset will be reviewed to be a part of the website, you can
             check the status in{' '}
             <Link href={`/creator-dashboard`}>

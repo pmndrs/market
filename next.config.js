@@ -8,11 +8,4 @@ module.exports = withBundleAnalyzer({
   future: {
     webpack5: false,
   },
-  webpack: (config) => {
-    config.node = {
-      fs: 'empty', // webpack4 era solution
-    }
-
-    return config
-  },
 })

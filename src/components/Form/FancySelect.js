@@ -12,12 +12,17 @@ const FancySelect = () => {
   const assetState = useAddAssetStore()
   const [newCat, setNewCat] = useState('')
 
-  useEffect(async () => {
+  const getCategories = async () => {
     const allCats = await supabase
       .from(assetState.selectedType.url || assetState.assetTypes[0].url)
       .select('category')
     const cats = Array.from(new Set(allCats.data.map((a) => a.category)))
     useAddAssetStore.setState({ availableCats: cats })
+  }
+
+  useEffect(() => {
+    getCategories()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assetState.selectedType])
 
   return (
@@ -34,7 +39,7 @@ const FancySelect = () => {
           <div>
             {menu}
 
-            <div className='border-t border-gray-200 flex items-center px-2 text-base text-gray-800'>
+            <div className='flex items-center px-2 text-base text-gray-800 border-t border-gray-200'>
               <div className='flex-grow mr-2'>
                 <Input value={newCat} onChange={(value) => setNewCat(value)} />
               </div>
@@ -42,8 +47,8 @@ const FancySelect = () => {
                 className='flex text-sm'
                 onClick={() =>
                   useAddAssetStore.setState({
-                    newCat,
-                    availableCats: [...items, newCat],
+                    newCat: '',
+                    availableCats: [...assetState.availableCats, newCat],
                   })
                 }
               >

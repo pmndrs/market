@@ -53,9 +53,9 @@ function FileDrop({
   )
 
   const thumbs = preview && (
-    <div className='inline-flex rounded my-4 w-full h-auto'>
-      <div className='flex min-h-0 overflow-hidden rounded w-full'>
-        <img src={preview} className='w-full h-auto block m-auto' />
+    <div className='inline-flex w-full h-auto my-4 rounded'>
+      <div className='flex w-full min-h-0 overflow-hidden rounded'>
+        <img src={preview} alt='' className='block w-full h-auto m-auto' />
       </div>
     </div>
   )
@@ -69,7 +69,7 @@ function FileDrop({
         {label}
       </label>
       {description && (
-        <span className='block text-xs font-medium text-gray-500 my-1'>
+        <span className='block my-1 text-xs font-medium text-gray-500'>
           {description}
         </span>
       )}

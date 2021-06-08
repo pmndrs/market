@@ -107,9 +107,9 @@ const useStore = create((set, get) => {
       }
     },
     createBuffer: async (name) => {
-      const buffer = await fetch(
-        `${API_ENDPOINT}/models/${name}/buffer`
-      ).then((data) => data.text())
+      const buffer = await fetch(`${API_ENDPOINT}/models/${name}/buffer`).then(
+        (data) => data.text()
+      )
 
       const gltfLoader = new GLTFLoader()
       const dracoloader = new DRACOLoader()

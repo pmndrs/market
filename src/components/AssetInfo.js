@@ -39,15 +39,12 @@ const AssetInfo = (asset) => {
     })
   )
 
-  const {
-    createZip,
-    createMatcapCodeDownload,
-    createPBRCodeDownload,
-  } = useMaterialStore((s) => ({
-    createZip: s.createZip,
-    createMatcapCodeDownload: s.createMatcapCodeDownload,
-    createPBRCodeDownload: s.createPBRCodeDownload,
-  }))
+  const { createZip, createMatcapCodeDownload, createPBRCodeDownload } =
+    useMaterialStore((s) => ({
+      createZip: s.createZip,
+      createMatcapCodeDownload: s.createMatcapCodeDownload,
+      createPBRCodeDownload: s.createPBRCodeDownload,
+    }))
 
   const { createHDRIDownload } = useHDRIStore((s) => ({
     createHDRIDownload: s.createHDRIDownload,

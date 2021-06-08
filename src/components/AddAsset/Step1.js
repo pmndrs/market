@@ -1,4 +1,3 @@
-import { PlusIcon } from '@heroicons/react/solid'
 import { useEffect } from 'react'
 import VerticalSelect from '@/components/Form/RadioGroup'
 import Input from '@/components/Form/Input'
@@ -14,6 +13,7 @@ const Step1 = ({ onClick }) => {
 
   useEffect(() => {
     useAddAssetStore.setState({ selectedType: assetState.assetTypes[0] })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -23,6 +23,7 @@ const Step1 = ({ onClick }) => {
       useAddAssetStore.setState({ slug })
       checkAvailability(slug)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assetState.name])
 
   const checkAvailability = async (slug) => {
@@ -33,7 +34,7 @@ const Step1 = ({ onClick }) => {
       .select('id')
       .filter('_id', 'eq', `${type}/${slug}`)
 
-    useAddAssetStore.setState({ slugAvailable: !!!data.length })
+    useAddAssetStore.setState({ slugAvailable: !data.length })
   }
 
   const updateSlug = (slug) => {
@@ -46,7 +47,7 @@ const Step1 = ({ onClick }) => {
   }
 
   return (
-    <main className='max-w-lg mx-auto pt-10 pb-12 px-4 lg:pb-16'>
+    <main className='max-w-lg px-4 pt-10 pb-12 mx-auto lg:pb-16'>
       <form>
         <div className='space-y-6'>
           <div>
@@ -97,6 +98,7 @@ const Step1 = ({ onClick }) => {
                 <a
                   target='_blank'
                   href='https://github.com/pmndrs/market-assets/blob/main/starter.blend'
+                  rel='noreferrer'
                 >
                   in the repo
                 </a>
