@@ -4,9 +4,9 @@ import { supabase } from '../initSupabase'
 import { getStats } from '../getStats'
 import useStore from '.'
 import { slugify } from '../slugify'
-import { getSize } from './formatSize'
 
 const url = 'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/'
+
 const assetTypes = [
   {
     name: 'Model',
@@ -57,21 +57,25 @@ const useAddAssetStore = create((set, get) => {
     stats: {},
     model: null,
     creatorMe: true,
+    creatorID: null,
     creator: {
       slug: '',
       name: '',
       link: '',
-      imageLink: '',
+      logo: '',
       donateLink: '',
     },
     partOfTeam: false,
+    teamID: null,
     team: {
       slug: '',
       name: '',
       link: '',
-      imageLink: '',
+      logo: '',
       donateLink: '',
     },
+    loadingText: 'Getting your data',
+    createdAsset: null,
     uploadFile: async (file) => {
       const slug = get().slug
       if (!slug) {
@@ -95,47 +99,105 @@ const useAddAssetStore = create((set, get) => {
       })
       const json = JSON.parse(text)
       const stats = getStats(json)
-      const { size, highPoly } = getSize(file.size)
+      console.log(file.size)
+      set({ model: file, stats, size: file.size })
+    },
+    getCreator: async () => {
+      const state = get()
+      const user = useStore.getState().user
+      const DB = 'creators'
+      let creatorID
+      if (state.creatorMe) {
+        const creator = {
+          url: slugify(user.profile.name),
+          name: user.profile.name,
+          logo: user.profile.avatar,
+        }
 
-      set({ model: file, stats, size, highPoly })
+        const { data } = await supabase
+          .from(DB)
+          .select('id')
+          .filter('url', 'eq', creator.url)
+
+        if (data.length) {
+          creatorID = data[0].id
+        } else {
+          const { data } = await supabase.from(DB).insert(creator)
+          creatorID = data[0].id
+        }
+      } else {
+        if (state.creatorID) {
+          creatorID = state.creatorID
+        } else {
+          const { data } = await supabase.from(DB).insert({
+            url: state.creator.slug,
+            name: state.creator.name,
+            link: state.creator.link,
+            logo: state.creator.logo,
+            donateLink: state.creator.donateLink,
+          })
+          creatorID = data[0].id
+        }
+      }
+
+      return creatorID
+    },
+    getTeam: async () => {
+      const state = get()
+      const DB = 'teams'
+      let teamID
+
+      if (state.teamID) {
+        teamID = state.teamID
+      } else {
+        const { data } = await supabase.from(DB).insert({
+          url: state.team.slug,
+          name: state.team.name,
+          link: state.team.link,
+          logo: state.team.logo,
+          donateLink: state.team.donateLink,
+        })
+        teamID = data[0].id
+      }
+
+      return teamID
     },
     createAsset: async () => {
+      set({ createdAsset: null })
       const state = get()
-      const data = {
-        _id: `${state.selectedType.url.slice(0, -1)}/${state.slug}`,
+      const user = useStore.getState().user
+      const id = `${state.selectedType.url.slice(0, -1)}/${state.slug}`
+      const assetData = {
+        _id: id,
         name: state.name,
         category: state.category,
         stats: state.stats,
         license: state.license.value,
-        size: state.size,
-        highPoly: state.highPoly,
         user_id: user.profile.id,
+        approved: false,
+        user_id: user.profile.id,
+        size: state.size,
       }
-      if (state.creatorMe) {
-        set({
-          creator: {
-            slug: slugify(user.profile.name),
-            name: user.profile.name,
-            imageLink: user.profile.avatar,
-          },
-        })
-      }
+      set({ loadingText: 'Uploading your model' })
       const { data: modelData } = await supabase.storage
         .from(state.selectedType.url)
         .upload(`${state.slug}/model.gltf`, state.model)
       const model = `${url}${modelData.Key}`
+      set({ loadingText: 'Uploading your thumbnail' })
       const { data: thumbnailData } = await supabase.storage
         .from(state.selectedType.url)
         .upload(`${state.slug}/thumbnail.png`, state.thumbnail)
       const thumbnail = `${url}${thumbnailData.Key}`
-
-      console.log({
-        thumbnail,
-        model,
-        creator: state.creator,
-        team: state.partOfTeam ? state.team : null,
-        ...data,
-      })
+      set({ loadingText: 'Setting Creator' })
+      const creator = await state.getCreator()
+      set({ loadingText: 'Setting the team' })
+      const team = state.partOfTeam ? await state.getTeam() : null
+      set({ loadingText: 'Creating Asset' })
+      await supabase
+        .from(state.selectedType.url)
+        .insert({ thumbnail, file: model, creator, team, ...assetData })
+      set({ loadingText: 'We are done' })
+      set({ createdAsset: id })
     },
   }
 })

@@ -65,6 +65,12 @@ const CreatorSelect = () => {
               id='creator'
               name='creator'
               className='mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+              value={assetState.creatorID}
+              onChange={(e) =>
+                useAddAssetStore.setState({
+                  creatorID: parseInt(e.target.value),
+                })
+              }
             >
               <option>Please select a creator</option>
               {creators.map((creator) => (
@@ -107,14 +113,14 @@ const CreatorSelect = () => {
           </div>{' '}
           <div className='mt-2'>
             <Input
-              key='creator-imageLink'
+              key='creator-logo'
               label='Image Link'
-              value={assetState.creator.imageLink}
-              onChange={(imageLink) =>
+              value={assetState.creator.logo}
+              onChange={(logo) =>
                 useAddAssetStore.setState({
                   creator: {
                     ...assetState.creator,
-                    imageLink,
+                    logo,
                   },
                 })
               }

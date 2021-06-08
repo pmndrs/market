@@ -57,6 +57,12 @@ const TeamSelect = () => {
               id='team'
               name='team'
               className='mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+              value={assetState.teamID}
+              onChange={(e) =>
+                useAddAssetStore.setState({
+                  teamID: parseInt(e.target.value),
+                })
+              }
             >
               <option>Please select a team</option>
               {teams.map((team) => (
@@ -99,14 +105,14 @@ const TeamSelect = () => {
           </div>{' '}
           <div className='mt-2'>
             <Input
-              key='team-imageLink'
+              key='team-logo'
               label='Image Link'
-              value={assetState.team.imageLink}
-              onChange={(imageLink) =>
+              value={assetState.team.logo}
+              onChange={(logo) =>
                 useAddAssetStore.setState({
                   team: {
                     ...assetState.team,
-                    imageLink,
+                    logo,
                   },
                 })
               }

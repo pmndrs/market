@@ -64,6 +64,20 @@ const UserMenu = ({ user }) => {
                     )}
                   </Menu.Item>
                   <Menu.Item>
+                    {({ active }) => (
+                      <Link href='/creator-dashboard'>
+                        <a
+                          className={classNames(
+                            active ? 'bg-gray-100' : '',
+                            'block px-4 py-2 text-sm text-gray-700 w-full text-center'
+                          )}
+                        >
+                          Creator Dashboard
+                        </a>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
                     {() => (
                       <a
                         href='https://documenter.getpostman.com/view/476520/TzRUC7y1'
