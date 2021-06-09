@@ -33,8 +33,7 @@ export async function getServerSideProps({ req }) {
     .eq('user_id', user.id)
 
   const url = `${API_ENDPOINT}/favorites?favs=${data[0].favorites}`
-  const fetchy = await fetch(url)
-  const favorites = await fetchy.json()
+  const favorites = await fetch(url).json()
 
   return { props: { user, favorites } }
 }

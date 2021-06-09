@@ -29,7 +29,7 @@ const TeamSelect = () => {
 
   return (
     <div>
-      <label className='block text-sm font-medium text-gray-700'>Team</label>
+      <p className='block text-sm font-medium text-gray-700'>Team</p>
 
       <div className='flex items-center mt-2'>
         <input

@@ -29,12 +29,7 @@ const CreatorSelect = () => {
 
   return (
     <div>
-      <label
-        htmlFor='upload'
-        className='block text-sm font-medium text-gray-700'
-      >
-        Creator
-      </label>
+      <p className='block text-sm font-medium text-gray-700'>Creator</p>
 
       <div className='flex items-center mt-2'>
         <input
