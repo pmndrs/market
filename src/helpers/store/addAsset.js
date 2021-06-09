@@ -24,7 +24,6 @@ const assetTypes = [
   {
     name: 'Matcap',
     url: 'materials',
-    disabled: true,
   },
 ]
 
@@ -43,6 +42,7 @@ const licenses = [
 ]
 const useAddAssetStore = create((set, get) => {
   return {
+    uploadingError: false,
     assetTypes,
     selectedType: assetTypes[0],
     name: '',
@@ -163,24 +163,11 @@ const useAddAssetStore = create((set, get) => {
 
       return teamID
     },
-    createAsset: async () => {
-      set({ createdAsset: null })
+    uploadAssetFile: async () => {
       const state = get()
-      const user = useStore.getState().user
-      const id = `${state.selectedType.url.slice(0, -1)}/${state.slug}`
-      const assetData = {
-        _id: id,
-        name: state.name,
-        category: state.category,
-        license: state.license.value,
-        user_id: user.profile.id,
-        approved: false,
-        size: state.size,
-      }
-      set({ loadingText: 'Uploading your asset' })
+      const fileName = encodeURIComponent(state.file.name)
       let file
       if (state.selectedType.url === 'models') {
-        assetData.stats = state.stats
         const { data: modelData } = await supabase.storage
           .from(state.selectedType.url)
           .upload(`${state.slug}/model.gltf`, state.file)
@@ -190,24 +177,62 @@ const useAddAssetStore = create((set, get) => {
       if (state.selectedType.url === 'hdris') {
         const { data: modelData } = await supabase.storage
           .from(state.selectedType.url)
-          .upload(`${state.slug}/${state.file.name}`, state.file)
+          .upload(`${state.slug}/${fileName}`, state.file)
         file = `${url}${modelData.Key}`
       }
-      set({ loadingText: 'Uploading your thumbnail' })
+      if (state.selectedType.name === 'Matcap') {
+        const { data: modelData } = await supabase.storage
+          .from(state.selectedType.url)
+          .upload(`${state.slug}/${fileName}`, state.file)
+        file = `${url}${modelData.Key}`
+      }
+
+      return file
+    },
+    uploadThumbnail: async () => {
+      const state = get()
       const { data: thumbnailData } = await supabase.storage
         .from(state.selectedType.url)
         .upload(`${state.slug}/thumbnail.png`, state.thumbnail)
-      const thumbnail = `${url}${thumbnailData.Key}`
-      set({ loadingText: 'Setting Creator' })
-      const creator = await state.getCreator()
-      set({ loadingText: 'Setting the team' })
-      const team = state.partOfTeam ? await state.getTeam() : null
-      set({ loadingText: 'Creating Asset' })
-      await supabase
-        .from(state.selectedType.url)
-        .insert({ thumbnail, file, creator, team, ...assetData })
-      set({ loadingText: 'We are done' })
-      set({ createdAsset: id })
+      return `${url}${thumbnailData.Key}`
+    },
+    createAsset: async () => {
+      try {
+        set({ createdAsset: null, uploadingError: false })
+        const state = get()
+        const user = useStore.getState().user
+        const id = `${state.selectedType.url.slice(0, -1)}/${state.slug}`
+        const assetData = {
+          _id: id,
+          name: state.name,
+          category: state.category,
+          license: state.license.value,
+          user_id: user.profile.id,
+          approved: false,
+          size: state.size,
+        }
+        if (state.selectedType.url === 'models') assetData.stats = state.stats
+        set({ loadingText: 'Uploading your asset' })
+        const file = await state.uploadAssetFile()
+        set({ loadingText: 'Uploading your thumbnail' })
+        const thumbnail = await state.uploadThumbnail()
+        set({ loadingText: 'Setting Creator' })
+        const creator = await state.getCreator()
+        set({ loadingText: 'Setting the team' })
+        const team = state.partOfTeam ? await state.getTeam() : null
+        set({ loadingText: 'Creating Asset' })
+        await supabase
+          .from(state.selectedType.url)
+          .insert({ thumbnail, file, creator, team, ...assetData })
+        set({ loadingText: 'We are done' })
+        set({ createdAsset: id })
+      } catch (e) {
+        console.error(e)
+        set({
+          loadingText: 'There has been an error, please try again.',
+          uploadingError: true,
+        })
+      }
     },
   }
 })

@@ -35,6 +35,13 @@ const Step2 = ({ onClick }) => {
               label='Upload your HDRI (max 5mb)'
             />
           )}
+          {assetState.selectedType.name === 'Matcap' && (
+            <FileDrop
+              maxSize={1000000}
+              onChange={assetState.uploadAsset}
+              label='Upload your Matcap (max 1mb)'
+            />
+          )}
 
           <CreatorSelect />
 
