@@ -45,11 +45,8 @@ Some needs to know:
 
 ## Roadmap
 
-- allow asset uploads
 - components category
 - npm package with this
-- Creator pages
-- Team Pages
 - material editor
 
 ## Appendix
