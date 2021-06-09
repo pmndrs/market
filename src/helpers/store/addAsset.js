@@ -15,7 +15,6 @@ const assetTypes = [
   {
     name: 'HDRI',
     url: 'hdris',
-    disabled: true,
   },
   {
     name: 'PBR Material',
@@ -55,7 +54,7 @@ const useAddAssetStore = create((set, get) => {
     availableCats: [],
     thumbnail: '',
     stats: {},
-    model: null,
+    file: null,
     creatorMe: true,
     creatorID: null,
     creator: {
@@ -85,6 +84,9 @@ const useAddAssetStore = create((set, get) => {
 
       set({ thumbnail: file })
     },
+    uploadAsset: async (file) => {
+      set({ file, size: file.size })
+    },
     uploadModel: async (file) => {
       const slug = get().slug
       if (!slug) {
@@ -99,8 +101,7 @@ const useAddAssetStore = create((set, get) => {
       })
       const json = JSON.parse(text)
       const stats = getStats(json)
-      console.log(file.size)
-      set({ model: file, stats, size: file.size })
+      set({ file, stats, size: file.size })
     },
     getCreator: async () => {
       const state = get()
@@ -171,17 +172,27 @@ const useAddAssetStore = create((set, get) => {
         _id: id,
         name: state.name,
         category: state.category,
-        stats: state.stats,
         license: state.license.value,
         user_id: user.profile.id,
         approved: false,
         size: state.size,
       }
-      set({ loadingText: 'Uploading your model' })
-      const { data: modelData } = await supabase.storage
-        .from(state.selectedType.url)
-        .upload(`${state.slug}/model.gltf`, state.model)
-      const model = `${url}${modelData.Key}`
+      set({ loadingText: 'Uploading your asset' })
+      let file
+      if (state.selectedType.url === 'models') {
+        assetData.stats = state.stats
+        const { data: modelData } = await supabase.storage
+          .from(state.selectedType.url)
+          .upload(`${state.slug}/model.gltf`, state.file)
+        file = `${url}${modelData.Key}`
+      }
+
+      if (state.selectedType.url === 'hdris') {
+        const { data: modelData } = await supabase.storage
+          .from(state.selectedType.url)
+          .upload(`${state.slug}/${state.file.name}`, state.file)
+        file = `${url}${modelData.Key}`
+      }
       set({ loadingText: 'Uploading your thumbnail' })
       const { data: thumbnailData } = await supabase.storage
         .from(state.selectedType.url)
@@ -194,7 +205,7 @@ const useAddAssetStore = create((set, get) => {
       set({ loadingText: 'Creating Asset' })
       await supabase
         .from(state.selectedType.url)
-        .insert({ thumbnail, file: model, creator, team, ...assetData })
+        .insert({ thumbnail, file, creator, team, ...assetData })
       set({ loadingText: 'We are done' })
       set({ createdAsset: id })
     },

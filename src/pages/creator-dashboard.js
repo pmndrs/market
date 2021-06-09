@@ -27,6 +27,18 @@ export async function getServerSideProps({ req }) {
       },
     }
   }
+
+  const cleanAssets = (assets) =>
+    assets.map((m) => {
+      const { size } = getSize(m.size)
+      return {
+        ...m,
+        id: m._id,
+        _id: m.id,
+        size,
+      }
+    })
+
   const { data } = await supabase
     .from('profiles')
     .select('id')
@@ -38,19 +50,23 @@ export async function getServerSideProps({ req }) {
     .select()
     .filter('user_id', 'eq', data[0].id)
 
+  const { data: hdris } = await supabase
+    .from('hdris')
+    .select()
+    .filter('user_id', 'eq', data[0].id)
+
+  const { data: materials } = await supabase
+    .from('materials')
+    .select()
+    .filter('user_id', 'eq', data[0].id)
+
   return {
     props: {
       user,
       assets: [
-        ...models.map((m) => {
-          const { size } = getSize(m.size)
-          return {
-            ...m,
-            id: m._id,
-            _id: m.id,
-            size,
-          }
-        }),
+        ...cleanAssets(models),
+        ...cleanAssets(hdris),
+        ...cleanAssets(materials),
       ],
     },
   }

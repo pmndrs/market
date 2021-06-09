@@ -16,19 +16,31 @@ const Step2 = ({ onClick }) => {
               Let{"'"}s upload your asset
             </p>
           </div>
+          {assetState.selectedType.url === 'models' && (
+            <FileDrop
+              maxSize={5000000}
+              accept='.gltf'
+              showPreview={false}
+              onChange={assetState.uploadModel}
+              label='Upload your model (max 5mb). Only GLTF files are accepted'
+            />
+          )}
 
-          <FileDrop
-            maxSize={5000000}
-            accept='.gltf'
-            showPreview={false}
-            onChange={assetState.uploadModel}
-            label='Upload your model (max 5mb). Only GLTF files are accepted'
-          />
+          {assetState.selectedType.url === 'hdris' && (
+            <FileDrop
+              maxSize={5000000}
+              accept='.hdr'
+              showPreview={false}
+              onChange={assetState.uploadAsset}
+              label='Upload your HDRI (max 5mb)'
+            />
+          )}
+
           <CreatorSelect />
 
           <TeamSelect />
           <div className='flex justify-end'>
-            <Button onClick={onClick} disabled={!assetState.model}>
+            <Button onClick={onClick} disabled={!assetState.file}>
               Submit Asset
             </Button>
           </div>
