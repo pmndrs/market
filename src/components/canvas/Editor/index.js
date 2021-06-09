@@ -1,4 +1,3 @@
-import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { Html, Loader, OrbitControls, Stage, useGLTF } from '@react-three/drei'
 import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'

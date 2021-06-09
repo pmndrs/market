@@ -21,9 +21,9 @@ export default Page
 
 export async function getServerSideProps({ params }) {
   try {
-    const model = await fetch(
-      `${API_ENDPOINT}/models/${params.name}`
-    ).then((rsp) => rsp.json())
+    const model = await fetch(`${API_ENDPOINT}/models/${params.name}`).then(
+      (rsp) => rsp.json()
+    )
 
     return {
       props: {

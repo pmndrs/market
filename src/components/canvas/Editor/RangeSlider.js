@@ -43,7 +43,7 @@ const RangeSlider = ({
         type='range'
         id={material}
         name={material}
-        defaultValue={value.toString()}
+        value={value}
         onChange={onRangeChange}
       />
     </div>

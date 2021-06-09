@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 import copy from 'clipboard-copy'
 import parse from '@react-three/gltfjsx'
-import Tippy from '@tippyjs/react'
 
 import { Leva } from 'leva'
 

@@ -17,6 +17,7 @@ import Category from './info/Category'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/router'
 import Rating from './info/rating'
+import Link from 'next/link'
 
 const assetTabHeader = [
   { label: 'Model', value: 'model' },
@@ -62,6 +63,8 @@ const AssetInfo = (asset) => {
 
     return code
   }
+
+  console.log(asset)
 
   const primitiveCode = `
   function Model(props) {
@@ -255,6 +258,16 @@ const AssetInfo = (asset) => {
                 Copy direct link
               </DownloadButton>
             </>
+          )}
+          {asset.stats && !asset.stats.textures.properties.length && (
+            <Link href={`/editor/${router.query.name}`}>
+              <a
+                className='block w-full py-2 text-center text-white bg-gray-800 disabled:opacity-75 disabled:cursor-auto'
+                style={{ marginTop: 20 }}
+              >
+                Edit Materials
+              </a>
+            </Link>
           )}
         </div>
       </aside>
