@@ -101,7 +101,7 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
           ))}
         </section>
       </div>
-      <Button className='fixed bottom-5 left-5' onClick={save}>
+      <Button className='fixed bottom-5 right-5' onClick={save}>
         Download Model
       </Button>
     </main>

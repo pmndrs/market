@@ -26,7 +26,7 @@ const RangeSlider = ({
   }
   const props = {
     min: 0,
-    max: property === 'emissiveIntensity' ? 100 : 0,
+    max: property === 'emissiveIntensity' ? 10 : 1,
     step: property === 'emissiveIntensity' ? 0.5 : 0.1,
   }
   return (
@@ -43,7 +43,7 @@ const RangeSlider = ({
         type='range'
         id={material}
         name={material}
-        value={value}
+        defaultValue={value}
         onChange={onRangeChange}
       />
     </div>

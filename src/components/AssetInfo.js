@@ -64,8 +64,6 @@ const AssetInfo = (asset) => {
     return code
   }
 
-  console.log(asset)
-
   const primitiveCode = `
   function Model(props) {
     const { scene } = useGLTF('${asset.file}')
