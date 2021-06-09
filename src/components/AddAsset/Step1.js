@@ -46,6 +46,14 @@ const Step1 = ({ onClick }) => {
     }
   }
 
+  const setAssetType = (type) => {
+    useAddAssetStore.setState({ selectedType: type })
+    if (type.url === 'materials') {
+      useAddAssetStore.setState({
+        category: type.name === 'Matcap' ? 'matcaps' : 'PBR',
+      })
+    }
+  }
   return (
     <main className='max-w-lg px-4 pt-10 pb-12 mx-auto lg:pb-16'>
       <form>
@@ -55,6 +63,12 @@ const Step1 = ({ onClick }) => {
               Some info about your asset
             </p>
           </div>
+          <VerticalSelect
+            value={assetState.selectedType}
+            onChange={setAssetType}
+            label='Type of Asset'
+            options={assetState.assetTypes}
+          />
           <Input
             key='name'
             label='Asset Name'
@@ -77,19 +91,13 @@ const Step1 = ({ onClick }) => {
           />
 
           <VerticalSelect
-            value={assetState.selectedType}
-            onChange={(s) => useAddAssetStore.setState({ selectedType: s })}
-            label='Type of Asset'
-            options={assetState.assetTypes}
-          />
-          <VerticalSelect
             value={assetState.license}
             onChange={(s) => useAddAssetStore.setState({ license: s })}
             label='License'
             options={assetState.licenses}
           />
 
-          <FancySelect />
+          {assetState.selectedType.url !== 'materials' && <FancySelect />}
           <FileDrop
             description={
               <>

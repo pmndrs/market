@@ -43,11 +43,94 @@ const Step2 = ({ onClick }) => {
             />
           )}
 
+          {assetState.selectedType.name === 'PBR Material' && (
+            <>
+              <p
+                htmlFor='upload'
+                className='block mb-4 text-sm font-medium text-gray-700'
+              >
+                Upload your maps, only base color is required
+              </p>
+              <FileDrop
+                maxSize={1000000}
+                showPreview={false}
+                onChange={(file) =>
+                  useAddAssetStore.setState({
+                    maps: {
+                      ...assetState.maps,
+                      map: file,
+                    },
+                  })
+                }
+                label='Base Color'
+              />
+              <FileDrop
+                showPreview={false}
+                maxSize={1000000}
+                onChange={(file) =>
+                  useAddAssetStore.setState({
+                    maps: {
+                      ...assetState.maps,
+                      aoMap: file,
+                    },
+                  })
+                }
+                label='Ambient Occlusion'
+              />
+              <FileDrop
+                maxSize={1000000}
+                showPreview={false}
+                onChange={(file) =>
+                  useAddAssetStore.setState({
+                    maps: {
+                      ...assetState.maps,
+                      displacementMap: file,
+                    },
+                  })
+                }
+                label='Height Map'
+              />
+              <FileDrop
+                maxSize={1000000}
+                showPreview={false}
+                onChange={(file) =>
+                  useAddAssetStore.setState({
+                    maps: {
+                      ...assetState.maps,
+                      normalMap: file,
+                    },
+                  })
+                }
+                label='Normal Map'
+              />
+              <FileDrop
+                maxSize={1000000}
+                showPreview={false}
+                onChange={(file) =>
+                  useAddAssetStore.setState({
+                    maps: {
+                      ...assetState.maps,
+                      roughnessMap: file,
+                    },
+                  })
+                }
+                label='Roughness Map'
+              />
+            </>
+          )}
+
           <CreatorSelect />
 
           <TeamSelect />
           <div className='flex justify-end'>
-            <Button onClick={onClick} disabled={!assetState.file}>
+            <Button
+              onClick={onClick}
+              disabled={
+                assetState.selectedType.name === 'PBR Material'
+                  ? !assetState.maps.map
+                  : !assetState.file
+              }
+            >
               Submit Asset
             </Button>
           </div>

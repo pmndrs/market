@@ -19,7 +19,6 @@ const assetTypes = [
   {
     name: 'PBR Material',
     url: 'materials',
-    disabled: true,
   },
   {
     name: 'Matcap',
@@ -72,6 +71,20 @@ const useAddAssetStore = create((set, get) => {
       link: '',
       logo: '',
       donateLink: '',
+    },
+    sizes: {
+      map: '',
+      aoMap: '',
+      displacementMap: '',
+      normalMap: '',
+      roughnessMap: '',
+    },
+    maps: {
+      map: '',
+      aoMap: '',
+      displacementMap: '',
+      normalMap: '',
+      roughnessMap: '',
     },
     loadingText: 'Getting your data',
     createdAsset: null,
@@ -165,7 +178,7 @@ const useAddAssetStore = create((set, get) => {
     },
     uploadAssetFile: async () => {
       const state = get()
-      const fileName = encodeURIComponent(state.file.name)
+      const fileName = state.file ? encodeURIComponent(state.file.name) : ''
       let file
       if (state.selectedType.url === 'models') {
         const { data: modelData } = await supabase.storage
@@ -185,6 +198,21 @@ const useAddAssetStore = create((set, get) => {
           .from(state.selectedType.url)
           .upload(`${state.slug}/${fileName}`, state.file)
         file = `${url}${modelData.Key}`
+      }
+
+      if (state.selectedType.name === 'PBR Material') {
+        file = {}
+        const maps = Object.keys(state.maps).map(async (name) => {
+          const { data: pbrData } = await supabase.storage
+            .from(state.selectedType.url)
+            .upload(`${state.slug}/${state.maps[name].name}`, state.maps[name])
+          file = {
+            ...file,
+            [name]: `${url}${pbrData.Key}`,
+          }
+        })
+
+        await Promise.all(maps)
       }
 
       return file
@@ -221,9 +249,33 @@ const useAddAssetStore = create((set, get) => {
         set({ loadingText: 'Setting the team' })
         const team = state.partOfTeam ? await state.getTeam() : null
         set({ loadingText: 'Creating Asset' })
-        await supabase
-          .from(state.selectedType.url)
-          .insert({ thumbnail, file, creator, team, ...assetData })
+        if (state.selectedType.name === 'PBR Material') {
+          const sizes = Object.keys(state.maps).reduce((acc, curr) => {
+            acc[curr] = state.maps[curr].size
+            return acc
+          }, {})
+          const size = Object.values(sizes).reduce((acc, curr) => {
+            acc = acc + curr
+            return acc
+          }, 0)
+
+          const data = {
+            ...assetData,
+            sizes,
+            thumbnail,
+            maps: file,
+            creator,
+            size,
+            team,
+          }
+          await supabase.from(state.selectedType.url).insert(data)
+          console.log(data)
+        } else {
+          await supabase
+            .from(state.selectedType.url)
+            .insert({ thumbnail, file, creator, team, ...assetData })
+        }
+
         set({ loadingText: 'We are done' })
         set({ createdAsset: id })
       } catch (e) {
