@@ -42,12 +42,12 @@ Some needs to know:
 - 🥇 favorites, comments, ratings
 - 🔌 api endpoint
 - ☁️ CDN with caching
+- ⚙️ Material Editor
 
 ## Roadmap
 
 - components category
 - npm package with this
-- material editor
 
 ## Appendix
 
