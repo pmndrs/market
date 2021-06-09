@@ -1,4 +1,5 @@
 const Stats = ({ stats, size }) => {
+  if (Object.keys(stats).length === 0) return null
   const items = [
     { name: 'Model Size', stat: size },
     { name: 'Meshes', stat: stats.meshes.properties.length },
@@ -20,11 +21,13 @@ const Stats = ({ stats, size }) => {
       : null,
     { name: 'Animations', stat: stats.animations.properties.length },
     { name: 'Skinned', stat: stats.skinned },
-    {
-      name: 'Extensions Required',
-      stat: stats.extensions.join(', '),
-      small: true,
-    },
+    stats.extensions
+      ? {
+          name: 'Extensions Required',
+          stat: stats.extensions.join(', '),
+          small: true,
+        }
+      : null,
     { name: 'Memory Consumption', stat: `~${stats.memoryConsumption}` },
   ].filter((e) => e)
 

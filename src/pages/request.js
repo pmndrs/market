@@ -64,12 +64,12 @@ const RequestPage = ({ user, requests: requestsServer }) => {
       <Tabs
         tabs={[
           {
-            name: 'Open',
+            name: `Open (${requests.filter((r) => !r.closed).length})`,
             onClick: () => setTab('open'),
             current: tab === 'open',
           },
           {
-            name: 'Closed',
+            name: `Closed (${requests.filter((r) => r.closed).length})`,
             onClick: () => setTab('closed'),
             current: tab === 'closed',
           },

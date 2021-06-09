@@ -37,7 +37,7 @@ const UserMenu = ({ user }) => {
                 >
                   <Menu.Item>
                     {({ active }) => (
-                      <Link href='favorites'>
+                      <Link href='/favorites'>
                         <a
                           className={classNames(
                             active ? 'bg-gray-100' : '',
@@ -49,6 +49,50 @@ const UserMenu = ({ user }) => {
                       </Link>
                     )}
                   </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href='/add-asset'>
+                        <a
+                          className={classNames(
+                            active ? 'bg-gray-100' : '',
+                            'block px-4 py-2 text-sm text-gray-700 w-full text-center'
+                          )}
+                        >
+                          Add your asset
+                        </a>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href='/creator-dashboard'>
+                        <a
+                          className={classNames(
+                            active ? 'bg-gray-100' : '',
+                            'block px-4 py-2 text-sm text-gray-700 w-full text-center'
+                          )}
+                        >
+                          Creator Dashboard
+                        </a>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  {user.profile.admin && (
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link href='/admin-dashboard'>
+                          <a
+                            className={classNames(
+                              active ? 'bg-gray-100' : '',
+                              'block px-4 py-2 text-sm text-gray-700 w-full text-center'
+                            )}
+                          >
+                            Admin Dashboard
+                          </a>
+                        </Link>
+                      )}
+                    </Menu.Item>
+                  )}
                   <Menu.Item>
                     {() => (
                       <a
@@ -63,6 +107,7 @@ const UserMenu = ({ user }) => {
                       </a>
                     )}
                   </Menu.Item>
+
                   <Menu.Item>
                     {({ active }) => (
                       <button

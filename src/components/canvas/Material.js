@@ -33,8 +33,9 @@ const PBR = ({ maps, displacementScale }) => {
 const MatCap = ({ file }) => {
   const [matcap] = useTexture([file])
   const group = useRef()
-  const { nodes } = useGLTF('/suzanne.gltf')
-
+  const { nodes } = useGLTF(
+    'https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/suzanne-high-poly/model.gltf'
+  )
   return (
     <group ref={group} dispose={null}>
       <mesh
@@ -42,7 +43,6 @@ const MatCap = ({ file }) => {
         receiveShadow
         geometry={nodes.Suzanne.geometry}
         position={[0, 0.19, -0.04]}
-        attach='material'
       >
         <meshMatcapMaterial matcap={matcap} />
       </mesh>
@@ -69,7 +69,6 @@ const Material = ({ file, category, maps }) => {
     ...defaultControls,
     ...otherControls,
   })
-
   return (
     <>
       <Stage

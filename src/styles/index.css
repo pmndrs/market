@@ -33,3 +33,12 @@ a {
   box-shadow: none !important;
   @apply bg-gray-100 border border-gray-200 rounded-md !important;
 }
+body .ant-select.ant-select-single.ant-select-show-arrow .ant-select-selector {
+  @apply border-gray-300 hover:outline-none hover:ring-indigo-500 hover:border-indigo-500 sm:text-sm rounded-md;
+  transition: none;
+  height: 38px;
+}
+
+body .ant-select {
+  @apply mt-1 block w-full text-base;
+}

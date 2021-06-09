@@ -31,7 +31,7 @@ Start the server
 Some needs to know:
 
 - Login does not work locally
-- No enviroment keys are needed unless you need to do things that change the database
+- No environment keys are needed unless you need to do things that change the database
 
 ## Features
 
@@ -39,19 +39,14 @@ Some needs to know:
 - 🚥 starters for threejs and react-three-fiber
 - 👥 accounts
 - 📬 request assets
-- 🥇 favorites
+- 🥇 favorites, comments, ratings
 - 🔌 api endpoint
 - ☁️ CDN with caching
 
 ## Roadmap
 
-- comments
-- ratings
-- allow aseet uploads
 - components category
 - npm package with this
-- Creator pages
-- Team Pages
 - material editor
 
 ## Appendix

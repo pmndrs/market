@@ -1,8 +1,8 @@
 import create from 'zustand'
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
-import { createCode as createR3FModelCode } from '../code/model/r3f'
-import { createCode as createThreeModelCode } from '../code/model/three'
+import { createCode as createR3FHDRICode } from '../code/hdri/r3f'
+import { createCode as createThreeHDRICode } from '../code/hdri/three'
 import { sortAssets } from './utils'
 
 const useStore = create((set, get) => {
@@ -17,12 +17,12 @@ const useStore = create((set, get) => {
 
       return sortAssets(order, currentHdri)
     },
-    createHDRIDownload: async (model, jsx, tab) => {
+    createHDRIDownload: async (hdri, tab) => {
       let code = ''
       if (tab === 'r3f') {
-        code = await createR3FModelCode(model, jsx)
+        code = await createR3FHDRICode(hdri)
       } else {
-        code = await createThreeModelCode(model)
+        code = await createThreeHDRICode(hdri)
       }
 
       var zip = new JSZip()
