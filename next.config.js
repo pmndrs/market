@@ -8,4 +8,14 @@ module.exports = withBundleAnalyzer({
   future: {
     webpack5: false,
   },
+  webpack: (config, { isServer }) => {
+    // Fixes draco
+    if (!isServer) {
+      config.node = {
+        fs: 'empty',
+      }
+    }
+
+    return config
+  },
 })

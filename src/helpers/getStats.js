@@ -5,6 +5,10 @@ import {
   WebIO,
   uuid,
 } from '@gltf-transform/core'
+import {
+  DracoMeshCompression,
+  MaterialsUnlit,
+} from '@gltf-transform/extensions'
 import { inspect } from '@gltf-transform/functions'
 
 function formatBytes(bytes, decimals = 2) {
@@ -26,9 +30,13 @@ function decodeDataURI(resource, resources) {
   resource.uri = resourceUUID
 }
 
-export const getStats = (json) => {
+export const getStats = async (json) => {
   try {
     const io = new WebIO()
+      .registerExtensions([DracoMeshCompression, MaterialsUnlit])
+      .registerDependencies({
+        'draco3d.decoder': await window.DracoDecoderModule(),
+      })
 
     const resources = {}
     for (const bufferDef of json.buffers || []) {
