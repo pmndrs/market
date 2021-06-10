@@ -257,16 +257,18 @@ const AssetInfo = (asset) => {
               </DownloadButton>
             </>
           )}
-          {asset.stats && !asset.stats.textures.properties.length && (
-            <Link href={`/editor/${router.query.name}`}>
-              <a
-                className='block w-full py-2 text-center text-white bg-gray-800 disabled:opacity-75 disabled:cursor-auto'
-                style={{ marginTop: 20 }}
-              >
-                Edit Materials
-              </a>
-            </Link>
-          )}
+          {asset.stats &&
+            asset.stats.textures &&
+            !asset.stats.textures.properties.length && (
+              <Link href={`/editor/${router.query.name}`}>
+                <a
+                  className='block w-full py-2 text-center text-white bg-gray-800 disabled:opacity-75 disabled:cursor-auto'
+                  style={{ marginTop: 20 }}
+                >
+                  Edit Materials
+                </a>
+              </Link>
+            )}
         </div>
       </aside>
     </div>

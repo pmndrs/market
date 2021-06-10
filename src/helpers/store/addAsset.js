@@ -113,7 +113,7 @@ const useAddAssetStore = create((set, get) => {
         reader.readAsText(file)
       })
       const json = JSON.parse(text)
-      const stats = getStats(json)
+      const stats = await getStats(json)
       set({ file, stats, size: file.size })
     },
     getCreator: async () => {
