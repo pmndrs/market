@@ -32,6 +32,7 @@ const Search = ({ search, setSearch, onOrderChange, assetName }) => {
           onChange={(e) => onOrderChange(e.target.value)}
         >
           <option value='alphabetic'>Order By</option>
+          <option value='size'>Size</option>
           <option value='added'>Last Added</option>
           <option value='views'>Views</option>
           <option value='alphabetic'>Alphabetic</option>
