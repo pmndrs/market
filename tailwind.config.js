@@ -7,7 +7,11 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      screens: {
+        laptop: '1200px',
+      },
+    },
   },
   variants: {
     extend: {},
