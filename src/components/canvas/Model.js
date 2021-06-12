@@ -14,7 +14,7 @@ const Model = ({ file }) => {
     ...lightControls,
   })
 
-  const { animations, scene } = useGLTF(file)
+  const { animations, scene } = useGLTF('/ermine.gltf')
 
   const { animationsClip, defaultAnimationsControls, mixer } = useMemo(() => {
     const mixer = new AnimationMixer(scene)
@@ -35,13 +35,15 @@ const Model = ({ file }) => {
     () => defaultAnimationsControls
   )
 
-  for (let clipName in animationsClip) {
-    if (controlsAnim[clipName]) {
-      animationsClip[clipName].play()
-    } else {
-      animationsClip[clipName].stop()
+  useEffect(() => {
+    for (let clipName in animationsClip) {
+      if (controlsAnim[clipName]) {
+        animationsClip[clipName].play()
+      } else {
+        animationsClip[clipName].stop()
+      }
     }
-  }
+  }, [animationsClip, controlsAnim])
 
   useLayoutEffect(() => {
     void scene.traverse(
