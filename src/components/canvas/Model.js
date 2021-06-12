@@ -1,10 +1,10 @@
+import { useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stage, useGLTF } from '@react-three/drei'
 import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { useControls } from 'leva'
 import { AnimationMixer } from 'three'
 import { lightControls, defaultControls } from './controls'
-import { useMemo } from 'react'
 
 const Model = ({ file }) => {
   const ref = useRef()
@@ -14,36 +14,36 @@ const Model = ({ file }) => {
     ...lightControls,
   })
 
-  const { animations, scene } = useGLTF('/ermine.gltf')
+  const { animations, scene } = useGLTF(file)
 
-  const { animationsClip, defaultAnimationsControls, mixer } = useMemo(() => {
+  const { animationClips, defaultAnimationsControls, mixer } = useMemo(() => {
     const mixer = new AnimationMixer(scene)
-    const animationsClip = []
+    const animationClips = []
     let defaultAnimationsControls = {}
 
     for (let a of animations) {
       let action = mixer.clipAction(a)
-      animationsClip[a.name] = action
+      animationClips[a.name] = action
       defaultAnimationsControls[a.name] = false
     }
 
-    return { defaultAnimationsControls, animationsClip, mixer }
+    return { defaultAnimationsControls, animationClips, mixer }
   }, [animations, scene])
 
-  const [controlsAnim, setControlsAnim] = useControls(
+  const [animationsControls, setAnimationsControls] = useControls(
     'Animations',
     () => defaultAnimationsControls
   )
 
   useEffect(() => {
-    for (let clipName in animationsClip) {
-      if (controlsAnim[clipName]) {
-        animationsClip[clipName].play()
+    for (let clipName in animationClips) {
+      if (animationsControls[clipName]) {
+        animationClips[clipName].play()
       } else {
-        animationsClip[clipName].stop()
+        animationClips[clipName].stop()
       }
     }
-  }, [animationsClip, controlsAnim])
+  }, [animationClips, animationsControls])
 
   useLayoutEffect(() => {
     void scene.traverse(
@@ -61,13 +61,13 @@ const Model = ({ file }) => {
     if (animations.length) {
       defaultAnimationsControls[animations[0].name] = true
     }
-    setControlsAnim(defaultAnimationsControls)
+    setAnimationsControls(defaultAnimationsControls)
   }, [
     scene,
     controls.wireframe,
     animations,
     defaultAnimationsControls,
-    setControlsAnim,
+    setAnimationsControls,
   ])
 
   useFrame((state, delta) => {
