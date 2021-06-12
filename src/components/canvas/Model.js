@@ -4,6 +4,7 @@ import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { useControls } from 'leva'
 import { AnimationMixer } from 'three'
 import { lightControls, defaultControls } from './controls'
+import { useMemo } from 'react'
 
 const Model = ({ file }) => {
   const ref = useRef()
@@ -13,26 +14,32 @@ const Model = ({ file }) => {
     ...lightControls,
   })
 
-  const { animations,scene } = useGLTF(file)
-  const content = scene || scenes[0];
-  const mixer = new AnimationMixer( content );
-  const animationsClip = []
-  let defaultAnimationsControls = {}
+  const { animations, scene } = useGLTF(file)
 
-  for (let a of animations){
-    let action = mixer.clipAction(a);
-    animationsClip[a.name] = action
-    defaultAnimationsControls[a.name] = false
-  }
-  const [controlsAnim,setControlsAnim] = useControls('Animations',()=>(
-    defaultAnimationsControls
-  ))
+  const { animationsClip, defaultAnimationsControls, mixer } = useMemo(() => {
+    const mixer = new AnimationMixer(scene)
+    const animationsClip = []
+    let defaultAnimationsControls = {}
 
-  for(let clipName in animationsClip){
-    if(controlsAnim[clipName]){
-      animationsClip[clipName].play();
-    }else{
-      animationsClip[clipName].stop();
+    for (let a of animations) {
+      let action = mixer.clipAction(a)
+      animationsClip[a.name] = action
+      defaultAnimationsControls[a.name] = false
+    }
+
+    return { defaultAnimationsControls, animationsClip, mixer }
+  }, [animations, scene])
+
+  const [controlsAnim, setControlsAnim] = useControls(
+    'Animations',
+    () => defaultAnimationsControls
+  )
+
+  for (let clipName in animationsClip) {
+    if (controlsAnim[clipName]) {
+      animationsClip[clipName].play()
+    } else {
+      animationsClip[clipName].stop()
     }
   }
 
@@ -41,7 +48,7 @@ const Model = ({ file }) => {
       (obj) => obj.isMesh && (obj.castShadow = obj.receiveShadow = true)
     )
   }, [scene])
-  
+
   useEffect(() => {
     scene.traverse((obj) => {
       if (obj.isMesh && obj.material) {
@@ -49,12 +56,18 @@ const Model = ({ file }) => {
       }
     })
 
-    if(animations[0]){
+    if (animations.length) {
       defaultAnimationsControls[animations[0].name] = true
     }
     setControlsAnim(defaultAnimationsControls)
-  }, [scene, controls.wireframe])
-  
+  }, [
+    scene,
+    controls.wireframe,
+    animations,
+    defaultAnimationsControls,
+    setControlsAnim,
+  ])
+
   useFrame((state, delta) => {
     mixer.update(delta)
   })
