@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 import { saveAs } from 'file-saver'
 import { GLTFExporter } from 'three-stdlib'
-import { useRouter } from 'next/router'
 import RangeSlider from './RangeSlider'
 import ColorPicker from './ColorPicker'
 import { useUpdateScene } from './useUpdateScene'
@@ -13,7 +12,6 @@ import Select from './Select'
 const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
   const [activeTab, setActiveTab] = useState()
   const exporter = new GLTFExporter()
-  const router = useRouter()
   useUpdateScene({ materialsEditor, scene })
 
   const save = () => {
@@ -27,7 +25,12 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
 
   return (
     <main className='p-4'>
-      <button onClick={() => router.back()}>
+      <button
+        onClick={(e) => {
+          e.preventDefault()
+          window.history.go(-1)
+        }}
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='w-10 h-10'
@@ -68,13 +71,14 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
               key={material}
               className={`${activeTab === material ? '' : 'hidden'}`}
             >
-              {Object.keys(materialsEditor[material]).map((property) => {
+              {Object.keys(materialsEditor[material]).map((property, i) => {
                 const val = materialsEditor[material][property]
                 const props = {
                   material,
                   property,
                   setMaterialsEditor,
                   value: val.value,
+                  key: i,
                 }
 
                 if (val.type === 'range') {
