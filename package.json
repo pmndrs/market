@@ -15,15 +15,8 @@
     "analyze": "ANALYZE=true next build",
     "start": "next start",
     "minify": "node server/minify.js",
-    "postbuild": "next-sitemap"
-  },
-  "lint-staged": {
-    "*.{js,jsx,json,md}": [
-      "prettier --write"
-    ],
-    "*.{js,jsx}": [
-      "eslint --fix"
-    ]
+    "postbuild": "next-sitemap",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.1.2",
@@ -73,11 +66,16 @@
     "eslint-plugin-tailwind": "^0.2.1",
     "express": "^4.17.1",
     "fathom-client": "^3.0.0",
-    "lint-staged": "^10.5.4",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "next-sitemap": "^1.6.57",
     "node-fetch": "^2.6.1",
     "postcss": "^8.3.0",
     "prettier": "^2.3.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{js,jsx,md}": "prettier --write"
+  }
 }
