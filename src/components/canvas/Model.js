@@ -1,7 +1,9 @@
-import { Canvas } from '@react-three/fiber'
+import { useMemo } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stage, useGLTF } from '@react-three/drei'
 import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { useControls } from 'leva'
+import { AnimationMixer } from 'three'
 import { lightControls, defaultControls } from './controls'
 
 const Model = ({ file }) => {
@@ -12,7 +14,36 @@ const Model = ({ file }) => {
     ...lightControls,
   })
 
-  const { scene } = useGLTF(file)
+  const { animations, scene } = useGLTF(file)
+
+  const { animationClips, defaultAnimationsControls, mixer } = useMemo(() => {
+    const mixer = new AnimationMixer(scene)
+    const animationClips = []
+    let defaultAnimationsControls = {}
+
+    for (let a of animations) {
+      let action = mixer.clipAction(a)
+      animationClips[a.name] = action
+      defaultAnimationsControls[a.name] = false
+    }
+
+    return { defaultAnimationsControls, animationClips, mixer }
+  }, [animations, scene])
+
+  const [animationsControls, setAnimationsControls] = useControls(
+    'Animations',
+    () => defaultAnimationsControls
+  )
+
+  useEffect(() => {
+    for (let clipName in animationClips) {
+      if (animationsControls[clipName]) {
+        animationClips[clipName].play()
+      } else {
+        animationClips[clipName].stop()
+      }
+    }
+  }, [animationClips, animationsControls])
 
   useLayoutEffect(() => {
     void scene.traverse(
@@ -26,7 +57,22 @@ const Model = ({ file }) => {
         obj.material.wireframe = controls.wireframe
       }
     })
-  }, [scene, controls.wireframe])
+
+    if (animations.length) {
+      defaultAnimationsControls[animations[0].name] = true
+    }
+    setAnimationsControls(defaultAnimationsControls)
+  }, [
+    scene,
+    controls.wireframe,
+    animations,
+    defaultAnimationsControls,
+    setAnimationsControls,
+  ])
+
+  useFrame((state, delta) => {
+    mixer.update(delta)
+  })
 
   return (
     <>
