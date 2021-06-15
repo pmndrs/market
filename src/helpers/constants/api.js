@@ -1,2 +1,4 @@
-export const API_ENDPOINT = 'https://api.market.pmnd.rs'
-// export const API_ENDPOINT = 'http://localhost:3001'
+export const API_ENDPOINT =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000/api'
+    : 'https://api.market.pmnd.rs/api'
