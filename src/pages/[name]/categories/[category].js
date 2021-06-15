@@ -24,7 +24,6 @@ export default Page
 
 export async function getServerSideProps({ params }) {
   const { name, category } = params
-  console.log(params)
   const data = await fetch(`${API_ENDPOINT}/${name}/category/${category}`)
   const assets = await data.json()
   const capitalizeFirstLetter = ([first, ...rest]) =>

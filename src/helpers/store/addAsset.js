@@ -269,7 +269,6 @@ const useAddAssetStore = create((set, get) => {
             team,
           }
           await supabase.from(state.selectedType.url).insert(data)
-          console.log(data)
         } else {
           await supabase
             .from(state.selectedType.url)

@@ -43,7 +43,7 @@ const Model = ({ file }) => {
         animationClips[clipName].stop()
       }
     }
-  }, [animationClips, animationsControls])
+  }, [animationClips, animationsControls, scene])
 
   useLayoutEffect(() => {
     void scene.traverse(
@@ -101,7 +101,7 @@ export default function ModelComponent(props) {
     >
       <color attach='background' color='white' />
       <Suspense fallback={null}>
-        <Model {...props} />
+        <Model {...props} key={props.id} />
       </Suspense>
     </Canvas>
   )
