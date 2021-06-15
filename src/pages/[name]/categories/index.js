@@ -16,11 +16,7 @@ const Categories = ({ title, categories }) => {
     <Layout title='Categories'>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {categories.map((category) => (
-          <Category
-            {...category}
-            key={category.name}
-            type={query.categoryType}
-          />
+          <Category {...category} key={category.name} type={query.name} />
         ))}
       </ul>
     </Layout>
@@ -34,7 +30,6 @@ export async function getServerSideProps(ctx) {
 
   const data = await fetch(`${API_ENDPOINT}/${type}/categories`)
   const categories = await data.json()
-
   return {
     props: {
       categories,
