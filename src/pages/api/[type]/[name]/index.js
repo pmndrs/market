@@ -58,24 +58,25 @@ export default async function handler(req, res) {
       let asset = {
         ...current,
       }
-      if (current._id < data.length - 1) {
-        const next = await supabase
-          .from(assetType)
-          .select(selectData)
-          .eq('id', current._id + 1)
+      const next = await supabase
+        .from(assetType)
+        .select(selectData)
+        .eq('id', current._id + 1)
+        .filter('approved', 'eq', true)
 
-        if (next.data.length) {
-          asset = {
-            ...asset,
-            next: cleanSupabaseData(next.data)[0],
-          }
+      if (next.data.length) {
+        asset = {
+          ...asset,
+          next: cleanSupabaseData(next.data)[0],
         }
       }
+
       if (current._id > 1) {
         const prev = await supabase
           .from(assetType)
           .select(selectData)
           .eq('id', current._id - 1)
+          .filter('approved', 'eq', true)
         if (prev.data.length) {
           asset = {
             ...asset,

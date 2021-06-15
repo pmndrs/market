@@ -15,6 +15,7 @@ export const getInfo = async (type, slug) => {
       .from(t)
       .select(listData[t])
       .eq(type.slice(0, -1), creator.id)
+      .filter('approved', 'eq', true)
 
     assets[t] = cleanSupabaseData(assetTypeData.data)
   })
