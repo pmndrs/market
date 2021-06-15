@@ -5,9 +5,8 @@ module.exports = withBundleAnalyzer({
   serverRuntimeConfig: {
     PROJECT_ROOT: __dirname,
   },
-  future: {
-    webpack5: false,
-  },
+  webpack5: false,
+
   webpack: (config, { isServer }) => {
     // Fixes draco
     if (!isServer) {
