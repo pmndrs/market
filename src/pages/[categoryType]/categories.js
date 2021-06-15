@@ -29,7 +29,7 @@ const Categories = ({ title, categories }) => {
 
 export default Categories
 
-export async function getStaticProps(ctx) {
+export async function getServerSideProps(ctx) {
   const type = ctx.params.categoryType
 
   const data = await fetch(`${API_ENDPOINT}/${type}/categories`)
@@ -40,16 +40,5 @@ export async function getStaticProps(ctx) {
       categories,
       title: 'Categories',
     },
-  }
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: [
-      '/models/categories/',
-      '/materials/categories/',
-      '/hdris/categories/',
-    ],
-    fallback: false,
   }
 }

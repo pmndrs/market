@@ -41,7 +41,7 @@ const Index = ({ title, materials }) => {
 }
 export default Index
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await fetch(`${API_ENDPOINT}/materials`)
   const materials = await data.json()
   return {

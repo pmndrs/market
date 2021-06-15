@@ -40,7 +40,7 @@ const Index = ({ title, hdris }) => {
 
 export default Index
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await fetch(`${API_ENDPOINT}/hdris`)
   const hdris = await data.json()
 
