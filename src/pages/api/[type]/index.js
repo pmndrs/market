@@ -4,7 +4,6 @@ import { listData } from '@/helpers/api/queries/list'
 import { supabase } from '@/helpers/initSupabase'
 
 export default async function handler(req, res) {
-  res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate')
   try {
     const assetType = req.query.type
     if (assetType === 'favorites') {
@@ -20,9 +19,10 @@ export default async function handler(req, res) {
         console.log(error)
       }
       const value = cleanSupabaseData(data)
+      res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate')
       res.status(200).json(value)
     }
   } catch (e) {
-    res.status(500).json(e)
+    console.log(e)
   }
 }

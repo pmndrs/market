@@ -12,7 +12,6 @@ creator (
 `
 
 export default async function handler(req, res) {
-  res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate')
   try {
     const assetType = req.query.type
     const name = req.query.name
@@ -40,10 +39,12 @@ export default async function handler(req, res) {
 
           return acc
         }, [])
+      res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate')
       res.status(200).json(categories)
     }
     if (assetType === 'creators' || assetType === 'teams') {
       const { data } = await supabase.from(assetType).select().eq('url', name)
+      res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate')
       res.status(200).json({
         ...data[0],
         page: !!data[0].url,
@@ -57,15 +58,17 @@ export default async function handler(req, res) {
       let asset = {
         ...current,
       }
-      const next = await supabase
-        .from(assetType)
-        .select(selectData)
-        .eq('id', current._id + 1)
+      if (current._id < data.length - 1) {
+        const next = await supabase
+          .from(assetType)
+          .select(selectData)
+          .eq('id', current._id + 1)
 
-      if (next.data.length) {
-        asset = {
-          ...asset,
-          next: cleanSupabaseData(next.data)[0],
+        if (next.data.length) {
+          asset = {
+            ...asset,
+            next: cleanSupabaseData(next.data)[0],
+          }
         }
       }
       if (current._id > 1) {
@@ -81,9 +84,10 @@ export default async function handler(req, res) {
         }
       }
 
+      res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate')
       res.status(200).json(asset)
     }
   } catch (e) {
-    res.status(500).json(e)
+    console.log(e)
   }
 }

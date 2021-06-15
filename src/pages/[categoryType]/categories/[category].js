@@ -23,11 +23,10 @@ const Page = ({ title, assets, type }) => {
 export default Page
 
 export async function getServerSideProps({ params }) {
-  const data = await fetch(`${API_ENDPOINT}/${params.categoryType}`)
-  const allModels = await data.json()
-  const assets = allModels.filter(
-    (asset) => asset.category.toLowerCase() === params.category.toLowerCase()
+  const data = await fetch(
+    `${API_ENDPOINT}/${params.categoryType}/category/${params.category}`
   )
+  const assets = await data.json()
   const capitalizeFirstLetter = ([first, ...rest]) =>
     first.toUpperCase() + rest.join('')
 
