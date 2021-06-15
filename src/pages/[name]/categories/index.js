@@ -30,7 +30,7 @@ const Categories = ({ title, categories }) => {
 export default Categories
 
 export async function getServerSideProps(ctx) {
-  const type = ctx.params.categoryType
+  const type = ctx.params.name
 
   const data = await fetch(`${API_ENDPOINT}/${type}/categories`)
   const categories = await data.json()
