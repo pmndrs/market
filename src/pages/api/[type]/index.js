@@ -14,7 +14,7 @@ export default async function handler(req, res) {
         .from(assetType)
         .select(listData[assetType])
         .filter('approved', 'eq', true)
-        .order('id')
+        .order('id', { ascending: false })
       if (error) {
         console.log(error)
       }

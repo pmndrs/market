@@ -16,18 +16,37 @@ const Assets = ({ assets: starterAssets }) => {
 
     setAssets(assets.filter((a) => a._id !== id))
   }
+  const deleteAsset = async (id, path) => {
+    const from = path.split('/')[0] + 's'
+    await supabase.from(from).delete().eq('id', id)
+    await supabase.storage
+      .from(from)
+      .remove([
+        `${path.split('/')[1]}/model.gltf`,
+        `${path.split('/')[1]}/thumbnail.png`,
+      ])
+    setAssets(assets.filter((a) => a._id !== id))
+  }
   return (
     <Layout title={'Assets to Approve'}>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
         {assets.map((asset) => (
           <div key={asset.id}>
             <Asset {...asset} />
-            <Button
-              onClick={() => approveAsset(asset._id, asset.id)}
-              className='w-full mt-4 bg-green-600'
-            >
-              Approve
-            </Button>
+            <div className='flex gap-2'>
+              <Button
+                onClick={() => deleteAsset(asset._id, asset.id)}
+                className='w-full mt-4 bg-red-600'
+              >
+                Delete
+              </Button>
+              <Button
+                onClick={() => approveAsset(asset._id, asset.id)}
+                className='w-full mt-4 bg-green-600'
+              >
+                Approve
+              </Button>
+            </div>
           </div>
         ))}
       </ul>
