@@ -71,11 +71,15 @@ const AssetInfo = (asset) => {
   }`
 
   const createModelDownload = () => {
-    if (assetType.value !== 'model') {
-      return
-    }
-    const code = createCode()
-    createModelDownloadZip(asset, code, tab)
+    // Wrap it into a Promise so the function will always return a Promise<void>
+    // instead of void | Promise<void>
+    return new Promise((resolve) => {
+      if (assetType.value !== 'model') {
+        resolve()
+      }
+      const code = createCode()
+      resolve(createModelDownloadZip(asset, code, tab))
+    })
   }
 
   const handleStarterDownload = () => {
@@ -92,7 +96,7 @@ const AssetInfo = (asset) => {
         promise = createHDRIDownload(asset, tab)
         break
       default:
-        promise = copy(createModelDownload()) // model case
+        promise = createModelDownload() // model case
     }
 
     toast.promise(promise, {

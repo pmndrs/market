@@ -45,9 +45,9 @@ const ModelInfo = (model) => {
     return <primitive object={scene} {...props} />
   }`
 
-  const createModelDownload = () => {
+  const createModelDownload = async () => {
     const code = createCode()
-    createModelDownloadZip(model, code, tab)
+    await createModelDownloadZip(model, code, tab)
   }
 
   const tabs = [
@@ -89,7 +89,7 @@ const ModelInfo = (model) => {
           {tab !== 'model' && (
             <DownloadButton
               onClick={() =>
-                toast.promise(copy(createModelDownload()), {
+                toast.promise(createModelDownload(), {
                   loading: 'Generating project',
                   success: 'Downloaded',
                 })
