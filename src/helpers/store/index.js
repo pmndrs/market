@@ -31,9 +31,9 @@ const useStore = create((set, get) => {
     createModelDownloadZip: async (model, jsx, tab) => {
       let code = ''
       if (tab === 'r3f') {
-        code = await createR3FModelCode(model, jsx)
+        code = createR3FModelCode(model, jsx)
       } else {
-        code = await createThreeModelCode(model)
+        code = createThreeModelCode(model)
       }
 
       var zip = new JSZip()

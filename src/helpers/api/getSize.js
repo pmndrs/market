@@ -1,10 +1,5 @@
-export const getSize = (starterSize, filename, justNumber = false) => {
-  let size
-  if (filename.includes('_textures')) {
-    size = starterSize / 1000
-  } else {
-    if (!size) size = starterSize / 1000
-  }
+export const getSize = (starterSize, justNumber = false) => {
+  const size = starterSize / 1000
 
   if (justNumber) return { size }
   return {

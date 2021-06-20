@@ -53,12 +53,10 @@ export const getStats = async (json) => {
     const report = inspect(document)
 
     const faces = report.meshes.properties.reduce(
-      (acc, curr) => (acc = curr.glPrimitives + acc),
-      0
+      (acc, curr) => curr.glPrimitives + acc
     )
     const vertices = report.meshes.properties.reduce(
-      (acc, curr) => (acc = curr.vertices + acc),
-      0
+      (acc, curr) => curr.vertices + acc
     )
     let totalBytes = 0
     for (let accessor of document.getRoot().listAccessors()) {
