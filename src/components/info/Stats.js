@@ -3,13 +3,14 @@ const Stats = ({ stats, size }) => {
   const items = [
     { name: 'Model Size', stat: size },
     { name: 'Meshes', stat: stats.meshes.properties.length },
-    {
+    stats.faces === Number && {
       name: 'Faces',
       stat: stats.faces,
     },
     {
       name: 'Vertices',
-      stat: stats.vertices,
+      stat:
+        stats.vertices === Number ? stats.vertices : stats.vertices.vertices,
     },
 
     { name: 'Textures', stat: stats.textures.properties.length },
@@ -30,7 +31,6 @@ const Stats = ({ stats, size }) => {
       : null,
     { name: 'Memory Consumption', stat: `~${stats.memoryConsumption}` },
   ].filter((e) => e)
-
   return (
     <div>
       <h3 className='text-lg font-medium text-gray-900 leading-6'>
