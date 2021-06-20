@@ -18,7 +18,7 @@ const Comments = ({ id }) => {
       >
         Comments
       </h2>
-      <div className='bg-white shadow sm:rounded-lg sm:overflow-hidden'>
+      <div className='shadow sm:rounded-lg sm:overflow-hidden dark:border dark:border-gray-800'>
         <div className='divide-y divide-gray-200 dark:divide-gray-700'>
           <div className='px-4 py-6 sm:px-6'>
             <ul className='space-y-8'>

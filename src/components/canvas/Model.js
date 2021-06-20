@@ -104,7 +104,7 @@ export default function ModelComponent(props) {
     >
       <color
         attach='background'
-        args={[darkMode ? colors.gray[800] : colors.white]}
+        args={[darkMode ? colors.gray[900] : colors.white]}
       />
       <Suspense fallback={null}>
         <Model {...props} key={props.id} />

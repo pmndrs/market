@@ -14,7 +14,7 @@ const Search = ({ search, setSearch, onOrderChange, assetName }) => {
           id='search'
           value={search}
           onChange={setSearch}
-          className='block w-full pr-10 bg-white border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+          className='block w-full pr-10 text-gray-800 bg-white border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
           placeholder={placeholder}
         />
         <div className='absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none'>

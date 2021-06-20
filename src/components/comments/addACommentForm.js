@@ -11,7 +11,7 @@ const AddACommentForm = ({ assetId }) => {
 
   if (!user) return null
   return (
-    <div className='px-4 py-6 bg-gray-50 sm:px-6'>
+    <div className='px-4 py-6 bg-gray-50 sm:px-6 dark:bg-gray-800 '>
       <div className='flex space-x-3'>
         <div className='flex-shrink-0'>
           <img

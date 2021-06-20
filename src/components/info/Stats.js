@@ -40,7 +40,7 @@ const Stats = ({ stats, size }) => {
         {items.map((item) => (
           <div
             key={item.name}
-            className='px-4 py-5 overflow-hidden bg-white rounded-lg shadow sm:p-6'
+            className='px-4 py-5 overflow-hidden bg-transparent rounded-lg shadow dark:border dark:border-gray-800 sm:p-6'
           >
             <dt className='text-sm font-medium text-gray-500 truncate'>
               {item.name}

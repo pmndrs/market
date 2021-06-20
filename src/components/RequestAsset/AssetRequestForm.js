@@ -16,7 +16,7 @@ const AssetRequestForm = ({ onSubmit }) => {
           htmlFor='request'
           className='block text-sm font-medium text-gray-700'
         >
-          What is the model?
+          What is the asset?
         </label>
         <div className='mt-1'>
           <input
@@ -26,7 +26,7 @@ const AssetRequestForm = ({ onSubmit }) => {
             name='request'
             required
             id='request'
-            className='block w-full border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+            className='block w-full text-gray-800 bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
             placeholder='A spaceship'
           />
         </div>
@@ -44,7 +44,7 @@ const AssetRequestForm = ({ onSubmit }) => {
               type='text'
               name='description'
               id='description'
-              className='block w-full border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+              className='block w-full text-gray-800 bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
             ></textarea>
           </div>
         </div>
@@ -59,7 +59,7 @@ const AssetRequestForm = ({ onSubmit }) => {
         <select
           id='type'
           name='type'
-          className='block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+          className='block w-full py-2 pl-3 pr-10 mt-1 text-base text-gray-800 bg-white border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
           defaultValue='Model'
           value={category}
           onChange={(e) => setCategory(e.target.value)}

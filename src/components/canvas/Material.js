@@ -103,7 +103,7 @@ export default function MaterialComponent(props) {
     >
       <color
         attach='background'
-        args={[darkMode ? colors.gray[800] : colors.white]}
+        args={[darkMode ? colors.gray[900] : colors.white]}
       />
       <ambientLight intensity={0.25} />
       <Suspense fallback={null}>
