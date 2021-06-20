@@ -7,7 +7,6 @@ import Button from '../Button'
 
 const Request = (request) => {
   const user = useStore((s) => s.user)
-
   const vote = useRequestsStore((s) => s.vote)
 
   const closeRequest = async () => {

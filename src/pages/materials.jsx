@@ -1,4 +1,5 @@
-import useStore from '@/helpers/store/materials'
+import useMaterialsStore from '@/helpers/store/materials'
+import useStore from '@/helpers/store'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import Asset from '@/components/Asset'
@@ -6,7 +7,7 @@ import { API_ENDPOINT } from '@/helpers/constants/api'
 import Search from '@/components/Search'
 
 const Index = ({ title, materials }) => {
-  const { search, currentMaterials, setSearch, setOrder } = useStore(
+  const { search, currentMaterials, setSearch, setOrder } = useMaterialsStore(
     (state) => ({
       search: state.search,
       currentMaterials: state.currentMaterials,
@@ -15,8 +16,8 @@ const Index = ({ title, materials }) => {
     })
   )
   useEffect(() => {
-    useStore.setState({ currentMaterials: materials })
-    useStore.setState({ defaultMaterials: materials })
+    useMaterialsStore.setState({ currentMaterials: materials })
+    useMaterialsStore.setState({ defaultMaterials: materials })
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

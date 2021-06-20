@@ -2,8 +2,13 @@ import Layout from '@/components/layout/'
 import { supabase } from '../helpers/initSupabase'
 import Asset from '@/components/Asset'
 import { API_ENDPOINT } from '@/helpers/constants/api'
+import { useEffect } from 'react'
+import useStore from '@/helpers/store'
 
 const Favorites = ({ favorites }) => {
+  useEffect(() => {
+    useStore.setState({ title: 'Favorites' })
+  })
   return (
     <Layout title={'Your Favorites'}>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>

@@ -10,6 +10,7 @@ import { GLTFLoader, DRACOLoader, MeshoptDecoder } from 'three-stdlib'
 
 const useStore = create((set, get) => {
   return {
+    title: '',
     darkMode: false,
     router: {},
     user: null,

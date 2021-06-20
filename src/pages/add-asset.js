@@ -4,7 +4,7 @@ import useStore from '@/helpers/store'
 import Head from 'next/head'
 
 const Page = () => {
-  const user = useStore()
+  const { user } = useStore()
 
   if (!user) return null
   return (

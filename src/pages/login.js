@@ -1,6 +1,8 @@
 import { supabase } from '../helpers/initSupabase'
 import Layout from '@/components/layout'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+import useStore from '@/helpers/store'
 
 const Index = ({ user }) => {
   const router = useRouter()
@@ -8,6 +10,10 @@ const Index = ({ user }) => {
   if (user) {
     router.push('/')
   }
+
+  useEffect(() => {
+    useStore.setState({ title: 'Login' })
+  })
 
   const signIn = async (provider) => {
     await supabase.auth.signIn(

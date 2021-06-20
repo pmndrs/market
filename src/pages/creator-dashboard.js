@@ -2,8 +2,13 @@ import Layout from '@/components/layout/'
 import { supabase } from '../helpers/initSupabase'
 import Asset from '@/components/Asset'
 import { getSize } from '@/helpers/getSize'
+import { useEffect } from 'react'
+import useStore from '@/helpers/store'
 
 const Assets = ({ assets }) => {
+  useEffect(() => {
+    useStore.setState({ title: 'Creator Dashboard' })
+  })
   return (
     <Layout title={'Your Assets'}>
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>

@@ -1,4 +1,5 @@
-import useStore from '@/helpers/store/hdri'
+import useHDRIStore from '@/helpers/store/hdri'
+import useStore from '@/helpers/store'
 import Layout from '@/components/layout/'
 import { useEffect } from 'react'
 import { API_ENDPOINT } from '@/helpers/constants/api'
@@ -6,15 +7,17 @@ import Asset from '@/components/Asset'
 import Search from '@/components/Search'
 
 const Index = ({ title, hdris }) => {
-  const { search, currentHdri, setSearch, setOrder } = useStore((state) => ({
-    search: state.search,
-    currentHdri: state.currentHdri,
-    setSearch: state.setSearch,
-    setOrder: state.setOrder,
-  }))
+  const { search, currentHdri, setSearch, setOrder } = useHDRIStore(
+    (state) => ({
+      search: state.search,
+      currentHdri: state.currentHdri,
+      setSearch: state.setSearch,
+      setOrder: state.setOrder,
+    })
+  )
   useEffect(() => {
-    useStore.setState({ currentHdri: hdris })
-    useStore.setState({ defaultHdri: hdris })
+    useHDRIStore.setState({ currentHdri: hdris })
+    useHDRIStore.setState({ defaultHdri: hdris })
     useStore.setState({ title })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

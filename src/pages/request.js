@@ -1,4 +1,4 @@
-import useStore from '@/helpers/store/requests'
+import useRequestsStore from '@/helpers/store/requests'
 import Layout from '@/components/layout/'
 import { supabase } from '../helpers/initSupabase'
 import AssetRequestForm from '@/components/RequestAsset/AssetRequestForm'
@@ -8,10 +8,11 @@ import Tippy from '@tippyjs/react'
 import { useState } from 'react'
 import Button from '@/components/Button'
 import Tabs from '@/components/Tabs'
+import useStore from '@/helpers/store'
 
 const RequestPage = ({ user, requests: requestsServer }) => {
   const [tab, setTab] = useState('open')
-  const { requesting, submitRequest, setRequests, requests } = useStore(
+  const { requesting, submitRequest, setRequests, requests } = useRequestsStore(
     (s) => ({
       requesting: s.requesting,
       submitRequest: s.submitRequest,
@@ -19,6 +20,10 @@ const RequestPage = ({ user, requests: requestsServer }) => {
       requests: s.requests,
     })
   )
+
+  useEffect(() => {
+    useStore.setState({ title: 'Asset Requests' })
+  })
 
   useEffect(() => {
     setRequests(requestsServer)
@@ -47,7 +52,9 @@ const RequestPage = ({ user, requests: requestsServer }) => {
               <Button
                 disabled={!user}
                 onClick={() =>
-                  user ? useStore.setState({ requesting: !requesting }) : null
+                  user
+                    ? useRequestsStore.setState({ requesting: !requesting })
+                    : null
                 }
               >
                 Request an Asset

@@ -3,10 +3,15 @@ import { supabase } from '../helpers/initSupabase'
 import Asset from '@/components/Asset'
 import { getSize } from '@/helpers/getSize'
 import Button from '@/components/Button'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import useStore from '@/helpers/store'
 
 const Assets = ({ assets: starterAssets }) => {
   const [assets, setAssets] = useState(starterAssets)
+
+  useEffect(() => {
+    useStore.setState({ title: 'Admin Dashboard' })
+  })
 
   const approveAsset = async (id, path) => {
     await supabase
