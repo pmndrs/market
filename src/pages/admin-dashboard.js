@@ -39,18 +39,18 @@ const Assets = ({ assets: starterAssets }) => {
           <div key={asset.id}>
             <Asset {...asset} />
             <div className='flex gap-2'>
-              <Button
+              <button
                 onClick={() => deleteAsset(asset._id, asset.id)}
-                className='w-full mt-4 bg-red-600'
+                className='relative items-center w-full px-4 py-2 mt-4 text-sm font-medium text-white bg-red-600 shadow-sm rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-gray-500 disabled:opacity-60 disabled:cursor-auto'
               >
                 Delete
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={() => approveAsset(asset._id, asset.id)}
-                className='w-full mt-4 bg-green-600'
+                className='relative items-center w-full px-4 py-2 mt-4 text-sm font-medium text-white bg-green-600 shadow-sm rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-gray-500 disabled:opacity-60 disabled:cursor-auto'
               >
                 Approve
-              </Button>
+              </button>
             </div>
           </div>
         ))}
