@@ -69,7 +69,7 @@ const Request = (request) => {
                   </button>
                 </div>
               </Tippy>
-              <p className='inline-flex px-2 text-lg font-bold leading-5'>
+              <p className='inline-flex px-2 text-lg font-bold text-gray-800 leading-5'>
                 {request.upvotes.length}
               </p>
             </div>

@@ -10,6 +10,8 @@ import {
 import { Suspense, useRef } from 'react'
 import { useControls } from 'leva'
 import { defaultControls, lightControls } from './controls'
+import useStore from '@/helpers/store'
+import colors from 'tailwindcss/colors'
 
 const PBR = ({ maps, displacementScale }) => {
   const texturesLoader = useTexture([...Object.values(maps)])
@@ -91,6 +93,7 @@ const Material = ({ file, category, maps }) => {
 }
 
 export default function MaterialComponent(props) {
+  const { darkMode } = useStore()
   return (
     <Canvas
       shadows
@@ -98,7 +101,10 @@ export default function MaterialComponent(props) {
       dpr={[1, 1.5]}
       camera={{ position: [0, 0, 150], fov: 50 }}
     >
-      <color attach='background' color='white' />
+      <color
+        attach='background'
+        args={[darkMode ? colors.gray[800] : colors.white]}
+      />
       <ambientLight intensity={0.25} />
       <Suspense fallback={null}>
         <Material {...props} />

@@ -10,7 +10,7 @@ const Tabs = ({ tabs }) => {
         <select
           id='tabs'
           name='tabs'
-          className='block w-full py-2 pl-3 pr-10 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+          className='block w-full py-2 pl-3 pr-10 text-base bg-white border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
           defaultValue={tabs.find((tab) => tab.current).name}
           onChange={(e) =>
             tabs

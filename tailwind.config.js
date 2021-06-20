@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: ['./src/pages/**/*', './src/components/**/*'],
-  darkMode: 'media',
+  darkMode: 'class',
   jit: true,
   theme: {
     fontFamily: {
@@ -17,6 +17,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    require('nightwind'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
   ],

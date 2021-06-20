@@ -20,7 +20,9 @@ const VerticalSelect = ({ options, value, onChange, label }) => {
                 settingIdx === options.length - 1
                   ? 'rounded-bl-md rounded-br-md'
                   : '',
-                checked ? 'bg-blue-50 border-blue-200 z-10' : 'border-gray-200',
+                checked
+                  ? 'dark:bg-gray-600 dark:border-gray-800 bg-blue-50 border-blue-200 z-10'
+                  : 'border-gray-200',
                 'relative border p-4 flex cursor-pointer focus:outline-none',
                 setting.disabled ? 'opacity-30 cursor-default' : ''
               )

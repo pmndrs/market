@@ -9,7 +9,6 @@ export const sortAssets = (order, currentAssets) => {
     )
   }
   if (order === 'size') {
-    console.log(currentAssets)
     assetsToReturn = currentAssets.sort(
       (a, b) => a.originalSize - b.originalSize
     )

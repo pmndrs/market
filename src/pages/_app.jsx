@@ -8,6 +8,16 @@ import ProgressBar from '@badrap/bar-of-progress'
 import useHandleLogin from '@/helpers/hooks/useHandleLogin'
 import useFathom from '@/helpers/hooks/useFathom'
 import { Toaster } from 'react-hot-toast'
+import useStore from '@/helpers/store'
+
+function getInitialColorMode() {
+  const persistedColorPreference = window.localStorage.getItem('nightwind-mode')
+  const hasPersistedPreference = typeof persistedColorPreference === 'string'
+  if (hasPersistedPreference) {
+    return persistedColorPreference
+  }
+  return 'light'
+}
 
 const progress = new ProgressBar({
   size: 3,
@@ -28,6 +38,14 @@ function MyApp({ Component, pageProps }) {
     router.events.on('routeChangeComplete', progress.finish)
     router.events.on('routeChangeError', progress.finish)
   }, [router.events])
+
+  useEffect(() => {
+    getInitialColorMode() === 'light'
+      ? document.documentElement.classList.remove('dark')
+      : document.documentElement.classList.add('dark')
+    document.documentElement.classList.add('nightwind')
+    useStore.setState({ darkMode: getInitialColorMode() === 'dark' })
+  }, [])
 
   return (
     <>
@@ -91,7 +109,6 @@ function MyApp({ Component, pageProps }) {
           content='http://market.pmnd.rs/share.png'
         />
       </Head>
-
       <Component user={user} session={session} {...pageProps} />
       <Toaster />
     </>

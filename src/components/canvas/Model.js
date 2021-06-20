@@ -5,6 +5,8 @@ import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { useControls } from 'leva'
 import { AnimationMixer } from 'three'
 import { lightControls, defaultControls } from './controls'
+import colors from 'tailwindcss/colors'
+import useStore from '@/helpers/store'
 
 const Model = ({ file }) => {
   const ref = useRef()
@@ -92,6 +94,7 @@ const Model = ({ file }) => {
 }
 
 export default function ModelComponent(props) {
+  const { darkMode } = useStore()
   return (
     <Canvas
       shadows
@@ -99,7 +102,10 @@ export default function ModelComponent(props) {
       dpr={[1, 1.5]}
       camera={{ position: [0, 0, 150], fov: 50 }}
     >
-      <color attach='background' color='white' />
+      <color
+        attach='background'
+        args={[darkMode ? colors.gray[800] : colors.white]}
+      />
       <Suspense fallback={null}>
         <Model {...props} key={props.id} />
       </Suspense>

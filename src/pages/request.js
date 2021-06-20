@@ -76,7 +76,7 @@ const RequestPage = ({ user, requests: requestsServer }) => {
         ]}
       />
       <div className='mt-10 overflow-hidden bg-white shadow sm:rounded-md'>
-        <ul className='divide-y divide-gray-200'>
+        <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
           {currentRequests.map((request) => (
             <Request closed={tab === 'closed'} {...request} key={request.id} />
           ))}
