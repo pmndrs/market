@@ -5,7 +5,7 @@ import { createCode as createR3FHDRICode } from '../code/hdri/r3f'
 import { createCode as createThreeHDRICode } from '../code/hdri/three'
 import { sortAssets } from './utils'
 
-const useStore = create((set, get) => {
+const useHDRIStore = create((set, get) => {
   return {
     defaultHdri: null,
     currentHdri: [],
@@ -59,4 +59,4 @@ const useStore = create((set, get) => {
   }
 })
 
-export default useStore
+export default useHDRIStore

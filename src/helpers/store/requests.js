@@ -1,7 +1,7 @@
 import create from 'zustand'
 import { supabase } from '../../helpers/initSupabase'
 
-const useStore = create((set, get) => {
+const useRequestsStore = create((set, get) => {
   return {
     requests: [],
     setRequests: (requests) => {
@@ -24,8 +24,10 @@ const useStore = create((set, get) => {
         user_id: user?.id,
         created: new Date(),
       }
-      set({ requests: [{ id: 'fake-id', ...newRequest }, ...requests] })
-      useStore.setState({ requesting: false })
+      set({
+        requests: [{ id: 'fake-id', ...newRequest }, ...requests],
+        requesting: false,
+      })
       const { error } = await supabase.from('requests').insert([newRequest])
 
       if (error) {
@@ -54,4 +56,4 @@ const useStore = create((set, get) => {
   }
 })
 
-export default useStore
+export default useRequestsStore
