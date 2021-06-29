@@ -2,7 +2,6 @@ import Layout from '@/components/layout/'
 import { supabase } from '../helpers/initSupabase'
 import Asset from '@/components/Asset'
 import { getSize } from '@/helpers/getSize'
-import Button from '@/components/Button'
 import { useEffect, useState } from 'react'
 import useStore from '@/helpers/store'
 
