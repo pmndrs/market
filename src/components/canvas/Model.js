@@ -1,12 +1,11 @@
-import { useMemo } from 'react'
+import { Suspense, useRef, useLayoutEffect, useEffect, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stage, useGLTF } from '@react-three/drei'
-import { Suspense, useRef, useLayoutEffect, useEffect } from 'react'
 import { useControls } from 'leva'
 import { AnimationMixer } from 'three'
-import { lightControls, defaultControls } from './controls'
 import colors from 'tailwindcss/colors'
 import useStore from '@/helpers/store'
+import { lightControls, defaultControls } from './controls'
 
 const Model = ({ file }) => {
   const ref = useRef()
