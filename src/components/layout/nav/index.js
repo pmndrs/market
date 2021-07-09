@@ -67,7 +67,10 @@ const Nav = () => {
               </div>
               <div className='flex gap-2'>
                 <Tippy content='Toggle Dark Mode'>
-                  <button onClick={toggleDarkMode} className='text-gray-400'>
+                  <button
+                    onClick={toggleDarkMode}
+                    className='text-gray-500 border-transparent hover:border-gray-300 hover:text-gray-700'
+                  >
                     {darkMode ? (
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
