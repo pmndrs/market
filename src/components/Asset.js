@@ -15,7 +15,7 @@ const Asset = (asset) => {
         className='absolute inset-0 focus:outline-none'
         href={'/' + asset.id}
       >
-        <a>
+        <>
           <div className='relative'>
             {!asset.approved && (
               <div className='absolute w-full text-center text-gray-900 top-[50%] left-[50%] z-[100] transform translate-x-[-50%] translate-y-[-50%]'>
@@ -89,7 +89,7 @@ const Asset = (asset) => {
             )}
             {getMaterialSize(asset)}
           </p>
-        </a>
+        </>
       </Link>
     </li>
   )
