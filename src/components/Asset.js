@@ -15,18 +15,13 @@ const Asset = (asset) => {
         className='absolute inset-0 focus:outline-none'
         href={'/' + asset.id}
       >
-        <>
+        <a>
           <div className='relative'>
             {!asset.approved && (
               <div className='absolute w-full text-center text-gray-900 top-[50%] left-[50%] z-[100] transform translate-x-[-50%] translate-y-[-50%]'>
                 Pending Approval
               </div>
             )}
-            <Link href={`/${type}/categories/${asset.category}`}>
-              <a className='absolute right-0 z-20 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>
-                {asset.category}
-              </a>
-            </Link>
             <div
               className={
                 'block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'
@@ -89,7 +84,12 @@ const Asset = (asset) => {
             )}
             {getMaterialSize(asset)}
           </p>
-        </>
+        </a>
+      </Link>
+      <Link href={`/${type}/categories/${asset.category}`}>
+        <a className='absolute top-0 right-0 z-20 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>
+          {asset.category}
+        </a>
       </Link>
     </li>
   )
