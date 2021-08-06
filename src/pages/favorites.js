@@ -32,13 +32,15 @@ export async function getServerSideProps({ req }) {
       },
     }
   }
+
   const { data } = await supabase
     .from('profiles')
     .select('favorites')
     .eq('user_id', user.id)
 
-  const url = `${API_ENDPOINT}/favorites?favs=${data[0].favorites}`
-  const favorites = await fetch(url).json()
+  const url = `${API_ENDPOINT}/favorites?favs=${data[0]?.favorites}`
+  const assetData = await fetch(url)
+  const favorites = await assetData.json()
 
   return { props: { user, favorites } }
 }
