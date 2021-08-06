@@ -34,7 +34,7 @@ const Index = ({ user }) => {
             <div>
               <button
                 onClick={() => signIn('google')}
-                className='inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white border border-gray-300 bg-[#4285F4] rounded-md shadow-sm'
+                className='inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white border border-gray-300 bg-[#4285F4] rounded-md shadow-sm dark:bg-[#FFF]'
               >
                 <span>Sign in with Google</span>
 
@@ -52,7 +52,7 @@ const Index = ({ user }) => {
             <div>
               <button
                 onClick={() => signIn('github')}
-                className='inline-flex justify-center w-full px-4 py-2 mt-4 text-sm font-medium text-white border border-gray-300 bg-[#181717] rounded-md shadow-sm'
+                className='inline-flex justify-center w-full px-4 py-2 mt-4 text-sm font-medium text-white border border-gray-300 bg-[#181717] rounded-md shadow-sm dark:bg-[#FFF]'
               >
                 <span>Sign in with GitHub</span>
                 <svg
