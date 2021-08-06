@@ -7,8 +7,8 @@ export default async function handler(req, res) {
   try {
     const assetType = req.query.type
     if (assetType === 'favorites') {
-      const team = await getAssetFavorites(req.query.favs)
-      res.status(200).json(team)
+      const assetData = await getAssetFavorites(req.query.favs)
+      res.status(200).json(assetData)
     } else {
       const { data, error } = await supabase
         .from(assetType)
