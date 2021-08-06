@@ -12,7 +12,7 @@ const UserMenu = ({ user }) => {
           {({ open }) => (
             <>
               <div>
-                <Menu.Button className='flex text-sm bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+                <Menu.Button className='flex text-sm bg-white rounded-full ring-1 ring-gray-500 hover:ring-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
                   <span className='sr-only'>Open user menu</span>
                   <img
                     className='w-8 h-8 rounded-full'
