@@ -58,16 +58,19 @@ export const getStats = async (json) => {
     const vertices = report.meshes.properties.reduce(
       (acc, curr) => curr.vertices + acc
     )
-    let totalBytes = 0
-    for (let accessor of document.getRoot().listAccessors()) {
-      totalBytes += accessor.getByteLength()
-    }
-    for (let texture of document.getRoot().listTextures()) {
-      totalBytes += ImageUtils.getMemSize(
-        texture.getImage(),
-        texture.getMimeType()
+    const totalBytes = document
+      .getRoot()
+      .listAccessors()
+      .reduce(
+        (acc, curr) => curr.getByteLength() + acc,
+        document
+          .getRoot()
+          .listTextures()
+          .reduce(
+            (acc, curr) =>
+              ImageUtils.getMemSize(curr.getImage(), curr.getMimeType()) + acc
+          )
       )
-    }
 
     return {
       extensions: json.extensionsUsed || json.extensionsRequired,
