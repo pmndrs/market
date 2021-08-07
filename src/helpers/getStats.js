@@ -30,6 +30,16 @@ function decodeDataURI(resource, resources) {
   resource.uri = resourceUUID
 }
 
+function getTexturesSize() {
+  return document
+    .getRoot()
+    .listTextures()
+    .reduce(
+      (acc, curr) =>
+        ImageUtils.getMemSize(curr.getImage(), curr.getMimeType()) + acc
+    )
+}
+
 export const getStats = async (json) => {
   try {
     const io = new WebIO()
@@ -61,16 +71,7 @@ export const getStats = async (json) => {
     const totalBytes = document
       .getRoot()
       .listAccessors()
-      .reduce(
-        (acc, curr) => curr.getByteLength() + acc,
-        document
-          .getRoot()
-          .listTextures()
-          .reduce(
-            (acc, curr) =>
-              ImageUtils.getMemSize(curr.getImage(), curr.getMimeType()) + acc
-          )
-      )
+      .reduce((acc, curr) => curr.getByteLength() + acc, getTexturesSize())
 
     return {
       extensions: json.extensionsUsed || json.extensionsRequired,
