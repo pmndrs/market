@@ -278,7 +278,6 @@ const useAddAssetStore = create((set, get) => {
           loadingText: 'We are done',
           createdAsset: id,
         })
-        set({ createdAsset: id })
       } catch (e) {
         console.error(e)
         set({
