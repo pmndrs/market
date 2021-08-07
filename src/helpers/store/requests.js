@@ -24,8 +24,10 @@ const useStore = create((set, get) => {
         user_id: user?.id,
         created: new Date(),
       }
-      set({ requests: [{ id: 'fake-id', ...newRequest }, ...requests] })
-      useStore.setState({ requesting: false })
+      set({
+        requests: [{ id: 'fake-id', ...newRequest }, ...requests],
+        requesting: false,
+      })
       const { error } = await supabase.from('requests').insert([newRequest])
 
       if (error) {
