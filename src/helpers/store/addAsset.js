@@ -254,9 +254,7 @@ const useAddAssetStore = create((set, get) => {
             acc[curr] = state.maps[curr].size
             return acc
           }, {})
-          const size = Object.values(sizes).reduce(
-            (acc, curr) => (acc = acc + curr)
-          )
+          const size = Object.values(sizes).reduce((acc, curr) => acc + curr)
 
           const data = {
             ...assetData,
