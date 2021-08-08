@@ -124,7 +124,7 @@ const AssetInfo = (asset) => {
   ]
 
   return (
-    <div className='mt-5'>
+    <div className='-mt-20'>
       <div className='z-10 hidden mb-6 laptop:block w-[70%]'>
         <Leva
           fill
