@@ -15,6 +15,9 @@
     margin: 0;
     padding: 0;
   }
+  select {
+    color: initial;
+  }
 }
 
 a {
