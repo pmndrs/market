@@ -1,6 +1,6 @@
-export const sortAssets = (order, currentAssets, orderDirection) => {
+export const sortAssets = (orderBy, currentAssets, orderDirection) => {
   let assetsToReturn
-  switch (order) {
+  switch (orderBy) {
     case 'views':
       assetsToReturn = currentAssets.sort((a, b) => b.views - a.views)
       break
