@@ -10,12 +10,17 @@ const useStore = create((set, get) => {
     defaultHdri: null,
     currentHdri: [],
     search: '',
-    order: 'alphabetic',
-    setOrder: (order, hdris) => {
-      set({ order })
+    orderBy: 'alphabetic',
+    orderDirection: 'asc',
+    setOrderBy: (orderBy, hdris) => {
+      set({ orderBy })
       const currentHdri = hdris || get().currentHdri
-
-      return sortAssets(order, currentHdri)
+      return sortAssets(orderBy, currentHdri, get().orderDirection)
+    },
+    setOrderDirection: (orderDirection) => {
+      set({ orderDirection })
+      const currentHdri = get().currentHdri
+      return sortAssets(get().orderBy, currentHdri, get().orderDirection)
     },
     createHDRIDownload: async (hdri, tab) => {
       let code = ''
@@ -40,8 +45,8 @@ const useStore = create((set, get) => {
     setSearch: (e) => {
       const search = e.target.value
       const defaultHdri = get().defaultHdri
-      const order = get().order
-      const setOrder = get().setOrder
+      const orderBy = get().orderBy
+      const setOrderBy = get().setOrderBy
       set({ search: search })
       if (search.length) {
         const searchResults = defaultHdri.filter((hdri) => {
@@ -51,9 +56,9 @@ const useStore = create((set, get) => {
             hdri.name.toLowerCase().includes(search.toLowerCase())
           )
         })
-        set({ currentHdri: setOrder(order, searchResults) })
+        set({ currentHdri: setOrderBy(orderBy, searchResults) })
       } else {
-        set({ currentHdri: setOrder(order, defaultHdri) })
+        set({ currentHdri: setOrderBy(orderBy, defaultHdri) })
       }
     },
   }
