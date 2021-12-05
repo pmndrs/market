@@ -36,7 +36,7 @@ const useCommentsStore = create((set, get) => {
           ],
         })
       } catch (e) {
-        toast.error('There has been a problem delting your comment')
+        toast.error('There has been a problem deleting your comment')
       }
     },
     updateComment: async (user, id, newComment) => {
