@@ -7,7 +7,8 @@ _id,
  size,
  category,
  approved,
- thumbnail`
+ thumbnail,
+ file`
 
 const models = `
  ${common},

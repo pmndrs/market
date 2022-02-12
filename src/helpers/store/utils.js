@@ -5,7 +5,7 @@ export const sortAssets = (order, currentAssets) => {
   }
   if (order === 'added') {
     assetsToReturn = currentAssets.sort(
-      (a, b) => new Date(b.lastModified) - new Date(a.lastModified)
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
     )
   }
   if (order === 'size') {
