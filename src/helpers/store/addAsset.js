@@ -254,10 +254,7 @@ const useAddAssetStore = create((set, get) => {
             acc[curr] = state.maps[curr].size
             return acc
           }, {})
-          const size = Object.values(sizes).reduce((acc, curr) => {
-            acc = acc + curr
-            return acc
-          }, 0)
+          const size = Object.values(sizes).reduce((acc, curr) => acc + curr)
 
           const data = {
             ...assetData,
@@ -275,8 +272,10 @@ const useAddAssetStore = create((set, get) => {
             .insert({ thumbnail, file, creator, team, ...assetData })
         }
 
-        set({ loadingText: 'We are done' })
-        set({ createdAsset: id })
+        set({
+          loadingText: 'We are done',
+          createdAsset: id,
+        })
       } catch (e) {
         console.error(e)
         set({
