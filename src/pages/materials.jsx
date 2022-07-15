@@ -7,14 +7,14 @@ import { API_ENDPOINT } from '@/helpers/constants/api'
 import Search from '@/components/Search'
 
 const Index = ({ title, materials }) => {
-  const { search, currentMaterials, setSearch, setOrder } = useMaterialsStore(
-    (state) => ({
+  const { search, currentMaterials, setSearch, setOrderBy, setOrderDirection } =
+    useMaterialsStore((state) => ({
       search: state.search,
       currentMaterials: state.currentMaterials,
       setSearch: state.setSearch,
-      setOrder: state.setOrder,
-    })
-  )
+      setOrderBy: state.setOrderBy,
+      setOrderDirection: state.setOrderDirection,
+    }))
   useEffect(() => {
     useMaterialsStore.setState({ currentMaterials: materials })
     useMaterialsStore.setState({ defaultMaterials: materials })
@@ -29,7 +29,8 @@ const Index = ({ title, materials }) => {
       <Search
         search={search}
         setSearch={setSearch}
-        onOrderChange={setOrder}
+        onOrderChange={setOrderBy}
+        onOrderDirectionChange={setOrderDirection}
         assetName='materials'
       />
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
