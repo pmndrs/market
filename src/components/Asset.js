@@ -22,11 +22,6 @@ const Asset = (asset) => {
                 Pending Approval
               </div>
             )}
-            <Link href={`/${type}/categories/${asset.category}`}>
-              <a className='absolute right-0 z-20 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>
-                {asset.category}
-              </a>
-            </Link>
             <div
               className={
                 'block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-10 aspect-h-7 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500'
@@ -89,6 +84,11 @@ const Asset = (asset) => {
             )}
             {getMaterialSize(asset)}
           </p>
+        </a>
+      </Link>
+      <Link href={`/${type}/categories/${asset.category}`}>
+        <a className='absolute top-0 right-0 z-20 p-2 text-sm text-gray-800 bg-gray-100 rounded-tl-none rounded-tr-lg rounded-br-none rounded-bl-md opacity-85'>
+          {asset.category}
         </a>
       </Link>
     </li>
