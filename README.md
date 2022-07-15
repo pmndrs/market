@@ -49,10 +49,6 @@ Some needs to know:
 - components category
 - npm package with this
 
-## Appendix
-
-All assets and API can be found here: https://github.com/pmndrs/market-assets
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
