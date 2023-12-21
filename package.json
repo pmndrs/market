@@ -47,14 +47,15 @@
     "react-markdown": "^6.0.3",
     "tailwindcss": "^3.4.0",
     "three": "^0.131.3",
-    "three-stdlib": "^2.4.0"
+    "three-stdlib": "^2.4.0",
+    "eslint": "^8.56.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@next/bundle-analyzer": "^14.0.4",
     "autoprefixer": "^10.4.16",
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.56.0",
+
     "eslint-config-next": "^14.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^7.0.1",
