@@ -1,22 +1,11 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/pages/**/*', './src/components/**/*'],
+  content: ['./src/pages/**/*', './src/components/**/*'],
   darkMode: 'class',
-  jit: true,
   theme: {
-    colors: colors,
-    nightwind: {
-      colors: {
-        white: colors.gray[900],
-        black: colors.gray[50],
-      },
-    },
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-    },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
       screens: {
         laptop: '1200px',
       },
