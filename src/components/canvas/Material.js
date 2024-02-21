@@ -36,7 +36,7 @@ const MatCap = ({ file }) => {
   const [matcap] = useTexture([file])
   const group = useRef()
   const { nodes } = useGLTF(
-    'https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/suzanne-high-poly/model.gltf'
+    'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/suzanne-high-poly/model.gltf'
   )
   return (
     <group ref={group} dispose={null}>
