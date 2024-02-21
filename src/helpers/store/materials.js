@@ -7,7 +7,7 @@ import { createCode as createR3FPBRCode } from '../code/pbr/r3f'
 import { createCode as createThreePBRCode } from '../code/pbr/three'
 import { sortAssets } from './utils'
 
-const useStore = create((set, get) => {
+const useMaterialsStore = create((set, get) => {
   return {
     defaultMaterials: null,
     currentMaterials: [],
@@ -101,4 +101,4 @@ const useStore = create((set, get) => {
   }
 })
 
-export default useStore
+export default useMaterialsStore

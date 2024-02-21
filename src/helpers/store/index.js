@@ -123,6 +123,7 @@ const useStore = create((set, get) => {
       dracoloader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
       gltfLoader.setDRACOLoader(dracoloader)
       gltfLoader.setMeshoptDecoder(MeshoptDecoder)
+
       const result = await new Promise((resolve, reject) =>
         gltfLoader.parse(buffer, '', resolve, reject)
       )

@@ -6,7 +6,6 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import ProgressBar from '@badrap/bar-of-progress'
 import useHandleLogin from '@/helpers/hooks/useHandleLogin'
-import useFathom from '@/helpers/hooks/useFathom'
 import { Toaster } from 'react-hot-toast'
 import useStore from '@/helpers/store'
 
@@ -31,7 +30,6 @@ function MyApp({ Component, pageProps }) {
   const session = supabase.auth.session()
   const router = useRouter()
   useHandleLogin()
-  useFathom()
 
   useEffect(() => {
     router.events.on('routeChangeStart', progress.start)
