@@ -6,14 +6,21 @@ import { API_ENDPOINT } from '@/helpers/constants/api'
 import Search from '@/components/Search'
 
 const Index = ({ title, models }) => {
-  const { search, currentModels, setSearch, setOrderBy, setOrderDirection } =
-    useStore((state) => ({
-      search: state.search,
-      currentModels: state.currentModels,
-      setSearch: state.setSearch,
-      setOrderBy: state.setOrderBy,
-      setOrderDirection: state.setOrderDirection,
-    }))
+  const {
+    search,
+    currentModels,
+    setSearch,
+    setOrderBy,
+    setOrderDirection,
+    orderDirection,
+  } = useStore((state) => ({
+    search: state.search,
+    currentModels: state.currentModels,
+    setSearch: state.setSearch,
+    setOrderBy: state.setOrderBy,
+    setOrderDirection: state.setOrderDirection,
+    orderDirection: state.orderDirection,
+  }))
   useEffect(() => {
     useStore.setState({ currentModels: models })
     useStore.setState({ defaultModels: models })
@@ -31,6 +38,7 @@ const Index = ({ title, models }) => {
         setSearch={setSearch}
         onOrderChange={setOrderBy}
         onOrderDirectionChange={setOrderDirection}
+        orderDirection={orderDirection}
         assetName='models'
       />
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>
