@@ -22,12 +22,17 @@ const useStore = create((set, get) => {
     currentModels: [],
     parseBuffer: null,
     search: '',
-    order: 'alphabetic',
-    setOrder: (order, models) => {
-      set({ order })
+    orderBy: 'alphabetic',
+    orderDirection: 'asc',
+    setOrderBy: (orderBy, models) => {
+      set({ orderBy })
       const currentModels = models || get().currentModels
-
-      return sortAssets(order, currentModels)
+      return sortAssets(orderBy, currentModels, get().orderDirection)
+    },
+    setOrderDirection: (orderDirection) => {
+      set({ orderDirection })
+      const currentModels = get().currentModels
+      return sortAssets(get().orderBy, currentModels, get().orderDirection)
     },
     createModelDownloadZip: async (model, jsx, tab) => {
       let code = ''
@@ -52,8 +57,8 @@ const useStore = create((set, get) => {
     setSearch: (e) => {
       const search = e.target.value
       const defaultModels = get().defaultModels
-      const setOrder = get().setOrder
-      const order = get().order
+      const setOrderBy = get().setOrderBy
+      const orderBy = get().orderBy
       set({ search: search })
       if (search.length) {
         const searchResults = defaultModels.filter((model) => {
@@ -63,9 +68,9 @@ const useStore = create((set, get) => {
             model.name.toLowerCase().includes(search.toLowerCase())
           )
         })
-        set({ currentModels: setOrder(order, searchResults) })
+        set({ currentModels: setOrderBy(orderBy, searchResults) })
       } else {
-        set({ currentModels: setOrder(order, defaultModels) })
+        set({ currentModels: setOrderBy(orderBy, defaultModels) })
       }
     },
     toggleFavorite: async (type, name) => {

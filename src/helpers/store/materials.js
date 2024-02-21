@@ -12,12 +12,17 @@ const useMaterialsStore = create((set, get) => {
     defaultMaterials: null,
     currentMaterials: [],
     search: '',
-    order: 'alphabetic',
-    setOrder: (order, materials) => {
-      set({ order })
+    orderBy: 'alphabetic',
+    orderDirection: 'asc',
+    setOrderBy: (orderBy, materials) => {
+      set({ orderBy })
       const currentMaterials = materials || get().currentMaterials
-
-      return sortAssets(order, currentMaterials)
+      return sortAssets(orderBy, currentMaterials, get().orderDirection)
+    },
+    setOrderDirection: (orderDirection) => {
+      set({ orderDirection })
+      const currentMaterials = get().currentMaterials
+      return sortAssets(get().orderBy, currentMaterials, get().orderDirection)
     },
     createPBRCodeDownload: async (material, tab) => {
       let code = ''
@@ -78,8 +83,8 @@ const useMaterialsStore = create((set, get) => {
     setSearch: (e) => {
       const search = e.target.value
       const defaultMaterials = get().defaultMaterials
-      const order = get().order
-      const setOrder = get().setOrder
+      const orderBy = get().orderBy
+      const setOrderBy = get().setOrderBy
       set({ search: search })
       if (search.length) {
         const searchResults = defaultMaterials.filter((material) => {
@@ -88,9 +93,9 @@ const useMaterialsStore = create((set, get) => {
             material.name.toLowerCase().includes(search.toLowerCase())
           )
         })
-        set({ currentMaterials: setOrder(order, searchResults) })
+        set({ currentMaterials: setOrderBy(orderBy, searchResults) })
       } else {
-        set({ currentMaterials: setOrder(order, defaultMaterials) })
+        set({ currentMaterials: setOrderBy(orderBy, defaultMaterials) })
       }
     },
   }

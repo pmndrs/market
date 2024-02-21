@@ -7,14 +7,21 @@ import Asset from '@/components/Asset'
 import Search from '@/components/Search'
 
 const Index = ({ title, hdris }) => {
-  const { search, currentHdri, setSearch, setOrder } = useHDRIStore(
-    (state) => ({
-      search: state.search,
-      currentHdri: state.currentHdri,
-      setSearch: state.setSearch,
-      setOrder: state.setOrder,
-    })
-  )
+  const {
+    search,
+    currentHdri,
+    setSearch,
+    setOrderBy,
+    setOrderDirection,
+    orderDirection,
+  } = useHDRIStore((state) => ({
+    search: state.search,
+    currentHdri: state.currentHdri,
+    setSearch: state.setSearch,
+    setOrderBy: state.setOrderBy,
+    setOrderDirection: state.setOrderDirection,
+    orderDirection: state.orderDirection,
+  }))
   useEffect(() => {
     useHDRIStore.setState({ currentHdri: hdris })
     useHDRIStore.setState({ defaultHdri: hdris })
@@ -29,7 +36,9 @@ const Index = ({ title, hdris }) => {
       <Search
         search={search}
         setSearch={setSearch}
-        onOrderChange={setOrder}
+        onOrderChange={setOrderBy}
+        onOrderDirectionChange={setOrderDirection}
+        orderDirection={orderDirection}
         assetName="HDRI's"
       />
       <ul className=' mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8'>

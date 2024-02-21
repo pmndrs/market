@@ -1,29 +1,23 @@
-export const sortAssets = (order, currentAssets) => {
+export const sortAssets = (orderBy, currentAssets, orderDirection) => {
   let assetsToReturn
-  if (order === 'views') {
-    assetsToReturn = currentAssets.sort((a, b) => b.views - a.views)
-  }
-  if (order === 'added') {
-    assetsToReturn = currentAssets.sort(
-      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-    )
-  }
-  if (order === 'size') {
-    assetsToReturn = currentAssets.sort(
-      (a, b) => a.originalSize - b.originalSize
-    )
-  }
-  if (order === 'alphabetic') {
-    assetsToReturn = currentAssets.sort((a, b) => {
-      if (a.id < b.id) {
-        return -1
-      }
-      if (a.id > b.id) {
-        return 1
-      }
-      return 0
-    })
+  switch (orderBy) {
+    case 'views':
+      assetsToReturn = currentAssets.sort((a, b) => b.views - a.views)
+      break
+    case 'added':
+      assetsToReturn = currentAssets.sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      )
+      break
+    case 'size':
+      assetsToReturn = currentAssets.sort(
+        (a, b) => a.originalSize - b.originalSize
+      )
+      break
+    default:
+      assetsToReturn = currentAssets.sort((a, b) => (a.id < b.id ? -1 : 1))
+    // default is alphabetic
   }
 
-  return assetsToReturn
+  return orderDirection === 'asc' ? assetsToReturn : assetsToReturn.reverse()
 }
