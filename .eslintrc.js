@@ -16,7 +16,9 @@ module.exports = {
     'import/no-cycle': 'off',
     'no-multi-assign': 'off',
     'react/react-in-jsx-scope': 'off',
+    // nextjs issue; need to update next
     'jsx-a11y/anchor-is-valid': 'off',
+    "react/no-unknown-property": 0
   },
   settings: {},
   plugins: ['import'],

@@ -85,6 +85,7 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
                   return (
                     <RangeSlider
                       {...props}
+                      key={i}
                       max={val.max}
                       min={val.min}
                       step={val.step}
@@ -92,11 +93,11 @@ const EditTools = ({ materialsEditor, scene, setMaterialsEditor }) => {
                   )
                 }
                 if (val.type === 'color') {
-                  return <ColorPicker {...props} />
+                  return <ColorPicker key={i} {...props} />
                 }
 
                 if (val.type === 'select') {
-                  return <Select {...props} options={val.options} />
+                  return <Select {...props} key={i} options={val.options} />
                 }
 
                 return null
