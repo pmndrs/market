@@ -1,5 +1,5 @@
 import { supabase } from '@/helpers/initSupabase'
-import fetch from 'node-fetch'
+import axios from 'axios'
 
 const getBuffer = async (assetType, name) => {
   const { data } = await supabase
@@ -8,9 +8,9 @@ const getBuffer = async (assetType, name) => {
     .filter('_id', 'eq', `${assetType.slice(0, -1)}/${name}`)
     .limit(1)
 
-  const json = await fetch(data[0].file).then((rsp) => rsp.json())
+  const json = await axios.get(data[0].file)
 
-  return json
+  return json.data
 }
 
 export default async function handler(req, res) {

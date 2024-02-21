@@ -56,9 +56,10 @@ const AssetInfo = (asset) => {
       createBuffer(router.query.name)
   }, [tab, createBuffer, router.query.name, assetType.value])
 
-  const createCode = () => {
+  const createCode = (types = false) => {
     const code = parse(asset.file, parsedBuffer, {
       printwidth: 100,
+      types,
     })
 
     return code
@@ -170,6 +171,17 @@ const AssetInfo = (asset) => {
                 disabled={!parsedBuffer}
               >
                 Copy JSX Scene Graph
+              </DownloadButton>
+              <DownloadButton
+                onClick={() =>
+                  toast.promise(copy(createCode(true)), {
+                    loading: 'Generating code',
+                    success: 'Copied',
+                  })
+                }
+                disabled={!parsedBuffer}
+              >
+                Copy TSX Scene Graph
               </DownloadButton>
               <DownloadButton
                 onClick={() =>
