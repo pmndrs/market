@@ -77,41 +77,27 @@ const useStore = create((set, get) => {
       const user = get().user
       const favoriteName = `${type}/${name}`
       const currentFavorites = user.profile.favorites
+      let favorites
       if (currentFavorites && currentFavorites.includes(favoriteName)) {
-        const favorites = currentFavorites.filter((fav) => fav !== favoriteName)
-
-        await supabase
-          .from('profiles')
-          .update({ favorites })
-          .eq('user_id', user.id)
-        set({
-          user: {
-            ...user,
-            profile: {
-              ...user.profile,
-              favorites,
-            },
-          },
-        })
+        favorites = currentFavorites.filter((fav) => fav !== favoriteName)
       } else {
-        const favorites = currentFavorites
+        favorites = currentFavorites
           ? [...currentFavorites, favoriteName]
           : [favoriteName]
-        await supabase
-          .from('profiles')
-          .update({ favorites })
-          .eq('user_id', user.id)
-
-        set({
-          user: {
-            ...user,
-            profile: {
-              ...user.profile,
-              favorites,
-            },
-          },
-        })
       }
+      await supabase
+        .from('profiles')
+        .update({ favorites })
+        .eq('user_id', user.id)
+      set({
+        user: {
+          ...user,
+          profile: {
+            ...user.profile,
+            favorites,
+          },
+        },
+      })
     },
     createBuffer: async (name) => {
       const buffer = await fetch(`${API_ENDPOINT}/models/${name}/buffer`).then(
