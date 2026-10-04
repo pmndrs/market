@@ -10,6 +10,8 @@ import Button from '@/components/Button'
 import Tabs from '@/components/Tabs'
 import useStore from '@/helpers/store'
 
+const sortByUpvotes = (a, b) => (a.upvotes.length > b.upvotes.length ? -1 : 1)
+
 const RequestPage = ({ user, requests: requestsServer }) => {
   const [tab, setTab] = useState('open')
   const { requesting, submitRequest, setRequests, requests } = useRequestsStore(
@@ -26,7 +28,7 @@ const RequestPage = ({ user, requests: requestsServer }) => {
   })
 
   useEffect(() => {
-    setRequests(requestsServer)
+    setRequests(requestsServer.sort(sortByUpvotes))
   }, [requestsServer, setRequests])
 
   const currentRequests =
@@ -98,7 +100,7 @@ export default RequestPage
 export async function getServerSideProps({ req }) {
   const { user } = await supabase.auth.api.getUserByCookie(req)
   const { data } = await supabase.from('requests').select()
-  const requests = data.sort((a, b) => a.upvotes.length > b.upvotes.length)
+  const requests = data.sort(sortByUpvotes)
 
   return { props: { user, requests } }
 }
